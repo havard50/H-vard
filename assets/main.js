@@ -179,4 +179,48 @@
     window.setTimeout(processEmbeds, 400);
     window.setTimeout(processEmbeds, 2000);
   })();
+
+  (function initSiteModeToggle() {
+    var KEY = "havardpedersen-site-mode";
+    var root = document.documentElement;
+    var btn = document.querySelector(".site-mode-toggle");
+    if (!btn) return;
+
+    function applyMode(mode) {
+      var press = mode === "press";
+      root.setAttribute("data-site-mode", press ? "press" : "tour");
+      try {
+        localStorage.setItem(KEY, press ? "press" : "tour");
+      } catch (err) {}
+      btn.setAttribute("aria-pressed", press ? "true" : "false");
+      if (press) {
+        btn.textContent = "Tour look";
+        btn.setAttribute(
+          "aria-label",
+          "Switch to dramatic tour and stage colors"
+        );
+      } else {
+        btn.textContent = "Press look";
+        btn.setAttribute(
+          "aria-label",
+          "Switch to calmer press-friendly colors"
+        );
+      }
+    }
+
+    var stored = null;
+    try {
+      stored = localStorage.getItem(KEY);
+    } catch (err) {}
+    if (stored === "press" || stored === "tour") {
+      applyMode(stored);
+    } else {
+      applyMode(root.getAttribute("data-site-mode") || "tour");
+    }
+
+    btn.addEventListener("click", function () {
+      var isPress = root.getAttribute("data-site-mode") === "press";
+      applyMode(isPress ? "tour" : "press");
+    });
+  })();
 })();

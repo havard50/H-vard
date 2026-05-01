@@ -15,6 +15,8 @@
   --rock-glow: rgba(140, 36, 48, 0.35);
   --border: rgba(245, 240, 235, 0.11);
   --glow: rgba(180, 48, 62, 0.22);
+  --on-accent: #140606;
+  --on-accent-hover: #0a0404;
   --font-sans: "DM Sans", system-ui, sans-serif;
   --font-display: "Instrument Serif", Georgia, serif;
   --radius: 12px;
@@ -130,8 +132,13 @@ a:hover {
   height: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
+  justify-content: flex-start;
+  gap: 0.65rem;
+}
+
+.header-spacer {
+  flex: 1;
+  min-width: 0.5rem;
 }
 
 .logo {
@@ -176,7 +183,7 @@ a:hover {
 .site-nav .nav-cta {
   padding: 0.5rem 1rem;
   background: linear-gradient(135deg, #e8bc6a 0%, #b8822e 48%, #7a2832 100%);
-  color: #140606;
+  color: var(--on-accent);
   border-radius: 999px;
   font-weight: 600;
   box-shadow:
@@ -186,7 +193,35 @@ a:hover {
 
 .site-nav .nav-cta:hover {
   background: linear-gradient(135deg, #f0c47a 0%, #c99338 50%, #8b3038 100%);
-  color: #0a0404;
+  color: var(--on-accent-hover);
+}
+
+.site-mode-toggle {
+  flex-shrink: 0;
+  padding: 0.42rem 0.85rem;
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  cursor: pointer;
+  transition: border-color 0.2s ease, color 0.2s ease, background 0.2s ease;
+}
+
+.site-mode-toggle:hover {
+  color: var(--accent);
+  border-color: rgba(212, 168, 74, 0.45);
+  background: rgba(212, 168, 74, 0.08);
+}
+
+.site-mode-toggle[aria-pressed="true"] {
+  color: var(--accent);
+  border-color: rgba(212, 168, 74, 0.55);
+  background: rgba(212, 168, 74, 0.12);
 }
 
 .nav-toggle {
@@ -472,7 +507,7 @@ a:hover {
 
 .btn-primary {
   background: linear-gradient(135deg, #f0c97a 0%, #c89438 42%, #6e2028 100%);
-  color: #140606;
+  color: var(--on-accent);
   box-shadow:
     0 12px 32px rgba(70, 18, 26, 0.55),
     0 0 0 1px rgba(212, 168, 74, 0.35);
@@ -481,7 +516,7 @@ a:hover {
 .btn-primary:hover {
   transform: translateY(-1px);
   filter: brightness(1.06) saturate(1.05);
-  color: #0a0303;
+  color: var(--on-accent-hover);
 }
 
 .btn-ghost {
@@ -1514,7 +1549,7 @@ a:hover {
   font-size: 0.88rem;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  color: #140606;
+  color: var(--on-accent);
   background: linear-gradient(135deg, #f0c97a, #b8822e 55%, #5c1820);
   border: 1px solid rgba(212, 168, 74, 0.45);
   box-shadow:
@@ -1523,7 +1558,7 @@ a:hover {
 }
 
 .floating-book-btn:hover {
-  color: #1c1409;
+  color: var(--on-accent-hover);
   transform: translateY(-1px);
 }
 
@@ -1664,4 +1699,161 @@ body.lightbox-open .floating-book-btn {
   margin: 0;
   font-size: 0.875rem;
   color: var(--text-muted);
+}
+
+/* —— Press / off-season look (toggle in header) —— */
+html[data-site-mode="press"] {
+  --bg: #f2efe9;
+  --bg-elevated: #e6e2da;
+  --surface: #fffcf7;
+  --text: #1a1816;
+  --text-muted: #5c5752;
+  --accent: #6e5420;
+  --accent-hot: #8f4540;
+  --accent-2: #5c4034;
+  --accent-3: #7a5540;
+  --accent-soft: rgba(110, 84, 32, 0.11);
+  --rock-glow: rgba(110, 84, 32, 0.07);
+  --border: rgba(26, 24, 22, 0.12);
+  --glow: rgba(100, 70, 55, 0.07);
+  --on-accent: #171512;
+  --on-accent-hover: #0a0908;
+}
+
+html[data-site-mode="press"] body {
+  background:
+    radial-gradient(circle at 12% 16%, rgba(110, 84, 32, 0.08), transparent 44%),
+    radial-gradient(circle at 88% 8%, rgba(180, 150, 110, 0.12), transparent 36%),
+    linear-gradient(180deg, #f2efe9 0%, #e8e4dc 100%);
+}
+
+html[data-site-mode="press"] .site-header {
+  background: rgba(242, 239, 233, 0.94);
+  border-bottom-color: rgba(26, 24, 22, 0.1);
+  box-shadow: 0 10px 32px rgba(0, 0, 0, 0.07);
+}
+
+html[data-site-mode="press"] .site-mode-toggle {
+  background: rgba(26, 24, 22, 0.05);
+  border-color: rgba(26, 24, 22, 0.14);
+}
+
+html[data-site-mode="press"] .site-mode-toggle:hover,
+html[data-site-mode="press"] .site-mode-toggle[aria-pressed="true"] {
+  background: rgba(110, 84, 32, 0.12);
+  border-color: rgba(110, 84, 32, 0.35);
+  color: var(--accent);
+}
+
+html[data-site-mode="press"] .hero-video {
+  background:
+    linear-gradient(110deg, rgba(250, 248, 244, 0.82), rgba(240, 236, 228, 0.65)),
+    radial-gradient(circle at 78% 22%, rgba(200, 170, 120, 0.2), transparent 45%),
+    radial-gradient(circle at 12% 72%, rgba(120, 70, 60, 0.06), transparent 48%);
+}
+
+html[data-site-mode="press"] .hero-video-frame {
+  opacity: 0.22;
+  filter: saturate(0.95) contrast(1.02);
+}
+
+html[data-site-mode="press"] .hero-video-glow {
+  background: linear-gradient(180deg, transparent, rgba(236, 232, 224, 0.96));
+}
+
+html[data-site-mode="press"] .hero-bg {
+  background:
+    radial-gradient(ellipse 80% 55% at 72% 8%, var(--accent-soft), transparent 52%),
+    radial-gradient(ellipse 55% 50% at 10% 88%, var(--rock-glow), transparent 50%),
+    linear-gradient(180deg, rgba(248, 246, 242, 0.88) 0%, rgba(236, 232, 226, 0.85) 100%);
+}
+
+html[data-site-mode="press"] .hero-photo {
+  opacity: 0.55;
+  filter: grayscale(0.06) contrast(1.05) saturate(0.92);
+}
+
+html[data-site-mode="press"] .hero--cinematic .hero-content {
+  background: linear-gradient(
+    145deg,
+    rgba(255, 252, 247, 0.94),
+    rgba(248, 244, 238, 0.82)
+  );
+  border: 1px solid rgba(26, 24, 22, 0.1);
+  box-shadow:
+    0 24px 70px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.6);
+}
+
+html[data-site-mode="press"] .hero-title-accent {
+  color: #6e5420;
+  text-shadow: none;
+}
+
+html[data-site-mode="press"] .hero-lead {
+  color: #4a4640;
+}
+
+html[data-site-mode="press"] .hero-stats li {
+  color: #3d3a36;
+  background: rgba(26, 24, 22, 0.04);
+  border-color: rgba(26, 24, 22, 0.1);
+}
+
+html[data-site-mode="press"] .site-nav .nav-cta {
+  box-shadow:
+    0 8px 22px rgba(60, 40, 30, 0.18),
+    0 0 0 1px rgba(180, 150, 100, 0.35);
+}
+
+html[data-site-mode="press"] .btn-primary {
+  box-shadow:
+    0 10px 26px rgba(60, 40, 30, 0.2),
+    0 0 0 1px rgba(180, 150, 100, 0.35);
+}
+
+html[data-site-mode="press"] .floating-book-btn {
+  box-shadow:
+    0 12px 28px rgba(40, 30, 24, 0.2),
+    0 0 0 1px rgba(255, 255, 255, 0.5);
+}
+
+html[data-site-mode="press"] .quote-strip {
+  background: linear-gradient(90deg, rgba(26, 24, 22, 0.03), rgba(26, 24, 22, 0.01));
+  border-color: rgba(26, 24, 22, 0.1);
+}
+
+html[data-site-mode="press"] .quote-strip p {
+  color: #3a3632;
+}
+
+html[data-site-mode="press"] .bio-short {
+  background: rgba(110, 84, 32, 0.08);
+  border-left-color: var(--accent);
+  color: #2c2925;
+}
+
+html[data-site-mode="press"] .review-feature {
+  border-color: rgba(26, 24, 22, 0.12);
+  background: linear-gradient(165deg, rgba(110, 84, 32, 0.06), rgba(255, 255, 255, 0.5));
+}
+
+html[data-site-mode="press"] .lightbox {
+  background: rgba(250, 248, 244, 0.92);
+}
+
+html[data-site-mode="press"] .lightbox-close {
+  border-color: rgba(26, 24, 22, 0.15);
+  background: linear-gradient(135deg, rgba(110, 84, 32, 0.12), rgba(255, 255, 255, 0.6));
+  color: var(--text);
+}
+
+html[data-site-mode="press"] .section-epk {
+  background: linear-gradient(180deg, #e8e4dc 0%, #ddd8cf 100%);
+}
+
+@media (max-width: 768px) {
+  html[data-site-mode="press"] .site-nav {
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+  }
 }
