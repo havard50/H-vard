@@ -1,0 +1,3 @@
+# Static site — open index.html at repo root
+[build]
+  publish = "."
