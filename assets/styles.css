@@ -63,14 +63,14 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+/* Scroll-in motion only — content stays visible for SEO, no-JS, and print */
 .reveal {
-  opacity: 0;
-  transform: translateY(18px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
+  opacity: 1;
+  transform: translateY(22px);
+  transition: transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .reveal.in-view {
-  opacity: 1;
   transform: translateY(0);
 }
 
@@ -562,11 +562,16 @@ a:hover {
 
 /* Photo-driven cinematic hero */
 .hero--cinematic {
-  min-height: min(100svh, 56rem);
-  min-height: min(100dvh, 56rem);
+  min-height: calc(100svh - var(--header-h));
+  min-height: calc(100dvh - var(--header-h));
   align-items: center;
   padding-bottom: clamp(2.5rem, 8vw, 5rem);
   padding-top: clamp(2rem, 6vw, 3.5rem);
+}
+
+.hero--impact.hero--cinematic {
+  min-height: max(100svh - var(--header-h), 38rem);
+  min-height: max(100dvh - var(--header-h), 38rem);
 }
 
 @media (min-width: 720px) {
@@ -576,30 +581,55 @@ a:hover {
 }
 
 .hero--cinematic .hero-photo {
-  opacity: 0.52;
+  opacity: 0.64;
   object-position: 22% 28%;
-  filter: grayscale(0.05) contrast(1.08) saturate(0.98);
+  filter: grayscale(0.04) contrast(1.06) saturate(1);
 }
 
 .hero--cinematic .hero-video-frame {
-  opacity: 0.26;
+  opacity: 0.22;
 }
 
 .hero--cinematic .hero-content {
-  max-width: min(44rem, 100%);
+  max-width: min(46rem, 100%);
   margin-left: 0;
   margin-right: auto;
   border-radius: calc(var(--radius) + 10px);
   background: linear-gradient(
     145deg,
-    rgba(14, 8, 12, 0.94),
-    rgba(18, 10, 14, 0.78)
+    rgba(14, 8, 12, 0.88),
+    rgba(18, 10, 14, 0.72)
   );
   border: 1px solid rgba(154, 61, 74, 0.2);
   box-shadow:
     0 28px 80px rgba(0, 0, 0, 0.55),
     inset 0 1px 0 rgba(255, 255, 255, 0.04);
   backdrop-filter: blur(12px);
+}
+
+.hero-scroll-hint {
+  margin: 1.15rem 0 0;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.hero-scroll-hint a {
+  color: #e8bc6a;
+  text-decoration: none;
+}
+
+.hero-scroll-hint a:hover {
+  text-decoration: underline;
+}
+
+.hero-scroll-hint-note {
+  margin-left: 0.35rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  opacity: 0.75;
 }
 
 .hero-tagline {
@@ -1826,7 +1856,6 @@ body.lightbox-open .floating-book-btn {
 @media (prefers-reduced-motion: reduce) {
   .reveal,
   .reveal.in-view {
-    opacity: 1;
     transform: none;
     transition: none;
   }

@@ -15,6 +15,21 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="assets/styles.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "MusicGroup",
+        "name": "Håvard Pedersen",
+        "alternateName": "Håvard Pedersen & The Blues Is Alright Band",
+        "url": "https://havardpedersen.netlify.app/",
+        "genre": ["Blues rock", "Rock"],
+        "sameAs": [
+          "https://open.spotify.com/artist/50PJ7UncEwx3fUxJ1LgZid",
+          "https://www.youtube.com/@havardhedde10",
+          "https://www.instagram.com/haavard_pedersen_raa_ekte_live"
+        ]
+      }
+    </script>
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
@@ -40,6 +55,7 @@
           <span class="nav-toggle-bar" aria-hidden="true"></span>
         </button>
         <nav id="site-nav" class="site-nav" aria-label="Primary">
+          <a href="#hero">Home</a>
           <a href="#about">About</a>
           <a href="#listen">Listen</a>
           <a href="#videos">Video</a>
@@ -55,7 +71,7 @@
     </header>
 
     <main id="main">
-      <section class="hero hero--cinematic reveal" aria-labelledby="hero-title">
+      <section id="hero" class="hero hero--cinematic hero--impact" aria-labelledby="hero-title">
         <div class="hero-video" aria-hidden="true">
           <iframe
             class="hero-video-frame"
@@ -75,6 +91,9 @@
           class="hero-photo"
           src="assets/images/studio-white-falcon-wide.png"
           alt="Håvard Pedersen — studio portrait with Gretsch White Falcon"
+          width="1600"
+          height="900"
+          fetchpriority="high"
           loading="eager"
           decoding="async"
         />
@@ -108,6 +127,13 @@
             <li>No backing tracks</li>
           </ul>
           <p class="hero-meta">No filters. No playback. Just real music.</p>
+          <p class="hero-scroll-hint">
+            <a href="#listen">Music &amp; Spotify ·</a>
+            <a href="#videos">Videos ·</a>
+            <a href="#gallery">Gallery ·</a>
+            <a href="#live">Tour dates</a>
+            <span class="hero-scroll-hint-note">below</span>
+          </p>
         </div>
       </section>
 

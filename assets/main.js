@@ -54,6 +54,21 @@
       revealNodes.forEach(function (node) {
         revealObserver.observe(node);
       });
+
+      function markRevealsInViewport() {
+        var vh = window.innerHeight || document.documentElement.clientHeight || 800;
+        revealNodes.forEach(function (node) {
+          if (node.classList.contains("in-view")) return;
+          var r = node.getBoundingClientRect();
+          if (r.top < vh * 0.94 && r.bottom > -vh * 0.2) {
+            node.classList.add("in-view");
+            revealObserver.unobserve(node);
+          }
+        });
+      }
+
+      markRevealsInViewport();
+      window.addEventListener("load", markRevealsInViewport);
     } else {
       revealNodes.forEach(function (node) {
         node.classList.add("in-view");
