@@ -113,13 +113,13 @@
               Blues-driven rock with cinematic energy — from Vardø to Oslo, and stages across Europe and beyond.
               Built for rooms where the PA shakes and the crowd leans in.
             </p>
-            <div class="hero-cta-primary" role="group" aria-label="Primary shortcuts">
+            <div class="hero-cta-primary hero-cta-row--main" role="group" aria-label="Primary shortcuts">
               <a class="btn btn-primary" href="#listen">Listen</a>
-              <a class="btn btn-ghost" href="#videos">Videos</a>
               <a class="btn btn-ghost" href="#gallery">Photos</a>
               <a class="btn btn-ghost" href="#contact">Contact</a>
             </div>
-            <div class="hero-actions">
+            <div class="hero-actions hero-cta-row--more" role="group" aria-label="More links">
+              <a class="btn btn-ghost" href="#videos">Videos</a>
               <a class="btn btn-primary btn--outline" href="https://www.gigplanet.no/band/havard-pedersen-and-the-blues-is-alright-band"
                 >Book the band</a
               >
@@ -177,15 +177,22 @@
 
       <section id="about" class="section section-about reveal">
         <div class="section-inner">
-          <p class="section-kicker">Artist Profile</p>
-          <h2 class="section-title">About</h2>
-          <p class="bio-short">
-            Håvard Pedersen is a Norwegian guitarist, songwriter, and bandleader from Vardø in Arctic Norway —
-            <strong>endorsed by Gretsch guitars</strong>, a passionate live performer with three albums and a growing
-            catalogue of singles and new studio work. He fronts <strong>Håvard Pedersen &amp; The Blues Is Alright Band</strong>
-            and records at <strong>The Norwegian Sound</strong> in Mjøndalen with producer <strong>Peter Michelsen</strong>
-            (Donkeyboy) — blues-driven rock that stays raw, real, and rooted in the instrument.
-          </p>
+          <header class="about-header">
+            <p class="section-kicker">Biography</p>
+            <h2 class="section-title section-title--about">Håvard Pedersen</h2>
+            <p class="bio-short">
+              Norwegian guitarist, singer, and songwriter from Vardø in Arctic Norway — <strong>endorsed by Gretsch guitars</strong>,
+              a live-first blues-rock artist with three albums, a stream of singles, and new sessions at
+              <strong>The Norwegian Sound</strong> in Mjøndalen with producer <strong>Peter Michelsen</strong> (Donkeyboy).
+              He fronts <strong>Håvard Pedersen &amp; The Blues Is Alright Band</strong>: raw tone, real rooms, no playback.
+            </p>
+            <ul class="about-highlights" aria-label="Career highlights">
+              <li>Gretsch-endorsed artist</li>
+              <li>Guests: John Norum · Ronni Le Tekrø</li>
+              <li>Studio: The Norwegian Sound, Mjøndalen</li>
+              <li>Blues-rock trio · Oslo-based</li>
+            </ul>
+          </header>
           <figure class="about-visual-lead">
             <img
               class="about-visual-lead-img"
@@ -208,7 +215,7 @@
               <figcaption class="about-photo-caption">Press &amp; promo — high-res via <a href="mailto:havardpedersen@me.com">email</a></figcaption>
             </figure>
             <div class="prose prose-bio">
-            <h3 class="prose-subhead">Biography</h3>
+            <h3 class="prose-subhead">Background &amp; story</h3>
             <p>
               Håvard Pedersen is a Norwegian guitarist, songwriter, and bandleader originally from the remote
               Arctic town of Vardø in Northern Norway. Growing up in a place where the raw forces of nature
@@ -321,7 +328,8 @@
             <p class="section-kicker">Discography</p>
             <h2 id="listen-title" class="section-title">The Music</h2>
             <p class="album-tagline">
-              Stream the catalogue, watch performances, and grab physical / digital releases from the shop.
+              Stream on Spotify and Apple Music, scroll the singles list, then jump to <a href="#videos">videos</a> and the
+              <a href="#gallery">photo gallery</a> — physical CDs still ship from the legacy store.
             </p>
             <div class="listen-now-row">
               <a class="btn btn-primary" href="https://open.spotify.com/artist/50PJ7UncEwx3fUxJ1LgZid">Listen on Spotify</a>
@@ -331,18 +339,38 @@
             </div>
           </div>
           <div class="music-stack">
-            <div class="music-embed-panel">
-              <h3 class="music-embed-heading">Spotify</h3>
-              <div class="spotify-embed-wrap">
-                <iframe
-                  title="Spotify — Håvard Pedersen"
-                  src="https://open.spotify.com/embed/artist/50PJ7UncEwx3fUxJ1LgZid?utm_source=generator"
-                  width="100%"
-                  height="380"
-                  style="border: 0"
-                  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                  loading="lazy"
-                ></iframe>
+            <div class="music-embeds-grid" aria-label="Streaming embeds">
+              <div class="music-embed-panel">
+                <h3 class="music-embed-heading">Spotify — full catalogue</h3>
+                <div class="spotify-embed-wrap">
+                  <iframe
+                    title="Spotify — Håvard Pedersen"
+                    src="https://open.spotify.com/embed/artist/50PJ7UncEwx3fUxJ1LgZid?utm_source=generator"
+                    width="100%"
+                    height="380"
+                    style="border: 0"
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                    loading="lazy"
+                  ></iframe>
+                </div>
+              </div>
+              <div class="music-embed-panel">
+                <h3 class="music-embed-heading">Apple Music — album spotlight</h3>
+                <div class="apple-embed-wrap">
+                  <iframe
+                    title="Apple Music — Never Felt So Good"
+                    src="https://embed.music.apple.com/no/album/never-felt-so-good/438518141"
+                    width="100%"
+                    height="450"
+                    style="max-width: 660px; border: 0; overflow: hidden; border-radius: inherit; background: transparent"
+                    allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write"
+                    loading="lazy"
+                  ></iframe>
+                </div>
+                <p class="music-embed-note">
+                  <a href="https://music.apple.com/no/search?term=H%C3%A5vard%20Pedersen">Search “Håvard Pedersen” on Apple Music</a>
+                  for singles and <em>You and I</em>.
+                </p>
               </div>
             </div>
             <figure class="album-art-wrap">
@@ -396,24 +424,14 @@
               </ol>
               <p class="music-card-hint">Full discography on <a href="https://open.spotify.com/artist/50PJ7UncEwx3fUxJ1LgZid">Spotify</a> · live cuts on <a href="#videos">YouTube</a></p>
             </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="journey" class="section section-listen reveal">
-        <div class="section-inner">
-          <p class="section-kicker">Story</p>
-          <h2 class="section-title">The Journey</h2>
-          <p class="listen-lead">
-            New recordings take shape at <strong>The Norwegian Sound</strong> in Mjøndalen with producer
-            <strong>Peter Michelsen</strong> (Donkeyboy), alongside a catalogue built with guests like John Norum and Ronni Le Tekrø.
-          </p>
-          <div class="listen-placeholder" role="region" aria-label="Artist journey">
-            <p>
-              Focus now: new albums and singles from that Norwegian studio room — plus roots in Cinematic World,
-              The Norwegian Beatles, and Three Men Electric Jam.
-            </p>
-            <p class="listen-hint">Touring footprint: USA · England · Germany · France · Belgium · Russia</p>
+            <div id="studio" class="music-studio-callout">
+              <p class="music-studio-callout-kicker">In the studio</p>
+              <p class="music-studio-callout-text">
+                New album sessions at <strong>The Norwegian Sound</strong>, Mjøndalen, with producer
+                <strong>Peter Michelsen</strong> (Donkeyboy) — summer single planned for 2026. Press and booking:
+                <a href="#contact">contact</a> · <a href="#press-reviews">press archive</a>.
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -421,12 +439,11 @@
       <section id="visuals" class="section section-links section-visuals reveal">
         <div class="section-inner">
           <p class="section-kicker">Film &amp; stills</p>
-          <h2 class="section-title">Video, stage &amp; gallery</h2>
+          <h2 class="section-title">Video &amp; photos</h2>
           <p class="listen-lead">
-            Performances below are from his YouTube channel,
-            <a href="https://www.youtube.com/@havardhedde10">@havardhedde10</a>.
-            <em>Det sku bli oss</em> is also on YouTube as the official Topic release (streaming).
-            Scroll down for Instagram and the photo gallery.
+            Embedded performances from <a href="https://www.youtube.com/@havardhedde10">YouTube @havardhedde10</a>
+            — including <em>Det sku bli oss</em> — plus a curated on-site gallery (live, studio, portraits, artwork).
+            Instagram photo posts load below for fresh tour and studio shots.
           </p>
 
           <div id="videos" class="visuals-block">
@@ -579,26 +596,9 @@
               <a href="#live">Live and touring</a>
             </li>
             <li>
-              <a href="#new-music">New music 2026</a>
+              <a href="#studio">New music &amp; studio</a>
             </li>
           </ul>
-        </div>
-      </section>
-
-      <section id="new-music" class="section section-about reveal">
-        <div class="section-inner">
-          <p class="section-kicker">In The Studio</p>
-          <h2 class="section-title">New Music - 2026</h2>
-          <div class="prose">
-            <p>
-              Håvard is in the studio at <strong>The Norwegian Sound</strong> in Mjøndalen, working on a new album with
-              producer <strong>Peter Michelsen</strong> (Donkeyboy) — his most honest and powerful release to date.
-            </p>
-            <p>
-              A new single is planned for summer 2026. As a <strong>Gretsch-endorsed artist</strong>, the guitar voice
-              on these sessions stays true to raw tone and live feel.
-            </p>
-          </div>
         </div>
       </section>
 
@@ -615,6 +615,9 @@
             </li>
             <li>
               <a href="https://www.youtube.com/@havardhedde10">YouTube — @havardhedde10</a>
+            </li>
+            <li>
+              <a href="https://www.facebook.com/pages/Havard-Pedersen/376826480817">Facebook — fan page</a>
             </li>
             <li>
               <a href="https://www.gigplanet.no/band/havard-pedersen-and-the-blues-is-alright-band">Booking and inquiries</a>
@@ -883,10 +886,14 @@
         <div class="section-inner">
           <p class="section-kicker">On Stage</p>
           <h2 class="section-title">Live &amp; Touring</h2>
-          <div class="listen-placeholder" role="region" aria-label="Live and touring">
-            <p>The plan is simple: take the music on the road.</p>
+          <div class="live-intro" role="region" aria-label="Live and touring">
+            <p>
+              <strong>Håvard Pedersen &amp; The Blues Is Alright Band</strong> tour as a tight Oslo-based trio — originals
+              and chosen classics, no backing tracks, built for clubs and festivals from Northern Norway to the continent.
+            </p>
             <p class="listen-hint">
-              Håvard Pedersen &amp; The Blues Is Alright Band are booking now, bringing real blues rock to stages everywhere.
+              Booking and routing: <a href="https://www.gigplanet.no/band/havard-pedersen-and-the-blues-is-alright-band">Gigplanet</a>
+              · live footage in <a href="#videos">Video</a>.
             </p>
           </div>
           <p class="tour-dates-intro">Selected dates — confirm details before travel; more shows TBA.</p>
