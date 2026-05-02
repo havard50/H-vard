@@ -5,8 +5,9 @@
   --bg: #050508;
   --bg-elevated: #0b090c;
   --surface: #151015;
+  --surface-deep: #08060a;
   --text: #f5f0ea;
-  --text-muted: #a69da6;
+  --text-muted: #9f94a3;
   --accent: #d4a84a;
   --accent-hot: #e07070;
   --accent-2: #9a3d4a;
@@ -17,6 +18,8 @@
   --glow: rgba(180, 48, 62, 0.22);
   --on-accent: #140606;
   --on-accent-hover: #0a0404;
+  --section-pad-y: clamp(4.5rem, 12vw, 7.75rem);
+  --section-glow: rgba(212, 168, 74, 0.07);
   --font-sans: "DM Sans", system-ui, sans-serif;
   --font-display: "Instrument Serif", Georgia, serif;
   --radius: 12px;
@@ -120,10 +123,14 @@ a:hover {
   top: 0;
   z-index: 100;
   height: var(--header-h);
-  background: rgba(5, 5, 8, 0.88);
+  background:
+    linear-gradient(180deg, rgba(20, 8, 12, 0.97) 0%, rgba(5, 5, 8, 0.9) 100%),
+    rgba(5, 5, 8, 0.88);
   backdrop-filter: blur(14px);
-  border-bottom: 1px solid rgba(154, 61, 74, 0.22);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.45);
+  border-bottom: 1px solid rgba(154, 61, 74, 0.28);
+  box-shadow:
+    0 1px 0 rgba(212, 168, 74, 0.06),
+    0 12px 40px rgba(0, 0, 0, 0.45);
 }
 
 .header-inner {
@@ -146,7 +153,7 @@ a:hover {
   font-family: var(--font-display);
   font-size: 1.35rem;
   font-weight: 400;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.05em;
   color: var(--text);
   text-decoration: none;
   animation: logoIn 0.9s ease both;
@@ -167,7 +174,17 @@ a:hover {
 .site-nav {
   display: flex;
   align-items: center;
-  gap: clamp(0.5rem, 2vw, 1.5rem);
+  gap: clamp(0.45rem, 1.6vw, 1.15rem);
+}
+
+@media (min-width: 769px) {
+  .site-nav {
+    padding: 0.38rem 0.72rem 0.38rem 0.85rem;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.035);
+    border: 1px solid rgba(154, 61, 74, 0.22);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
+  }
 }
 
 .site-nav a {
@@ -989,7 +1006,7 @@ html[data-site-mode="press"] .about-visual-lead {
 
 /* Sections */
 .section {
-  padding: clamp(4rem, 12vw, 7rem) var(--space);
+  padding: var(--section-pad-y) var(--space);
   border-top: 1px solid var(--border);
   position: relative;
 }
@@ -999,8 +1016,8 @@ html[data-site-mode="press"] .about-visual-lead {
   position: absolute;
   inset: 0;
   pointer-events: none;
-  opacity: 0.33;
-  background: radial-gradient(ellipse 70% 40% at 50% 0%, rgba(212, 168, 74, 0.06), transparent 70%);
+  opacity: 0.4;
+  background: radial-gradient(ellipse 72% 42% at 50% 0%, var(--section-glow), transparent 72%);
 }
 
 .section-inner {
@@ -1016,6 +1033,11 @@ html[data-site-mode="press"] .about-visual-lead {
   font-size: clamp(2rem, 5vw, 3rem);
   font-weight: 400;
   letter-spacing: -0.02em;
+  line-height: 1.08;
+}
+
+.section-kicker + .section-title {
+  margin-top: -0.15rem;
 }
 
 .section-kicker {
@@ -1245,9 +1267,11 @@ html[data-site-mode="press"] .about-visual-lead {
 }
 
 .listen-lead {
-  max-width: 40rem;
-  margin: 0 0 1.5rem;
+  max-width: 44rem;
+  margin: 0 0 1.75rem;
   color: var(--text-muted);
+  font-size: clamp(1rem, 1.5vw, 1.05rem);
+  line-height: 1.58;
 }
 
 .listen-lead-compact {
@@ -1368,19 +1392,6 @@ html[data-site-mode="press"] .about-visual-lead {
   margin-bottom: 0;
 }
 
-.visual-gallery-label {
-  margin: 0 0 0.65rem;
-  font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: #c8cfdb;
-}
-
-.section-inner > .visual-gallery-label ~ .visual-gallery-label {
-  margin-top: 2rem;
-}
-
 .music-video-grid {
   display: grid;
   gap: 1.35rem;
@@ -1392,6 +1403,60 @@ html[data-site-mode="press"] .about-visual-lead {
   display: flex;
   flex-direction: column;
   gap: 0.55rem;
+}
+
+.music-video-card--archive {
+  min-height: 0;
+}
+
+.music-video-archive-link {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+  min-height: 100%;
+  aspect-ratio: 16 / 9;
+  padding: 1.2rem 1.35rem;
+  border-radius: var(--radius);
+  border: 1px solid rgba(154, 61, 74, 0.32);
+  background:
+    linear-gradient(145deg, rgba(154, 61, 74, 0.14) 0%, rgba(8, 6, 10, 0.92) 55%),
+    var(--surface-deep);
+  text-decoration: none;
+  color: var(--text);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.music-video-archive-link:hover {
+  border-color: rgba(212, 168, 74, 0.5);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45);
+  transform: translateY(-1px);
+}
+
+.music-video-archive-kicker {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 0.45rem;
+}
+
+.music-video-archive-title {
+  display: block;
+  font-family: var(--font-display);
+  font-size: clamp(1.15rem, 2.4vw, 1.35rem);
+  font-weight: 400;
+  line-height: 1.2;
+  margin-bottom: 0.55rem;
+  color: #f0e8de;
+}
+
+.music-video-archive-deck {
+  font-size: 0.86rem;
+  line-height: 1.5;
+  color: var(--text-muted);
 }
 
 .music-video-embed {
@@ -1625,6 +1690,7 @@ html[data-site-mode="press"] {
   --bg: #f2efe9;
   --bg-elevated: #e6e2da;
   --surface: #fffcf7;
+  --surface-deep: #e4e0d8;
   --text: #1a1816;
   --text-muted: #5c5752;
   --accent: #6e5420;
@@ -1637,6 +1703,7 @@ html[data-site-mode="press"] {
   --glow: rgba(100, 70, 55, 0.07);
   --on-accent: #171512;
   --on-accent-hover: #0a0908;
+  --section-glow: rgba(110, 84, 32, 0.09);
 }
 
 html[data-site-mode="press"] body {
@@ -1650,6 +1717,27 @@ html[data-site-mode="press"] .site-header {
   background: rgba(242, 239, 233, 0.94);
   border-bottom-color: rgba(26, 24, 22, 0.1);
   box-shadow: 0 10px 32px rgba(0, 0, 0, 0.07);
+}
+
+html[data-site-mode="press"] .site-nav {
+  background: rgba(26, 24, 22, 0.05);
+  border-color: rgba(26, 24, 22, 0.12);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+
+html[data-site-mode="press"] .music-video-archive-link {
+  background: linear-gradient(145deg, rgba(110, 84, 32, 0.1) 0%, rgba(255, 252, 247, 0.95) 50%);
+  border-color: rgba(26, 24, 22, 0.14);
+  color: var(--text);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+}
+
+html[data-site-mode="press"] .music-video-archive-title {
+  color: var(--text);
+}
+
+html[data-site-mode="press"] .music-video-archive-link:hover {
+  border-color: rgba(110, 84, 32, 0.4);
 }
 
 html[data-site-mode="press"] .site-mode-toggle {
@@ -1794,7 +1882,7 @@ html[data-site-mode="press"] .album-tracklist-summary {
   object-fit: cover;
   object-position: center 22%;
   z-index: 1;
-  opacity: 0.78;
+  opacity: 0.88;
 }
 
 .hero__scrim {
