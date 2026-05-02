@@ -32,6 +32,57 @@
         setOpen(false);
       });
     });
+
+    var navHashLinks = Array.prototype.slice.call(nav.querySelectorAll('a[href^="#"]'));
+    var sectionIds = navHashLinks
+      .map(function (l) {
+        return l.getAttribute("href").slice(1);
+      })
+      .filter(function (id) {
+        return id && document.getElementById(id);
+      });
+
+    sectionIds.sort(function (a, b) {
+      return document.getElementById(a).offsetTop - document.getElementById(b).offsetTop;
+    });
+
+    var headerEl = document.querySelector(".site-header");
+    function headerHeight() {
+      return headerEl ? headerEl.offsetHeight : 64;
+    }
+
+    var spyTicking = false;
+    function updateNavCurrentSection() {
+      var line = headerHeight() + 8;
+      var current = sectionIds.length ? sectionIds[0] : "";
+      var i;
+      var el;
+      var top;
+      for (i = 0; i < sectionIds.length; i++) {
+        el = document.getElementById(sectionIds[i]);
+        if (!el) continue;
+        top = el.getBoundingClientRect().top;
+        if (top <= line) current = sectionIds[i];
+      }
+      navHashLinks.forEach(function (link) {
+        var href = link.getAttribute("href") || "";
+        if (href === "#" + current) link.setAttribute("aria-current", "page");
+        else link.removeAttribute("aria-current");
+      });
+      spyTicking = false;
+    }
+
+    function onScrollOrResize() {
+      if (!spyTicking) {
+        spyTicking = true;
+        window.requestAnimationFrame(updateNavCurrentSection);
+      }
+    }
+
+    window.addEventListener("scroll", onScrollOrResize, { passive: true });
+    window.addEventListener("resize", onScrollOrResize, { passive: true });
+    window.addEventListener("load", updateNavCurrentSection);
+    updateNavCurrentSection();
   }
 
   var revealNodes = document.querySelectorAll(".reveal");
@@ -152,48 +203,52 @@
     }
 
     if (videoIds.length > 1) {
+      var reduceMotionMq = window.matchMedia("(prefers-reduced-motion: reduce)");
+      var rotationTimer = null;
       var currentIndex = 0;
       var isTransitioning = false;
       var rotateAttr = parseInt(heroFrame.getAttribute("data-rotate-ms") || "16000", 10);
       var rotateMs = Math.min(120000, Math.max(8000, isNaN(rotateAttr) ? 16000 : rotateAttr));
 
-      window.setInterval(function () {
-        if (isTransitioning) return;
-        isTransitioning = true;
-        currentIndex = (currentIndex + 1) % videoIds.length;
-        heroFrame.classList.add("is-fading");
+      function stopHeroRotation() {
+        if (rotationTimer !== null) {
+          window.clearInterval(rotationTimer);
+          rotationTimer = null;
+        }
+      }
 
-        window.setTimeout(function () {
-          heroFrame.src = buildYouTubeSrc(videoIds[currentIndex]);
+      function startHeroRotation() {
+        if (videoIds.length <= 1 || reduceMotionMq.matches) return;
+        if (rotationTimer !== null) return;
+        rotationTimer = window.setInterval(function () {
+          if (isTransitioning) return;
+          isTransitioning = true;
+          currentIndex = (currentIndex + 1) % videoIds.length;
+          heroFrame.classList.add("is-fading");
+
           window.setTimeout(function () {
-            heroFrame.classList.remove("is-fading");
-            isTransitioning = false;
-          }, 420);
-        }, 450);
-      }, rotateMs);
-    }
-  }
+            heroFrame.src = buildYouTubeSrc(videoIds[currentIndex]);
+            window.setTimeout(function () {
+              heroFrame.classList.remove("is-fading");
+              isTransitioning = false;
+            }, 420);
+          }, 450);
+        }, rotateMs);
+      }
 
-  (function initInstagramEmbeds() {
-    function processEmbeds() {
-      if (
-        window.instgrm &&
-        window.instgrm.Embeds &&
-        typeof window.instgrm.Embeds.process === "function"
-      ) {
-        try {
-          window.instgrm.Embeds.process();
-        } catch (e) {}
+      function onReduceMotionChange() {
+        if (reduceMotionMq.matches) stopHeroRotation();
+        else startHeroRotation();
+      }
+
+      startHeroRotation();
+      if (typeof reduceMotionMq.addEventListener === "function") {
+        reduceMotionMq.addEventListener("change", onReduceMotionChange);
+      } else if (typeof reduceMotionMq.addListener === "function") {
+        reduceMotionMq.addListener(onReduceMotionChange);
       }
     }
-    if (document.readyState === "loading") {
-      document.addEventListener("DOMContentLoaded", processEmbeds);
-    } else {
-      processEmbeds();
-    }
-    window.setTimeout(processEmbeds, 400);
-    window.setTimeout(processEmbeds, 2000);
-  })();
+  }
 
   (function initSiteModeToggle() {
     var KEY = "havardpedersen-site-mode";

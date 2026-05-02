@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="Håvard Pedersen — Norwegian guitarist, songwriter & bandleader from Vardø. Gretsch-endorsed artist, blues-rock live act, new music from The Norwegian Sound (Mjøndalen) with producer Peter Michelsen (Donkeyboy). Raw. Real. Live."
+      content="Håvard Pedersen — Norwegian guitarist, singer, songwriter & bandleader from Vardø. Gretsch-endorsed artist, blues-rock live act, new music from The Norwegian Sound (Mjøndalen) with producer Peter Michelsen (Donkeyboy). Raw. Real. Live."
     />
     <title>Håvard Pedersen</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -22,7 +22,7 @@
         "name": "Håvard Pedersen",
         "alternateName": "Håvard Pedersen & The Blues Is Alright Band",
         "url": "https://havardpedersen.netlify.app/",
-        "description": "Norwegian guitarist, songwriter, and Gretsch-endorsed artist. Blues-rock live act Håvard Pedersen & The Blues Is Alright Band. New recordings with producer Peter Michelsen (Donkeyboy) at The Norwegian Sound, Mjøndalen.",
+        "description": "Norwegian guitarist, singer, songwriter, and Gretsch-endorsed artist. Blues-rock live act Håvard Pedersen & The Blues Is Alright Band. New recordings with producer Peter Michelsen (Donkeyboy) at The Norwegian Sound, Mjøndalen.",
         "genre": ["Blues rock", "Rock"],
         "sameAs": [
           "https://open.spotify.com/artist/50PJ7UncEwx3fUxJ1LgZid",
@@ -64,108 +64,63 @@
           <a href="#news">News</a>
           <a href="#band">Band</a>
           <a href="#contact">Contact</a>
-          <a href="#press-reviews">Press</a>
+          <a href="#press">Press</a>
           <a class="nav-cta" href="https://www.gigplanet.no/band/havard-pedersen-and-the-blues-is-alright-band">Booking</a>
         </nav>
       </div>
     </header>
 
     <main id="main">
-      <section id="hero" class="hero hero--cinematic hero--impact" aria-labelledby="hero-title">
-        <div class="hero-video" aria-hidden="true">
-          <iframe
-            class="hero-video-frame"
-            src="https://www.youtube-nocookie.com/embed/i8fR9-sAvPM?autoplay=1&mute=1&controls=0&loop=1&playlist=i8fR9-sAvPM&modestbranding=1&playsinline=1&rel=0"
-            title="Background performance video"
-            tabindex="-1"
-            aria-hidden="true"
+      <section id="hero" class="hero hero--modern" aria-labelledby="hero-title">
+        <div class="hero__media" aria-hidden="true">
+          <div class="hero__video-wrap">
+            <iframe
+              class="hero-video-frame"
+              src="https://www.youtube-nocookie.com/embed/i8fR9-sAvPM?autoplay=1&mute=1&controls=0&loop=1&playlist=i8fR9-sAvPM&modestbranding=1&playsinline=1&rel=0"
+              title="Background performance video"
+              tabindex="-1"
+              aria-hidden="true"
+              loading="eager"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
+              data-video-ids="i8fR9-sAvPM,hwxs4sBNwp0"
+              data-rotate-ms="16000"
+            ></iframe>
+          </div>
+          <img
+            class="hero__image"
+            src="assets/images/studio-white-falcon-wide.png"
+            alt="Håvard Pedersen — studio portrait with Gretsch White Falcon"
+            width="1600"
+            height="900"
+            fetchpriority="high"
             loading="eager"
-            referrerpolicy="strict-origin-when-cross-origin"
-            allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
-            data-video-ids="i8fR9-sAvPM,hwxs4sBNwp0"
-            data-rotate-ms="16000"
-          ></iframe>
-          <div class="hero-video-glow"></div>
+            decoding="async"
+          />
+          <div class="hero__scrim"></div>
         </div>
-        <img
-          class="hero-photo"
-          src="assets/images/studio-white-falcon-wide.png"
-          alt="Håvard Pedersen — studio portrait with Gretsch White Falcon"
-          width="1600"
-          height="900"
-          fetchpriority="high"
-          loading="eager"
-          decoding="async"
-        />
-        <div class="hero-bg" aria-hidden="true"></div>
-        <div class="hero-layout">
-          <div class="hero-display">
-            <p class="hero-eyebrow">Håvard Pedersen</p>
-            <p class="hero-tagline" id="hero-tagline">Norwegian guitarist, singer &amp; songwriter</p>
-            <h1 id="hero-title" class="hero-title hero-title--display">
-              <span class="hero-title-line">Raw.</span>
-              <span class="hero-title-line hero-title-accent">Real. Live.</span>
+        <div class="hero__content">
+          <div class="hero__inner">
+            <p class="hero__eyebrow">Håvard Pedersen</p>
+            <p class="hero__tagline" id="hero-tagline">Norwegian guitarist, singer &amp; songwriter.</p>
+            <h1 id="hero-title" class="hero__headline">
+              <span class="hero__headline-line">Raw.</span>
+              <span class="hero__headline-line hero__headline-line--accent">Real. Live.</span>
             </h1>
-          </div>
-          <div class="hero-content">
-            <p class="hero-lead">
-              Three albums deep — <em>Never Felt So Good</em> (2011) with guests <strong>John Norum</strong> and
-              <strong>Ronni Le Tekrø</strong>, <em>You and I</em> (2021), and the 2025 single <em>Det sku bli oss</em>
-              from <strong>The Norwegian Sound</strong> with <strong>Peter Michelsen</strong> (Donkeyboy). Gretsch tone,
-              blues-rock trio, stages from Vardø to Oslo and across Europe — built for rooms where the PA shakes.
-            </p>
-            <div class="hero-cta-primary hero-cta-row--main" role="group" aria-label="Primary shortcuts">
-              <a class="btn btn-primary" href="#listen">Listen</a>
-              <a class="btn btn-ghost" href="#gallery">Photos</a>
-              <a class="btn btn-ghost" href="#contact">Contact</a>
+            <div class="hero__cta" role="group" aria-label="Primary actions">
+              <a class="btn btn-primary btn--hero" href="#listen">Listen</a>
+              <a class="btn btn-ghost btn--hero" href="#gallery">Photos</a>
+              <a class="btn btn-ghost btn--hero" href="#contact">Contact</a>
             </div>
-            <div class="hero-actions hero-cta-row--more" role="group" aria-label="More links">
-              <a class="btn btn-ghost" href="#videos">Videos</a>
-              <a class="btn btn-primary btn--outline" href="https://www.gigplanet.no/band/havard-pedersen-and-the-blues-is-alright-band"
-                >Book the band</a
-              >
-              <a class="btn btn-ghost" href="https://www.instagram.com/haavard_pedersen_raa_ekte_live">Instagram</a>
-            </div>
-            <ul class="hero-stats" aria-label="Quick artist highlights">
-              <li>Gretsch-endorsed artist</li>
-              <li>New music · The Norwegian Sound, Mjøndalen</li>
-              <li>No backing tracks · Oslo-based trio</li>
-            </ul>
-            <p class="hero-meta">Endorsed by Gretsch guitars. No filters. No playback. Just real music.</p>
-            <p class="hero-scroll-hint">
-              <a href="#listen">Music &amp; Spotify ·</a>
-              <a href="#videos">Videos ·</a>
-              <a href="#gallery">Gallery ·</a>
-              <a href="#live">Tour dates</a>
-              <span class="hero-scroll-hint-note">below</span>
+            <p class="hero__micro">
+              <em>Never Felt So Good</em> · <em>You and I</em> · <em>Det sku bli oss</em> — with guests
+              <strong>John Norum</strong> &amp; <strong>Ronni Le Tekrø</strong>; new work with
+              <strong>Peter Michelsen</strong> at The Norwegian Sound, Mjøndalen.
+              <span class="hero__micro-links">
+                <a href="#videos">Video</a> · <a href="#listen">Music</a> ·
+                <a href="https://www.gigplanet.no/band/havard-pedersen-and-the-blues-is-alright-band">Booking</a>
+              </span>
             </p>
-          </div>
-        </div>
-      </section>
-
-      <section class="featured-release reveal" aria-labelledby="featured-release-title">
-        <div class="featured-release-inner">
-          <div class="featured-release-art">
-            <img
-              src="assets/images/single-det-sku-studio.png"
-              alt="Det sku bli oss — single artwork"
-              width="640"
-              height="640"
-              loading="lazy"
-              decoding="async"
-            />
-          </div>
-          <div class="featured-release-copy">
-            <p class="featured-release-kicker">Featured single · 2025</p>
-            <h2 id="featured-release-title" class="featured-release-title">Det sku bli oss</h2>
-            <p class="featured-release-lead">
-              Stream on your platform, then watch the official release in <a href="#videos">Videos</a>.
-            </p>
-            <div class="featured-release-actions">
-              <a class="btn btn-primary" href="https://open.spotify.com/artist/50PJ7UncEwx3fUxJ1LgZid">Spotify</a>
-              <a class="btn btn-ghost" href="https://music.apple.com/no/search?term=H%C3%A5vard%20Pedersen">Apple Music</a>
-              <a class="btn btn-ghost" href="#listen">Full discography</a>
-            </div>
           </div>
         </div>
       </section>
@@ -178,125 +133,72 @@
 
       <section id="about" class="section section-about reveal">
         <div class="section-inner">
-          <header class="about-header">
-            <p class="section-kicker">Biography</p>
+          <header class="section-head section-head--about">
+            <p class="section-kicker">About</p>
             <h2 class="section-title section-title--about">Håvard Pedersen</h2>
-            <p class="bio-short">
-              Norwegian guitarist, singer, and songwriter from Vardø in Arctic Norway — <strong>endorsed by Gretsch guitars</strong>,
-              a live-first blues-rock artist with three albums, a stream of singles, and new sessions at
-              <strong>The Norwegian Sound</strong> in Mjøndalen with producer <strong>Peter Michelsen</strong> (Donkeyboy).
-              He fronts <strong>Håvard Pedersen &amp; The Blues Is Alright Band</strong>: raw tone, real rooms, no playback.
+            <p class="section-deck">
+              Norwegian guitarist, singer, and songwriter — Gretsch-endorsed, blues-rock bandleader, three albums and new sessions
+              at The Norwegian Sound with Peter Michelsen (Donkeyboy).
             </p>
-            <ul class="about-highlights" aria-label="Career highlights">
-              <li>Gretsch-endorsed artist</li>
-              <li>Guests: John Norum · Ronni Le Tekrø</li>
-              <li>Studio: The Norwegian Sound, Mjøndalen</li>
-              <li>Blues-rock trio · Oslo-based</li>
-            </ul>
-            <div class="about-at-a-glance" aria-label="At a glance">
-              <h3 class="about-at-a-glance-title">At a glance</h3>
-              <dl class="about-glance-list">
-                <dt>Who</dt>
-                <dd>Norwegian guitarist, singer, and songwriter — <strong>Håvard Pedersen &amp; The Blues Is Alright Band</strong> (trio).</dd>
-                <dt>Where</dt>
-                <dd>From <strong>Vardø</strong>, Arctic Norway · based in <strong>Oslo</strong>.</dd>
-                <dt>Records</dt>
-                <dd>
-                  <em>Never Felt So Good</em> (2011) · <em>You and I</em> (2021) · singles including <em>Det sku bli oss</em> (2025);
-                  new album in progress with <strong>Peter Michelsen</strong> (Donkeyboy).
-                </dd>
-                <dt>Collaborators</dt>
-                <dd><strong>John Norum</strong> (Europe) · <strong>Ronni Le Tekrø</strong> (TNT) · studio work with Michelsen at The Norwegian Sound, Mjøndalen.</dd>
-                <dt>Sound</dt>
-                <dd>Blues-driven rock and melodic guitar music — <strong>Gretsch</strong>, SRV / Gary Moore lineage, no backing tracks live.</dd>
-              </dl>
-            </div>
           </header>
-          <figure class="about-visual-lead">
-            <img
-              class="about-visual-lead-img"
-              src="assets/images/promo-raa-ekte-live.png"
-              alt="Håvard Pedersen and The Blues Is Alright Band — Rå Ekte Live"
-              loading="lazy"
-              decoding="async"
-            />
-            <figcaption class="about-visual-lead-caption">Rå Ekte Live — stage energy, no playback</figcaption>
-          </figure>
-          <div class="about-grid about-grid--artist">
-            <figure class="about-photo-wrap">
+
+          <div class="about-premium">
+            <figure class="about-premium__banner">
               <img
-                class="about-photo"
-                src="assets/images/studio-gretsch-portrait.png"
-                alt="Håvard Pedersen — press portrait with Gretsch"
+                class="about-premium__banner-img"
+                src="assets/images/promo-raa-ekte-live.png"
+                alt="Håvard Pedersen and The Blues Is Alright Band — Rå Ekte Live"
                 loading="lazy"
                 decoding="async"
               />
-              <figcaption class="about-photo-caption">Press &amp; promo — high-res via <a href="mailto:havardpedersen@me.com">email</a></figcaption>
+              <figcaption class="about-premium__banner-cap">Rå Ekte Live — stage energy, no playback</figcaption>
             </figure>
+
+            <aside class="about-premium__aside">
+              <figure class="about-portrait">
+                <img
+                  class="about-portrait__img"
+                  src="assets/images/studio-gretsch-portrait.png"
+                  alt="Håvard Pedersen — press portrait with Gretsch"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <figcaption class="about-portrait__cap">
+                  Press portrait — high-res via <a href="mailto:havardpedersen@me.com">email</a>
+                </figcaption>
+              </figure>
+              <ul class="about-highlights" aria-label="Career highlights">
+                <li>Gretsch-endorsed artist</li>
+                <li>Guests: John Norum · Ronni Le Tekrø</li>
+                <li>Studio: The Norwegian Sound, Mjøndalen</li>
+                <li>Blues-rock trio · Oslo-based</li>
+              </ul>
+            </aside>
+
+            <div class="about-premium__main">
+            <p class="bio-short bio-short--inset">
+              From Vardø to Oslo: a live-first artist with <strong>three albums</strong>, a run of <strong>singles</strong>, and
+              <strong>Håvard Pedersen &amp; The Blues Is Alright Band</strong> — raw tone, real rooms, no playback.
+            </p>
             <div class="prose prose-bio">
             <h3 class="prose-subhead">Background &amp; story</h3>
             <p>
-              Håvard Pedersen is a Norwegian guitarist, songwriter, and bandleader originally from the remote
-              Arctic town of Vardø in Northern Norway. Growing up in a place where the raw forces of nature
-              are impossible to ignore, he developed a deep emotional connection to music early on — drawn
-              especially to the expressive power of the electric guitar.
+              From <strong>Vardø</strong> in Arctic Norway, Håvard Pedersen is a guitarist, singer, and songwriter
+              shaped by blues and rock — <a href="https://www.johnnorum.se/">John Norum</a> is family, and artists
+              from Gary Moore and SRV to <a href="https://www.europetheband.com/">Europe</a> fed his early ears.
             </p>
             <p>
-              Inspired by legendary artists like Gary Moore and Stevie Ray Vaughan, and bands like Kiss and
-              <a href="https://www.europetheband.com/">Europe</a>, Håvard picked up the guitar at a young age
-              and quickly found his voice through blues and rock. A defining moment came when he experienced
-              Europe live as a child — later forming a personal and musical connection through his cousin,
-              guitarist <a href="https://www.johnnorum.se/">John Norum</a>.
+              Three albums and a run of singles sit alongside session and stage work with guests such as Norum and
+              <a href="https://www.ronniletekro.com/">Ronni Le Tekrø</a>. New material is tracked with producer
+              <strong>Peter Michelsen</strong> (<a href="https://en.wikipedia.org/wiki/Donkeyboy">Donkeyboy</a>) at
+              <a href="https://www.thenorwegiansound.com/">The Norwegian Sound</a>, Mjøndalen. He is a
+              <strong>Gretsch-endorsed artist</strong>.
             </p>
             <p>
-              Over the years, Håvard has built a solid reputation as a passionate and authentic live performer.
-              With three albums and several singles released, his music reflects both personal experiences and
-              universal themes — ranging from love and loss to resilience and transformation. His album
-              <em>You and I</em> stands out as an emotional and introspective work, capturing the depth of his
-              songwriting and melodic sensibility.
+              On stage he leads <strong>Håvard Pedersen &amp; The Blues Is Alright Band</strong> — an Oslo-based trio,
+              no backing tracks, built for rooms that want guitar-led blues-rock straight from the source.
             </p>
-            <p>
-              He has collaborated with notable musicians such as John Norum and
-              <a href="https://www.ronniletekro.com/">Ronni Le Tekrø</a>. Recent albums and singles are shaped in the studio
-              with producer <strong>Peter Michelsen</strong> of <a href="https://en.wikipedia.org/wiki/Donkeyboy">Donkeyboy</a>,
-              recorded at <a href="https://www.thenorwegiansound.com/">The Norwegian Sound</a> in Mjøndalen — a natural fit
-              for his melodic, guitar-forward sound. He is an <strong>endorsed Gretsch artist</strong> (endorsed by Gretsch guitars).
-              In addition to his solo career, he has been involved in several bands and projects including
-              <a href="http://www.cinematicworld.com/">Cinematic World</a>,
-              <a href="http://www.norwegianbeatles.com/">The Norwegian Beatles</a>, and Three Men Electric Jam —
-              gaining extensive experience from stages across Norway and internationally in Europe, the UK, and
-              the United States.
-            </p>
-            <p>
-              Today, Håvard fronts <strong>Håvard Pedersen &amp; The Blues Is Alright Band</strong>, delivering
-              what he calls “raw, real live music” — a no-nonsense, emotionally driven blues-rock experience
-              rooted in authenticity. His playing is characterized by expressive phrasing, powerful tone, and a
-              deep respect for the blues tradition, while still pushing toward a modern and personal sound.
-            </p>
-            <p>
-              Beyond the stage, Håvard is a creative entrepreneur with a strong independent spirit. After years
-              in the retail and business world, he has chosen to focus fully on music and self-created projects —
-              aiming to build a sustainable life around artistic freedom, live performance, and meaningful
-              connection with audiences.
-            </p>
-            <p>
-              Despite facing personal challenges, including health setbacks and a major back surgery, he has
-              remained committed to his path. His journey is one of persistence, reinvention, and belief in the
-              power of music as both expression and purpose.
-            </p>
-            <p>
-              At his core, Håvard Pedersen is an artist driven not by trends, but by truth. His goal is simple:
-              to create honest music, play powerful live shows, and build something real — on his own terms.
-            </p>
-            <h3 class="prose-subhead">Collaborators &amp; guests</h3>
-            <ul class="collab-list">
-              <li><a href="https://www.johnnorum.se/">John Norum</a> (Europe) — studio &amp; tribute work</li>
-              <li><a href="https://www.ronniletekro.com/">Ronni Le Tekrø</a> (TNT)</li>
-              <li>
-                <strong>Peter Michelsen</strong> — producer; <a href="https://en.wikipedia.org/wiki/Donkeyboy">Donkeyboy</a>;
-                sessions at <a href="https://www.thenorwegiansound.com/">The Norwegian Sound</a>, Mjøndalen
-              </li>
-            </ul>
+            </div>
             </div>
           </div>
         </div>
@@ -307,20 +209,9 @@
           <p class="section-kicker">Updates</p>
           <h2 class="section-title">News &amp; releases</h2>
           <p class="listen-lead">
-            Singles, studio work with Peter Michelsen at The Norwegian Sound, and live dates for
-            <strong>Håvard Pedersen &amp; The Blues Is Alright Band</strong>. Older stories live on the
-            <a href="https://havardpedersen.com/news.html">classic news archive</a>.
+            Studio and live updates. Archive: <a href="https://havardpedersen.com/news.html">havardpedersen.com/news</a>.
           </p>
           <div class="news-grid">
-            <article class="news-card">
-              <p class="news-card-kicker">Single · 2025</p>
-              <h3 class="news-card-title">Det sku bli oss</h3>
-              <p class="news-card-text">
-                Out now on streaming — add it on
-                <a href="https://open.spotify.com/artist/50PJ7UncEwx3fUxJ1LgZid">Spotify</a>
-                and watch the official YouTube release in <a href="#videos">Videos</a>.
-              </p>
-            </article>
             <article class="news-card">
               <p class="news-card-kicker">Recording · 2026</p>
               <h3 class="news-card-title">New album in progress</h3>
@@ -348,10 +239,8 @@
             <p class="section-kicker">Discography</p>
             <h2 id="listen-title" class="section-title">The Music</h2>
             <p class="album-tagline">
-              <strong>On this page:</strong> album artwork, full <em>Never Felt So Good</em> tracklist, playable
-              <strong>Spotify</strong> (catalogue + debut album preview) and <strong>Apple Music</strong> embeds,
-              singles list, then <a href="#videos">YouTube performances</a> and the <a href="#gallery">photo gallery</a>.
-              CDs: <a href="https://havardpedersen.com/shop.html">legacy store</a>.
+              Stream the catalogue, browse releases and tracklists — live footage in <a href="#videos">Video</a>,
+              stills in <a href="#gallery">Photos</a>. CDs: <a href="https://havardpedersen.com/shop.html">shop</a>.
             </p>
             <div class="listen-now-row">
               <a class="btn btn-primary" href="https://open.spotify.com/artist/50PJ7UncEwx3fUxJ1LgZid">Listen on Spotify</a>
@@ -393,21 +282,6 @@
                   <a href="https://music.apple.com/no/search?term=H%C3%A5vard%20Pedersen">Search “Håvard Pedersen” on Apple Music</a>
                   for singles and <em>You and I</em>.
                 </p>
-              </div>
-            </div>
-            <div class="music-embed-panel music-embed-panel--full">
-              <h3 class="music-embed-heading">Spotify — debut album (play any track)</h3>
-              <p class="music-embed-sub">Audio preview of <em>Never Felt So Good</em> — same guest credits as in the bio (Norum, Tekrø).</p>
-              <div class="spotify-embed-wrap">
-                <iframe
-                  title="Spotify — Never Felt So Good album"
-                  src="https://open.spotify.com/embed/album/17MYfinSWo8DC3XESNqmFi?utm_source=generator"
-                  width="100%"
-                  height="352"
-                  style="border: 0"
-                  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                  loading="lazy"
-                ></iframe>
               </div>
             </div>
             <figure class="album-art-wrap">
@@ -456,7 +330,6 @@
                   <li><span class="track-title">The Greatest Fan Of All</span></li>
                   <li><span class="track-title">While My Guitar Gently Weeps</span></li>
                 </ol>
-                <p class="music-card-hint music-card-hint--tight">Track order per discography; hear them in the Spotify / Apple players above.</p>
               </details>
             </article>
             <article class="music-card">
@@ -486,34 +359,20 @@
               </ol>
               <p class="music-card-hint">Full discography on <a href="https://open.spotify.com/artist/50PJ7UncEwx3fUxJ1LgZid">Spotify</a> · live cuts on <a href="#videos">YouTube</a></p>
             </div>
-            <div id="studio" class="music-studio-callout">
-              <p class="music-studio-callout-kicker">In the studio</p>
-              <p class="music-studio-callout-text">
-                New album sessions at <strong>The Norwegian Sound</strong>, Mjøndalen, with producer
-                <strong>Peter Michelsen</strong> (Donkeyboy) — summer single planned for 2026. Press and booking:
-                <a href="#contact">contact</a> · <a href="#press-reviews">press archive</a>.
-              </p>
-            </div>
           </div>
         </div>
       </section>
 
-      <section id="visuals" class="section section-links section-visuals reveal">
+      <section id="videos" class="section section-video reveal" aria-labelledby="videos-title">
         <div class="section-inner">
-          <p class="section-kicker">Film &amp; stills</p>
-          <h2 class="section-title">Video &amp; photos</h2>
+          <p class="section-kicker">Film</p>
+          <h2 id="videos-title" class="section-title">Video</h2>
           <p class="listen-lead">
-            Embedded performances from <a href="https://www.youtube.com/@havardhedde10">YouTube @havardhedde10</a>
-            — including <em>Det sku bli oss</em> — plus a curated on-site gallery (live, studio, portraits, artwork).
-            Instagram photo posts load below for fresh tour and studio shots.
+            Performances and videos on <a href="https://www.youtube.com/@havardhedde10">YouTube @havardhedde10</a>.
+            Interviews: <a href="#press">Press</a>.
           </p>
 
-          <div id="videos" class="visuals-block">
-          <p class="visual-gallery-label">Performances &amp; music videos</p>
-          <p class="video-section-note">
-            Live multi-cam sets and official releases on YouTube. Broadcast and print interviews (e.g. UK radio, Norwegian TV)
-            are summarized under <a href="#press-reviews">Press</a> with links to the full legacy archive.
-          </p>
+          <div class="visuals-block">
           <div
             class="music-video-grid"
             aria-label="Videos from Håvard Pedersen on YouTube @havardhedde10"
@@ -558,18 +417,6 @@
                 Det sku bli oss — official Topic / streaming release
               </p>
             </div>
-            <div class="music-video-card music-video-card--interview">
-              <a
-                class="music-video-external"
-                href="https://havardpedersen.com/interviews.html"
-                rel="noopener noreferrer"
-              >
-                <span class="music-video-external-kicker">Interviews &amp; TV</span>
-                <span class="music-video-external-title">Hermitage FM (UK), TV Nord, NRK — full list on classic site</span>
-                <span class="music-video-external-cta">Open interview archive →</span>
-              </a>
-              <p class="music-video-caption">Radio and television — links to audio and video clips (legacy hub)</p>
-            </div>
           </div>
           <p class="music-video-channel-cta">
             <a class="btn btn-ghost" href="https://www.youtube.com/@havardhedde10"
@@ -577,29 +424,19 @@
             >
           </p>
           </div>
+        </div>
+      </section>
 
-          <p class="visual-gallery-label">From @havardhedde on Instagram</p>
-          <p class="listen-lead listen-lead-compact">
-            Recent photo posts from the road and studio — same energy as the gallery below, straight from Instagram.
+      <section id="gallery" class="section section-gallery reveal" aria-labelledby="gallery-title">
+        <div class="section-inner">
+          <p class="section-kicker">Stills</p>
+          <h2 id="gallery-title" class="section-title">Photos</h2>
+          <p class="listen-lead">
+            Live, studio, portraits, and artwork — tap an image for fullscreen.
           </p>
-          <div class="instagram-embed-row instagram-embed-row--photos" aria-label="Photo posts from @havardhedde on Instagram">
-            <blockquote
-              class="instagram-media"
-              data-instgrm-permalink="https://www.instagram.com/p/DTQdECWiMGW/"
-              data-instgrm-version="14"
-            ></blockquote>
-            <blockquote
-              class="instagram-media"
-              data-instgrm-permalink="https://www.instagram.com/p/DPqXkLxje9-/"
-              data-instgrm-version="14"
-            ></blockquote>
-          </div>
 
-          <div id="gallery" class="visuals-block">
-          <p class="visual-gallery-label">Photo gallery — tap any image for fullscreen</p>
-          <p class="listen-lead listen-lead-compact">
-            High-resolution live, studio, portrait, and release art — hosted here so promoters and press can browse without broken links.
-          </p>
+          <div class="visuals-block">
+          <p class="visual-gallery-label">Gallery</p>
           <div class="gallery-group">
             <p class="gallery-group-label">Live &amp; stage</p>
             <div class="visual-grid visual-grid--artist">
@@ -643,10 +480,10 @@
             </div>
           </div>
           </div>
-          <div class="hero-actions visuals-actions">
-            <a class="btn btn-ghost" href="https://www.instagram.com/haavard_pedersen_raa_ekte_live?igsh=MWV5YzZjZm1tNnFycw%3D%3D&utm_source=qr">Open @haavard_pedersen_raa_ekte_live</a>
-            <a class="btn btn-ghost" href="https://www.instagram.com/havardhedde?igsh=MWY0ZmpvM25yeWs3dg%3D%3D&amp;utm_source=qr">Open @havardhedde on Instagram</a>
-            <a class="btn btn-ghost" href="https://www.youtube.com/@havardhedde10">Watch on YouTube — @havardhedde10</a>
+          <div class="visuals-actions">
+            <a class="btn btn-ghost" href="https://www.instagram.com/haavard_pedersen_raa_ekte_live?igsh=MWV5YzZjZm1tNnFycw%3D%3D&utm_source=qr">@haavard_pedersen_raa_ekte_live</a>
+            <a class="btn btn-ghost" href="https://www.instagram.com/havardhedde?igsh=MWY0ZmpvM25yeWs3dg%3D%3D&amp;utm_source=qr">@havardhedde</a>
+            <a class="btn btn-ghost" href="https://www.youtube.com/@havardhedde10">YouTube @havardhedde10</a>
           </div>
         </div>
       </section>
@@ -672,11 +509,6 @@
             <li><span class="band-lineup-name">Tom Arne Fossheim</span> — drums</li>
             <li><span class="band-lineup-name">Pål Salvesen</span> — bass</li>
           </ul>
-          <ul class="badge-row" aria-label="Band facts">
-            <li>3 members</li>
-            <li>Based in Oslo</li>
-            <li>Starting from 20,000 NOK</li>
-          </ul>
           <ul class="link-grid">
             <li>
               <a href="https://www.gigplanet.no/band/havard-pedersen-and-the-blues-is-alright-band">Booking and info</a>
@@ -688,7 +520,7 @@
               <a href="#live">Live and touring</a>
             </li>
             <li>
-              <a href="#studio">New music &amp; studio</a>
+              <a href="#listen">Discography &amp; studio</a>
             </li>
           </ul>
         </div>
@@ -747,213 +579,44 @@
               </ul>
             </aside>
           </div>
-          <div class="contact-elsewhere" aria-label="Social and related sites">
-            <h3 class="contact-elsewhere-title">Follow &amp; related projects</h3>
+          <div class="contact-elsewhere" aria-label="Related projects">
+            <h3 class="contact-elsewhere-title">Also</h3>
             <ul class="contact-elsewhere-list">
-              <li><a href="https://www.instagram.com/haavard_pedersen_raa_ekte_live">Instagram @haavard_pedersen_raa_ekte_live</a></li>
-              <li><a href="https://www.youtube.com/@havardhedde10">YouTube @havardhedde10</a></li>
-              <li><a href="https://www.facebook.com/pages/Havard-Pedersen/376826480817">Facebook</a></li>
               <li><a href="https://www.norwegianbeatles.com/">The Norwegian Beatles</a></li>
-              <li><a href="https://havardpedersen.com/">Classic site — news archive, guestbook, extra photos</a></li>
+              <li><a href="https://havardpedersen.com/">havardpedersen.com</a> — older news, interviews, extras</li>
             </ul>
           </div>
         </div>
       </section>
 
-      <section id="contact-links" class="section section-about reveal">
+      <section id="press" class="section section-about reveal" aria-labelledby="press-title">
         <div class="section-inner">
-          <p class="section-kicker">Directory</p>
-          <h2 class="section-title">Links &amp; directory</h2>
+          <p class="section-kicker">Media</p>
+          <h2 id="press-title" class="section-title">Press</h2>
           <p class="listen-lead">
-            Booking, studios (The Norwegian Sound, Mjøndalen), guest collaborators (John Norum, Ronni Le Tekrø, Peter Michelsen),
-            and stores for <em>Never Felt So Good</em>. Use Gigplanet for current live dates; older profile links sit in the archive toggle below.
+            Selected coverage from the <em>Never Felt So Good</em> era. Full reviews, interviews, and scans:
+            <a href="https://havardpedersen.com/reviews.html">Reviews</a> ·
+            <a href="https://havardpedersen.com/interviews.html">Interviews</a> ·
+            <a href="https://havardpedersen.com/">havardpedersen.com</a>.
           </p>
-
-          <div class="link-directory">
-            <div class="link-directory-block">
-              <h3>Direct contact</h3>
-              <ul class="link-grid">
-                <li><a href="mailto:havardpedersen@me.com">havardpedersen@me.com</a></li>
-              </ul>
-            </div>
-
-            <div class="link-directory-block">
-              <h3>Booking</h3>
-              <ul class="link-grid">
-                <li>
-                  <a href="https://www.gigplanet.no/band/havard-pedersen-and-the-blues-is-alright-band">Gigplanet — Håvard Pedersen &amp; The Blues Is Alright Band</a>
-                </li>
-                <li>
-                  <a href="https://www.viggolund.no/">Viggo Lund Management (legacy booking reference)</a>
-                </li>
-              </ul>
-            </div>
-
-            <div class="link-directory-block">
-              <h3>Social and fan pages</h3>
-              <ul class="link-grid">
-                <li>
-                  <a href="https://www.facebook.com/pages/Havard-Pedersen/376826480817">Facebook — Håvard Pedersen fan page</a>
-                </li>
-                <li>
-                  <a href="https://www.youtube.com/@havardhedde10">YouTube — @havardhedde10</a>
-                </li>
-                <li>
-                  <a href="https://www.youtube.com/user/MrPhillynott">YouTube — classic channel (MrPhillynott)</a>
-                </li>
-              </ul>
-              <details class="link-directory-archive">
-                <summary>Older artist profiles (archive)</summary>
-                <ul class="link-grid link-grid--archive">
-                  <li><a href="https://www.reverbnation.com/h%C3%A5vardpedersen">ReverbNation</a></li>
-                  <li><a href="https://www.myspace.com/hpedersen.official">Myspace</a></li>
-                </ul>
-              </details>
-            </div>
-
-            <div class="link-directory-block">
-              <h3>Bands and projects</h3>
-              <ul class="link-grid">
-                <li><a href="https://www.cinematicworld.com/">Cinematic World</a></li>
-                <li><a href="https://www.norwegianbeatles.com/">The Norwegian Beatles</a></li>
-                <li><a href="https://havardpedersen.com/shop.html">Web shop (Never Felt So Good era)</a></li>
-                <li><a href="https://www.cinematicworld.com/bestilling.htm">Cinematic World — order / bestilling</a></li>
-              </ul>
-            </div>
-
-            <div class="link-directory-block">
-              <h3>Studios</h3>
-              <ul class="link-grid">
-                <li>
-                  <a href="https://www.thenorwegiansound.com/">The Norwegian Sound — Mjøndalen</a> (current sessions)
-                </li>
-                <li><a href="https://altalydstudio.no/">Alta Lydstudio (Alta, Norway)</a></li>
-                <li><a href="https://www.studiostudio.no/">StudioStudio Nyhagen (Bøverbru, Norway)</a></li>
-              </ul>
-            </div>
-
-            <div class="link-directory-block">
-              <h3>Guests and collaborators</h3>
-              <ul class="link-grid">
-                <li><a href="https://www.johnnorum.se/">John Norum</a></li>
-                <li><a href="https://www.ronniletekro.com/">Ronni Le Tekrø</a></li>
-                <li>
-                  Peter Michelsen — <a href="https://en.wikipedia.org/wiki/Donkeyboy">Donkeyboy</a> ·
-                  <a href="https://www.thenorwegiansound.com/">The Norwegian Sound</a>
-                </li>
-              </ul>
-            </div>
-
-            <div class="link-directory-block">
-              <h3>Related artists</h3>
-              <p class="link-directory-note">Bands tied to Håvard’s collaborators — John Norum (Europe) and Ronni Le Tekrø (TNT).</p>
-              <ul class="link-grid">
-                <li><a href="https://www.europetheband.com/">Europe</a></li>
-                <li><a href="https://www.tnttheband.com/">TNT</a></li>
-              </ul>
-            </div>
-
-            <div class="link-directory-block">
-              <h3>Buy Never Felt So Good (digital / stores)</h3>
-              <ul class="link-grid">
-                <li><a href="https://www.cdbaby.com/cd/havardpedersen">CD Baby</a></li>
-                <li><a href="https://itunes.apple.com/no/album/never-felt-so-good/id438518141">Apple Music / iTunes</a></li>
-                <li><a href="https://www.amazon.com/Never-Felt-So-Good/dp/B0051G66Q0/">Amazon</a></li>
-              </ul>
-            </div>
-          </div>
-
-          <div id="press-reviews" class="press-archive">
-            <h3 class="press-highlights-title">Interviews and broadcast</h3>
-            <ul class="press-list">
-              <li>
-                <time datetime="2011-06-08">June 8, 2011</time> — Jon Seymour’s “From Blues To Rock” interview with Håvard for Hermitage FM 99.2 (UK).
-              </li>
-              <li>
-                <time datetime="2010-11-23">November 23, 2010</time> — TV Nord interview (Norwegian television).
-              </li>
-              <li>
-                <time datetime="2010-11-17">November 17, 2010</time> — Altaposten: “Føler seg bra” — piece on the debut album and moving home to Alta.
-              </li>
-              <li>
-                <time datetime="2010-08-07">August 7, 2010</time> — NRK and Altaposten: coverage of the upcoming release of <em>Never Felt So Good</em>, sessions in Alta with John Norum, Ronni Le Tekrø, and other guests.
-              </li>
-            </ul>
-
-            <div class="review-feature">
-              <h3 class="review-feature-title">Review — Exit Music (UK)</h3>
-              <p class="review-meta">
-                <time datetime="2011-02-21">February 21, 2011</time>
-                · Jon Seymour · <em>Never Felt So Good</em>
-              </p>
-              <blockquote class="review-quote" cite="https://havardpedersen.com/reviews.html">
-                <p>
-                  “The album contains 14 tracks, 11 of which are original songs, and there are 3 absolutely brilliant cover versions.”
-                  On Thin Lizzy’s “Still In Love With You”, featuring John Norum on guitar and lead vocals:
-                  “In light of recent events, I can think of nothing else I’ve heard to be a more heartfelt tribute to the late, great Gary Moore.
-                  John Norum’s sound and vocal tone are suited perfectly to the song, and it was goosebump inducing.”
-                </p>
-                <p>
-                  On the original material: “Really varied, touching on a lot of Håvard’s influences, including blues, rockabilly, pop/punk and a whole heap more…
-                  The sound is just so natural, nothing ever sounds forced… This is ‘feel good’ music of the highest order.”
-                </p>
-                <p>
-                  “Go and have a poke around, and then buy this album, it’s frickin awesome!”
-                </p>
-              </blockquote>
-              <p class="review-attribution">Summarized from the original Exit Music review; full press clippings live on the legacy site.</p>
-            </div>
-
-            <div class="review-feature">
-              <h3 class="review-feature-title">Norwegian press (English summaries)</h3>
-              <p class="review-meta">August–November 2010 · Altaposten, NRK</p>
-
-              <article class="press-summary">
-                <h4 class="press-summary-heading">Debut with a constellation of guests</h4>
-                <p>
-                  Regional and national outlets reported on Håvard’s first solo album under the title <em>Never Felt So Good</em> (Cinematicworld Records),
-                  highlighting sessions in Alta with producer Kjetil Linnes and guest appearances including Europe guitarist John Norum,
-                  TNT’s Ronni Le Tekrø, and a wide circle of singers and players from rock, metal, and Sámi music scenes.
-                  Stories underlined how a holiday visit from Norum grew into studio work that helped push the project to completion.
-                </p>
-              </article>
-
-              <article class="press-summary">
-                <h4 class="press-summary-heading">“Good to finally get it out”</h4>
-                <p>
-                  Altaposten followed the long road from first announcement to firm release date, describing a record built from both fresh songs and material
-                  that had waited years to be recorded. Håvard credited spontaneous takes and Linnes’s production instincts — including moments captured
-                  almost without him realizing the tape was rolling — as part of the album’s honest, unforced sound.
-                  Pieces also previewed heavy arrangements of covers such as The Pussycats’ “Just A Little Teardrop” and a broad, epic take on
-                  George Harrison’s “While My Guitar Gently Weeps”, in line with his role in The Norwegian Beatles.
-                </p>
-              </article>
-
-              <article class="press-summary">
-                <h4 class="press-summary-heading">NRK · Finnmark artist with an Europe connection</h4>
-                <p>
-                  NRK framed the story for a national audience: a Finnmark-born guitarist releasing a debut with star-studded help,
-                  three covers among fourteen tracks, and a grounded outlook — a lifelong dream of making the record, without pop-star illusions.
-                </p>
-              </article>
-            </div>
-
-            <div class="review-feature review-feature--compact">
-              <h3 class="review-feature-title">Legacy pages on havardpedersen.com</h3>
-              <ul class="press-legacy-links">
-                <li><a href="https://havardpedersen.com/reviews.html">Reviews</a></li>
-                <li><a href="https://havardpedersen.com/interviews.html">Interviews</a></li>
-                <li><a href="https://havardpedersen.com/news.html">News archive</a></li>
-                <li><a href="https://havardpedersen.com/videos.html">Videos</a></li>
-              </ul>
-            </div>
-
-            <p class="press-footnote">
-              Photos, guestbook, and older site structure remain on the
-              <a href="https://havardpedersen.com/">classic homepage</a>
-              and linked sections above.
-            </p>
-          </div>
+          <ul class="press-list">
+            <li>
+              <time datetime="2011-06-08">June 8, 2011</time> — Hermitage FM 99.2 (UK), “From Blues To Rock” with Jon Seymour.
+            </li>
+            <li>
+              <time datetime="2010-11-23">Nov 23, 2010</time> — TV Nord.
+            </li>
+            <li>
+              <time datetime="2010-11-17">Nov 17, 2010</time> — Altaposten, debut album coverage.
+            </li>
+            <li>
+              <time datetime="2010-08-07">Aug 7, 2010</time> — NRK / Altaposten, <em>Never Felt So Good</em> sessions (Alta), guests including Norum and Tekrø.
+            </li>
+            <li>
+              <time datetime="2011-02-21">Feb 21, 2011</time> — Exit Music (UK) review of <em>Never Felt So Good</em> — summary on
+              <a href="https://havardpedersen.com/reviews.html">havardpedersen.com/reviews</a>.
+            </li>
+          </ul>
         </div>
       </section>
 
@@ -963,87 +626,30 @@
           <h2 class="section-title">Live &amp; Touring</h2>
           <div class="live-intro" role="region" aria-label="Live and touring">
             <p>
-              <strong>Håvard Pedersen &amp; The Blues Is Alright Band</strong> tour as a tight Oslo-based trio — originals
-              and chosen classics, no backing tracks, built for clubs and festivals from Northern Norway to the continent.
+              <strong>Håvard Pedersen &amp; The Blues Is Alright Band</strong> — Oslo-based trio, originals and classics,
+              no backing tracks. Footage in <a href="#videos">Video</a>.
             </p>
             <p class="listen-hint">
-              Booking and routing: <a href="https://www.gigplanet.no/band/havard-pedersen-and-the-blues-is-alright-band">Gigplanet</a>
-              · live footage in <a href="#videos">Video</a>.
+              Dates and booking: <a href="https://www.gigplanet.no/band/havard-pedersen-and-the-blues-is-alright-band">Gigplanet</a>
+              · updates in <a href="#news">News</a>.
             </p>
           </div>
-          <p class="tour-dates-intro">Selected dates — confirm details before travel; more shows TBA.</p>
-          <ul class="tour-dates">
-            <li>
-              <time datetime="2025-07-15">15 Jul 2025</time>
-              <span class="tour-dates-venue">Blues &amp; BBQ Akkarfjord — Hammerfestdagan, Hammerfest</span>
-            </li>
-            <li>
-              <time datetime="2025-07-16">16 Jul 2025</time>
-              <span class="tour-dates-venue">TBA</span>
-            </li>
-            <li>
-              <time datetime="2025-07-17">17 Jul 2025</time>
-              <span class="tour-dates-venue">Private arrangement</span>
-            </li>
-            <li>
-              <time datetime="2025-07-18">18 Jul 2025</time>
-              <span class="tour-dates-venue">Perleporten — Honningsvåg</span>
-            </li>
-            <li>
-              <time datetime="2025-08-28">28 Aug 2025</time>
-              <span class="tour-dates-venue">TBA</span>
-            </li>
-            <li>
-              <time datetime="2025-08-29">29 Aug 2025</time>
-              <span class="tour-dates-venue">Inni Granskauen Festival — Aurskog</span>
-            </li>
-            <li>
-              <time datetime="2025-11-01">1 Nov 2025</time>
-              <span class="tour-dates-venue">Sandvika — Bærum</span>
-            </li>
-          </ul>
-          <p class="live-outro">
-            More dates: watch <a href="#news">News</a> and <a href="https://www.gigplanet.no/band/havard-pedersen-and-the-blues-is-alright-band">Gigplanet</a>.
-          </p>
         </div>
       </section>
 
-      <section id="epk" class="section section-epk reveal">
-        <div class="section-inner epk-layout">
-          <div class="epk-main">
-            <p class="section-kicker">Press And Booking</p>
-            <h2 class="section-title">Electronic Press Kit</h2>
-            <p class="listen-lead">
-              <strong>Håvard Pedersen</strong> — Gretsch-endorsed Norwegian guitarist and singer; blues-rock trio
-              <strong>The Blues Is Alright Band</strong> (Oslo). Use this page for bio, streaming audio, photos, and video;
-              booking via Gigplanet or email for press kits and guest lists.
-            </p>
-            <div class="hero-actions">
-              <a class="btn btn-primary" href="https://www.gigplanet.no/band/havard-pedersen-and-the-blues-is-alright-band">
-                Send booking request
-              </a>
-              <a class="btn btn-ghost" href="mailto:havardpedersen@me.com">
-                Press contact
-              </a>
-            </div>
-          </div>
-          <aside class="epk-card" aria-label="EPK quick details">
-            <h3>Quick facts</h3>
-            <ul>
-              <li><strong>Format:</strong> Blues-rock trio</li>
-              <li><strong>Base:</strong> Oslo, Norway</li>
-              <li><strong>Set:</strong> Originals + selected classics</li>
-              <li><strong>Markets:</strong> Clubs, festivals, private events</li>
-              <li><strong>Booking:</strong> Gigplanet and direct inquiry</li>
-            </ul>
-          </aside>
-        </div>
-      </section>
     </main>
 
     <footer class="site-footer">
       <div class="footer-inner">
         <p class="footer-copy">© Håvard Pedersen · havardpedersen.com</p>
+        <p class="footer-meta">
+          Press &amp; booking:
+          <a href="mailto:havardpedersen@me.com">Email</a>
+          ·
+          <a href="https://www.gigplanet.no/band/havard-pedersen-and-the-blues-is-alright-band">Gigplanet</a>
+          ·
+          <a href="#press">Press</a>
+        </p>
       </div>
     </footer>
 
@@ -1060,6 +666,5 @@
     </div>
 
     <script src="assets/main.js"></script>
-    <script async src="https://www.instagram.com/embed.js"></script>
   </body>
 </html>
