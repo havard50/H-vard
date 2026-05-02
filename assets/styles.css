@@ -649,6 +649,17 @@ a:hover {
   color: #e4e0d8;
 }
 
+.bio-short a {
+  font-weight: 600;
+  color: #fde68a;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.bio-short a:hover {
+  color: #fff;
+}
+
 .about-photo-caption {
   margin: 0;
   padding: 0.55rem 0.75rem;
@@ -1150,6 +1161,7 @@ html[data-site-mode="press"] .about-visual-lead {
 }
 
 .contact-form {
+  position: relative;
   display: grid;
   gap: 1rem;
   padding: 1.35rem 1.5rem;
@@ -1188,11 +1200,30 @@ html[data-site-mode="press"] .about-visual-lead {
 }
 
 .hp-field {
-  position: absolute;
-  left: -9999px;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
+  position: absolute !important;
+  left: 0 !important;
+  top: 0 !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  clip-path: inset(50%) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+.hp-field input {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  opacity: 0 !important;
 }
 
 .contact-aside {
@@ -2250,6 +2281,14 @@ html[data-site-mode="press"] .bio-short {
   color: #2c2925;
 }
 
+html[data-site-mode="press"] .bio-short a {
+  color: var(--accent);
+}
+
+html[data-site-mode="press"] .bio-short a:hover {
+  color: #3d3a36;
+}
+
 html[data-site-mode="press"] .lightbox {
   background: rgba(250, 248, 244, 0.92);
 }
@@ -2346,16 +2385,16 @@ html[data-site-mode="press"] .album-tracklist-summary {
   filter: saturate(1.03) contrast(1.02);
 }
 
-/* Bottom-weighted scrim: top stays clear so the portrait reads as the hero */
+/* Bottom-weighted scrim — lighter so the guitar portrait stays the focal read */
 .hero__scrim {
   position: absolute;
   inset: 0;
   z-index: 2;
   pointer-events: none;
   background:
-    linear-gradient(180deg, rgba(5, 5, 8, 0.06) 0%, rgba(5, 5, 8, 0.02) 38%, rgba(5, 5, 8, 0.42) 72%, rgba(5, 5, 8, 0.78) 100%),
-    radial-gradient(ellipse 95% 85% at 88% 58%, rgba(60, 14, 28, 0.14), transparent 58%),
-    radial-gradient(ellipse 70% 50% at 20% 80%, rgba(167, 139, 250, 0.12), transparent 55%);
+    linear-gradient(180deg, rgba(5, 5, 8, 0.02) 0%, rgba(5, 5, 8, 0.008) 42%, rgba(5, 5, 8, 0.2) 72%, rgba(5, 5, 8, 0.48) 100%),
+    radial-gradient(ellipse 95% 85% at 88% 58%, rgba(60, 14, 28, 0.06), transparent 58%),
+    radial-gradient(ellipse 70% 50% at 20% 80%, rgba(167, 139, 250, 0.06), transparent 55%);
 }
 
 .hero__scanlines {
@@ -2397,11 +2436,11 @@ html[data-site-mode="press"] .album-tracklist-summary {
   border-radius: calc(var(--radius) + 12px);
   background: linear-gradient(
     155deg,
-    rgba(18, 12, 32, 0.82) 0%,
-    rgba(8, 6, 16, 0.62) 45%,
-    rgba(12, 8, 22, 0.78) 100%
+    rgba(18, 12, 32, 0.72) 0%,
+    rgba(8, 6, 16, 0.52) 45%,
+    rgba(12, 8, 22, 0.68) 100%
   );
-  border: 1px solid rgba(167, 139, 250, 0.35);
+  border: 1px solid rgba(167, 139, 250, 0.32);
   box-shadow:
     0 0 0 1px rgba(56, 189, 248, 0.12),
     0 32px 90px rgba(0, 0, 0, 0.55),
@@ -2478,6 +2517,23 @@ html[data-site-mode="press"] .album-tracklist-summary {
   margin-bottom: 1.15rem;
 }
 
+.hero__cta--primary-row {
+  margin-bottom: 0.5rem;
+  align-items: center;
+}
+
+.hero__cta--secondary-row {
+  margin-bottom: 1.05rem;
+  gap: 0.5rem;
+}
+
+.btn--hero-secondary {
+  padding: 0.58rem 1rem;
+  min-height: 2.45rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+}
+
 .btn--hero {
   padding: 0.95rem 1.65rem;
   font-size: 1rem;
@@ -2505,6 +2561,117 @@ html[data-site-mode="press"] .album-tracklist-summary {
   font-weight: 600;
 }
 
+.hero__momentum {
+  margin: 0.85rem 0 0.65rem;
+  font-size: 0.82rem;
+  line-height: 1.55;
+  color: rgba(226, 232, 240, 0.92);
+  max-width: 38rem;
+}
+
+.hero__momentum em {
+  font-style: italic;
+  color: #fde68a;
+}
+
+.hero__booking-hook {
+  margin: 0 0 0.75rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  line-height: 1.45;
+  color: #a5f3fc;
+  max-width: 36rem;
+  text-shadow: 0 1px 12px rgba(0, 0, 0, 0.45);
+}
+
+.hero__promoter-tags {
+  list-style: none;
+  margin: 0 0 1rem;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem 0.55rem;
+  max-width: 40rem;
+}
+
+.hero__promoter-tags li {
+  margin: 0;
+  padding: 0.28rem 0.62rem;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: rgba(235, 228, 216, 0.92);
+  border-radius: 999px;
+  border: 1px solid rgba(167, 139, 250, 0.28);
+  background: rgba(8, 6, 18, 0.42);
+}
+
+.hero__cta--single-primary {
+  margin-bottom: 1rem;
+}
+
+.hero__cta--single-primary .btn--hero-dominate {
+  width: 100%;
+  max-width: 22rem;
+  justify-content: center;
+  padding: 1.05rem 1.85rem;
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  box-shadow:
+    0 0 0 1px rgba(253, 230, 138, 0.25),
+    0 18px 42px rgba(0, 0, 0, 0.45),
+    0 0 48px rgba(56, 189, 248, 0.22);
+}
+
+@media (min-width: 520px) {
+  .hero__cta--single-primary .btn--hero-dominate {
+    width: auto;
+    min-width: 17rem;
+  }
+}
+
+.hero__instant-play {
+  margin: 0 0 1.15rem;
+  padding: 0.85rem 0.95rem 1rem;
+  max-width: min(100%, 26rem);
+  border-radius: calc(var(--radius) + 6px);
+  border: 1px solid rgba(56, 189, 248, 0.22);
+  background: rgba(6, 4, 14, 0.55);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
+}
+
+.hero__instant-label {
+  margin: 0 0 0.55rem;
+  font-family: var(--font-future);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #7dd3fc;
+}
+
+.hero__embed-wrap {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.35);
+}
+
+.hero__embed-more {
+  display: inline-block;
+  margin-top: 0.65rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: rgba(253, 230, 138, 0.95);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.hero__embed-more:hover {
+  color: #fff;
+}
+
 @media (min-width: 720px) {
   .hero.hero--modern {
     justify-content: flex-end;
@@ -2524,8 +2691,8 @@ html[data-site-mode="press"] .album-tracklist-summary {
 
   .hero__scrim {
     background:
-      linear-gradient(180deg, rgba(5, 5, 8, 0.04) 0%, rgba(5, 5, 8, 0.02) 35%, rgba(5, 5, 8, 0.38) 65%, rgba(5, 5, 8, 0.82) 100%),
-      radial-gradient(ellipse 100% 80% at 50% 92%, rgba(40, 10, 22, 0.35), transparent 55%);
+      linear-gradient(180deg, rgba(5, 5, 8, 0.015) 0%, rgba(5, 5, 8, 0.008) 40%, rgba(5, 5, 8, 0.18) 68%, rgba(5, 5, 8, 0.5) 100%),
+      radial-gradient(ellipse 100% 80% at 50% 92%, rgba(40, 10, 22, 0.16), transparent 55%);
   }
 
   .hero__inner {
@@ -2781,4 +2948,269 @@ html[data-site-mode="press"] .hero__headline-line--accent {
   background-clip: unset;
   color: #6e5420;
   filter: none;
+}
+
+html[data-site-mode="press"] .hero__momentum {
+  color: #4a4845;
+}
+
+html[data-site-mode="press"] .hero__booking-hook {
+  color: var(--accent);
+  text-shadow: none;
+}
+
+html[data-site-mode="press"] .hero__promoter-tags li {
+  border-color: rgba(26, 24, 22, 0.14);
+  background: rgba(255, 252, 247, 0.72);
+  color: #3d3a36;
+}
+
+html[data-site-mode="press"] .hero__instant-play {
+  border-color: rgba(26, 24, 22, 0.12);
+  background: rgba(255, 252, 247, 0.92);
+}
+
+html[data-site-mode="press"] .hero__instant-label {
+  color: var(--accent);
+}
+
+html[data-site-mode="press"] .hero__embed-more {
+  color: var(--accent);
+}
+
+/* —— Booking-first hero, credibility strip quotes, press kit, live schedule, about expand —— */
+.credibility-quotes {
+  margin: 1.5rem 0 0;
+  padding-top: 1.25rem;
+  border-top: 1px solid rgba(167, 139, 250, 0.2);
+  display: grid;
+  gap: 0.75rem;
+  max-width: 52rem;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+}
+
+@media (min-width: 700px) {
+  .credibility-quotes {
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem 1.5rem;
+  }
+}
+
+.credibility-quote {
+  margin: 0;
+  font-size: 0.88rem;
+  line-height: 1.5;
+  color: rgba(230, 224, 240, 0.88);
+  font-style: italic;
+  padding: 0.75rem 0.95rem;
+  border-radius: var(--radius);
+  border: 1px solid rgba(56, 189, 248, 0.12);
+  background: rgba(8, 6, 16, 0.45);
+}
+
+.credibility-quote em {
+  font-style: normal;
+  color: #fde68a;
+}
+
+.credibility-outlets {
+  margin: 1rem 0 0;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(186, 230, 253, 0.85);
+  text-align: center;
+}
+
+.credibility-quote-attrib {
+  display: block;
+  margin-top: 0.45rem;
+  font-size: 0.72rem;
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: rgba(253, 230, 138, 0.75);
+}
+
+.about-expand {
+  margin-top: 1.5rem;
+  border-radius: calc(var(--radius) + 4px);
+  border: 1px solid rgba(167, 139, 250, 0.22);
+  background: rgba(6, 4, 12, 0.5);
+  padding: 0 1rem 0.5rem;
+}
+
+.about-expand-summary {
+  cursor: pointer;
+  list-style: none;
+  font-family: var(--font-future);
+  font-weight: 600;
+  font-size: 0.85rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #a5f3fc;
+  padding: 1rem 0.25rem;
+}
+
+.about-expand summary::-webkit-details-marker {
+  display: none;
+}
+
+.about-expand-body {
+  padding: 0 0.15rem 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.section-press-kit {
+  background: linear-gradient(180deg, rgba(10, 6, 18, 0.5), rgba(4, 3, 10, 0.9));
+}
+
+.press-kit-grid {
+  list-style: none;
+  margin: 0 0 1.25rem;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+}
+
+.press-kit-grid--lead {
+  margin-bottom: 0.35rem;
+}
+
+.press-kit-grid--lead .btn {
+  min-height: 3rem;
+  font-size: 0.95rem;
+}
+
+.press-kit-grid__full {
+  flex: 1 1 100%;
+  min-width: 100%;
+}
+
+.press-kit-divider {
+  margin: 0 0 0.85rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(148, 163, 184, 0.85);
+}
+
+.press-kit-grid .btn {
+  width: 100%;
+  justify-content: center;
+}
+
+@media (min-width: 520px) {
+  .press-kit-grid li {
+    flex: 1 1 calc(50% - 0.5rem);
+    min-width: 12rem;
+  }
+
+  .press-kit-grid .btn {
+    width: auto;
+    min-width: 10.5rem;
+  }
+}
+
+.press-kit-note {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.55;
+  color: var(--text-muted);
+}
+
+.live-schedule {
+  margin: 1.15rem 0 1rem;
+  padding: 1.1rem 1.15rem;
+  border-radius: calc(var(--radius) + 2px);
+  border: 1px solid rgba(56, 189, 248, 0.2);
+  background: rgba(8, 6, 18, 0.45);
+}
+
+.live-schedule-title {
+  margin: 0 0 0.5rem;
+  font-family: var(--font-future);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #7dd3fc;
+}
+
+.live-schedule-lead {
+  margin: 0 0 0.75rem;
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: rgba(235, 228, 240, 0.9);
+}
+
+.gig-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.gig-list li {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.5rem 0.85rem;
+  font-size: 0.92rem;
+  line-height: 1.5;
+  color: var(--text-muted);
+}
+
+.gig-date {
+  font-family: var(--font-future);
+  font-weight: 700;
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #fde68a;
+}
+
+.gig-meta a {
+  font-weight: 600;
+}
+
+html[data-site-mode="press"] .credibility-quote {
+  border-color: rgba(26, 24, 22, 0.12);
+  background: rgba(255, 252, 247, 0.65);
+  color: #3d3a36;
+}
+
+html[data-site-mode="press"] .credibility-outlets {
+  color: #5c574f;
+}
+
+html[data-site-mode="press"] .credibility-quote-attrib {
+  color: #6e5420;
+}
+
+html[data-site-mode="press"] .about-expand {
+  border-color: rgba(26, 24, 22, 0.14);
+  background: rgba(255, 252, 247, 0.55);
+}
+
+html[data-site-mode="press"] .about-expand-summary {
+  color: var(--accent);
+}
+
+html[data-site-mode="press"] .live-schedule {
+  border-color: rgba(26, 24, 22, 0.12);
+  background: rgba(255, 252, 247, 0.88);
+}
+
+html[data-site-mode="press"] .live-schedule-title {
+  color: var(--accent);
+}
+
+html[data-site-mode="press"] .gig-date {
+  color: var(--accent);
 }
