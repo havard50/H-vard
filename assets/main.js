@@ -293,4 +293,51 @@
       applyMode(isPress ? "tour" : "press");
     });
   })();
+
+  (function initPressKitContactPrefill() {
+    var KEY = "havard-press-prefill";
+    var links = document.querySelectorAll(
+      'a[href="#contact"][data-press-topic]'
+    );
+    if (!links.length) return;
+
+    function applyPrefill() {
+      if (window.location.hash.replace(/^#/, "") !== "contact") return;
+      var form = document.querySelector("#contact .contact-form");
+      var ta = form && form.querySelector('textarea[name="message"]');
+      if (!ta) return;
+      var topic = null;
+      try {
+        topic = sessionStorage.getItem(KEY);
+      } catch (err) {}
+      if (!topic) return;
+      var prefix = "Press request: " + topic + "\n\n";
+      try {
+        sessionStorage.removeItem(KEY);
+      } catch (err) {}
+      var v = ta.value.trim();
+      if (!v) {
+        ta.value = prefix;
+      } else if (v.indexOf("Press request:") === -1) {
+        ta.value = prefix + ta.value;
+      }
+      ta.focus();
+    }
+
+    links.forEach(function (a) {
+      a.addEventListener("click", function () {
+        var t = a.getAttribute("data-press-topic");
+        if (!t) return;
+        try {
+          sessionStorage.setItem(KEY, t);
+        } catch (err) {}
+        window.setTimeout(function () {
+          applyPrefill();
+        }, 80);
+      });
+    });
+
+    window.addEventListener("hashchange", applyPrefill);
+    window.addEventListener("load", applyPrefill);
+  })();
 })();
