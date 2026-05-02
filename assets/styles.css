@@ -3138,18 +3138,6 @@ html[data-site-mode="press"] .hero__embed-more {
   color: rgba(148, 163, 184, 0.92);
 }
 
-.press-kit-grid--quick {
-  margin-bottom: 1rem;
-}
-
-@media (min-width: 640px) {
-  .press-kit-grid--quick li {
-    flex: 1 1 calc(33.333% - 0.5rem);
-    min-width: 9rem;
-    max-width: 14rem;
-  }
-}
-
 .press-kit-channels-intro {
   margin: 0 0 0.55rem;
   font-size: 0.88rem;
@@ -3214,29 +3202,6 @@ html[data-site-mode="press"] .hero__embed-more {
   min-width: 100%;
 }
 
-.press-kit-divider {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
-  gap: 0.45rem;
-  margin: 0 0 0.85rem;
-}
-
-.press-kit-divider-main {
-  font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: rgba(148, 163, 184, 0.88);
-}
-
-.press-kit-divider-sub {
-  font-size: 0.78rem;
-  font-weight: 500;
-  letter-spacing: 0.02em;
-  color: rgba(148, 163, 184, 0.65);
-}
-
 .press-kit-cta-primary {
   box-shadow:
     0 0 0 1px rgba(253, 230, 138, 0.18),
@@ -3244,46 +3209,16 @@ html[data-site-mode="press"] .hero__embed-more {
     0 0 52px rgba(56, 189, 248, 0.18);
 }
 
-.press-kit-quick-btn {
-  font-size: 0.76rem !important;
-  font-weight: 600 !important;
-  min-height: 2.38rem !important;
-  padding: 0.48rem 0.72rem !important;
-  color: rgba(226, 232, 240, 0.82) !important;
-  border-color: rgba(148, 163, 184, 0.22) !important;
-  background: rgba(6, 4, 14, 0.35) !important;
-}
-
-.press-kit-quick-btn:hover {
-  color: #fde68a !important;
-  border-color: rgba(253, 230, 138, 0.28) !important;
-}
-
 .press-kit-flow-note {
-  margin: -0.35rem 0 0;
+  margin: 0.25rem 0 0;
   font-size: 0.78rem;
   line-height: 1.45;
   color: rgba(148, 163, 184, 0.75);
   max-width: 36rem;
 }
 
-html[data-site-mode="press"] .press-kit-quick-btn {
-  background: rgba(255, 252, 247, 0.45) !important;
-  border-color: rgba(26, 24, 22, 0.12) !important;
-  color: #4a4540 !important;
-}
-
-html[data-site-mode="press"] .press-kit-quick-btn:hover {
-  color: var(--accent) !important;
-  border-color: rgba(110, 84, 32, 0.3) !important;
-}
-
 html[data-site-mode="press"] .press-kit-flow-note {
   color: #7a726a;
-}
-
-html[data-site-mode="press"] .press-kit-divider-sub {
-  color: #8a8278;
 }
 
 .press-kit-grid .btn {
