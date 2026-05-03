@@ -199,7 +199,8 @@
                   height="152"
                   style="border: 0; border-radius: 12px"
                   allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                  loading="eager"
+                  loading="lazy"
+                  fetchpriority="low"
                   referrerpolicy="strict-origin-when-cross-origin"
                 ></iframe>
               </div>
@@ -469,49 +470,81 @@
                 <em>You and I</em> (2021). Production context: <a href="#about">About</a>.
               </figcaption>
             </figure>
-            <article class="music-card">
-              <h3>Never Felt So Good <span>(2011)</span></h3>
-              <p>
-                Debut album (Cinematicworld Records): blues, rockabilly, and melodic rock — including
-                “Still In Love With You” with <strong>John Norum</strong> as a tribute to Gary Moore, plus guests such as
-                <strong>Ronni Le Tekrø</strong>. Fourteen tracks; stream above or expand the full listing.
-              </p>
-              <p class="music-card-hint">
-                <a href="https://havardpedersen.com/shop.html">CD &amp; digital</a>
-                ·
-                <a href="https://itunes.apple.com/no/album/never-felt-so-good/id438518141">Apple Music</a>
-              </p>
-              <details class="album-tracklist-details" open>
-                <summary class="album-tracklist-summary">Full album — 14 tracks</summary>
-                <ol class="tracklist-list tracklist-list--album">
-                  <li><span class="track-title">I Love The Sun</span></li>
-                  <li><span class="track-title">Just A Little Teardrop</span></li>
-                  <li><span class="track-title">Never Felt So Good</span></li>
-                  <li><span class="track-title">Our Song</span></li>
-                  <li><span class="track-title">Still In Love With You</span> <span class="track-note">feat. John Norum</span></li>
-                  <li><span class="track-title">The Black Eagle</span></li>
-                  <li><span class="track-title">Dudette</span></li>
-                  <li><span class="track-title">Sugarbabe</span></li>
-                  <li><span class="track-title">Mighty Bird</span></li>
-                  <li><span class="track-title">Make Believe</span></li>
-                  <li><span class="track-title">Northern Sky</span></li>
-                  <li><span class="track-title">Mobile Dreams</span></li>
-                  <li><span class="track-title">The Greatest Fan Of All</span></li>
-                  <li><span class="track-title">While My Guitar Gently Weeps</span></li>
-                </ol>
-              </details>
+            <article class="music-card music-card--with-cover">
+              <a
+                class="music-card-cover"
+                href="https://music.apple.com/no/album/never-felt-so-good/438518141"
+                aria-label="Never Felt So Good — open in Apple Music"
+              >
+                <img
+                  src="https://is1-ssl.mzstatic.com/image/thumb/Music/c1/a1/62/mzi.qytoprdk.jpg/600x600bb.jpg"
+                  width="600"
+                  height="600"
+                  alt="Never Felt So Good — album cover"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </a>
+              <div class="music-card__body">
+                <h3>Never Felt So Good <span>(2011)</span></h3>
+                <p>
+                  Debut album (Cinematicworld Records): blues, rockabilly, and melodic rock — including
+                  “Still In Love With You” with <strong>John Norum</strong> as a tribute to Gary Moore, plus guests such as
+                  <strong>Ronni Le Tekrø</strong>. Fourteen tracks; stream above or expand the full listing.
+                </p>
+                <p class="music-card-hint">
+                  <a href="https://havardpedersen.com/shop.html">CD &amp; digital</a>
+                  ·
+                  <a href="https://music.apple.com/no/album/never-felt-so-good/438518141">Apple Music</a>
+                </p>
+                <details class="album-tracklist-details" open>
+                  <summary class="album-tracklist-summary">Full album — 14 tracks</summary>
+                  <ol class="tracklist-list tracklist-list--album">
+                    <li><span class="track-title">I Love The Sun</span></li>
+                    <li><span class="track-title">Just A Little Teardrop</span></li>
+                    <li><span class="track-title">Never Felt So Good</span></li>
+                    <li><span class="track-title">Our Song</span></li>
+                    <li><span class="track-title">Still In Love With You</span> <span class="track-note">feat. John Norum</span></li>
+                    <li><span class="track-title">The Black Eagle</span></li>
+                    <li><span class="track-title">Dudette</span></li>
+                    <li><span class="track-title">Sugarbabe</span></li>
+                    <li><span class="track-title">Mighty Bird</span></li>
+                    <li><span class="track-title">Make Believe</span></li>
+                    <li><span class="track-title">Northern Sky</span></li>
+                    <li><span class="track-title">Mobile Dreams</span></li>
+                    <li><span class="track-title">The Greatest Fan Of All</span></li>
+                    <li><span class="track-title">While My Guitar Gently Weeps</span></li>
+                  </ol>
+                </details>
+              </div>
             </article>
-            <article class="music-card">
-              <h3>You and I <span>(2021)</span></h3>
-              <p>
-                Second studio chapter: life, pressure, love, and resilience — more direct and vulnerable, with a richer
-                guitar-and-vocal sound between blues and melodic rock.
-              </p>
-              <p class="music-card-hint">
-                <a href="https://open.spotify.com/artist/50PJ7UncEwx3fUxJ1LgZid">Spotify</a>
-                ·
-                <a href="https://music.apple.com/no/search?term=H%C3%A5vard%20Pedersen%20You%20and%20I">Apple Music</a>
-              </p>
+            <article class="music-card music-card--with-cover">
+              <a
+                class="music-card-cover"
+                href="https://music.apple.com/no/album/you-and-i/1553917917"
+                aria-label="You and I — open in Apple Music"
+              >
+                <img
+                  src="https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/6d/c2/cd/6dc2cd35-4eb8-92bf-ce1a-f1ecc83ef5c3/196006100919.jpg/600x600bb.jpg"
+                  width="600"
+                  height="600"
+                  alt="You and I — album cover"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </a>
+              <div class="music-card__body">
+                <h3>You and I <span>(2021)</span></h3>
+                <p>
+                  Second studio chapter: life, pressure, love, and resilience — more direct and vulnerable, with a richer
+                  guitar-and-vocal sound between blues and melodic rock.
+                </p>
+                <p class="music-card-hint">
+                  <a href="https://open.spotify.com/artist/50PJ7UncEwx3fUxJ1LgZid">Spotify</a>
+                  ·
+                  <a href="https://music.apple.com/no/album/you-and-i/1553917917">Apple Music</a>
+                </p>
+              </div>
             </article>
             <div class="music-tracklist-block">
               <p class="music-subtitle">

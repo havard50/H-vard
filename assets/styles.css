@@ -1412,6 +1412,45 @@ html[data-site-mode="press"] .about-visual-lead {
   padding: 1rem 1.1rem;
 }
 
+.music-card--with-cover {
+  display: grid;
+  gap: 1rem;
+  align-items: start;
+}
+
+@media (min-width: 520px) {
+  .music-card--with-cover {
+    grid-template-columns: minmax(120px, 168px) minmax(0, 1fr);
+    gap: 1.15rem;
+  }
+}
+
+.music-card-cover {
+  display: block;
+  margin: 0;
+  border-radius: calc(var(--radius) - 2px);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.28);
+  transition: border-color 0.15s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.music-card-cover:hover {
+  border-color: rgba(253, 230, 138, 0.35);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.38);
+  transform: translateY(-1px);
+}
+
+.music-card-cover img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.music-card__body {
+  min-width: 0;
+}
+
 .music-card h3 {
   margin: 0 0 0.4rem;
   font-size: 1.1rem;
@@ -2339,6 +2378,15 @@ html[data-site-mode="press"] .contact-elsewhere-list a {
 html[data-site-mode="press"] .gallery-group-label,
 html[data-site-mode="press"] .album-tracklist-summary {
   color: #6e5420;
+}
+
+html[data-site-mode="press"] .music-card-cover {
+  border-color: rgba(26, 24, 22, 0.12);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.06);
+}
+
+html[data-site-mode="press"] .music-card-cover:hover {
+  border-color: rgba(110, 84, 32, 0.32);
 }
 
 @media (max-width: 768px) {
