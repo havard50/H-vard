@@ -2891,6 +2891,10 @@ html[data-site-mode="press"] .album-tracklist-summary {
   color: var(--text-muted);
 }
 
+.footer-meta--secondary {
+  margin-top: 0.35rem;
+}
+
 .footer-meta a {
   color: #e8bc6a;
   text-decoration: none;
