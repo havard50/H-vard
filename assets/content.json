@@ -118,7 +118,7 @@
       "kicker": "Archive · UK radio",
       "title": "Blast Radio UK — WMGGW",
       "body": "Segment archived as MP3 on the legacy domain (February 26).",
-      "image": "/assets/images/archive-blast-radio-uk.png",
+      "image": "/assets/images/live-red-guitar.png",
       "imageAlt": "Håvard Pedersen — live on stage with red electric guitar",
       "imageFit": "cover",
       "audio": "https://havardpedersen.com/BlastRadioUK_WMGGW_Feb26th.mp3",
@@ -134,6 +134,9 @@
       "kicker": "Archive · UK radio",
       "title": "Hermitage FM — From Blues To Rock (2011)",
       "body": "Conversation with Jon Seymour plus a Mobile Dreams live spot — both archived on the legacy domain (MP3).",
+      "image": "/assets/images/havard-live-sunburst-semihollow.png",
+      "imageAlt": "Håvard Pedersen — live performance, semi-hollow guitar",
+      "imageFit": "cover",
       "audio": "https://havardpedersen.com/HermitageFM_interviewJune8.mp3",
       "links": [
         {
