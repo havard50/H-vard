@@ -19,12 +19,21 @@
     var archiveCount = Array.isArray(data.timelineArchive)
       ? data.timelineArchive.length
       : 0;
+    var interviewsCount = Array.isArray(data.recentInterviews)
+      ? data.recentInterviews.length
+      : 0;
     var liveCount = Array.isArray(data.live) ? data.live.length : 0;
     var storeCount = Array.isArray(data.store) ? data.store.length : 0;
     var videoCount = Array.isArray(data.videos) ? data.videos.length : 0;
     statsEl.innerHTML =
       "<li>Timeline items: " +
       timelineCount +
+      "</li>" +
+      "<li>Timeline archive: " +
+      archiveCount +
+      "</li>" +
+      "<li>Recent interviews: " +
+      interviewsCount +
       "</li>" +
       "<li>Live entries: " +
       liveCount +

@@ -31,23 +31,10 @@
       "links": [{ "label": "About sessions", "href": "#about" }]
     },
     {
-      "kicker": "Interviews · recent",
-      "title": "Press, podcasts & long-form conversations",
-      "body": "New interviews and media appearances are listed alongside releases — extended archive on the legacy site; clips also surface on YouTube and TikTok.",
-      "links": [
-        {
-          "label": "Interview archive",
-          "href": "https://havardpedersen.com/interviews.html"
-        },
-        {
-          "label": "YouTube — @havardhedde10",
-          "href": "https://www.youtube.com/@havardhedde10"
-        },
-        {
-          "label": "TikTok — @haavardhedde",
-          "href": "https://www.tiktok.com/@haavardhedde"
-        }
-      ]
+      "kicker": "Interviews",
+      "title": "Conversations & archive audio",
+      "body": "YouTube, short-form, and older radio — quick links in Recent interviews (same section, above the feed).",
+      "links": [{ "label": "Recent interviews", "href": "#recent-interviews" }]
     },
     {
       "kicker": "Social video",
@@ -69,6 +56,43 @@
       "kicker": "Press archive",
       "title": "Broadcast & print history",
       "body": "Regional TV, UK radio, and press artefacts stay documented — linked from Press and legacy pages."
+    }
+  ],
+  "recentInterviews": [
+    {
+      "kicker": "YouTube",
+      "title": "Long-form & channel hub",
+      "body": "Official YouTube is where longer performance pieces and sit-down style clips are published when they are ready.",
+      "links": [
+        { "label": "Channel — @havardhedde10", "href": "https://www.youtube.com/@havardhedde10" },
+        { "label": "Shorts", "href": "https://www.youtube.com/@havardhedde10/shorts" }
+      ]
+    },
+    {
+      "kicker": "TikTok & Instagram",
+      "title": "Candid & short-form",
+      "body": "Vertical clips and on-the-fly performance moments often land on TikTok and Reels first.",
+      "links": [
+        { "label": "TikTok @haavardhedde", "href": "https://www.tiktok.com/@haavardhedde" },
+        { "label": "Instagram @havardhedde", "href": "https://www.instagram.com/havardhedde" }
+      ]
+    },
+    {
+      "kicker": "Archive · UK radio",
+      "title": "Hermitage FM — From Blues To Rock (2011)",
+      "body": "Conversation with Jon Seymour — full audio archived on the legacy domain (MP3).",
+      "links": [
+        { "label": "Listen (MP3)", "href": "https://havardpedersen.com/HermitageFM_interviewJune8.mp3" }
+      ]
+    },
+    {
+      "kicker": "Press & print",
+      "title": "Broadcast, TV, and reviews",
+      "body": "Scan lists and review summaries on the legacy pages; the Press section on this site covers the core broadcast trail.",
+      "links": [
+        { "label": "Press (this site)", "href": "#press" },
+        { "label": "Reviews (legacy)", "href": "https://havardpedersen.com/reviews.html" }
+      ]
     }
   ],
   "live": [

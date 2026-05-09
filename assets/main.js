@@ -399,6 +399,7 @@
   (function initDynamicContent() {
     var timelineRoot = document.querySelector("#timeline-feed");
     var timelineArchiveRoot = document.querySelector("#timeline-archive-feed");
+    var interviewsRoot = document.querySelector("#interviews-feed");
     var liveRoot = document.querySelector("#live-gigs");
     var storeRoot = document.querySelector("#store-grid");
     var storeCheckoutStatus = document.querySelector("#store-checkout-status");
@@ -407,6 +408,7 @@
     if (
       !timelineRoot &&
       !timelineArchiveRoot &&
+      !interviewsRoot &&
       !liveRoot &&
       !storeRoot &&
       !videoRoot &&
@@ -492,6 +494,29 @@
           return timelineArticleHtml(item, true);
         })
         .join("");
+    }
+
+    function interviewCardHtml(item) {
+      if (!item) return "";
+      return (
+        '<article class="news-card interview-card">' +
+        '<p class="news-card-kicker">' +
+        esc(item.kicker) +
+        "</p>" +
+        '<h3 class="news-card-title">' +
+        esc(item.title) +
+        "</h3>" +
+        '<p class="news-card-text">' +
+        esc(item.body) +
+        "</p>" +
+        renderLinks(item.links, "news-card-links") +
+        "</article>"
+      );
+    }
+
+    function renderRecentInterviews(items) {
+      if (!interviewsRoot || !Array.isArray(items) || !items.length) return;
+      interviewsRoot.innerHTML = items.map(interviewCardHtml).join("");
     }
 
     function renderLive(items) {
@@ -673,6 +698,7 @@
         if (!data || typeof data !== "object") return;
         renderTimeline(data.timeline);
         renderTimelineArchive(data.timelineArchive);
+        renderRecentInterviews(data.recentInterviews);
         renderLive(data.live);
         renderStore(data.store, data.storeSettings);
         renderStoreStatus(data.storeSettings);

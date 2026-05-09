@@ -864,6 +864,40 @@ html[data-site-mode="press"] .about-visual-lead {
   text-decoration: underline;
 }
 
+.interviews-block {
+  margin-bottom: 2rem;
+}
+
+.interviews-heading {
+  margin: 0 0 0.35rem;
+  font-family: var(--font-display);
+  font-size: clamp(1.2rem, 2.5vw, 1.45rem);
+  font-weight: 400;
+  color: var(--text);
+}
+
+.interviews-lead {
+  margin: 0 0 1rem;
+  font-size: 0.94rem;
+}
+
+.interviews-grid {
+  gap: 1rem;
+}
+
+@media (min-width: 720px) {
+  .interviews-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.interview-card {
+  border-color: rgba(212, 168, 74, 0.28);
+  box-shadow:
+    0 14px 34px rgba(0, 0, 0, 0.26),
+    inset 0 1px 0 rgba(212, 168, 74, 0.06);
+}
+
 .timeline-card-media {
   margin: -1.25rem -1.35rem 0.85rem;
   border-radius: var(--radius) var(--radius) 0 0;
