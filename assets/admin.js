@@ -16,6 +16,9 @@
 
   function renderStats(data) {
     var timelineCount = Array.isArray(data.timeline) ? data.timeline.length : 0;
+    var archiveCount = Array.isArray(data.timelineArchive)
+      ? data.timelineArchive.length
+      : 0;
     var liveCount = Array.isArray(data.live) ? data.live.length : 0;
     var storeCount = Array.isArray(data.store) ? data.store.length : 0;
     var videoCount = Array.isArray(data.videos) ? data.videos.length : 0;
@@ -47,7 +50,7 @@
   }
 
   function loadCurrent() {
-    fetch("assets/content.json", { cache: "no-store" })
+    fetch("/assets/content.json", { cache: "no-store" })
       .then(function (res) {
         if (!res.ok) throw new Error("Could not load assets/content.json");
         return res.json();

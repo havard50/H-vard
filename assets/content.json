@@ -1,6 +1,20 @@
 {
   "timeline": [
     {
+      "kicker": "Live · 2026",
+      "title": "Tour routing & poster",
+      "body": "Confirmed festival and club dates appear here when announced. Holds and routing for promoters run through Gigplanet.",
+      "image": "/assets/images/tour-poster-2025.png",
+      "imageAlt": "Tour poster — 2026 live routing graphic",
+      "links": [
+        {
+          "label": "Gigplanet",
+          "href": "https://www.gigplanet.no/band/havard-pedersen-and-the-blues-is-alright-band"
+        },
+        { "label": "Live & touring", "href": "#live" }
+      ]
+    },
+    {
       "kicker": "Release · 2025",
       "title": "New single: Det sku bli oss",
       "body": "Out now on streaming platforms. Hear it under Music and watch the official clip under Video.",
@@ -11,20 +25,15 @@
       "featured": true
     },
     {
-      "kicker": "Touring · 2026",
-      "title": "Booking open for festivals and venues",
-      "body": "Routing and holds are coordinated through Gigplanet for promoters and agents.",
-      "links": [
-        {
-          "label": "Gigplanet",
-          "href": "https://www.gigplanet.no/band/havard-pedersen-and-the-blues-is-alright-band"
-        }
-      ]
+      "kicker": "Studio",
+      "title": "Album sessions underway",
+      "body": "Recording with Peter Michelsen at The Norwegian Sound, Mjøndalen. Credits and context: About.",
+      "links": [{ "label": "About sessions", "href": "#about" }]
     },
     {
       "kicker": "Interviews · recent",
       "title": "Press, podcasts & long-form conversations",
-      "body": "New interviews and media appearances are listed alongside releases — extended archive on the legacy site; clips and conversations also surface on YouTube and TikTok.",
+      "body": "New interviews and media appearances are listed alongside releases — extended archive on the legacy site; clips also surface on YouTube and TikTok.",
       "links": [
         {
           "label": "Interview archive",
@@ -41,12 +50,6 @@
       ]
     },
     {
-      "kicker": "Studio",
-      "title": "Album sessions underway",
-      "body": "Recording with Peter Michelsen at The Norwegian Sound, Mjøndalen. Credits and context: About.",
-      "links": [{ "label": "About sessions", "href": "#about" }]
-    },
-    {
       "kicker": "Social video",
       "title": "Short-form clips",
       "body": "Performance edits and promo reels publish first on TikTok (@haavardhedde) and YouTube Shorts (@havardhedde10).",
@@ -54,7 +57,9 @@
         { "label": "TikTok — @haavardhedde", "href": "https://www.tiktok.com/@haavardhedde" },
         { "label": "YouTube Shorts — @havardhedde10", "href": "https://www.youtube.com/@havardhedde10/shorts" }
       ]
-    },
+    }
+  ],
+  "timelineArchive": [
     {
       "kicker": "Archive · 2011",
       "title": "Never Felt So Good",
@@ -69,7 +74,7 @@
   "live": [
     {
       "date": "TBA",
-      "meta": "2026 routing ongoing — confirmed shows appear here"
+      "meta": "2026 routing ongoing — confirmed shows appear here and in News"
     }
   ],
   "store": [
@@ -129,8 +134,8 @@
     "helpText": ""
   },
   "heroBackground": {
-    "caption": "Background: full trio live — wider stage shot (February 2025). Edit youtubeId in content.json to swap (try zEXcH3lHjls for the official MV).",
-    "youtubeId": "i8fR9-sAvPM"
+    "caption": "Background: solo live guitar — February 2025 (swap youtubeId in content.json if needed).",
+    "youtubeId": "hwxs4sBNwp0"
   },
   "videos": [
     {

@@ -279,12 +279,21 @@
 
   (function initDynamicContent() {
     var timelineRoot = document.querySelector("#timeline-feed");
+    var timelineArchiveRoot = document.querySelector("#timeline-archive-feed");
     var liveRoot = document.querySelector("#live-gigs");
     var storeRoot = document.querySelector("#store-grid");
     var storeCheckoutStatus = document.querySelector("#store-checkout-status");
     var videoRoot = document.querySelector("#video-feed");
     var partnersRoot = document.querySelector("#partners-grid");
-    if (!timelineRoot && !liveRoot && !storeRoot && !videoRoot && !partnersRoot) return;
+    if (
+      !timelineRoot &&
+      !timelineArchiveRoot &&
+      !liveRoot &&
+      !storeRoot &&
+      !videoRoot &&
+      !partnersRoot
+    )
+      return;
 
     function esc(value) {
       return String(value || "")
@@ -313,27 +322,55 @@
       return '<p class="' + className + '">' + items.join(" · ") + "</p>";
     }
 
+    function timelineArticleHtml(item, archiveVariant) {
+      if (!item) return "";
+      var featuredClass = item.featured ? " timeline-card--release" : "";
+      var archiveClass = archiveVariant ? " timeline-card--archive" : "";
+      var media = "";
+      if (item.image) {
+        media =
+          '<div class="timeline-card-media">' +
+          '<img src="' +
+          esc(item.image) +
+          '" alt="' +
+          esc(item.imageAlt || "") +
+          '" loading="lazy" decoding="async" />' +
+          "</div>";
+      }
+      return (
+        '<article class="news-card timeline-card' +
+        featuredClass +
+        archiveClass +
+        '">' +
+        media +
+        '<p class="news-card-kicker">' +
+        esc(item.kicker) +
+        "</p>" +
+        '<h3 class="news-card-title">' +
+        esc(item.title) +
+        "</h3>" +
+        '<p class="news-card-text">' +
+        esc(item.body) +
+        "</p>" +
+        renderLinks(item.links, "news-card-links") +
+        "</article>"
+      );
+    }
+
     function renderTimeline(items) {
       if (!timelineRoot || !Array.isArray(items) || !items.length) return;
       timelineRoot.innerHTML = items
         .map(function (item) {
-          var featuredClass = item && item.featured ? " timeline-card--release" : "";
-          return (
-            '<article class="news-card timeline-card' +
-            featuredClass +
-            '">' +
-            '<p class="news-card-kicker">' +
-            esc(item.kicker) +
-            "</p>" +
-            '<h3 class="news-card-title">' +
-            esc(item.title) +
-            "</h3>" +
-            '<p class="news-card-text">' +
-            esc(item.body) +
-            "</p>" +
-            renderLinks(item.links, "news-card-links") +
-            "</article>"
-          );
+          return timelineArticleHtml(item, false);
+        })
+        .join("");
+    }
+
+    function renderTimelineArchive(items) {
+      if (!timelineArchiveRoot || !Array.isArray(items) || !items.length) return;
+      timelineArchiveRoot.innerHTML = items
+        .map(function (item) {
+          return timelineArticleHtml(item, true);
         })
         .join("");
     }
@@ -508,7 +545,7 @@
         .join("");
     }
 
-    fetch("assets/content.json", { cache: "no-store" })
+    fetch("/assets/content.json", { cache: "no-store" })
       .then(function (res) {
         if (!res.ok) throw new Error("Content fetch failed");
         return res.json();
@@ -516,6 +553,7 @@
       .then(function (data) {
         if (!data || typeof data !== "object") return;
         renderTimeline(data.timeline);
+        renderTimelineArchive(data.timelineArchive);
         renderLive(data.live);
         renderStore(data.store, data.storeSettings);
         renderStoreStatus(data.storeSettings);
