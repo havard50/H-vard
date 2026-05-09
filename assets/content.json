@@ -81,5 +81,29 @@
       "body": "Merch and selected limited drops are being staged for launch.",
       "links": [{ "label": "Request updates", "href": "#contact" }]
     }
+  ],
+  "videos": [
+    {
+      "youtubeId": "i8fR9-sAvPM",
+      "title": "Håvard Pedersen & The Blues Is Alright Band — February 2025",
+      "caption": "The Blues Is Alright Band — live, February 2025"
+    },
+    {
+      "youtubeId": "hwxs4sBNwp0",
+      "title": "Håvard Pedersen — live clips, February 2025",
+      "caption": "Live stage clips — February 2025"
+    },
+    {
+      "youtubeId": "zEXcH3lHjls",
+      "title": "Det sku bli oss — Håvard Pedersen",
+      "caption": "Det sku bli oss — official video"
+    },
+    {
+      "archiveCard": true,
+      "kicker": "Short-form",
+      "title": "Reels and Shorts updates",
+      "body": "New vertical edits are published to social channels first, then selected clips land here.",
+      "href": "https://www.youtube.com/@havardhedde10/shorts"
+    }
   ]
 }

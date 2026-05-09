@@ -345,7 +345,8 @@
     var timelineRoot = document.querySelector("#timeline-feed");
     var liveRoot = document.querySelector("#live-gigs");
     var storeRoot = document.querySelector("#store-grid");
-    if (!timelineRoot && !liveRoot && !storeRoot) return;
+    var videoRoot = document.querySelector("#video-feed");
+    if (!timelineRoot && !liveRoot && !storeRoot && !videoRoot) return;
 
     function esc(value) {
       return String(value || "")
@@ -439,6 +440,49 @@
         .join("");
     }
 
+    function renderVideos(items) {
+      if (!videoRoot || !Array.isArray(items) || !items.length) return;
+      videoRoot.innerHTML = items
+        .map(function (item) {
+          if (item && item.archiveCard) {
+            return (
+              '<div class="music-video-card music-video-card--archive">' +
+              '<a class="music-video-archive-link" href="' +
+              esc(item.href || "#videos") +
+              '">' +
+              '<span class="music-video-archive-kicker">' +
+              esc(item.kicker) +
+              "</span>" +
+              '<strong class="music-video-archive-title">' +
+              esc(item.title) +
+              "</strong>" +
+              '<span class="music-video-archive-deck">' +
+              esc(item.body) +
+              "</span>" +
+              "</a>" +
+              "</div>"
+            );
+          }
+          if (!item || !item.youtubeId || !YT_ID.test(item.youtubeId)) return "";
+          return (
+            '<div class="music-video-card">' +
+            '<div class="music-video-embed">' +
+            '<iframe src="https://www.youtube-nocookie.com/embed/' +
+            esc(item.youtubeId) +
+            '?rel=0&modestbranding=1" title="' +
+            esc(item.title || "YouTube video") +
+            '" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="encrypted-media; picture-in-picture; fullscreen"></iframe>' +
+            "</div>" +
+            '<p class="music-video-caption">' +
+            esc(item.caption || "") +
+            "</p>" +
+            "</div>"
+          );
+        })
+        .filter(Boolean)
+        .join("");
+    }
+
     fetch("assets/content.json", { cache: "no-store" })
       .then(function (res) {
         if (!res.ok) throw new Error("Content fetch failed");
@@ -449,6 +493,7 @@
         renderTimeline(data.timeline);
         renderLive(data.live);
         renderStore(data.store);
+        renderVideos(data.videos);
       })
       .catch(function () {
         // Keep static fallback content if JSON is unavailable.
