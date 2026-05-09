@@ -60,6 +60,8 @@
       "body": "Never Felt So Good, You and I, and singles. Order and stream links in one place.",
       "status": "Live now",
       "priceFrom": "from NOK 149",
+      "checkoutLabel": "Buy now",
+      "checkoutLink": "",
       "links": [
         { "label": "Store and CDs", "href": "https://havardpedersen.com/shop.html" },
         { "label": "Spotify", "href": "https://open.spotify.com/artist/50PJ7UncEwx3fUxJ1LgZid" }
@@ -72,6 +74,8 @@
       "body": "For venues, festivals, and routing requests.",
       "status": "Booking open",
       "priceFrom": "quote on request",
+      "checkoutLabel": "Reserve ticket",
+      "checkoutLink": "",
       "links": [
         {
           "label": "Gigplanet",
@@ -90,6 +94,8 @@
       "body": "Merch and selected limited drops are being staged for launch.",
       "status": "Coming soon",
       "priceFrom": "TBA",
+      "checkoutLabel": "Checkout soon",
+      "checkoutLink": "",
       "links": [{ "label": "Request updates", "href": "#contact" }],
       "primaryAction": { "label": "Join waitlist", "href": "#contact" }
     },
@@ -99,10 +105,18 @@
       "body": "Available as a separate collection when enabled, without changing the music-first brand identity.",
       "status": "Optional extension",
       "priceFrom": "pilot phase",
+      "checkoutLabel": "Enable category",
+      "checkoutLink": "",
       "links": [{ "label": "Business inquiries", "href": "#contact" }],
       "primaryAction": { "label": "Discuss category", "href": "#contact" }
     }
   ],
+  "storeSettings": {
+    "checkoutEnabled": false,
+    "provider": "Stripe Payment Links",
+    "statusText": "Checkout not live yet. Activate payment links when ready.",
+    "helpText": "When enabled, each product card can use checkoutLink directly from this file."
+  },
   "videos": [
     {
       "youtubeId": "i8fR9-sAvPM",

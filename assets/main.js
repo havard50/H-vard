@@ -345,6 +345,7 @@
     var timelineRoot = document.querySelector("#timeline-feed");
     var liveRoot = document.querySelector("#live-gigs");
     var storeRoot = document.querySelector("#store-grid");
+    var storeCheckoutStatus = document.querySelector("#store-checkout-status");
     var videoRoot = document.querySelector("#video-feed");
     if (!timelineRoot && !liveRoot && !storeRoot && !videoRoot) return;
 
@@ -418,8 +419,10 @@
         .join("");
     }
 
-    function renderStore(items) {
+    function renderStore(items, storeSettings) {
       if (!storeRoot || !Array.isArray(items) || !items.length) return;
+      var checkoutEnabled = !!(storeSettings && storeSettings.checkoutEnabled);
+      var provider = (storeSettings && storeSettings.provider) || "Checkout";
       storeRoot.innerHTML = items
         .map(function (item) {
           var primaryAction = item && item.primaryAction && item.primaryAction.href && item.primaryAction.label
@@ -437,6 +440,26 @@
               (item.priceFrom ? '<span class="store-card__price">' + esc(item.priceFrom) + "</span>" : "") +
               "</p>";
           }
+          var checkoutAction = "";
+          if (item && item.checkoutLabel) {
+            if (checkoutEnabled && item.checkoutLink) {
+              checkoutAction =
+                '<a class="btn btn-ghost btn--compact store-card__checkout" href="' +
+                esc(item.checkoutLink) +
+                '">' +
+                esc(item.checkoutLabel) +
+                " (" +
+                esc(provider) +
+                ")" +
+                "</a>";
+            } else {
+              checkoutAction =
+                '<span class="store-card__checkout-disabled">' +
+                esc(item.checkoutLabel) +
+                " unavailable" +
+                "</span>";
+            }
+          }
           return (
             '<article class="news-card store-card">' +
             '<p class="news-card-kicker">' +
@@ -450,11 +473,29 @@
             "</p>" +
             meta +
             primaryAction +
+            checkoutAction +
             renderLinks(item.links, "news-card-links") +
             "</article>"
           );
         })
         .join("");
+    }
+
+    function renderStoreStatus(storeSettings) {
+      if (!storeCheckoutStatus) return;
+      if (!storeSettings || typeof storeSettings !== "object") return;
+      var provider = esc(storeSettings.provider || "payment links");
+      var statusText = esc(storeSettings.statusText || "Checkout status not set.");
+      var helpText = storeSettings.helpText
+        ? '<span class="store-checkout-help">' + esc(storeSettings.helpText) + "</span>"
+        : "";
+      storeCheckoutStatus.innerHTML =
+        '<strong>Checkout mode:</strong> ' +
+        statusText +
+        " <span class=\"store-checkout-provider\">(" +
+        provider +
+        ")</span> " +
+        helpText;
     }
 
     function renderVideos(items) {
@@ -509,7 +550,8 @@
         if (!data || typeof data !== "object") return;
         renderTimeline(data.timeline);
         renderLive(data.live);
-        renderStore(data.store);
+        renderStore(data.store, data.storeSettings);
+        renderStoreStatus(data.storeSettings);
         renderVideos(data.videos);
       })
       .catch(function () {

@@ -969,6 +969,21 @@ html[data-site-mode="press"] .about-visual-lead {
   color: rgba(148, 163, 184, 0.82);
 }
 
+.store-checkout-status {
+  margin: -0.45rem 0 1rem;
+  font-size: 0.79rem;
+  line-height: 1.5;
+  color: rgba(148, 163, 184, 0.92);
+}
+
+.store-checkout-provider {
+  color: #fde68a;
+}
+
+.store-checkout-help {
+  color: rgba(148, 163, 184, 0.75);
+}
+
 .store-card__meta {
   margin: 0.72rem 0 0;
   display: flex;
@@ -1000,6 +1015,23 @@ html[data-site-mode="press"] .about-visual-lead {
 
 .store-card__action {
   margin-top: 0.72rem;
+}
+
+.store-card__checkout {
+  margin-top: 0.52rem;
+}
+
+.store-card__checkout-disabled {
+  margin-top: 0.52rem;
+  display: inline-flex;
+  align-items: center;
+  padding: 0.28rem 0.52rem;
+  border-radius: 999px;
+  font-size: 0.73rem;
+  font-weight: 600;
+  border: 1px dashed rgba(148, 163, 184, 0.28);
+  color: rgba(148, 163, 184, 0.85);
+  background: rgba(15, 23, 42, 0.2);
 }
 
 .listen-now-row {
