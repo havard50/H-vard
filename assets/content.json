@@ -37,8 +37,8 @@
       "title": "Album sessions — vocal day",
       "body": "Tracking at The Norwegian Sound with Peter Michelsen. Stills and cleared reel clips land here; raw moments on Shorts/TikTok first.",
       "published": "2026-05-07",
-      "image": "/assets/images/studio-white-falcon-wide.png",
-      "imageAlt": "Håvard Pedersen — studio with Gretsch White Falcon",
+      "image": "/assets/images/cinematic-gretsch.png",
+      "imageAlt": "Håvard Pedersen — cinematic studio still with Gretsch guitar",
       "links": [
         { "label": "About / sessions", "href": "#about" },
         { "label": "Video", "href": "#videos" }
@@ -64,8 +64,6 @@
       "title": "April 2026 — live poster refresh",
       "body": "Routing graphic refreshed for spring holds — on-sale rows will mirror this card once dates are public.",
       "published": "2026-04-25",
-      "image": "/assets/images/tour-poster-2025.png",
-      "imageAlt": "Tour poster — 2026 routing (spring refresh)",
       "links": [
         { "label": "Open poster (PNG)", "href": "/assets/images/tour-poster-2025.png" },
         { "label": "Gigplanet", "href": "https://www.gigplanet.no/band/havard-pedersen-and-the-blues-is-alright-band" }
@@ -171,8 +169,8 @@
       "kicker": "Archive · UK radio",
       "title": "Hermitage FM — From Blues To Rock (2011)",
       "body": "Conversation with Jon Seymour plus a Mobile Dreams live spot — both archived on the legacy domain (MP3).",
-      "image": "/assets/images/havard-live-sunburst-semihollow.png",
-      "imageAlt": "Håvard Pedersen — live on stage, semi-hollow guitar (Hermitage FM archive)",
+      "image": "/assets/images/havard-live-bw-semihollow.png",
+      "imageAlt": "Håvard Pedersen — live black & white, semi-hollow guitar (Hermitage FM archive)",
       "imageFit": "cover",
       "audio": "https://havardpedersen.com/HermitageFM_interviewJune8.mp3",
       "links": [
@@ -255,8 +253,8 @@
       "kicker": "Albums",
       "title": "Never Felt So Good · You and I",
       "body": "Full catalogue on streaming; physical CDs coordinated by email until online checkout is available.",
-      "previewImage": "/assets/images/havard-live-sunburst-semihollow.png",
-      "previewAlt": "Håvard Pedersen — live performance still",
+      "previewImage": "https://is1-ssl.mzstatic.com/image/thumb/Music/c1/a1/62/mzi.qytoprdk.jpg/600x600bb.jpg",
+      "previewAlt": "Never Felt So Good — album artwork",
       "status": "Catalogue",
       "priceFrom": "Streaming · enquire for CDs",
       "links": [
@@ -311,8 +309,8 @@
       "kicker": "Seafood & partners",
       "title": "Holmen & Robertsen range",
       "body": "Non-music partner line — listing and checkout when agreed. Collaboration note under Partners.",
-      "previewImage": "/assets/images/studio-white-falcon-wide.png",
-      "previewAlt": "Partner spotlight — Holmen & Robertsen",
+      "previewImage": "/assets/images/promo-raa-ekte-live.png",
+      "previewAlt": "Rå Ekte Live — stage branding (partner enquiries)",
       "status": "On request",
       "priceFrom": "—",
       "links": [
