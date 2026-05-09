@@ -129,9 +129,11 @@
     "helpText": ""
   },
   "heroBackground": {
-    "caption": "Background: monochrome ambient loop from the live club photo (generated from still). Watch full clips under Video; Shorts on YouTube & TikTok.",
+    "caption": "Background: rotating live clips with Håvard & The Blues Is Alright Band — graded cooler / lower saturation so stage reds don’t overwhelm. Full clips under Video.",
+    "youtubeIds": ["i8fR9-sAvPM", "hwxs4sBNwp0", "zEXcH3lHjls"],
     "posterSrc": "assets/images/havard-live-bw-semihollow.png",
-    "ambientMp4": "assets/videos/hero-live-bw-loop.mp4"
+    "ambientMp4": "assets/videos/hero-live-bw-loop.mp4",
+    "rotateMs": 16000
   },
   "videos": [
     {

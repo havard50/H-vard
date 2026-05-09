@@ -2692,8 +2692,13 @@ html[data-site-mode="press"] .music-card-cover:hover {
   overflow: hidden;
 }
 
-.hero__video-wrap--ambient-only {
+.hero__video-wrap--band {
   background: #050506;
+}
+
+/* Ambient MP4: subtle monochrome bed under live clips */
+.hero__video-wrap--band .hero__ambient-video {
+  opacity: 0.26;
 }
 
 .hero__ambient-video {
@@ -2708,8 +2713,28 @@ html[data-site-mode="press"] .music-card-cover:hover {
   pointer-events: none;
 }
 
-.hero--modern .hero__ambient-video {
-  opacity: 1;
+/* Live band footage — CSS grade pulls red wash toward steel / blue-grey */
+.hero-video-frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: max(110vw, 220vh);
+  height: max(110vh, 220vw);
+  transform: translate(-50%, -50%);
+  border: 0;
+  z-index: 2;
+  pointer-events: none;
+  opacity: 0.56;
+  filter: saturate(0.36) contrast(1.09) hue-rotate(-26deg) brightness(0.93);
+  transition: opacity 0.85s ease;
+}
+
+.hero-video-frame.is-fading {
+  opacity: 0.28;
+}
+
+.hero.hero--modern .hero__video-wrap--band .hero-video-frame {
+  opacity: 0.54;
 }
 
 /* Neutral dark scrim — no colored gel on the B&W wallpaper */
@@ -2746,6 +2771,12 @@ html[data-site-mode="press"] .music-card-cover:hover {
 
   .hero__ambient-video {
     object-position: center 32%;
+    opacity: 0.72;
+  }
+
+  .hero.hero--modern .hero__video-wrap--band .hero-video-frame {
+    opacity: 0.1;
+    filter: saturate(0.22) grayscale(0.45) contrast(1.05);
   }
 }
 
@@ -3076,6 +3107,11 @@ html[data-site-mode="press"] .music-card-cover:hover {
     object-position: center 26%;
   }
 
+  .hero.hero--modern .hero__video-wrap--band .hero-video-frame {
+    opacity: 0.48;
+    filter: saturate(0.32) contrast(1.08) hue-rotate(-24deg) brightness(0.92);
+  }
+
   .hero__scrim {
     background:
       linear-gradient(180deg, rgba(5, 5, 6, 0.06) 0%, rgba(5, 5, 6, 0.02) 40%, rgba(4, 4, 5, 0.32) 68%, rgba(2, 2, 3, 0.55) 100%),
@@ -3086,12 +3122,6 @@ html[data-site-mode="press"] .music-card-cover:hover {
     margin-left: auto;
     margin-right: auto;
     max-width: min(36rem, 100%);
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .hero--modern .hero__ambient-video {
-    opacity: 1;
   }
 }
 
@@ -3272,6 +3302,11 @@ html[data-site-mode="press"] .hero--modern .hero__scrim {
 html[data-site-mode="press"] .hero__ambient-video {
   object-position: center 30%;
   filter: grayscale(1) contrast(1.05) brightness(1.02);
+}
+
+html[data-site-mode="press"] .hero.hero--modern .hero__video-wrap--band .hero-video-frame {
+  opacity: 0.4;
+  filter: saturate(0.26) contrast(1.06) hue-rotate(-22deg) brightness(0.95);
 }
 
 html[data-site-mode="press"] .hero__inner {
