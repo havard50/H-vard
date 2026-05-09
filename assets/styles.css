@@ -1034,6 +1034,23 @@ html[data-site-mode="press"] .about-visual-lead {
   background: rgba(15, 23, 42, 0.2);
 }
 
+.partner-card .news-card-title {
+  margin-bottom: 0.42rem;
+}
+
+.partner-tag {
+  margin-top: 0.65rem;
+  display: inline-flex;
+  align-items: center;
+  padding: 0.24rem 0.5rem;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: #a5f3fc;
+  border: 1px solid rgba(56, 189, 248, 0.24);
+  background: rgba(8, 6, 18, 0.45);
+}
+
 .listen-now-row {
   display: flex;
   flex-wrap: wrap;

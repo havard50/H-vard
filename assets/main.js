@@ -347,7 +347,8 @@
     var storeRoot = document.querySelector("#store-grid");
     var storeCheckoutStatus = document.querySelector("#store-checkout-status");
     var videoRoot = document.querySelector("#video-feed");
-    if (!timelineRoot && !liveRoot && !storeRoot && !videoRoot) return;
+    var partnersRoot = document.querySelector("#partners-grid");
+    if (!timelineRoot && !liveRoot && !storeRoot && !videoRoot && !partnersRoot) return;
 
     function esc(value) {
       return String(value || "")
@@ -541,6 +542,37 @@
         .join("");
     }
 
+    function renderPartners(items) {
+      if (!partnersRoot || !Array.isArray(items) || !items.length) return;
+      partnersRoot.innerHTML = items
+        .map(function (item) {
+          var link = item && item.website
+            ? '<p class="news-card-links"><a href="' +
+              esc(item.website) +
+              '">Visit website</a></p>'
+            : "";
+          var tag = item && item.tag
+            ? '<span class="partner-tag">' + esc(item.tag) + "</span>"
+            : "";
+          return (
+            '<article class="news-card partner-card">' +
+            '<p class="news-card-kicker">' +
+            esc(item.kicker || "Partner") +
+            "</p>" +
+            '<h3 class="news-card-title">' +
+            esc(item.name || "") +
+            "</h3>" +
+            '<p class="news-card-text">' +
+            esc(item.description || "") +
+            "</p>" +
+            tag +
+            link +
+            "</article>"
+          );
+        })
+        .join("");
+    }
+
     fetch("assets/content.json", { cache: "no-store" })
       .then(function (res) {
         if (!res.ok) throw new Error("Content fetch failed");
@@ -553,6 +585,7 @@
         renderStore(data.store, data.storeSettings);
         renderStoreStatus(data.storeSettings);
         renderVideos(data.videos);
+        renderPartners(data.partners);
       })
       .catch(function () {
         // Keep static fallback content if JSON is unavailable.

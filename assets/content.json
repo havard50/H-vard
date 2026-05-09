@@ -140,5 +140,21 @@
       "body": "New vertical edits are published to social channels first, then selected clips land here.",
       "href": "https://www.youtube.com/@havardhedde10/shorts"
     }
+  ],
+  "partners": [
+    {
+      "kicker": "Supported by",
+      "name": "Holmen and Robertsen Seafood",
+      "description": "Partner and collaboration support. Artist branding remains music-first.",
+      "website": "https://www.holmenrobertsen.no/",
+      "tag": "Sponsor"
+    },
+    {
+      "kicker": "Studio collaboration",
+      "name": "The Norwegian Sound",
+      "description": "Recording sessions and production context connected to current album work.",
+      "website": "https://www.thenorwegiansound.com/",
+      "tag": "Studio"
+    }
   ]
 }
