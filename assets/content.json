@@ -58,34 +58,49 @@
       "kicker": "Music",
       "title": "CD and digital catalogue",
       "body": "Never Felt So Good, You and I, and singles. Order and stream links in one place.",
+      "status": "Live now",
+      "priceFrom": "from NOK 149",
       "links": [
         { "label": "Store and CDs", "href": "https://havardpedersen.com/shop.html" },
         { "label": "Spotify", "href": "https://open.spotify.com/artist/50PJ7UncEwx3fUxJ1LgZid" }
-      ]
+      ],
+      "primaryAction": { "label": "Open music store", "href": "https://havardpedersen.com/shop.html" }
     },
     {
       "kicker": "Tickets",
       "title": "Concert booking and holds",
       "body": "For venues, festivals, and routing requests.",
+      "status": "Booking open",
+      "priceFrom": "quote on request",
       "links": [
         {
           "label": "Gigplanet",
           "href": "https://www.gigplanet.no/band/havard-pedersen-and-the-blues-is-alright-band"
         },
         { "label": "Contact", "href": "#contact" }
-      ]
+      ],
+      "primaryAction": {
+        "label": "Request hold",
+        "href": "https://www.gigplanet.no/band/havard-pedersen-and-the-blues-is-alright-band"
+      }
     },
     {
       "kicker": "Merch and drops",
       "title": "Merch, vinyl, and special products",
       "body": "Merch and selected limited drops are being staged for launch.",
-      "links": [{ "label": "Request updates", "href": "#contact" }]
+      "status": "Coming soon",
+      "priceFrom": "TBA",
+      "links": [{ "label": "Request updates", "href": "#contact" }],
+      "primaryAction": { "label": "Join waitlist", "href": "#contact" }
     },
     {
       "kicker": "Optional category",
       "title": "Seafood products and side offerings",
       "body": "Available as a separate collection when enabled, without changing the music-first brand identity.",
-      "links": [{ "label": "Business inquiries", "href": "#contact" }]
+      "status": "Optional extension",
+      "priceFrom": "pilot phase",
+      "links": [{ "label": "Business inquiries", "href": "#contact" }],
+      "primaryAction": { "label": "Discuss category", "href": "#contact" }
     }
   ],
   "videos": [

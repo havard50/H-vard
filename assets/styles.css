@@ -962,6 +962,46 @@ html[data-site-mode="press"] .about-visual-lead {
   color: var(--text-muted);
 }
 
+.store-payments {
+  margin: -0.35rem 0 1rem;
+  font-size: 0.8rem;
+  line-height: 1.45;
+  color: rgba(148, 163, 184, 0.82);
+}
+
+.store-card__meta {
+  margin: 0.72rem 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 0.6rem;
+}
+
+.store-card__status,
+.store-card__price {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.26rem 0.5rem;
+  border-radius: 999px;
+  font-size: 0.73rem;
+  font-weight: 600;
+}
+
+.store-card__status {
+  background: rgba(56, 189, 248, 0.14);
+  color: #a5f3fc;
+  border: 1px solid rgba(56, 189, 248, 0.24);
+}
+
+.store-card__price {
+  background: rgba(253, 230, 138, 0.12);
+  color: #fde68a;
+  border: 1px solid rgba(253, 230, 138, 0.24);
+}
+
+.store-card__action {
+  margin-top: 0.72rem;
+}
+
 .listen-now-row {
   display: flex;
   flex-wrap: wrap;

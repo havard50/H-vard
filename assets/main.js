@@ -422,6 +422,21 @@
       if (!storeRoot || !Array.isArray(items) || !items.length) return;
       storeRoot.innerHTML = items
         .map(function (item) {
+          var primaryAction = item && item.primaryAction && item.primaryAction.href && item.primaryAction.label
+            ? '<a class="btn btn-primary btn--compact store-card__action" href="' +
+              esc(item.primaryAction.href) +
+              '">' +
+              esc(item.primaryAction.label) +
+              "</a>"
+            : "";
+          var meta = "";
+          if (item && (item.status || item.priceFrom)) {
+            meta =
+              '<p class="store-card__meta">' +
+              (item.status ? '<span class="store-card__status">' + esc(item.status) + "</span>" : "") +
+              (item.priceFrom ? '<span class="store-card__price">' + esc(item.priceFrom) + "</span>" : "") +
+              "</p>";
+          }
           return (
             '<article class="news-card store-card">' +
             '<p class="news-card-kicker">' +
@@ -433,6 +448,8 @@
             '<p class="news-card-text">' +
             esc(item.body) +
             "</p>" +
+            meta +
+            primaryAction +
             renderLinks(item.links, "news-card-links") +
             "</article>"
           );
