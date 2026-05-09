@@ -2666,7 +2666,7 @@ html[data-site-mode="press"] .music-card-cover:hover {
   overflow: hidden;
 }
 
-/* Social hero: YouTube embed (@havardhedde10) over Ken Burns poster fallback */
+/* Social hero: YouTube (@havardhedde10) over ambient MP4 (photo → FFmpeg zoom loop) */
 .hero__video-wrap--social .hero-video-frame {
   z-index: 2;
 }
@@ -2675,32 +2675,19 @@ html[data-site-mode="press"] .music-card-cover:hover {
   opacity: 0.62;
 }
 
-/* Poster layer: slow zoom / drift loop — visible under iframe & during cross-fades */
-.hero__motion-bg {
+.hero__ambient-video {
   position: absolute;
-  inset: -8%;
-  width: 116%;
-  height: 116%;
-  max-width: none;
+  inset: 0;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
   object-position: center 34%;
   z-index: 0;
   filter: saturate(1.02) contrast(1.08);
-  transform-origin: 47% 38%;
-  will-change: transform;
-  animation: heroMotionKenBurns 34s ease-in-out infinite alternate;
+  pointer-events: none;
 }
 
-@keyframes heroMotionKenBurns {
-  0% {
-    transform: scale(1.02) translate3d(1%, 0, 0);
-  }
-  100% {
-    transform: scale(1.13) translate3d(-2.6%, -1.4%, 0);
-  }
-}
-
-.hero--modern .hero__motion-bg {
+.hero--modern .hero__ambient-video {
   opacity: 1;
 }
 
@@ -2737,13 +2724,8 @@ html[data-site-mode="press"] .music-card-cover:hover {
     opacity: 0.02;
   }
 
-  .hero__motion-bg {
-    animation: none;
-    inset: 0;
-    width: 100%;
-    height: 100%;
+  .hero__ambient-video {
     object-position: center 32%;
-    will-change: auto;
   }
 }
 
@@ -3070,7 +3052,7 @@ html[data-site-mode="press"] .music-card-cover:hover {
 
 /* Small screens: anchor B&W live shot slightly higher for handheld framing */
 @media (max-width: 768px) {
-  .hero--modern .hero__motion-bg {
+  .hero--modern .hero__ambient-video {
     object-position: center 26%;
   }
 
@@ -3092,7 +3074,7 @@ html[data-site-mode="press"] .music-card-cover:hover {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .hero--modern .hero__motion-bg {
+  .hero--modern .hero__ambient-video {
     opacity: 1;
   }
 
@@ -3275,11 +3257,7 @@ html[data-site-mode="press"] .hero--modern .hero__scrim {
     radial-gradient(ellipse 90% 80% at 70% 50%, rgba(110, 84, 32, 0.06), transparent 55%);
 }
 
-html[data-site-mode="press"] .hero__motion-bg {
-  animation: none;
-  inset: 0;
-  width: 100%;
-  height: 100%;
+html[data-site-mode="press"] .hero__ambient-video {
   object-position: center 30%;
   filter: grayscale(0.05) contrast(1.05) saturate(0.94);
 }

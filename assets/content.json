@@ -129,9 +129,10 @@
     "helpText": ""
   },
   "heroBackground": {
-    "caption": "Background: rotating clips from YouTube (@havardhedde10). Short-form also on TikTok (@haavardhedde). Fallback poster: live club shot.",
+    "caption": "Background: YouTube clips (@havardhedde10) over an ambient loop made from the live B&W photo (FFmpeg). TikTok: @haavardhedde.",
     "youtubeIds": ["hwxs4sBNwp0", "zEXcH3lHjls", "i8fR9-sAvPM"],
     "posterSrc": "assets/images/havard-live-bw-semihollow.png",
+    "ambientMp4": "assets/videos/hero-live-bw-loop.mp4",
     "rotateMs": 16000
   },
   "videos": [

@@ -268,6 +268,30 @@
 
   setupHeroYoutubeRotation(document.querySelector(".hero-video-frame"));
 
+  var syncAmbientHeroPlayback = function () {};
+
+  (function setupHeroAmbientVideoMotionPrefs() {
+    var ambient = document.querySelector(".hero__ambient-video");
+    if (!ambient) return;
+    var mq = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+    syncAmbientHeroPlayback = function () {
+      if (mq.matches) {
+        ambient.pause();
+        try {
+          ambient.currentTime = 0;
+        } catch (err) {}
+        return;
+      }
+      var p = ambient.play();
+      if (p && typeof p.catch === "function") p.catch(function () {});
+    };
+
+    syncAmbientHeroPlayback();
+    if (typeof mq.addEventListener === "function") mq.addEventListener("change", syncAmbientHeroPlayback);
+    else if (typeof mq.addListener === "function") mq.addListener(syncAmbientHeroPlayback);
+  })();
+
   (function initSiteModeToggle() {
     var KEY = "havardpedersen-site-mode";
     var root = document.documentElement;
@@ -606,11 +630,21 @@
 
         var hb = data.heroBackground;
         var heroFrame = document.querySelector(".hero-video-frame");
-        var posterImg = document.querySelector(".hero__motion-bg--poster");
+        var ambient = document.querySelector(".hero__ambient-video");
         var noteEl = document.querySelector("#hero-bg-note");
         if (hb && typeof hb === "object") {
           if (noteEl && hb.caption) noteEl.textContent = hb.caption;
-          if (posterImg && hb.posterSrc) posterImg.src = hb.posterSrc;
+          if (ambient && hb.posterSrc) ambient.setAttribute("poster", hb.posterSrc);
+          if (ambient && hb.ambientMp4) {
+            var srcEl = ambient.querySelector('source[type="video/mp4"]');
+            if (!srcEl) {
+              srcEl = document.createElement("source");
+              srcEl.type = "video/mp4";
+              ambient.appendChild(srcEl);
+            }
+            srcEl.src = hb.ambientMp4;
+            ambient.load();
+          }
           if (heroFrame && Array.isArray(hb.youtubeIds)) {
             var hid = hb.youtubeIds
               .map(function (id) {
@@ -628,6 +662,7 @@
           }
         }
         setupHeroYoutubeRotation(heroFrame);
+        syncAmbientHeroPlayback();
       })
       .catch(function () {
         // Keep static fallback content if JSON is unavailable.
