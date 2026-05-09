@@ -1419,11 +1419,24 @@ html[data-site-mode="press"] .about-visual-lead {
   object-position: center 32%;
 }
 
+/* Press-first lead (tall portrait crop) */
+.gallery-lead-wrap .visual-card--gallery-lead-portrait img {
+  aspect-ratio: 3 / 4;
+  max-height: min(38vh, 380px);
+  object-position: center 18%;
+}
+
 @media (max-width: 599px) {
   .gallery-lead-wrap .visual-card--gallery-lead img {
     aspect-ratio: 4 / 5;
     max-height: min(40vh, 300px);
     object-position: center 28%;
+  }
+
+  .gallery-lead-wrap .visual-card--gallery-lead-portrait img {
+    aspect-ratio: 3 / 4;
+    max-height: min(44vh, 320px);
+    object-position: center 15%;
   }
 }
 
