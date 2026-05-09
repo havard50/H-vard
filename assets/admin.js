@@ -25,6 +25,7 @@
     var liveCount = Array.isArray(data.live) ? data.live.length : 0;
     var storeCount = Array.isArray(data.store) ? data.store.length : 0;
     var videoCount = Array.isArray(data.videos) ? data.videos.length : 0;
+    var feedExtrasCount = Array.isArray(data.feedExtras) ? data.feedExtras.length : 0;
     statsEl.innerHTML =
       "<li>Timeline items: " +
       timelineCount +
@@ -43,6 +44,9 @@
       "</li>" +
       "<li>Video items: " +
       videoCount +
+      "</li>" +
+      "<li>Feed extras (living feed): " +
+      feedExtrasCount +
       "</li>";
   }
 

@@ -405,6 +405,7 @@
     var storeCheckoutStatus = document.querySelector("#store-checkout-status");
     var videoRoot = document.querySelector("#video-feed");
     var partnersRoot = document.querySelector("#partners-grid");
+    var latestUpdatesRoot = document.querySelector("#latest-updates-feed");
     if (
       !timelineRoot &&
       !timelineArchiveRoot &&
@@ -412,7 +413,8 @@
       !liveRoot &&
       !storeRoot &&
       !videoRoot &&
-      !partnersRoot
+      !partnersRoot &&
+      !latestUpdatesRoot
     )
       return;
 
@@ -434,6 +436,147 @@
         month: "short",
         day: "numeric"
       });
+    }
+
+    function parseFeedTime(iso) {
+      if (!iso || typeof iso !== "string") return 0;
+      var t = Date.parse(iso.length === 10 ? iso + "T12:00:00" : iso);
+      return isNaN(t) ? 0 : t;
+    }
+
+    /** Merge timeline, feedExtras, live (updated), and YouTube rows — newest first for the living feed. */
+    function buildLatestUpdates(data) {
+      var entries = [];
+      var dedupe = Object.create(null);
+
+      function pushEntry(e) {
+        if (!e || !e.ts || !e.title) return;
+        var key = (e.publishedIso || "") + "|" + e.title + "|" + (e.badge || "");
+        if (dedupe[key]) return;
+        dedupe[key] = true;
+        entries.push(e);
+      }
+
+      (data.feedExtras || []).forEach(function (item) {
+        if (!item || !item.published) return;
+        pushEntry({
+          ts: parseFeedTime(item.published),
+          publishedIso: item.published,
+          badge: item.kicker || "Update",
+          title: item.title,
+          body: item.body,
+          image: item.image,
+          imageAlt: item.imageAlt,
+          links: item.links,
+          defaultHash: "#news"
+        });
+      });
+
+      (data.timeline || []).forEach(function (item) {
+        if (!item || !item.published) return;
+        pushEntry({
+          ts: parseFeedTime(item.published),
+          publishedIso: item.published,
+          badge: item.kicker || "News",
+          title: item.title,
+          body: item.body,
+          image: item.image,
+          imageAlt: item.imageAlt,
+          links: item.links,
+          defaultHash: "#news"
+        });
+      });
+
+      (data.live || []).forEach(function (item) {
+        if (!item) return;
+        var when = item.updated || item.published;
+        if (!when) return;
+        pushEntry({
+          ts: parseFeedTime(when),
+          publishedIso: when,
+          badge: "Live",
+          title: (item.date || "Shows") + " · routing & dates",
+          body: item.meta || "",
+          links: item.links,
+          defaultHash: "#live"
+        });
+      });
+
+      (data.videos || []).forEach(function (item) {
+        if (!item || item.archiveCard) return;
+        if (!item.youtubeId || !YT_ID.test(item.youtubeId)) return;
+        var when = item.published || "2020-01-01";
+        var watch = "https://www.youtube.com/watch?v=" + item.youtubeId;
+        pushEntry({
+          ts: parseFeedTime(when),
+          publishedIso: when,
+          badge: "Video",
+          title: item.title || "YouTube",
+          body: item.caption || "",
+          links: [
+            { label: "Watch", href: watch },
+            { label: "Video section", href: "#videos" }
+          ],
+          defaultHash: "#videos"
+        });
+      });
+
+      entries.sort(function (a, b) {
+        return b.ts - a.ts;
+      });
+      return entries.slice(0, 12);
+    }
+
+    function primaryHrefForFeedEntry(e) {
+      if (e.links && e.links[0] && e.links[0].href) return e.links[0].href;
+      return e.defaultHash || "#news";
+    }
+
+    function renderLatestUpdates(items) {
+      if (!latestUpdatesRoot || !Array.isArray(items) || !items.length) return;
+      latestUpdatesRoot.innerHTML = items
+        .map(function (e) {
+          var href = esc(primaryHrefForFeedEntry(e));
+          var timeHtml =
+            e.publishedIso && formatPublished(e.publishedIso)
+              ? '<time class="latest-update__time" datetime="' +
+                esc(e.publishedIso) +
+                '">' +
+                esc(formatPublished(e.publishedIso)) +
+                "</time>"
+              : "";
+          var imgHtml =
+            e.image && typeof e.image === "string"
+              ? '<div class="latest-update__media"><img src="' +
+                esc(e.image) +
+                '" alt="' +
+                esc(e.imageAlt || "") +
+                '" loading="lazy" decoding="async" /></div>'
+              : "";
+          return (
+            '<li class="latest-update">' +
+            '<div class="latest-update__rail">' +
+            timeHtml +
+            '<span class="latest-update__badge">' +
+            esc(e.badge || "Update") +
+            "</span>" +
+            "</div>" +
+            '<div class="latest-update__main">' +
+            '<h3 class="latest-update__title"><a href="' +
+            href +
+            '">' +
+            esc(e.title) +
+            "</a></h3>" +
+            '<p class="latest-update__deck">' +
+            esc(e.body || "") +
+            "</p>" +
+            imgHtml +
+            renderLinks(e.links, "latest-update__links") +
+            "</div>" +
+            "</li>"
+          );
+        })
+        .join("");
     }
 
     function renderLinks(links, className) {
@@ -647,8 +790,17 @@
               checkoutAction +
               "</div>";
           }
+          var preview =
+            item && item.previewImage
+              ? '<div class="store-card__preview"><img src="' +
+                esc(item.previewImage) +
+                '" alt="' +
+                esc(item.previewAlt || item.title || "Product preview") +
+                '" loading="lazy" decoding="async" /></div>'
+              : "";
           return (
             '<article class="news-card store-card">' +
+            preview +
             '<p class="news-card-kicker">' +
             esc(item.kicker) +
             "</p>" +
@@ -765,6 +917,7 @@
       .then(function (data) {
         if (!data || typeof data !== "object") return;
         renderFeedMeta(data.siteMeta);
+        renderLatestUpdates(buildLatestUpdates(data));
         renderTimeline(data.timeline);
         renderTimelineArchive(data.timelineArchive);
         renderRecentInterviews(data.recentInterviews);

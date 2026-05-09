@@ -1,8 +1,22 @@
 {
   "siteMeta": {
     "feedUpdated": "2026-05-09",
-    "feedNote": "Entries are data-driven from this file (newest dated items first). Add a headless CMS or Git-based editor when you want updates without touching JSON by hand."
+    "feedNote": "Latest updates (top of News) merge timeline, live rows, video drops, and feedExtras — newest first. Edit those arrays here; add Decap/Netlify CMS or another headless CMS when you want a publish button instead of JSON."
   },
+  "feedExtras": [
+    {
+      "published": "2026-05-07",
+      "kicker": "Studio",
+      "title": "Album sessions — vocal day",
+      "body": "Tracking at The Norwegian Sound with Peter Michelsen. Stills and reel clips land here when cleared — follow Shorts/TikTok for raw moments.",
+      "image": "/assets/images/studio-white-falcon-wide.png",
+      "imageAlt": "Håvard Pedersen — studio with Gretsch White Falcon",
+      "links": [
+        { "label": "About / sessions", "href": "#about" },
+        { "label": "Video section", "href": "#videos" }
+      ]
+    }
+  ],
   "timeline": [
     {
       "kicker": "Live · 2026",
@@ -163,6 +177,7 @@
   "live": [
     {
       "date": "Poster",
+      "updated": "2026-05-01",
       "meta": "2026 routing snapshot — venues and dates appear on the tour poster (full PNG). Same updates roll into this list when gigs are confirmed.",
       "links": [
         {
@@ -177,6 +192,7 @@
     },
     {
       "date": "TBA",
+      "updated": "2026-04-18",
       "meta": "Additional festivals and clubs — announced here and in the Timeline when confirmed.",
       "links": [{ "label": "News feed", "href": "#news" }]
     }
@@ -186,6 +202,8 @@
       "kicker": "Single · 2025",
       "title": "Det sku bli oss",
       "body": "Latest single — stream on Spotify and Apple Music. CDs or bundles: use Contact until checkout goes live.",
+      "previewImage": "/assets/images/studio-gretsch-portrait.png",
+      "previewAlt": "Håvard Pedersen — Gretsch portrait",
       "status": "Out now",
       "priceFrom": "Streaming · CDs on request",
       "links": [
@@ -205,6 +223,8 @@
       "kicker": "Albums",
       "title": "Never Felt So Good · You and I",
       "body": "Full catalogue on streaming; physical CDs coordinated by email until Stripe (or similar) payment links are wired.",
+      "previewImage": "/assets/images/havard-live-sunburst-semihollow.png",
+      "previewAlt": "Håvard Pedersen — live performance still",
       "status": "Catalogue",
       "priceFrom": "Streaming · enquire for CDs",
       "links": [
@@ -224,6 +244,8 @@
       "kicker": "Live",
       "title": "Shows & ticket enquiries",
       "body": "Promoters and venues: routing and holds via Gigplanet. Ticket URLs will sit here next to dates when listings go public.",
+      "previewImage": "/assets/images/tour-poster-2025.png",
+      "previewAlt": "2026 tour routing poster",
       "status": "Booking active",
       "priceFrom": "Per event",
       "links": [
@@ -243,6 +265,8 @@
       "kicker": "Merch",
       "title": "Artist merchandise",
       "body": "Apparel and bundles — product rows and secure checkout activate when inventory and payment links are ready.",
+      "previewImage": "/assets/images/havard-portrait-scarf-bw.png",
+      "previewAlt": "Artist portrait — merch preview placeholder",
       "status": "Announcing soon",
       "priceFrom": "—",
       "links": [
@@ -255,6 +279,8 @@
       "kicker": "Seafood & partners",
       "title": "Holmen & Robertsen range",
       "body": "Partner products — separate listing and checkout when stock and payment links are agreed (music store stays primary).",
+      "previewImage": "/assets/images/studio-white-falcon-wide.png",
+      "previewAlt": "Brand imagery placeholder — partner row",
       "status": "On request",
       "priceFrom": "—",
       "links": [
@@ -280,21 +306,25 @@
   "videos": [
     {
       "youtubeId": "zEXcH3lHjls",
+      "published": "2025-11-02",
       "title": "Det sku bli oss — Håvard Pedersen",
       "caption": "Det sku bli oss — official video"
     },
     {
       "youtubeId": "-oE6ztWmr14",
+      "published": "2025-08-20",
       "title": "Håvard Pedersen — featured clip",
       "caption": "Featured performance — YouTube (approved for site)"
     },
     {
       "youtubeId": "hwxs4sBNwp0",
+      "published": "2025-02-18",
       "title": "Håvard Pedersen — live clips, February 2025",
       "caption": "Håvard Pedersen — live guitar & vocals"
     },
     {
       "youtubeId": "i8fR9-sAvPM",
+      "published": "2025-02-18",
       "title": "Håvard Pedersen & The Blues Is Alright Band — February 2025",
       "caption": "Full trio — live on stage, February 2025"
     },

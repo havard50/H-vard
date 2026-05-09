@@ -128,6 +128,7 @@
           <a href="#listen">Listen</a>
           <a href="#videos">Video</a>
           <a href="#gallery">Photos</a>
+          <a href="#latest-updates-heading">Feed</a>
           <a href="#news">News</a>
           <a href="#band">Band</a>
           <a href="#press-kit">Press kit</a>
@@ -389,12 +390,69 @@
 
       <section id="news" class="section section-news reveal" aria-labelledby="timeline-title">
         <div class="section-inner">
-          <p class="section-kicker">Updates</p>
-          <h2 id="timeline-title" class="section-title">News &amp; releases</h2>
+          <p class="section-kicker">Living platform</p>
+          <h2 id="timeline-title" class="section-title">News &amp; feed</h2>
           <p id="news-feed-meta" class="news-feed-meta">
             Feed last revised · <time datetime="2026-05-09">9 May 2026</time> — entries are driven by
             <strong>content.json</strong> (add a CMS later if you want non-developer updates).
           </p>
+
+          <div class="latest-updates-wrap">
+            <h3 class="news-subsection-title" id="latest-updates-heading">Latest updates</h3>
+            <p class="listen-lead latest-updates-lead">
+              Newest first — one stream merged from timeline items, live routing rows, new YouTube drops, and short posts in
+              <strong>feedExtras</strong>. Full story cards continue in the timeline grid below.
+            </p>
+            <ul
+              id="latest-updates-feed"
+              class="latest-updates-list"
+              aria-live="polite"
+              aria-relevant="additions"
+              aria-labelledby="latest-updates-heading"
+            >
+              <li class="latest-update">
+                <div class="latest-update__rail">
+                  <time class="latest-update__time" datetime="2026-05-09">9 May 2026</time>
+                  <span class="latest-update__badge">Social video</span>
+                </div>
+                <div class="latest-update__main">
+                  <h3 class="latest-update__title">
+                    <a href="#videos">Short-form clips</a>
+                  </h3>
+                  <p class="latest-update__deck">
+                    Performance edits and promo reels publish first on TikTok and YouTube Shorts — links in the Video section.
+                  </p>
+                </div>
+              </li>
+              <li class="latest-update">
+                <div class="latest-update__rail">
+                  <time class="latest-update__time" datetime="2026-05-08">8 May 2026</time>
+                  <span class="latest-update__badge">Video</span>
+                </div>
+                <div class="latest-update__main">
+                  <h3 class="latest-update__title">
+                    <a href="https://www.youtube.com/watch?v=zEXcH3lHjls">Det sku bli oss — official video</a>
+                  </h3>
+                  <p class="latest-update__deck">Latest single — official YouTube premiere.</p>
+                </div>
+              </li>
+              <li class="latest-update">
+                <div class="latest-update__rail">
+                  <time class="latest-update__time" datetime="2026-05-01">1 May 2026</time>
+                  <span class="latest-update__badge">Live · 2026</span>
+                </div>
+                <div class="latest-update__main">
+                  <h3 class="latest-update__title">
+                    <a href="https://www.gigplanet.no/band/havard-pedersen-and-the-blues-is-alright-band">Tour routing &amp; poster</a>
+                  </h3>
+                  <p class="latest-update__deck">
+                    Confirmed dates surface on the poster and Gigplanet; this list updates when gigs go public.
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
           <p class="listen-lead">
             Studio and live updates first. Older milestones sit in the archive below.
             Legacy news index:
@@ -542,6 +600,11 @@
               </article>
             </div>
           </div>
+
+          <h3 id="timeline-detail-heading" class="news-subsection-title">Timeline &amp; story cards</h3>
+          <p class="timeline-hint">
+            Expanded layout for the same stories as the feed — ideal for images, links, and archive context.
+          </p>
 
           <div id="timeline-feed" class="news-grid timeline-grid" aria-label="Latest news and updates">
             <article class="news-card timeline-card">
@@ -806,7 +869,7 @@
         </div>
       </section>
 
-      <section id="videos" class="section section-video reveal" aria-labelledby="videos-title">
+      <section id="videos" class="section section-video section-video--feed reveal" aria-labelledby="videos-title">
         <div class="section-inner">
           <p class="section-kicker">Film</p>
           <h2 id="videos-title" class="section-title">Video</h2>
@@ -815,6 +878,28 @@
             vertical edits first on <a href="https://www.tiktok.com/@haavardhedde">TikTok (@haavardhedde)</a>, then Shorts. Add new YouTube IDs in
             <strong>content.json</strong> when you publish; vertical or cinematic shorts can be added beside these embeds when you have URLs.
           </p>
+
+          <div class="video-energy" role="region" aria-label="Short-form and channel hubs">
+            <p class="video-energy__kicker">Motion-first</p>
+            <p class="video-energy__line">
+              Treat YouTube as the cinematic home base; TikTok, Shorts, and Reels as the pulse between releases. New embeds and IDs ship from
+              <strong>content.json</strong> — plug in AI shorts or campaign clips the same way.
+            </p>
+            <div class="video-reels-strip" aria-label="Short-form channels">
+              <a class="video-reel-tile video-reel-tile--shorts" href="https://www.youtube.com/@havardhedde10/shorts">
+                <span class="video-reel-tile__label">YouTube Shorts</span>
+                <span class="video-reel-tile__sub">Vertical clips · @havardhedde10</span>
+              </a>
+              <a class="video-reel-tile video-reel-tile--tiktok" href="https://www.tiktok.com/@haavardhedde">
+                <span class="video-reel-tile__label">TikTok</span>
+                <span class="video-reel-tile__sub">Performance energy · @haavardhedde</span>
+              </a>
+              <a class="video-reel-tile video-reel-tile--ig" href="https://www.instagram.com/havardhedde/">
+                <span class="video-reel-tile__label">Instagram Reels</span>
+                <span class="video-reel-tile__sub">@havardhedde</span>
+              </a>
+            </div>
+          </div>
 
           <div class="visuals-block">
           <div
@@ -1226,7 +1311,7 @@
               <li><strong>Artwork</strong> — tour poster above &amp; solo stills in <a href="#gallery">Photos</a>.</li>
             </ul>
             <p class="listen-hint">
-              Updates: <a href="#news">Timeline</a>.
+              Updates: <a href="#latest-updates-heading">Living feed</a> · <a href="#news">Timeline</a>.
             </p>
           </div>
         </div>
@@ -1237,7 +1322,8 @@
           <p class="section-kicker">Store</p>
           <h2 id="store-title" class="section-title">Artist store (music-first)</h2>
           <p class="listen-lead">
-            Music-first catalogue: streaming and orders now; secure cart when payment links are connected. Non-music partners:
+            Music-first catalogue: streaming and orders now; secure cart when payment links are connected. Row art comes from
+            <strong>previewImage</strong> in content.json — swap in vinyl, merch mockups, or ticket art when ready. Non-music partners:
             <a href="#partners">Partners</a>.
           </p>
           <ul class="store-cats" aria-label="Store categories">
