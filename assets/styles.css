@@ -1400,9 +1400,11 @@ html[data-site-mode="press"] .about-visual-lead {
   color: #deac5e;
 }
 
-/* Photos: full-width live lead, then a tight 2×2 / 4-across tile grid */
+/* Photos: featured lead (capped height), then uniform tile grid */
 .gallery-lead-wrap {
   margin-bottom: 0.85rem;
+  max-width: min(100%, 44rem);
+  margin-inline: auto;
 }
 
 .gallery-lead-wrap .visual-card--gallery-lead {
@@ -1410,16 +1412,17 @@ html[data-site-mode="press"] .about-visual-lead {
 }
 
 .gallery-lead-wrap .visual-card--gallery-lead img {
-  aspect-ratio: 2 / 1;
-  max-height: min(44vh, 420px);
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  max-height: min(34vh, 360px);
   object-fit: cover;
   object-position: center 32%;
 }
 
 @media (max-width: 599px) {
   .gallery-lead-wrap .visual-card--gallery-lead img {
-    aspect-ratio: 3 / 4;
-    max-height: 56vh;
+    aspect-ratio: 4 / 5;
+    max-height: min(40vh, 300px);
     object-position: center 28%;
   }
 }
@@ -1430,15 +1433,35 @@ html[data-site-mode="press"] .about-visual-lead {
   grid-template-columns: repeat(2, minmax(0, 1fr));
   margin-bottom: 0;
   align-items: stretch;
+  max-width: min(100%, 56rem);
+  margin-inline: auto;
+}
+
+.visual-grid.visual-grid--gallery-tiles .visual-card {
+  min-height: 0;
 }
 
 .visual-grid.visual-grid--gallery-tiles .visual-card img {
   aspect-ratio: 1 / 1;
+  max-height: min(42vw, 260px);
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+@media (min-width: 600px) {
+  .visual-grid.visual-grid--gallery-tiles .visual-card img {
+    max-height: min(28vw, 240px);
+  }
 }
 
 @media (min-width: 900px) {
   .visual-grid.visual-grid--gallery-tiles {
     grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .visual-grid.visual-grid--gallery-tiles .visual-card img {
+    max-height: min(22vw, 220px);
   }
 }
 
