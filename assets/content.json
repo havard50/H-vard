@@ -118,8 +118,8 @@
       "kicker": "Archive · UK radio",
       "title": "Blast Radio UK — WMGGW",
       "body": "Segment archived as MP3 on the legacy domain (February 26).",
-      "image": "/assets/images/live-red-guitar.png",
-      "imageAlt": "Håvard Pedersen — live on stage with red electric guitar",
+      "image": "/assets/images/cinematic-gretsch.png",
+      "imageAlt": "Håvard Pedersen — live under cinematic stage lights (archive radio)",
       "imageFit": "cover",
       "audio": "https://havardpedersen.com/BlastRadioUK_WMGGW_Feb26th.mp3",
       "links": [
@@ -134,8 +134,8 @@
       "kicker": "Archive · UK radio",
       "title": "Hermitage FM — From Blues To Rock (2011)",
       "body": "Conversation with Jon Seymour plus a Mobile Dreams live spot — both archived on the legacy domain (MP3).",
-      "image": "/assets/images/havard-live-sunburst-semihollow.png",
-      "imageAlt": "Håvard Pedersen — live performance, semi-hollow guitar",
+      "image": "/assets/images/guitar-breaks-session.png",
+      "imageAlt": "Håvard Pedersen — Guitar Breaks session still (archive radio)",
       "imageFit": "cover",
       "audio": "https://havardpedersen.com/HermitageFM_interviewJune8.mp3",
       "links": [
@@ -250,6 +250,18 @@
         { "label": "Partners (non-music)", "href": "#partners" }
       ],
       "primaryAction": { "label": "Contact team", "href": "#contact" }
+    },
+    {
+      "kicker": "Seafood & partners",
+      "title": "Holmen & Robertsen range",
+      "body": "Partner products — separate listing and checkout when stock and payment links are agreed (music store stays primary).",
+      "status": "On request",
+      "priceFrom": "—",
+      "links": [
+        { "label": "Partners", "href": "#partners" },
+        { "label": "Holmen & Robertsen", "href": "https://www.holmenrobertsen.no/" }
+      ],
+      "primaryAction": { "label": "Partner enquiry", "href": "#contact" }
     }
   ],
   "storeSettings": {

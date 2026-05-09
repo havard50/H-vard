@@ -1023,6 +1023,30 @@ html[data-site-mode="press"] .about-visual-lead {
   vertical-align: middle;
 }
 
+/* Interview cards — larger type (matches live site readability) */
+#interviews-feed .interview-card .news-card-kicker {
+  font-size: 0.74rem;
+  letter-spacing: 0.12em;
+  margin-bottom: 0.5rem;
+}
+
+#interviews-feed .interview-card .news-card-title {
+  font-size: clamp(1.2rem, 2.2vw + 0.65rem, 1.48rem);
+  line-height: 1.25;
+  margin-bottom: 0.6rem;
+}
+
+#interviews-feed .interview-card .news-card-text {
+  font-size: clamp(0.95rem, 1.2vw + 0.78rem, 1.05rem);
+  line-height: 1.58;
+}
+
+#interviews-feed .interview-card .news-card-links {
+  font-size: 0.92rem;
+  line-height: 1.55;
+  margin-top: 0.85rem;
+}
+
 .timeline-card-media {
   margin: -1.25rem -1.35rem 0.85rem;
   border-radius: var(--radius) var(--radius) 0 0;
@@ -1258,8 +1282,10 @@ html[data-site-mode="press"] .about-visual-lead {
 
 @media (min-width: 1280px) {
   #store-grid.news-grid {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(14.5rem, 1fr));
     gap: 1.15rem;
+    max-width: 80rem;
+    margin-inline: auto;
   }
 }
 
@@ -1476,6 +1502,18 @@ html[data-site-mode="press"] .about-visual-lead {
   .visual-grid.visual-grid--gallery-tiles .visual-card img {
     max-height: min(22vw, 220px);
   }
+}
+
+.gallery-footnote {
+  margin: 0.65rem 0 0;
+  max-width: 42rem;
+  font-size: 0.84rem;
+  line-height: 1.5;
+  color: rgba(235, 228, 240, 0.68);
+}
+
+html[data-site-mode="press"] .gallery-footnote {
+  color: rgba(61, 58, 54, 0.75);
 }
 
 .visual-grid--gallery-singles {
