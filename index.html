@@ -1152,8 +1152,15 @@
             <a href="https://www.gigplanet.no/band/havard-pedersen-and-the-blues-is-alright-band">Gigplanet</a>.
             Email and social: sidebar.
           </p>
+          <p class="listen-hint contact-form-static-hint">
+            <strong>one.com / static hosting:</strong> set <code>contactForm.action</code> in
+            <code>assets/content.json</code> to your Formspree URL (<code>https://formspree.io/f/…</code>). Leave
+            <code>action</code> empty to keep Netlify’s built-in form handling on Netlify previews only.
+          </p>
+          <p id="contact-form-provider-note" class="listen-hint contact-form-provider-note" hidden></p>
           <div class="contact-layout">
             <form
+              id="contact-form"
               class="contact-form"
               name="contact"
               method="POST"

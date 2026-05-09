@@ -2547,6 +2547,19 @@ html[data-site-mode="press"] .gallery-footnote {
   margin-top: 1.5rem;
 }
 
+.contact-form-static-hint code {
+  font-size: 0.88em;
+}
+
+.contact-form-provider-note {
+  margin-top: 0.35rem;
+  color: #a5f3fc;
+}
+
+html[data-site-mode="press"] .contact-form-provider-note {
+  color: #6e5420;
+}
+
 /* Links */
 .link-grid {
   list-style: none;

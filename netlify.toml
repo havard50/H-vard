@@ -1,3 +1,11 @@
 # Static site — open index.html at repo root
+#
+# --- Manual upload to one.com (or any static host) ---
+# Upload the same tree Netlify publishes: index.html, shop.html, admin.html,
+# robots.txt, sitemap.xml, and the ENTIRE assets/ folder (replace the whole
+# folder when content.json / CSS / JS / images change — avoids mixed versions).
+# Contact: Netlify Forms only work on Netlify. For one.com set contactForm.action
+# in assets/content.json to a Formspree (or similar) HTTPS endpoint.
+#
 [build]
   publish = "."

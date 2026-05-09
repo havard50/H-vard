@@ -887,6 +887,52 @@
         .join("");
     }
 
+    /**
+     * Netlify Forms only work on Netlify. For one.com, set contactForm.action in content.json
+     * to a Formspree (or any standard POST) HTTPS URL — same fields: name, email, message.
+     */
+    function applyContactForm(contactForm) {
+      var form = document.querySelector("#contact .contact-form");
+      if (!form) return;
+      var cfg = contactForm && typeof contactForm === "object" ? contactForm : null;
+      var action = cfg && cfg.action != null ? String(cfg.action).trim() : "";
+      if (!action || action.indexOf("https://") !== 0) return;
+
+      form.setAttribute("action", action);
+      form.removeAttribute("data-netlify");
+      form.removeAttribute("data-netlify-honeypot");
+
+      var note = document.querySelector("#contact-form-provider-note");
+      if (note) {
+        note.removeAttribute("hidden");
+        note.textContent =
+          (cfg.note && String(cfg.note).trim()) ||
+          "This form posts to the inbox configured in content.json (external provider).";
+      }
+
+      if (cfg.subject) {
+        var sub = form.querySelector('input[name="_subject"]');
+        if (!sub) {
+          sub = document.createElement("input");
+          sub.type = "hidden";
+          sub.name = "_subject";
+          form.insertBefore(sub, form.firstChild);
+        }
+        sub.value = String(cfg.subject);
+      }
+
+      if (cfg.redirectThanks) {
+        var next = form.querySelector('input[name="_next"]');
+        if (!next) {
+          next = document.createElement("input");
+          next.type = "hidden";
+          next.name = "_next";
+          form.appendChild(next);
+        }
+        next.value = String(cfg.redirectThanks);
+      }
+    }
+
     function renderPartners(items) {
       if (!partnersRoot || !Array.isArray(items) || !items.length) return;
       partnersRoot.innerHTML = items
@@ -937,6 +983,7 @@
         renderPartners(data.partners);
 
         applyHeroBackground(data.heroBackground);
+        applyContactForm(data.contactForm);
       })
       .catch(function () {
         // Keep static fallback content if JSON is unavailable.
