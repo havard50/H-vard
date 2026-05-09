@@ -126,7 +126,7 @@
           <a href="#listen">Listen</a>
           <a href="#videos">Video</a>
           <a href="#gallery">Photos</a>
-          <a href="#news">News</a>
+          <a href="#news">Timeline</a>
           <a href="#band">Band</a>
           <a href="#press-kit">Press kit</a>
           <a href="#contact">Contact</a>
@@ -168,8 +168,8 @@
         </div>
         <div class="hero__content">
           <div class="hero__inner">
-            <p class="hero__eyebrow">Håvard Pedersen</p>
-            <p class="hero__tagline" id="hero-tagline">Norwegian guitarist, singer &amp; songwriter.</p>
+            <p class="hero__eyebrow">Håvard Pedersen &amp; The Blues Is Alright Band</p>
+            <p class="hero__tagline" id="hero-tagline">Norwegian blues-rock guitarist, singer &amp; songwriter.</p>
             <p class="hero__proof" aria-label="Selected press and broadcast">
               NRK · Altaposten · TV Nord · Exit Music (UK) · Hermitage FM
             </p>
@@ -383,31 +383,70 @@
         </div>
       </section>
 
-      <section id="news" class="section section-news reveal">
+      <section id="news" class="section section-news reveal" aria-labelledby="timeline-title">
         <div class="section-inner">
-          <p class="section-kicker">Updates</p>
-          <h2 class="section-title">News &amp; releases</h2>
+          <p class="section-kicker">Live timeline</p>
+          <h2 id="timeline-title" class="section-title">Latest updates · newest first</h2>
           <p class="listen-lead">
-            Studio and live updates. Archive: <a href="https://havardpedersen.com/news.html">havardpedersen.com/news</a>.
+            A living artist feed: latest releases, concert announcements, clips, photos, and archive moments in one flow.
           </p>
-          <div class="news-grid">
-            <article class="news-card">
-              <p class="news-card-kicker">Recording · 2026</p>
-              <h3 class="news-card-title">New album in progress</h3>
+          <div class="news-grid timeline-grid" aria-label="Artist timeline, newest first">
+            <article class="news-card timeline-card timeline-card--release">
+              <p class="news-card-kicker">New release · 2025</p>
+              <h3 class="news-card-title">Det sku bli oss is out</h3>
               <p class="news-card-text">
-                Next full-length underway — summer single planned. Details land here and on social (studio credits in
-                <a href="#about">About</a>).
+                Latest single is live on streaming. Start in <a href="#listen">Music</a>, then continue through official clips in
+                <a href="#videos">Video</a>.
               </p>
             </article>
-            <article class="news-card">
-              <p class="news-card-kicker">Live</p>
-              <h3 class="news-card-title">Live routing</h3>
+            <article class="news-card timeline-card">
+              <p class="news-card-kicker">Touring · 2026</p>
+              <h3 class="news-card-title">Band booking and routing active</h3>
               <p class="news-card-text">
-                Same trio as on <a href="#videos">Video</a> ·
-                <a href="https://www.gigplanet.no/band/havard-pedersen-and-the-blues-is-alright-band">Gigplanet</a>
+                New festival and venue slots are being scheduled now via
+                <a href="https://www.gigplanet.no/band/havard-pedersen-and-the-blues-is-alright-band">Gigplanet</a>.
+              </p>
+            </article>
+            <article class="news-card timeline-card">
+              <p class="news-card-kicker">Studio</p>
+              <h3 class="news-card-title">New album sessions in progress</h3>
+              <p class="news-card-text">
+                Tracking continues with Peter Michelsen at The Norwegian Sound. Session context and credits are in
+                <a href="#about">About</a>.
+              </p>
+            </article>
+            <article class="news-card timeline-card">
+              <p class="news-card-kicker">Short-form video</p>
+              <h3 class="news-card-title">Reels, Shorts, TikTok updates</h3>
+              <p class="news-card-text">
+                New vertical promo cuts and performance snippets are published first on
+                <a href="https://www.youtube.com/@havardhedde10/shorts">YouTube Shorts</a> and
+                <a href="https://www.tiktok.com/@haavardhedde">TikTok</a>.
+              </p>
+            </article>
+            <article class="news-card timeline-card">
+              <p class="news-card-kicker">Archive spotlight · 2011</p>
+              <h3 class="news-card-title">Never Felt So Good era</h3>
+              <p class="news-card-text">
+                Legacy material stays visible: debut period, historical visuals, and interviews remain part of the artist journey archive.
+              </p>
+            </article>
+            <article class="news-card timeline-card">
+              <p class="news-card-kicker">Archive spotlight · media</p>
+              <h3 class="news-card-title">TV Nord, Hermitage FM, press history</h3>
+              <p class="news-card-text">
+                Important old media is preserved and linked as archive references, not removed.
               </p>
             </article>
           </div>
+          <p class="timeline-hint">
+            Full legacy archive: <a href="https://havardpedersen.com/news.html">News</a> ·
+            <a href="https://havardpedersen.com/reviews.html">Reviews</a> ·
+            <a href="https://havardpedersen.com/interviews.html">Interviews</a> ·
+            <a href="https://havardpedersen.com/TvNord.png-for-web-normal.png">TV Nord image</a> ·
+            <a href="https://havardpedersen.com/PlaylistNFSG.jpg">PlaylistNFSG</a> ·
+            <a href="https://havardpedersen.com/HermitageFM_interviewJune8.mp3">Hermitage FM audio</a>
+          </p>
         </div>
       </section>
 
@@ -907,7 +946,7 @@
               <ul class="gig-list" aria-label="Schedule">
                 <li>
                   <span class="gig-date">TBA</span>
-                  <span class="gig-meta">Confirmed shows listed here · watch <a href="#news">News</a></span>
+                  <span class="gig-meta">Confirmed shows listed here · watch <a href="#news">Timeline</a></span>
                 </li>
               </ul>
             </div>
@@ -917,7 +956,7 @@
               <li><strong>Artwork</strong> — tour poster &amp; stills in <a href="#gallery">Photos</a>.</li>
             </ul>
             <p class="listen-hint">
-              Updates: <a href="#news">News</a>.
+              Updates: <a href="#news">Timeline</a>.
             </p>
           </div>
         </div>
