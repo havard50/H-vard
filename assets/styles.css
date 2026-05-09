@@ -2287,6 +2287,69 @@ body.lightbox-open .floating-book-btn {
   color: var(--text-muted);
 }
 
+.footer-partner {
+  margin-top: 0.95rem;
+  padding-top: 0.9rem;
+  border-top: 1px solid rgba(148, 163, 184, 0.2);
+}
+
+.footer-partner-kicker {
+  margin: 0 0 0.45rem;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #a5f3fc;
+}
+
+.footer-partner-card {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 0.7rem;
+  align-items: start;
+}
+
+.footer-partner-logo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.1rem;
+  height: 2.1rem;
+  border-radius: 10px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: #0f172a;
+  background: linear-gradient(135deg, #a5f3fc, #fde68a);
+}
+
+.footer-partner-name {
+  margin: 0;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #f8fafc;
+}
+
+.footer-partner-copy {
+  margin: 0.18rem 0 0;
+  font-size: 0.83rem;
+  line-height: 1.45;
+  color: var(--text-muted);
+}
+
+.footer-partner-link {
+  display: inline-flex;
+  margin-top: 0.34rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #e8bc6a;
+  text-decoration: none;
+}
+
+.footer-partner-link:hover {
+  text-decoration: underline;
+}
+
 /* —— Press / off-season look (toggle in header) —— */
 html[data-site-mode="press"] {
   --bg: #f2efe9;
@@ -3170,6 +3233,22 @@ html[data-site-mode="press"] .hero__micro a {
 }
 
 html[data-site-mode="press"] .footer-meta a {
+  color: #6e5420;
+}
+
+html[data-site-mode="press"] .footer-partner {
+  border-top-color: rgba(26, 24, 22, 0.16);
+}
+
+html[data-site-mode="press"] .footer-partner-kicker {
+  color: #6e5420;
+}
+
+html[data-site-mode="press"] .footer-partner-name {
+  color: #2a2622;
+}
+
+html[data-site-mode="press"] .footer-partner-link {
   color: #6e5420;
 }
 
