@@ -134,8 +134,11 @@
     "helpText": ""
   },
   "heroBackground": {
-    "caption": "Background: solo live guitar — February 2025 (swap youtubeId in content.json if needed).",
-    "youtubeId": "hwxs4sBNwp0"
+    "caption": "Same stack as havardpedersen.com — studio portrait over subtly rotating live clips (edit youtubeIds / poster in content.json).",
+    "youtubeIds": ["i8fR9-sAvPM", "hwxs4sBNwp0"],
+    "rotateMs": 16000,
+    "posterImage": "/assets/images/studio-white-falcon-wide.png",
+    "posterAlt": "Håvard Pedersen — studio portrait with Gretsch White Falcon"
   },
   "videos": [
     {
