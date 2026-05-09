@@ -520,8 +520,14 @@
       if (!item) return "";
       var media = "";
       if (item.image) {
+        var mediaClass = "interview-card-media";
+        if (item.imageFit === "cover") {
+          mediaClass += " interview-card-media--cover";
+        }
         media =
-          '<div class="interview-card-media">' +
+          '<div class="' +
+          mediaClass +
+          '">' +
           '<img src="' +
           esc(item.image) +
           '" alt="' +

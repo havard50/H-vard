@@ -948,16 +948,20 @@ html[data-site-mode="press"] .about-visual-lead {
 }
 
 .interviews-grid {
-  gap: 1rem;
+  gap: 1.35rem;
 }
 
+/* Interviews use .news-grid — force two columns max so cards stay readable (no bleed into neighbours) */
 @media (min-width: 720px) {
-  .interviews-grid {
+  #interviews-feed.news-grid.interviews-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.6rem;
   }
 }
 
 .interview-card {
+  min-width: 0;
+  overflow: hidden;
   border-color: rgba(212, 168, 74, 0.28);
   box-shadow:
     0 14px 34px rgba(0, 0, 0, 0.26),
@@ -982,6 +986,14 @@ html[data-site-mode="press"] .about-visual-lead {
   background: #0a0a0c;
 }
 
+/* Portrait / promo photos — fill width without bleeding into neighbouring columns */
+.interview-card-media--cover img {
+  aspect-ratio: 3 / 4;
+  max-height: min(56vw, 17.5rem);
+  object-fit: cover;
+  object-position: center 22%;
+}
+
 .interview-card-audio {
   margin: -1.25rem -1.35rem 0.85rem;
   padding: 0.75rem 1rem;
@@ -994,6 +1006,8 @@ html[data-site-mode="press"] .about-visual-lead {
 .interview-card-media + .interview-card-audio {
   margin-top: 0;
   margin-bottom: 0.85rem;
+  margin-left: 0;
+  margin-right: 0;
   border-radius: 0;
 }
 
