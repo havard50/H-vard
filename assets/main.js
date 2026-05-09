@@ -427,6 +427,16 @@
         .replace(/'/g, "&#39;");
     }
 
+    /** On standalone shop page, in-page hashes must point at the homepage. */
+    function resolveHref(href) {
+      if (href == null || typeof href !== "string") return href;
+      if (href.charAt(0) !== "#") return href;
+      if (document.body && document.body.classList.contains("page-shop")) {
+        return "/" + href;
+      }
+      return href;
+    }
+
     function formatPublished(iso) {
       if (!iso || typeof iso !== "string") return "";
       var parsed = Date.parse(iso.length === 10 ? iso + "T12:00:00" : iso);
@@ -536,7 +546,6 @@
       if (!latestUpdatesRoot || !Array.isArray(items) || !items.length) return;
       latestUpdatesRoot.innerHTML = items
         .map(function (e) {
-          var href = esc(primaryHrefForFeedEntry(e));
           var timeHtml =
             e.publishedIso && formatPublished(e.publishedIso)
               ? '<time class="latest-update__time" datetime="' +
@@ -563,7 +572,7 @@
             "</div>" +
             '<div class="latest-update__main">' +
             '<h3 class="latest-update__title"><a href="' +
-            href +
+            esc(resolveHref(primaryHrefForFeedEntry(e))) +
             '">' +
             esc(e.title) +
             "</a></h3>" +
@@ -586,7 +595,7 @@
           if (!link || !link.href || !link.label) return "";
           return (
             '<a href="' +
-            esc(link.href) +
+            esc(resolveHref(link.href)) +
             '">' +
             esc(link.label) +
             "</a>"
@@ -755,7 +764,7 @@
         .map(function (item) {
           var primaryAction = item && item.primaryAction && item.primaryAction.href && item.primaryAction.label
             ? '<a class="btn btn-primary btn--compact store-card__action" href="' +
-              esc(item.primaryAction.href) +
+              esc(resolveHref(item.primaryAction.href)) +
               '">' +
               esc(item.primaryAction.label) +
               "</a>"
@@ -777,7 +786,7 @@
           ) {
             checkoutAction =
               '<a class="btn btn-ghost btn--compact store-card__checkout" href="' +
-              esc(item.checkoutLink) +
+              esc(resolveHref(item.checkoutLink)) +
               '">' +
               esc(item.checkoutLabel) +
               "</a>";

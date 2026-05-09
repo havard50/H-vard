@@ -2543,6 +2543,10 @@ html[data-site-mode="press"] .gallery-footnote {
   opacity: 0.85;
 }
 
+.shop-page-admin-hint {
+  margin-top: 1.5rem;
+}
+
 /* Links */
 .link-grid {
   list-style: none;

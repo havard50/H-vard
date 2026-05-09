@@ -3,45 +3,141 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Music &amp; CDs — Håvard Pedersen</title>
     <meta name="robots" content="index,follow" />
+    <meta
+      name="description"
+      content="Music store — Håvard Pedersen: streaming, CD enquiries, live holds, merch roadmap, and partner products. Same catalogue as the main site, driven by content.json."
+    />
+    <title>Music &amp; store — Håvard Pedersen</title>
+    <link rel="canonical" href="https://havardpedersen.com/shop.html" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Instrument+Serif:ital@0;1&family=Syne:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="/assets/styles.css" />
+    <link rel="icon" type="image/png" href="/assets/images/studio-gretsch-portrait.png" />
     <meta name="theme-color" content="#030206" />
   </head>
-  <body class="body--future">
+  <body class="body--future page-shop">
     <a class="skip-link" href="#main">Skip to content</a>
     <header class="site-header">
       <div class="header-inner">
-        <a class="logo" href="index.html#main">Håvard Pedersen</a>
-        <nav class="site-nav" aria-label="Shop navigation" style="display:flex;flex-wrap:wrap;gap:0.5rem;">
-          <a href="index.html#main">Home</a>
-          <a href="index.html#listen">Music</a>
-          <a href="index.html#contact">Contact</a>
+        <a class="logo" href="/">Håvard Pedersen</a>
+        <span class="header-spacer" aria-hidden="true"></span>
+        <button
+          class="site-mode-toggle"
+          type="button"
+          aria-pressed="false"
+          aria-label="Switch to calmer press-friendly colors"
+        >
+          Press look
+        </button>
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="site-nav"
+        >
+          <span class="sr-only">Menu</span>
+          <span class="nav-toggle-bar" aria-hidden="true"></span>
+        </button>
+        <nav id="site-nav" class="site-nav" aria-label="Primary">
+          <a href="/">Home</a>
+          <a href="/#listen">Listen</a>
+          <a href="/#videos">Video</a>
+          <a href="/#gallery">Photos</a>
+          <a href="/#latest-updates-heading">Feed</a>
+          <a href="/#news">News</a>
+          <a href="/#store">Store (home)</a>
+          <a href="/shop.html" aria-current="page">Shop</a>
+          <a href="/#contact">Contact</a>
+          <a class="nav-cta" href="https://www.gigplanet.no/band/havard-pedersen-and-the-blues-is-alright-band">Booking</a>
         </nav>
       </div>
     </header>
-    <main id="main" class="section" style="padding-top: 6rem; max-width: 42rem; margin: 0 auto">
-      <div class="section-inner">
-        <p class="section-kicker">Store</p>
-        <h1 class="section-title">Music, CDs &amp; orders</h1>
-        <p class="listen-lead">
-          <strong>Det sku bli oss</strong> (single, 2025) — stream on Spotify / Apple Music.
-          <strong><em>Never Felt So Good</em></strong> and <strong><em>You and I</em></strong> — full catalogue on streaming; CDs or bundles via
-          <a href="index.html#contact">Contact</a> until checkout is wired on the main site.
-          Archive pages: <a href="https://havardpedersen.com/">havardpedersen.com</a>.
-        </p>
-        <div class="listen-now-row" style="margin-top: 1rem">
-          <a class="btn btn-primary" href="https://open.spotify.com/track/3b5YUyKuugvteTF85a3TpP">Latest single — Spotify</a>
-          <a class="btn btn-ghost" href="https://open.spotify.com/artist/50PJ7UncEwx3fUxJ1LgZid">Artist catalogue</a>
-          <a class="btn btn-ghost" href="https://music.apple.com/no/search?term=H%C3%A5vard%20Pedersen">Apple Music</a>
-          <a class="btn btn-ghost" href="index.html#store">Store section</a>
+
+    <main id="main">
+      <section class="section section-news reveal in-view" aria-labelledby="shop-title">
+        <div class="section-inner">
+          <p class="section-kicker">Store</p>
+          <h1 id="shop-title" class="section-title">Music, merch &amp; orders</h1>
+          <p class="listen-lead">
+            Dedicated store page — same product rows as the homepage, loaded from <strong>content.json</strong> (previews, copy, and CTAs stay in
+            sync). Streaming works today; secure checkout when payment links are connected.
+          </p>
+          <p class="listen-lead">
+            <a class="btn btn-ghost btn--compact" href="/">← Full artist site</a>
+            <a class="btn btn-ghost btn--compact" href="/#listen">Music section</a>
+            <a class="btn btn-ghost btn--compact" href="/#partners">Partners</a>
+          </p>
+
+          <ul class="store-cats" aria-label="Store categories">
+            <li>Streaming &amp; catalogue</li>
+            <li>CDs / vinyl (on request)</li>
+            <li>Live / tickets</li>
+            <li>Merch</li>
+            <li>Seafood / partner (on request)</li>
+          </ul>
+          <p class="store-rollout">
+            Edit rows under <strong>store</strong> in content.json — <strong>previewImage</strong> powers the thumbnails below.
+          </p>
+          <p class="store-payments">
+            Planned payments: Stripe Payment Links, Shopify Buy Button, or Snipcart — chosen per product type.
+          </p>
+          <p id="store-checkout-status" class="store-checkout-status" aria-live="polite">
+            Secure checkout will appear here when payment links are activated.
+          </p>
+
+          <div id="store-grid" class="news-grid" aria-label="Store products">
+            <article class="news-card store-card">
+              <p class="news-card-kicker">Single · 2025</p>
+              <h3 class="news-card-title">Det sku bli oss</h3>
+              <p class="news-card-text">Stream on Spotify and Apple Music; CDs or bundles via Contact until checkout is live.</p>
+              <p class="store-card__meta">
+                <span class="store-card__status">Out now</span>
+                <span class="store-card__price">Streaming · CDs on request</span>
+              </p>
+              <div class="store-card__cta-row">
+                <a class="btn btn-primary btn--compact store-card__action" href="https://open.spotify.com/track/3b5YUyKuugvteTF85a3TpP"
+                  >Listen on Spotify</a
+                >
+              </div>
+              <p class="news-card-links">
+                <a href="https://open.spotify.com/track/3b5YUyKuugvteTF85a3TpP">Spotify — track</a> ·
+                <a href="https://music.apple.com/no/search?term=Det%20sku%20bli%20oss">Apple Music</a> ·
+                <a href="/#listen">Music section</a>
+              </p>
+            </article>
+          </div>
+
+          <p class="listen-hint shop-page-admin-hint">
+            JSON workflow: open <a href="/admin.html">Content admin</a> to validate and export updates, or edit the repo directly.
+          </p>
         </div>
-      </div>
+      </section>
     </main>
+
     <footer class="site-footer">
       <div class="footer-inner">
-        <p class="footer-copy"><a href="index.html#main">← Back to site</a></p>
+        <p class="footer-copy">© Håvard Pedersen · havardpedersen.com</p>
+        <p class="footer-meta">
+          <a href="/">Home</a>
+          ·
+          <a href="/#listen">Music</a>
+          ·
+          <a href="/#store">Store on homepage</a>
+          ·
+          <a href="/#contact">Contact</a>
+        </p>
       </div>
     </footer>
+
+    <a class="floating-book-btn" href="https://www.gigplanet.no/band/havard-pedersen-and-the-blues-is-alright-band" title="Book live dates via Gigplanet">
+      Book live
+    </a>
+
+    <script src="/assets/main.js"></script>
   </body>
 </html>
