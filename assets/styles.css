@@ -936,6 +936,32 @@ html[data-site-mode="press"] .about-visual-lead {
   text-decoration: underline;
 }
 
+.store-cats {
+  list-style: none;
+  margin: 0.15rem 0 0.55rem;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem 0.5rem;
+}
+
+.store-cats li {
+  padding: 0.34rem 0.6rem;
+  border-radius: 999px;
+  border: 1px solid rgba(56, 189, 248, 0.24);
+  background: rgba(8, 6, 18, 0.45);
+  font-size: 0.77rem;
+  font-weight: 600;
+  color: #a5f3fc;
+}
+
+.store-rollout {
+  margin: 0 0 1rem;
+  font-size: 0.86rem;
+  line-height: 1.55;
+  color: var(--text-muted);
+}
+
 .listen-now-row {
   display: flex;
   flex-wrap: wrap;
