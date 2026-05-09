@@ -1003,6 +1003,12 @@ html[data-site-mode="press"] .about-visual-lead {
   background: rgba(0, 0, 0, 0.35);
 }
 
+/* Audio-only card (no image): keep player inside padding — no full-bleed overlap */
+.interview-card > .interview-card-audio:first-child {
+  margin: 0 0 0.85rem;
+  border-radius: 0;
+}
+
 .interview-card-media + .interview-card-audio {
   margin-top: 0;
   margin-bottom: 0.85rem;
