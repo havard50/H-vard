@@ -502,6 +502,7 @@
 
       (data.live || []).forEach(function (item) {
         if (!item) return;
+        if (item.date === "Poster") return;
         var when = item.updated || item.published;
         if (!when) return;
         pushEntry({
@@ -779,20 +780,8 @@
       if (stamp && siteMeta.feedUpdated) {
         var iso = esc(siteMeta.feedUpdated);
         var human = esc(formatPublished(siteMeta.feedUpdated));
-        var feedHref = esc(hashLink("#latest-updates-heading"));
-        var newsHref = esc(hashLink("#news"));
         stamp.innerHTML =
-          "Content refreshed · <time datetime=\"" +
-          iso +
-          "\">" +
-          human +
-          "</time> — see the <a href=\"" +
-          feedHref +
-          "\">Feed</a> and <a href=\"" +
-          newsHref +
-          "\">News</a>" +
-          (document.body && document.body.classList.contains("page-shop") ? " on the homepage" : "") +
-          " for what is new.";
+          "Content refreshed · <time datetime=\"" + iso + "\">" + human + "</time>.";
       }
     }
 

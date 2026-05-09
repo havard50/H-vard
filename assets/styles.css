@@ -2832,21 +2832,13 @@ html[data-site-mode="press"] .contact-form-provider-note {
 }
 
 .video-energy__kicker {
-  margin: 0 0 0.45rem;
+  margin: 0 0 1rem;
   font-family: var(--font-future);
   font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 0.22em;
   text-transform: uppercase;
   color: #a5f3fc;
-}
-
-.video-energy__line {
-  margin: 0 0 1.1rem;
-  max-width: 48rem;
-  font-size: 1rem;
-  line-height: 1.58;
-  color: rgba(236, 230, 252, 0.88);
 }
 
 .video-reels-strip {
@@ -3003,13 +2995,6 @@ html[data-site-mode="press"] .contact-form-provider-note {
   font-weight: 600;
   color: #c5ccd8;
   letter-spacing: 0.02em;
-}
-
-.music-video-channel-cta {
-  margin: 0 0 1.5rem;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.65rem;
 }
 
 .lightbox {
@@ -3292,6 +3277,32 @@ body.lightbox-open .floating-book-btn {
   margin-top: 0.95rem;
   padding-top: 0.9rem;
   border-top: 1px solid rgba(148, 163, 184, 0.2);
+}
+
+.footer-partner-inline {
+  margin-top: 0.95rem;
+  padding-top: 0.9rem;
+  border-top: 1px solid rgba(148, 163, 184, 0.2);
+  font-size: 0.83rem;
+  line-height: 1.55;
+  color: var(--text-muted);
+}
+
+.footer-partner-inline .footer-partner-kicker {
+  display: inline;
+  margin: 0 0.4rem 0 0;
+  font-size: 0.68rem;
+  vertical-align: baseline;
+}
+
+.footer-partner-inline a {
+  font-weight: 600;
+  color: #e8bc6a;
+  text-decoration: none;
+}
+
+.footer-partner-inline a:hover {
+  text-decoration: underline;
 }
 
 .footer-partner-kicker {
@@ -4335,6 +4346,15 @@ html[data-site-mode="press"] .footer-partner {
   border-top-color: rgba(26, 24, 22, 0.16);
 }
 
+html[data-site-mode="press"] .footer-partner-inline {
+  border-top-color: rgba(26, 24, 22, 0.16);
+  color: var(--text-muted);
+}
+
+html[data-site-mode="press"] .footer-partner-inline a {
+  color: #6e5420;
+}
+
 html[data-site-mode="press"] .footer-partner-kicker {
   color: #6e5420;
 }
@@ -4790,10 +4810,6 @@ html[data-site-mode="press"] .video-energy {
 
 html[data-site-mode="press"] .video-energy__kicker {
   color: #6e5420;
-}
-
-html[data-site-mode="press"] .video-energy__line {
-  color: rgba(42, 38, 34, 0.9);
 }
 
 html[data-site-mode="press"] .video-reel-tile {

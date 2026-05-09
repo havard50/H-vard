@@ -1,7 +1,6 @@
 {
   "siteMeta": {
-    "feedUpdated": "2026-05-12",
-    "feedNote": "Releases, clips, and tour news land here first — newest items at the top."
+    "feedUpdated": "2026-05-12"
   },
   "contactForm": {
     "mailto": "havardpedersen@me.com",
@@ -9,37 +8,12 @@
     "action": "",
     "redirectThanks": "https://havardpedersen.com/?contact=sent"
   },
-  "feedExtras": [
-    {
-      "published": "2026-05-14",
-      "kicker": "Rehearsal · 2026",
-      "title": "May 2026 — new rehearsal clip",
-      "body": "Trio rehearsal clip in the can — vertical cut ships to TikTok / Shorts first; a longer graded version lands under Video when it is ready.",
-      "image": "/assets/images/havard-live-sunburst-semihollow.png",
-      "imageAlt": "Håvard Pedersen — live on stage with semi-hollow sunburst guitar",
-      "links": [
-        { "label": "Video", "href": "#videos" },
-        { "label": "TikTok — @haavardhedde", "href": "https://www.tiktok.com/@haavardhedde" }
-      ]
-    },
-    {
-      "published": "2026-05-07",
-      "kicker": "Studio",
-      "title": "Album sessions — vocal day",
-      "body": "Tracking at The Norwegian Sound with Peter Michelsen. Stills and reel clips land here when cleared — follow Shorts/TikTok for raw moments.",
-      "image": "/assets/images/studio-white-falcon-wide.png",
-      "imageAlt": "Håvard Pedersen — studio with Gretsch White Falcon",
-      "links": [
-        { "label": "About / sessions", "href": "#about" },
-        { "label": "Video section", "href": "#videos" }
-      ]
-    }
-  ],
+  "feedExtras": [],
   "timeline": [
     {
       "kicker": "Rehearsal · 2026",
       "title": "May 2026 — new rehearsal clip",
-      "body": "Trio rehearsal in progress — short-form edit coming to TikTok / YouTube Shorts; full story in the living feed and Video when graded.",
+      "body": "Trio rehearsal — short-form on TikTok / Shorts first; longer graded cut under Video when ready.",
       "published": "2026-05-14",
       "image": "/assets/images/havard-live-sunburst-semihollow.png",
       "imageAlt": "Håvard Pedersen — live on stage with semi-hollow sunburst guitar",
@@ -56,6 +30,18 @@
       "links": [
         { "label": "TikTok — @haavardhedde", "href": "https://www.tiktok.com/@haavardhedde" },
         { "label": "YouTube Shorts — @havardhedde10", "href": "https://www.youtube.com/@havardhedde10/shorts" }
+      ]
+    },
+    {
+      "kicker": "Studio",
+      "title": "Album sessions — vocal day",
+      "body": "Tracking at The Norwegian Sound with Peter Michelsen. Stills and cleared reel clips land here; raw moments on Shorts/TikTok first.",
+      "published": "2026-05-07",
+      "image": "/assets/images/studio-white-falcon-wide.png",
+      "imageAlt": "Håvard Pedersen — studio with Gretsch White Falcon",
+      "links": [
+        { "label": "About / sessions", "href": "#about" },
+        { "label": "Video", "href": "#videos" }
       ]
     },
     {
@@ -324,7 +310,7 @@
     {
       "kicker": "Seafood & partners",
       "title": "Holmen & Robertsen range",
-      "body": "Partner products — separate listing and checkout when stock and payment links are agreed (music store stays primary).",
+      "body": "Non-music partner line — listing and checkout when agreed. Collaboration note under Partners.",
       "previewImage": "/assets/images/studio-white-falcon-wide.png",
       "previewAlt": "Partner spotlight — Holmen & Robertsen",
       "status": "On request",
