@@ -3,6 +3,7 @@
 The site now reads key homepage sections from:
 
 - `assets/content.json`
+- Optional browser editor: `admin.html`
 
 You can update these areas by editing JSON only:
 
@@ -68,3 +69,4 @@ Add an item to `videos` with `youtubeId`:
 - Keep JSON valid (commas, quotes, brackets).
 - Use newest items first.
 - If JSON fails to load, the page still shows static fallback content.
+- `admin.html` helps edit/validate/export JSON quickly, then commit the file to deploy.

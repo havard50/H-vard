@@ -1,0 +1,101 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #0b0f17;
+  color: #e5e7eb;
+}
+
+.admin-wrap {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 1.25rem;
+}
+
+.admin-head h1 {
+  margin: 0.15rem 0 0.35rem;
+  font-size: 1.9rem;
+}
+
+.admin-kicker {
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.72rem;
+  color: #a5f3fc;
+}
+
+.admin-head p {
+  margin: 0 0 1rem;
+  color: #cbd5e1;
+  line-height: 1.45;
+}
+
+.admin-panel {
+  border: 1px solid #243244;
+  background: #111827;
+  border-radius: 12px;
+  padding: 0.95rem;
+  margin-bottom: 0.95rem;
+}
+
+.admin-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+button,
+.admin-link {
+  border: 1px solid #334155;
+  border-radius: 8px;
+  background: #1f2937;
+  color: #f8fafc;
+  padding: 0.48rem 0.68rem;
+  font-size: 0.88rem;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+button:hover,
+.admin-link:hover {
+  border-color: #64748b;
+}
+
+.status {
+  margin: 0.75rem 0 0;
+  font-size: 0.86rem;
+  color: #fde68a;
+}
+
+.hint {
+  margin: 0.35rem 0 0;
+  font-size: 0.8rem;
+  color: #94a3b8;
+}
+
+textarea {
+  width: 100%;
+  min-height: 420px;
+  border-radius: 10px;
+  border: 1px solid #334155;
+  background: #020617;
+  color: #e2e8f0;
+  padding: 0.7rem;
+  font-family: Consolas, "Courier New", monospace;
+  font-size: 0.82rem;
+  line-height: 1.45;
+}
+
+.stats {
+  margin: 0;
+  padding-left: 1.05rem;
+  color: #cbd5e1;
+}
+
+.stats li {
+  margin: 0.28rem 0;
+}
