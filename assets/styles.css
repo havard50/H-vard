@@ -362,55 +362,6 @@ a:hover {
   }
 }
 
-/* 404 — no menu toggle; short nav stays visible */
-.page-404 .site-nav--minimal {
-  position: static;
-  opacity: 1;
-  pointer-events: auto;
-  transform: none;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: center;
-  max-height: none;
-  overflow: visible;
-  padding: 0.2rem 0;
-  background: transparent;
-  border: none;
-  box-shadow: none;
-  gap: 0.45rem 0.75rem;
-}
-
-@media (max-width: 768px) {
-  .page-404 .site-header {
-    height: auto;
-    min-height: var(--header-h);
-  }
-
-  .page-404 .header-inner {
-    flex-wrap: wrap;
-    row-gap: 0.35rem;
-    height: auto;
-    min-height: 0;
-    padding-top: 0.45rem;
-    padding-bottom: 0.45rem;
-  }
-
-  .page-404 .header-spacer {
-    display: none;
-  }
-
-  .page-404 .site-nav--minimal a {
-    padding: 0.4rem 0.5rem;
-  }
-}
-
-.page-404-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.65rem;
-  margin-top: 1rem;
-}
-
 /* Hero */
 .hero {
   position: relative;
