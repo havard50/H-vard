@@ -509,9 +509,21 @@
           '" loading="lazy" decoding="async" />' +
           "</div>";
       }
+      var audioBlock = "";
+      if (item.audio) {
+        audioBlock =
+          '<div class="interview-card-audio">' +
+          '<audio controls preload="none">' +
+          '<source src="' +
+          esc(item.audio) +
+          '" type="audio/mpeg" />' +
+          "</audio>" +
+          "</div>";
+      }
       return (
         '<article class="news-card interview-card">' +
         media +
+        audioBlock +
         '<p class="news-card-kicker">' +
         esc(item.kicker) +
         "</p>" +

@@ -92,11 +92,47 @@
       ]
     },
     {
+      "kicker": "Archive · Altaposten",
+      "title": "Print — debut album coverage",
+      "body": "Altaposten feature during the Never Felt So Good campaign; scan archived on the legacy domain.",
+      "image": "https://havardpedersen.com/HavardAltaposten.png",
+      "imageAlt": "Altaposten — newspaper coverage scan",
+      "links": [
+        {
+          "label": "Altaposten scan (full image)",
+          "href": "https://havardpedersen.com/HavardAltaposten.png"
+        },
+        { "label": "Press timeline", "href": "#press" }
+      ]
+    },
+    {
+      "kicker": "Archive · UK radio",
+      "title": "Blast Radio UK — WMGGW",
+      "body": "Segment archived as MP3 on the legacy domain (February 26).",
+      "audio": "https://havardpedersen.com/BlastRadioUK_WMGGW_Feb26th.mp3",
+      "links": [
+        {
+          "label": "Download / open MP3",
+          "href": "https://havardpedersen.com/BlastRadioUK_WMGGW_Feb26th.mp3"
+        },
+        { "label": "Press timeline", "href": "#press" }
+      ]
+    },
+    {
       "kicker": "Archive · UK radio",
       "title": "Hermitage FM — From Blues To Rock (2011)",
-      "body": "Conversation with Jon Seymour — full audio archived on the legacy domain (MP3).",
+      "body": "Conversation with Jon Seymour plus a Mobile Dreams live spot — both archived on the legacy domain (MP3).",
+      "audio": "https://havardpedersen.com/HermitageFM_interviewJune8.mp3",
       "links": [
-        { "label": "Listen (MP3)", "href": "https://havardpedersen.com/HermitageFM_interviewJune8.mp3" }
+        {
+          "label": "Interview (MP3)",
+          "href": "https://havardpedersen.com/HermitageFM_interviewJune8.mp3"
+        },
+        {
+          "label": "Mobile Dreams — Hermitage FM (MP3)",
+          "href": "https://havardpedersen.com/MobileDreams_HermitageFM.mp3"
+        },
+        { "label": "Press timeline", "href": "#press" }
       ]
     },
     {
