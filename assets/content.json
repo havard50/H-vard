@@ -8,8 +8,7 @@
     "mailto": "havardpedersen@me.com",
     "subject": "Site contact — havardpedersen.com",
     "action": "",
-    "redirectThanks": "https://havardpedersen.com/?contact=sent",
-    "note": "Optional: set action to a Formspree (or similar) https://… URL if you want in-browser submit without opening an email app. Leave action empty for the free mailto flow on your own domain."
+    "redirectThanks": "https://havardpedersen.com/?contact=sent"
   },
   "feedExtras": [
     {

@@ -948,11 +948,10 @@
       form.removeAttribute("data-netlify-honeypot");
 
       var note = document.querySelector("#contact-form-provider-note");
-      if (note) {
+      var noteText = cfg.note && String(cfg.note).trim();
+      if (note && noteText) {
         note.removeAttribute("hidden");
-        note.textContent =
-          (cfg.note && String(cfg.note).trim()) ||
-          "This form posts to the inbox configured in content.json (external provider).";
+        note.textContent = noteText;
       }
 
       if (cfg.subject) {
@@ -1016,13 +1015,10 @@
       });
 
       var note = document.querySelector("#contact-form-provider-note");
-      if (note) {
+      var mailtoNote = cfg.mailtoNote && String(cfg.mailtoNote).trim();
+      if (note && mailtoNote) {
         note.removeAttribute("hidden");
-        note.textContent =
-          (cfg.mailtoNote && String(cfg.mailtoNote).trim()) ||
-          "Free — uses the visitor’s email app (no paid service). Message is addressed to " +
-          mailto +
-          ".";
+        note.textContent = mailtoNote;
       }
     }
 
