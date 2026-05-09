@@ -898,6 +898,24 @@ html[data-site-mode="press"] .about-visual-lead {
     inset 0 1px 0 rgba(212, 168, 74, 0.06);
 }
 
+.interview-card-media {
+  margin: -1.25rem -1.35rem 0.85rem;
+  border-radius: var(--radius) var(--radius) 0 0;
+  overflow: hidden;
+  border-bottom: 1px solid var(--border);
+  background: rgba(0, 0, 0, 0.35);
+}
+
+.interview-card-media img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 10;
+  object-fit: contain;
+  object-position: center top;
+  display: block;
+  background: #0a0a0c;
+}
+
 .timeline-card-media {
   margin: -1.25rem -1.35rem 0.85rem;
   border-radius: var(--radius) var(--radius) 0 0;

@@ -78,6 +78,20 @@
       ]
     },
     {
+      "kicker": "Archive · TV Nord",
+      "title": "Regional TV — November 2010",
+      "body": "TV Nord segment during the debut album campaign; broadcast still archived on the legacy domain.",
+      "image": "https://havardpedersen.com/TvNord.png-for-web-normal.png",
+      "imageAlt": "TV Nord — archived broadcast still",
+      "links": [
+        {
+          "label": "TV Nord still (full image)",
+          "href": "https://havardpedersen.com/TvNord.png-for-web-normal.png"
+        },
+        { "label": "Press timeline", "href": "#press" }
+      ]
+    },
+    {
       "kicker": "Archive · UK radio",
       "title": "Hermitage FM — From Blues To Rock (2011)",
       "body": "Conversation with Jon Seymour — full audio archived on the legacy domain (MP3).",

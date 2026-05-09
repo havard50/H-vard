@@ -498,8 +498,20 @@
 
     function interviewCardHtml(item) {
       if (!item) return "";
+      var media = "";
+      if (item.image) {
+        media =
+          '<div class="interview-card-media">' +
+          '<img src="' +
+          esc(item.image) +
+          '" alt="' +
+          esc(item.imageAlt || "") +
+          '" loading="lazy" decoding="async" />' +
+          "</div>";
+      }
       return (
         '<article class="news-card interview-card">' +
+        media +
         '<p class="news-card-kicker">' +
         esc(item.kicker) +
         "</p>" +
