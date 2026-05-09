@@ -362,6 +362,55 @@ a:hover {
   }
 }
 
+/* 404 — no menu toggle; short nav stays visible */
+.page-404 .site-nav--minimal {
+  position: static;
+  opacity: 1;
+  pointer-events: auto;
+  transform: none;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  max-height: none;
+  overflow: visible;
+  padding: 0.2rem 0;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  gap: 0.45rem 0.75rem;
+}
+
+@media (max-width: 768px) {
+  .page-404 .site-header {
+    height: auto;
+    min-height: var(--header-h);
+  }
+
+  .page-404 .header-inner {
+    flex-wrap: wrap;
+    row-gap: 0.35rem;
+    height: auto;
+    min-height: 0;
+    padding-top: 0.45rem;
+    padding-bottom: 0.45rem;
+  }
+
+  .page-404 .header-spacer {
+    display: none;
+  }
+
+  .page-404 .site-nav--minimal a {
+    padding: 0.4rem 0.5rem;
+  }
+}
+
+.page-404-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin-top: 1rem;
+}
+
 /* Hero */
 .hero {
   position: relative;
@@ -1566,6 +1615,39 @@ html[data-site-mode="press"] #interviews-feed .interview-card .news-card-kicker 
   }
 }
 
+.partner-card {
+  position: relative;
+}
+
+.partner-card:has(.partner-card__mark) {
+  padding-right: 5rem;
+}
+
+.partner-card__mark {
+  position: absolute;
+  top: 0.85rem;
+  right: 0.85rem;
+  margin: 0;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: rgba(222, 172, 94, 0.95);
+  border: 1px solid rgba(222, 172, 94, 0.35);
+  border-radius: 4px;
+  padding: 0.28rem 0.45rem;
+  line-height: 1;
+}
+
+.partner-card__logo {
+  margin: 0 0 0.5rem;
+}
+
+.partner-card__logo img {
+  max-height: 2.25rem;
+  width: auto;
+  display: block;
+}
+
 .partner-card .news-card-title {
   margin-bottom: 0.42rem;
 }
@@ -1703,11 +1785,42 @@ html[data-site-mode="press"] #interviews-feed .interview-card .news-card-kicker 
   color: #deac5e;
 }
 
+.gallery-section-lead {
+  max-width: 40rem;
+}
+
+.gallery-section-scan {
+  margin: -0.35rem 0 1rem;
+  max-width: 40rem;
+  font-size: 0.88rem;
+  line-height: 1.55;
+  color: rgba(235, 228, 240, 0.78);
+}
+
+html[data-site-mode="press"] .gallery-section-scan {
+  color: rgba(61, 58, 54, 0.82);
+}
+
 /* Photos: featured lead (capped height), then uniform tile grid */
 .gallery-lead-wrap {
   margin-bottom: 0.85rem;
   max-width: min(100%, 44rem);
   margin-inline: auto;
+}
+
+.gallery-lead-figure {
+  margin: 0;
+}
+
+.gallery-lead-cap {
+  margin: 0.5rem 0 0;
+  font-size: 0.84rem;
+  line-height: 1.45;
+  color: rgba(235, 228, 240, 0.72);
+}
+
+html[data-site-mode="press"] .gallery-lead-cap {
+  color: rgba(61, 58, 54, 0.78);
 }
 
 .gallery-lead-wrap .visual-card--gallery-lead {
@@ -1745,28 +1858,49 @@ html[data-site-mode="press"] #interviews-feed .interview-card .news-card-kicker 
 
 .visual-grid.visual-grid--gallery-tiles {
   display: grid;
-  gap: 0.85rem;
+  gap: 0.85rem 0.75rem;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   margin-bottom: 0;
-  align-items: stretch;
+  align-items: start;
   max-width: min(100%, 56rem);
   margin-inline: auto;
 }
 
-.visual-grid.visual-grid--gallery-tiles .visual-card {
+.visual-grid.visual-grid--gallery-tiles .gallery-tile {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
   min-height: 0;
 }
 
-.visual-grid.visual-grid--gallery-tiles .visual-card img {
+.visual-grid.visual-grid--gallery-tiles .gallery-tile .visual-card {
+  min-height: 0;
+}
+
+.visual-grid.visual-grid--gallery-tiles .gallery-tile .visual-card img {
   aspect-ratio: 1 / 1;
   max-height: min(42vw, 260px);
   width: 100%;
   height: auto;
   object-fit: cover;
+  display: block;
+}
+
+.gallery-tile-cap {
+  margin: 0.4rem 0 0;
+  padding: 0 0.1rem;
+  font-size: 0.78rem;
+  line-height: 1.4;
+  letter-spacing: 0.01em;
+  color: rgba(235, 228, 240, 0.7);
+}
+
+html[data-site-mode="press"] .gallery-tile-cap {
+  color: rgba(61, 58, 54, 0.76);
 }
 
 @media (min-width: 600px) {
-  .visual-grid.visual-grid--gallery-tiles .visual-card img {
+  .visual-grid.visual-grid--gallery-tiles .gallery-tile .visual-card img {
     max-height: min(28vw, 240px);
   }
 }
@@ -1776,7 +1910,7 @@ html[data-site-mode="press"] #interviews-feed .interview-card .news-card-kicker 
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
-  .visual-grid.visual-grid--gallery-tiles .visual-card img {
+  .visual-grid.visual-grid--gallery-tiles .gallery-tile .visual-card img {
     max-height: min(22vw, 220px);
   }
 }
@@ -3063,6 +3197,74 @@ body.lightbox-open .floating-book-btn {
   color: var(--text-muted);
 }
 
+.footer-content-stamp {
+  margin: 0.55rem 0 0;
+  font-size: 0.88rem;
+  line-height: 1.5;
+  color: rgba(226, 232, 240, 0.82);
+}
+
+.footer-content-stamp a {
+  color: #e8bc6a;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.footer-content-stamp a:hover {
+  text-decoration: underline;
+}
+
+.footer-content-stamp time {
+  font-weight: 600;
+  color: #f8fafc;
+}
+
+.footer-host-details {
+  margin: 0.65rem 0 0;
+  max-width: 46rem;
+  border: 1px solid rgba(148, 163, 184, 0.22);
+  border-radius: 10px;
+  background: rgba(15, 23, 42, 0.35);
+  padding: 0.35rem 0.65rem 0.55rem;
+}
+
+.footer-host-summary {
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #a5f3fc;
+  list-style: none;
+}
+
+.footer-host-summary::-webkit-details-marker {
+  display: none;
+}
+
+.footer-host-summary::after {
+  content: " ▾";
+  font-size: 0.75em;
+  opacity: 0.75;
+}
+
+.footer-host-details[open] .footer-host-summary::after {
+  content: " ▴";
+}
+
+.footer-host-body {
+  margin: 0.45rem 0 0;
+  font-size: 0.8rem;
+  line-height: 1.5;
+  color: var(--text-muted);
+}
+
+.footer-host-body code {
+  font-size: 0.88em;
+  padding: 0.1rem 0.32rem;
+  border-radius: 4px;
+  background: rgba(2, 6, 23, 0.65);
+  border: 1px solid rgba(148, 163, 184, 0.2);
+}
+
 .footer-partner {
   margin-top: 0.95rem;
   padding-top: 0.9rem;
@@ -4053,6 +4255,28 @@ html[data-site-mode="press"] .hero__micro em {
 
 html[data-site-mode="press"] .hero__micro a {
   color: #6e5420;
+}
+
+html[data-site-mode="press"] .footer-content-stamp {
+  color: rgba(61, 58, 54, 0.88);
+}
+
+html[data-site-mode="press"] .footer-content-stamp time {
+  color: #1c1917;
+}
+
+html[data-site-mode="press"] .footer-host-details {
+  border-color: rgba(26, 24, 22, 0.12);
+  background: rgba(255, 252, 247, 0.5);
+}
+
+html[data-site-mode="press"] .footer-host-summary {
+  color: #6e5420;
+}
+
+html[data-site-mode="press"] .footer-host-body code {
+  background: rgba(255, 252, 247, 0.9);
+  border-color: rgba(26, 24, 22, 0.12);
 }
 
 html[data-site-mode="press"] .footer-meta a {

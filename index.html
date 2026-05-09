@@ -48,6 +48,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="/assets/styles.css" />
+    <link rel="prefetch" href="/assets/content.json" as="fetch" type="application/json" />
     <link rel="icon" type="image/png" href="/assets/images/studio-gretsch-portrait.png" />
     <meta name="theme-color" content="#030206" />
     <meta name="apple-mobile-web-app-title" content="Håvard Pedersen" />
@@ -65,6 +66,7 @@
           "https://open.spotify.com/artist/50PJ7UncEwx3fUxJ1LgZid",
           "https://www.youtube.com/@havardhedde10",
           "https://www.instagram.com/haavard_pedersen_raa_ekte_live",
+          "https://www.instagram.com/havardhedde",
           "https://www.tiktok.com/@haavardhedde",
           "https://www.facebook.com/pages/Havard-Pedersen/376826480817"
         ],
@@ -309,15 +311,15 @@
             </aside>
 
             <div class="about-premium__main">
-            <p class="bio-short bio-short--inset">
-              From Arctic Norway to Oslo — <strong>Håvard Pedersen</strong> has released <strong>three albums</strong> and steady
-              <strong>singles</strong>, with touring and festivals booked as a guitar-led live act (trio: see <a href="#band">Band</a>).
-              <a href="#press-kit">Press kit</a> · <a href="#listen">Music</a> ·
-              <a href="https://www.gigplanet.no/band/havard-pedersen-and-the-blues-is-alright-band">Booking</a>.
-            </p>
             <details class="about-expand">
-              <summary class="about-expand-summary">Full bio, story &amp; press text</summary>
+              <summary class="about-expand-summary">Read full bio, story &amp; press text</summary>
               <div class="about-expand-body prose prose-bio">
+                <p class="bio-short bio-short--inset">
+                  From Arctic Norway to Oslo — <strong>Håvard Pedersen</strong> has released <strong>three albums</strong> and steady
+                  <strong>singles</strong>, with touring and festivals booked as a guitar-led live act (trio: see <a href="#band">Band</a>).
+                  <a href="#press-kit">Press kit</a> · <a href="#listen">Music</a> ·
+                  <a href="https://www.gigplanet.no/band/havard-pedersen-and-the-blues-is-alright-band">Booking</a>.
+                </p>
                 <h3 class="prose-subhead">Biography</h3>
                 <p>
                   <strong>Håvard Pedersen</strong> is a Norwegian guitarist, songwriter, and bandleader from the remote Arctic town of
@@ -393,7 +395,7 @@
           <p class="section-kicker">Living platform</p>
           <h2 id="timeline-title" class="section-title">News &amp; feed</h2>
           <p id="news-feed-meta" class="news-feed-meta">
-            Feed last revised · <time datetime="2026-05-09">9 May 2026</time> — entries are driven by
+            Feed last revised · <time datetime="2026-05-12">12 May 2026</time> — entries are driven by
             <strong>content.json</strong> (add a CMS later if you want non-developer updates).
           </p>
 
@@ -412,41 +414,77 @@
             >
               <li class="latest-update">
                 <div class="latest-update__rail">
-                  <time class="latest-update__time" datetime="2026-05-09">9 May 2026</time>
-                  <span class="latest-update__badge">Social video</span>
+                  <time class="latest-update__time" datetime="2026-05-14">14 May 2026</time>
+                  <span class="latest-update__badge">Rehearsal · 2026</span>
                 </div>
                 <div class="latest-update__main">
                   <h3 class="latest-update__title">
-                    <a href="#videos">Short-form clips</a>
+                    <a href="#videos">May 2026 — new rehearsal clip</a>
                   </h3>
                   <p class="latest-update__deck">
-                    Performance edits and promo reels publish first on TikTok and YouTube Shorts — links in the Video section.
+                    Trio rehearsal clip in the can — vertical cut ships to TikTok / Shorts first; a longer graded version lands under Video when it is
+                    ready.
+                  </p>
+                  <div class="latest-update__media">
+                    <img
+                      src="/assets/images/havard-live-sunburst-semihollow.png"
+                      alt="Håvard Pedersen — live on stage with semi-hollow sunburst guitar"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
+                  <p class="latest-update__links">
+                    <a href="#videos">Video</a> · <a href="https://www.tiktok.com/@haavardhedde">TikTok — @haavardhedde</a>
                   </p>
                 </div>
               </li>
               <li class="latest-update">
                 <div class="latest-update__rail">
-                  <time class="latest-update__time" datetime="2026-05-08">8 May 2026</time>
-                  <span class="latest-update__badge">Video</span>
-                </div>
-                <div class="latest-update__main">
-                  <h3 class="latest-update__title">
-                    <a href="https://www.youtube.com/watch?v=zEXcH3lHjls">Det sku bli oss — official video</a>
-                  </h3>
-                  <p class="latest-update__deck">Latest single — official YouTube premiere.</p>
-                </div>
-              </li>
-              <li class="latest-update">
-                <div class="latest-update__rail">
-                  <time class="latest-update__time" datetime="2026-05-01">1 May 2026</time>
+                  <time class="latest-update__time" datetime="2026-04-25">25 Apr 2026</time>
                   <span class="latest-update__badge">Live · 2026</span>
                 </div>
                 <div class="latest-update__main">
                   <h3 class="latest-update__title">
-                    <a href="https://www.gigplanet.no/band/havard-pedersen-and-the-blues-is-alright-band">Tour routing &amp; poster</a>
+                    <a href="/assets/images/tour-poster-2025.png" target="_blank" rel="noopener noreferrer">April 2026 — live poster refresh</a>
                   </h3>
                   <p class="latest-update__deck">
-                    Confirmed dates surface on the poster and Gigplanet; this list updates when gigs go public.
+                    Routing graphic refreshed for spring holds — on-sale rows will mirror this card once dates are public.
+                  </p>
+                  <div class="latest-update__media">
+                    <img
+                      src="/assets/images/tour-poster-2025.png"
+                      alt="Tour poster — 2026 routing (spring refresh)"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
+                  <p class="latest-update__links">
+                    <a href="/assets/images/tour-poster-2025.png" target="_blank" rel="noopener noreferrer">Open poster (PNG)</a>
+                    ·
+                    <a href="https://www.gigplanet.no/band/havard-pedersen-and-the-blues-is-alright-band">Gigplanet</a>
+                  </p>
+                </div>
+              </li>
+              <li class="latest-update">
+                <div class="latest-update__rail">
+                  <time class="latest-update__time" datetime="2025-10-15">15 Oct 2025</time>
+                  <span class="latest-update__badge">Release · 2025</span>
+                </div>
+                <div class="latest-update__main">
+                  <h3 class="latest-update__title">
+                    <a href="https://open.spotify.com/track/3b5YUyKuugvteTF85a3TpP">2025 — Det sku bli oss</a>
+                  </h3>
+                  <p class="latest-update__deck">Single out now on streaming — official video under Video; artwork in Photos.</p>
+                  <div class="latest-update__media">
+                    <img
+                      src="/assets/images/single-det-sku-studio.png"
+                      alt="Det sku bli oss — single artwork (studio)"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
+                  <p class="latest-update__links">
+                    <a href="#listen">Listen</a> · <a href="#videos">Watch</a>
                   </p>
                 </div>
               </li>
@@ -608,50 +646,23 @@
 
           <div id="timeline-feed" class="news-grid timeline-grid" aria-label="Latest news and updates">
             <article class="news-card timeline-card">
-              <p class="timeline-card-date"><time datetime="2026-05-01">1 May 2026</time></p>
+              <p class="timeline-card-date"><time datetime="2026-05-14">14 May 2026</time></p>
               <div class="timeline-card-media">
                 <img
-                  src="/assets/images/tour-poster-2025.png"
-                  alt="Tour poster — 2026 live routing graphic"
+                  src="/assets/images/havard-live-sunburst-semihollow.png"
+                  alt="Håvard Pedersen — live on stage with semi-hollow sunburst electric guitar"
                   loading="lazy"
                   decoding="async"
                 />
               </div>
-              <p class="news-card-kicker">Live · 2026</p>
-              <h3 class="news-card-title">Tour routing &amp; poster</h3>
+              <p class="news-card-kicker">Rehearsal · 2026</p>
+              <h3 class="news-card-title">May 2026 — new rehearsal clip</h3>
               <p class="news-card-text">
-                Confirmed festival and club dates appear here when announced. Holds and routing for promoters run through Gigplanet.
+                Trio rehearsal — short-form on TikTok / Shorts first; longer graded cut under Video when ready.
               </p>
               <p class="news-card-links">
-                <a href="https://www.gigplanet.no/band/havard-pedersen-and-the-blues-is-alright-band">Gigplanet</a> ·
-                <a href="#live">Live &amp; touring</a>
-              </p>
-            </article>
-            <article class="news-card timeline-card timeline-card--release">
-              <p class="timeline-card-date"><time datetime="2025-10-15">15 Oct 2025</time></p>
-              <p class="news-card-kicker">Release · 2025</p>
-              <h3 class="news-card-title">New single: Det sku bli oss</h3>
-              <p class="news-card-text">
-                Out now on streaming. Start in <a href="#listen">Music</a>, then official clips in <a href="#videos">Video</a>.
-              </p>
-            </article>
-            <article class="news-card timeline-card">
-              <p class="timeline-card-date"><time datetime="2026-04-12">12 Apr 2026</time></p>
-              <p class="news-card-kicker">Studio</p>
-              <h3 class="news-card-title">Album sessions underway</h3>
-              <p class="news-card-text">
-                Recording with Peter Michelsen at The Norwegian Sound. Context and credits in <a href="#about">About</a>.
-              </p>
-            </article>
-            <article class="news-card timeline-card">
-              <p class="timeline-card-date"><time datetime="2026-03-20">20 Mar 2026</time></p>
-              <p class="news-card-kicker">Interviews</p>
-              <h3 class="news-card-title">Conversations &amp; archive audio</h3>
-              <p class="news-card-text">
-                YouTube, short-form, and older radio — quick links in Recent interviews (same section).
-              </p>
-              <p class="news-card-links">
-                <a href="#recent-interviews">Recent interviews</a>
+                <a href="#videos">Video</a> ·
+                <a href="https://www.tiktok.com/@haavardhedde">TikTok</a>
               </p>
             </article>
             <article class="news-card timeline-card">
@@ -659,9 +670,73 @@
               <p class="news-card-kicker">Social video</p>
               <h3 class="news-card-title">Short-form clips</h3>
               <p class="news-card-text">
-                Performance edits publish first on
+                Performance edits on
                 <a href="https://www.tiktok.com/@haavardhedde">TikTok (@haavardhedde)</a> and
-                <a href="https://www.youtube.com/@havardhedde10/shorts">YouTube Shorts (@havardhedde10)</a>.
+                <a href="https://www.youtube.com/@havardhedde10/shorts">YouTube Shorts</a>.
+              </p>
+            </article>
+            <article class="news-card timeline-card">
+              <p class="timeline-card-date"><time datetime="2026-05-01">1 May 2026</time></p>
+              <div class="timeline-card-media">
+                <img
+                  src="/assets/images/tour-poster-2025.png"
+                  alt="Tour poster — 2026 live routing graphic for promoters and fans"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <p class="news-card-kicker">Live · 2026</p>
+              <h3 class="news-card-title">May 2026 — tour routing &amp; poster</h3>
+              <p class="news-card-text">
+                Routing snapshot — confirmed public dates also appear under Live &amp; Touring when venues announce.
+              </p>
+              <p class="news-card-links">
+                <a href="https://www.gigplanet.no/band/havard-pedersen-and-the-blues-is-alright-band">Gigplanet</a> ·
+                <a href="#live">Live &amp; touring</a>
+              </p>
+            </article>
+            <article class="news-card timeline-card">
+              <p class="timeline-card-date"><time datetime="2026-04-25">25 Apr 2026</time></p>
+              <div class="timeline-card-media">
+                <img
+                  src="/assets/images/tour-poster-2025.png"
+                  alt="Tour poster — spring 2026 routing refresh"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <p class="news-card-kicker">Live · 2026</p>
+              <h3 class="news-card-title">April 2026 — live poster refresh</h3>
+              <p class="news-card-text">
+                Poster updated for spring holds — on-sale rows will match this card once dates are public.
+              </p>
+              <p class="news-card-links">
+                <a href="/assets/images/tour-poster-2025.png" target="_blank" rel="noopener noreferrer">Open poster (PNG)</a> ·
+                <a href="https://www.gigplanet.no/band/havard-pedersen-and-the-blues-is-alright-band">Gigplanet</a>
+              </p>
+            </article>
+            <article class="news-card timeline-card">
+              <p class="timeline-card-date"><time datetime="2026-04-12">12 Apr 2026</time></p>
+              <p class="news-card-kicker">Studio</p>
+              <h3 class="news-card-title">Album sessions underway</h3>
+              <p class="news-card-text">
+                Recording with Peter Michelsen at The Norwegian Sound. Context in <a href="#about">About</a>.
+              </p>
+            </article>
+            <article class="news-card timeline-card timeline-card--release">
+              <p class="timeline-card-date"><time datetime="2025-10-15">15 Oct 2025</time></p>
+              <div class="timeline-card-media">
+                <img
+                  src="/assets/images/single-det-sku-studio.png"
+                  alt="Det sku bli oss — 2025 single studio artwork"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <p class="news-card-kicker">Release · 2025</p>
+              <h3 class="news-card-title">2025 — Det sku bli oss</h3>
+              <p class="news-card-text">
+                Out now on streaming — <a href="#listen">Music</a> · <a href="#videos">Video</a> · <a href="#gallery">Photos</a>.
               </p>
             </article>
           </div>
@@ -981,45 +1056,105 @@
         <div class="section-inner">
           <p class="section-kicker">Stills</p>
           <h2 id="gallery-title" class="section-title">Photos</h2>
-          <p class="listen-lead">
-            Håvard-first: solo portraits and guitar-led performance shots (press-friendly). Release artwork and ensemble promo graphics are
-            grouped below — tap any image for fullscreen.
+          <p class="listen-lead gallery-section-lead">
+            <strong>Press stills, clearly grouped.</strong> Lead image: solo portrait. The square row is four <em>different</em> frames — live colour, live
+            black-and-white, studio Gretsch portrait, cinematic guitar still — each with a short caption below for scanning and screen readers. Singles
+            and band promo sit in separate blocks under the fold.
+          </p>
+          <p class="gallery-section-scan">
+            <strong>Open fullscreen:</strong> tap any thumbnail; the overlay shows the same caption as below (or the image description).
           </p>
 
           <div class="visuals-block">
           <div class="gallery-group gallery-group--photography">
             <p class="gallery-group-label">Håvard Pedersen — solo &amp; performance</p>
             <div class="gallery-lead-wrap">
-              <a
-                class="visual-card visual-card--gallery-lead visual-card--gallery-lead-portrait"
-                href="/assets/images/havard-portrait-scarf-bw.png"
-                data-lightbox="true"
-                data-caption="Håvard Pedersen — press portrait, black &amp; white (scarf)"
-              >
-                <img
-                  src="/assets/images/havard-portrait-scarf-bw.png"
-                  alt="Håvard Pedersen — black and white press portrait with patterned scarf"
-                  loading="lazy"
-                  decoding="async"
-                />
-              </a>
+              <figure class="gallery-lead-figure">
+                <a
+                  class="visual-card visual-card--gallery-lead visual-card--gallery-lead-portrait"
+                  href="/assets/images/havard-portrait-scarf-bw.png"
+                  data-lightbox="true"
+                  data-caption="Håvard Pedersen — press portrait, black &amp; white (scarf)"
+                >
+                  <img
+                    src="/assets/images/havard-portrait-scarf-bw.png"
+                    alt="Håvard Pedersen — black and white press portrait with patterned scarf"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </a>
+                <figcaption class="gallery-lead-cap">Lead press portrait — scarf, black &amp; white (download hi-res via press kit).</figcaption>
+              </figure>
             </div>
             <div class="visual-grid visual-grid--gallery-tiles" aria-label="Portraits and live shots">
-              <a class="visual-card" href="/assets/images/live-red-guitar.png" data-lightbox="true" data-caption="Håvard Pedersen — live on stage, red electric guitar">
-                <img src="/assets/images/live-red-guitar.png" alt="Håvard Pedersen live on stage with red electric guitar" loading="lazy" decoding="async" />
-              </a>
-              <a class="visual-card" href="/assets/images/havard-live-sunburst-semihollow.png" data-lightbox="true" data-caption="Håvard Pedersen — live performance, semi-hollow guitar (sunburst)">
-                <img src="/assets/images/havard-live-sunburst-semihollow.png" alt="Håvard Pedersen — live on stage with semi-hollow sunburst guitar" loading="lazy" decoding="async" />
-              </a>
-              <a class="visual-card" href="/assets/images/studio-gretsch-portrait.png" data-lightbox="true" data-caption="Press portrait — black &amp; white, Gretsch guitar">
-                <img src="/assets/images/studio-gretsch-portrait.png" alt="Håvard Pedersen — black and white portrait with Gretsch guitar" loading="lazy" decoding="async" />
-              </a>
-              <a class="visual-card" href="/assets/images/studio-white-falcon-wide.png" data-lightbox="true" data-caption="Studio portrait — Gretsch White Falcon">
-                <img src="/assets/images/studio-white-falcon-wide.png" alt="Håvard Pedersen in black suit with white Gretsch guitar" loading="lazy" decoding="async" />
-              </a>
+              <figure class="gallery-tile">
+                <a
+                  class="visual-card"
+                  href="/assets/images/havard-live-sunburst-semihollow.png"
+                  data-lightbox="true"
+                  data-caption="Håvard Pedersen — live on stage, semi-hollow electric guitar (sunburst)"
+                >
+                  <img
+                    src="/assets/images/havard-live-sunburst-semihollow.png"
+                    alt="Håvard Pedersen — live on stage with semi-hollow sunburst electric guitar, stage lights"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </a>
+                <figcaption class="gallery-tile-cap">Live — sunburst semi-hollow (colour).</figcaption>
+              </figure>
+              <figure class="gallery-tile">
+                <a
+                  class="visual-card"
+                  href="/assets/images/havard-live-bw-semihollow.png"
+                  data-lightbox="true"
+                  data-caption="Håvard Pedersen — live performance, semi-hollow guitar (black &amp; white)"
+                >
+                  <img
+                    src="/assets/images/havard-live-bw-semihollow.png"
+                    alt="Håvard Pedersen — black and white live shot playing semi-hollow electric guitar"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </a>
+                <figcaption class="gallery-tile-cap">Live — semi-hollow (black &amp; white).</figcaption>
+              </figure>
+              <figure class="gallery-tile">
+                <a
+                  class="visual-card"
+                  href="/assets/images/studio-gretsch-portrait.png"
+                  data-lightbox="true"
+                  data-caption="Studio / press portrait — Håvard Pedersen with Gretsch guitar"
+                >
+                  <img
+                    src="/assets/images/studio-gretsch-portrait.png"
+                    alt="Håvard Pedersen — studio portrait in black and white holding Gretsch electric guitar"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </a>
+                <figcaption class="gallery-tile-cap">Studio portrait — Gretsch (B&amp;W).</figcaption>
+              </figure>
+              <figure class="gallery-tile">
+                <a
+                  class="visual-card"
+                  href="/assets/images/cinematic-gretsch.png"
+                  data-lightbox="true"
+                  data-caption="Cinematic still — Gretsch guitar, performance mood"
+                >
+                  <img
+                    src="/assets/images/cinematic-gretsch.png"
+                    alt="Håvard Pedersen — cinematic still with Gretsch guitar, low-key lighting"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </a>
+                <figcaption class="gallery-tile-cap">Cinematic still — Gretsch.</figcaption>
+              </figure>
             </div>
             <p class="gallery-footnote">
-              UK radio cards pair your press portrait (Blast) with the sunburst live shot (Hermitage); the grid below widens the story. Tap any image for fullscreen.
+              UK radio: Blast used this portrait; Hermitage paired with the sunburst live frame. Below: single artwork and ensemble promo — same tap-to-zoom
+              behaviour.
             </p>
           </div>
           <div class="gallery-group">
@@ -1308,8 +1443,20 @@
                 </li>
                 <li>
                   <span class="gig-date">TBA</span>
-                  <span class="gig-meta">Additional festivals &amp; clubs — announced in News when confirmed.</span>
+                  <span class="gig-meta">Additional festivals and clubs — announced here and in the Timeline when confirmed.</span>
                   <p class="gig-row-links"><a href="#news">News feed</a></p>
+                </li>
+                <li>
+                  <span class="gig-date">Next</span>
+                  <span class="gig-meta"
+                    >When the first on-sale show is public, replace this row with <strong>date · city · venue · ticket link</strong> (edit the
+                    <code>live</code> array in <strong>content.json</strong>).</span
+                  >
+                  <p class="gig-row-links">
+                    <a href="#latest-updates-heading">Living feed</a>
+                    ·
+                    <a href="https://www.gigplanet.no/band/havard-pedersen-and-the-blues-is-alright-band">Gigplanet</a>
+                  </p>
                 </li>
               </ul>
             </div>
@@ -1348,13 +1495,24 @@
             Planned payments: Stripe Payment Links, Shopify Buy Button, or Snipcart — chosen per product type.
           </p>
           <p id="store-checkout-status" class="store-checkout-status" aria-live="polite">
-            Secure checkout will appear here when payment links are activated.
+            Product rows below are live for streaming and enquiries — each card can gain Stripe (or similar) payment links when you are ready; no change
+            needed to the layout. <span class="store-checkout-provider">· Planned provider: Stripe Payment Links</span>
           </p>
           <div id="store-grid" class="news-grid" aria-label="Store products">
             <article class="news-card store-card">
+              <div class="store-card__preview">
+                <img
+                  src="/assets/images/studio-gretsch-portrait.png"
+                  alt="Håvard Pedersen — Gretsch portrait"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
               <p class="news-card-kicker">Single · 2025</p>
               <h3 class="news-card-title">Det sku bli oss</h3>
-              <p class="news-card-text">Stream on Spotify and Apple Music; CDs or bundles via Contact until checkout is live.</p>
+              <p class="news-card-text">
+                Latest single — stream on Spotify and Apple Music. CDs or bundles: use Contact until checkout goes live.
+              </p>
               <p class="store-card__meta">
                 <span class="store-card__status">Out now</span>
                 <span class="store-card__price">Streaming · CDs on request</span>
@@ -1370,9 +1528,19 @@
               </p>
             </article>
             <article class="news-card store-card">
+              <div class="store-card__preview">
+                <img
+                  src="/assets/images/havard-live-sunburst-semihollow.png"
+                  alt="Håvard Pedersen — live performance still"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
               <p class="news-card-kicker">Albums</p>
               <h3 class="news-card-title">Never Felt So Good · You and I</h3>
-              <p class="news-card-text">Full catalogue on streaming; CD enquiries via email until checkout ships.</p>
+              <p class="news-card-text">
+                Full catalogue on streaming; physical CDs coordinated by email until Stripe (or similar) payment links are wired.
+              </p>
               <p class="store-card__meta">
                 <span class="store-card__status">Catalogue</span>
                 <span class="store-card__price">Streaming · enquire for CDs</span>
@@ -1389,9 +1557,19 @@
               </p>
             </article>
             <article class="news-card store-card">
+              <div class="store-card__preview">
+                <img
+                  src="/assets/images/tour-poster-2025.png"
+                  alt="2026 tour routing poster"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
               <p class="news-card-kicker">Live</p>
               <h3 class="news-card-title">Shows &amp; ticket enquiries</h3>
-              <p class="news-card-text">Holds and routing via Gigplanet. Ticket links sit next to dates when public.</p>
+              <p class="news-card-text">
+                Promoters and venues: routing and holds via Gigplanet. Ticket URLs will sit here next to dates when listings go public.
+              </p>
               <p class="store-card__meta">
                 <span class="store-card__status">Booking active</span>
                 <span class="store-card__price">Per event</span>
@@ -1410,9 +1588,19 @@
               </p>
             </article>
             <article class="news-card store-card">
+              <div class="store-card__preview">
+                <img
+                  src="/assets/images/havard-portrait-scarf-bw.png"
+                  alt="Artist portrait — merch preview placeholder"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
               <p class="news-card-kicker">Merch</p>
               <h3 class="news-card-title">Artist merchandise</h3>
-              <p class="news-card-text">Apparel and bundles — inventory and checkout when ready.</p>
+              <p class="news-card-text">
+                Apparel and bundles — product rows and secure checkout activate when inventory and payment links are ready.
+              </p>
               <p class="store-card__meta">
                 <span class="store-card__status">Announcing soon</span>
                 <span class="store-card__price">—</span>
@@ -1423,6 +1611,14 @@
               <p class="news-card-links"><a href="#contact">Notify via Contact</a> · <a href="#partners">Partners</a></p>
             </article>
             <article class="news-card store-card">
+              <div class="store-card__preview">
+                <img
+                  src="/assets/images/studio-white-falcon-wide.png"
+                  alt="Brand imagery placeholder — partner row"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
               <p class="news-card-kicker">Seafood &amp; partners</p>
               <h3 class="news-card-title">Holmen &amp; Robertsen range</h3>
               <p class="news-card-text">
@@ -1453,18 +1649,26 @@
           </p>
           <div id="partners-grid" class="news-grid" aria-label="Partners and collaborators">
             <article class="news-card partner-card">
+              <p class="partner-card__mark" title="Holmen &amp; Robertsen Seafood">H&amp;R</p>
               <p class="news-card-kicker">Supported by</p>
               <h3 class="news-card-title">Holmen and Robertsen Seafood</h3>
-              <p class="news-card-text">Partner and collaboration support. Artist branding remains music-first.</p>
+              <p class="news-card-text">
+                Norwegian seafood company — sponsor and collaboration partner. Music and artist identity stay primary; partner campaigns sit here and in
+                Store when they go live.
+              </p>
               <span class="partner-tag">Sponsor</span>
-              <p class="news-card-links"><a href="https://www.holmenrobertsen.no/">Visit website</a></p>
+              <p class="news-card-links"><a href="https://www.holmenrobertsen.no/">holmenrobertsen.no</a></p>
             </article>
             <article class="news-card partner-card">
+              <p class="partner-card__mark" title="The Norwegian Sound, Mjøndalen">TNS</p>
               <p class="news-card-kicker">Studio collaboration</p>
               <h3 class="news-card-title">The Norwegian Sound</h3>
-              <p class="news-card-text">Recording sessions and production context connected to current album work.</p>
+              <p class="news-card-text">
+                Recording studio in Mjøndalen — current album and single sessions with Peter Michelsen; production partner for the new material on this
+                site.
+              </p>
               <span class="partner-tag">Studio</span>
-              <p class="news-card-links"><a href="https://www.thenorwegiansound.com/">Visit website</a></p>
+              <p class="news-card-links"><a href="https://www.thenorwegiansound.com/">thenorwegiansound.com</a></p>
             </article>
           </div>
         </div>
@@ -1475,6 +1679,18 @@
     <footer class="site-footer">
       <div class="footer-inner">
         <p class="footer-copy">© Håvard Pedersen · havardpedersen.com</p>
+        <p id="footer-content-stamp" class="footer-content-stamp">
+          Content refreshed · <time datetime="2026-05-12">12 May 2026</time> — see the
+          <a href="#latest-updates-heading">Feed</a> and <a href="#news">News</a> for what is new.
+        </p>
+        <details class="footer-host-details">
+          <summary class="footer-host-summary">Hosting this site yourself (e.g. one.com file upload)</summary>
+          <p id="footer-host-body" class="footer-host-body">
+            On one.com or any static host: upload the full site folder. When gigs, news, store rows, or partners change, replace
+            <code>assets/content.json</code> (and any new images it references) — pages pick up the update without editing HTML. Hard-refresh to
+            check.
+          </p>
+        </details>
         <p class="footer-meta">
           On this site:
           <a href="#listen">Music</a>
@@ -1519,7 +1735,7 @@
       <button class="lightbox-close" type="button" aria-label="Close image preview">Close</button>
       <figure class="lightbox-figure">
         <img class="lightbox-image" src="" alt="" />
-        <figcaption class="lightbox-caption"></figcaption>
+        <figcaption class="lightbox-caption" aria-live="polite"></figcaption>
       </figure>
     </div>
 

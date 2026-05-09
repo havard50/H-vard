@@ -154,7 +154,8 @@
         lastFocused = node;
         lightboxImage.src = image.src;
         lightboxImage.alt = image.alt || "Artist photo preview";
-        lightboxCaption.textContent = node.getAttribute("data-caption") || "";
+        var cap = (node.getAttribute("data-caption") || "").trim();
+        lightboxCaption.textContent = cap || (image.alt || "").trim() || "";
         lightbox.classList.add("is-open");
         lightbox.setAttribute("aria-hidden", "false");
         lightbox.setAttribute("aria-modal", "true");
@@ -652,7 +653,12 @@
 
     function renderTimeline(items) {
       if (!timelineRoot || !Array.isArray(items) || !items.length) return;
-      timelineRoot.innerHTML = items
+      var sorted = items.slice().sort(function (a, b) {
+        var tb = parseFeedTime((b && b.published) || "");
+        var ta = parseFeedTime((a && a.published) || "");
+        return tb - ta;
+      });
+      timelineRoot.innerHTML = sorted
         .map(function (item) {
           return timelineArticleHtml(item, false);
         })
@@ -755,6 +761,41 @@
       if (note) parts.push(note);
       el.innerHTML = parts.join(" — ");
       el.removeAttribute("hidden");
+    }
+
+    function hashLink(hash) {
+      var h = hash.charAt(0) === "#" ? hash : "#" + hash;
+      if (document.body && document.body.classList.contains("page-shop")) {
+        return "/" + h;
+      }
+      return h;
+    }
+
+    function renderFooterSiteMeta(siteMeta) {
+      if (!siteMeta || typeof siteMeta !== "object") return;
+      var stamp = document.querySelector("#footer-content-stamp");
+      if (stamp && siteMeta.feedUpdated) {
+        var iso = esc(siteMeta.feedUpdated);
+        var human = esc(formatPublished(siteMeta.feedUpdated));
+        var feedHref = esc(hashLink("#latest-updates-heading"));
+        var newsHref = esc(hashLink("#news"));
+        stamp.innerHTML =
+          "Content refreshed · <time datetime=\"" +
+          iso +
+          "\">" +
+          human +
+          "</time> — see the <a href=\"" +
+          feedHref +
+          "\">Feed</a> and <a href=\"" +
+          newsHref +
+          "\">News</a>" +
+          (document.body && document.body.classList.contains("page-shop") ? " on the homepage" : "") +
+          " for what is new.";
+      }
+      var hostBody = document.querySelector("#footer-host-body");
+      if (hostBody && siteMeta.hostStaticTip && String(siteMeta.hostStaticTip).trim()) {
+        hostBody.textContent = String(siteMeta.hostStaticTip).trim();
+      }
     }
 
     function renderStore(items, storeSettings) {
@@ -997,8 +1038,26 @@
           var tag = item && item.tag
             ? '<span class="partner-tag">' + esc(item.tag) + "</span>"
             : "";
+          var logo =
+            item && item.logoImage
+              ? '<div class="partner-card__logo"><img src="' +
+                esc(item.logoImage) +
+                '" alt="' +
+                esc(item.logoAlt || item.name || "Partner logo") +
+                '" loading="lazy" decoding="async" /></div>'
+              : "";
+          var mark =
+            item && item.mark
+              ? '<p class="partner-card__mark" title="' +
+                esc(item.markLabel || item.name || "") +
+                '">' +
+                esc(item.mark) +
+                "</p>"
+              : "";
           return (
             '<article class="news-card partner-card">' +
+            logo +
+            mark +
             '<p class="news-card-kicker">' +
             esc(item.kicker || "Partner") +
             "</p>" +
@@ -1024,6 +1083,7 @@
       .then(function (data) {
         if (!data || typeof data !== "object") return;
         renderFeedMeta(data.siteMeta);
+        renderFooterSiteMeta(data.siteMeta);
         renderLatestUpdates(buildLatestUpdates(data));
         renderTimeline(data.timeline);
         renderTimelineArchive(data.timelineArchive);

@@ -10,6 +10,27 @@
     />
     <title>Music &amp; store — Håvard Pedersen</title>
     <link rel="canonical" href="https://havardpedersen.com/shop.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Håvard Pedersen" />
+    <meta property="og:title" content="Music &amp; store — Håvard Pedersen" />
+    <meta
+      property="og:description"
+      content="Streaming, catalogue, live holds, and merch roadmap — same product rows as the homepage, from content.json."
+    />
+    <meta property="og:url" content="https://havardpedersen.com/shop.html" />
+    <meta property="og:locale" content="en_GB" />
+    <meta property="og:image" content="https://havardpedersen.com/assets/images/og-social.jpg" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Håvard Pedersen — artist imagery" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Music &amp; store — Håvard Pedersen" />
+    <meta
+      name="twitter:description"
+      content="Artist store — Spotify, Apple Music, albums, live routing, merch and partner rows."
+    />
+    <meta name="twitter:image" content="https://havardpedersen.com/assets/images/og-social.jpg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -17,6 +38,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="/assets/styles.css" />
+    <link rel="prefetch" href="/assets/content.json" as="fetch" type="application/json" />
     <link rel="icon" type="image/png" href="/assets/images/studio-gretsch-portrait.png" />
     <meta name="theme-color" content="#030206" />
   </head>
@@ -87,14 +109,25 @@
             Planned payments: Stripe Payment Links, Shopify Buy Button, or Snipcart — chosen per product type.
           </p>
           <p id="store-checkout-status" class="store-checkout-status" aria-live="polite">
-            Secure checkout will appear here when payment links are activated.
+            Product rows below are live for streaming and enquiries — each card can gain Stripe (or similar) payment links when you are ready; no change
+            needed to the layout. <span class="store-checkout-provider">· Planned provider: Stripe Payment Links</span>
           </p>
 
           <div id="store-grid" class="news-grid" aria-label="Store products">
             <article class="news-card store-card">
+              <div class="store-card__preview">
+                <img
+                  src="/assets/images/studio-gretsch-portrait.png"
+                  alt="Håvard Pedersen — Gretsch portrait"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
               <p class="news-card-kicker">Single · 2025</p>
               <h3 class="news-card-title">Det sku bli oss</h3>
-              <p class="news-card-text">Stream on Spotify and Apple Music; CDs or bundles via Contact until checkout is live.</p>
+              <p class="news-card-text">
+                Latest single — stream on Spotify and Apple Music. CDs or bundles: use Contact until checkout goes live.
+              </p>
               <p class="store-card__meta">
                 <span class="store-card__status">Out now</span>
                 <span class="store-card__price">Streaming · CDs on request</span>
@@ -110,6 +143,115 @@
                 <a href="/#listen">Music section</a>
               </p>
             </article>
+            <article class="news-card store-card">
+              <div class="store-card__preview">
+                <img
+                  src="/assets/images/havard-live-sunburst-semihollow.png"
+                  alt="Håvard Pedersen — live performance still"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <p class="news-card-kicker">Albums</p>
+              <h3 class="news-card-title">Never Felt So Good · You and I</h3>
+              <p class="news-card-text">
+                Full catalogue on streaming; physical CDs coordinated by email until Stripe (or similar) payment links are wired.
+              </p>
+              <p class="store-card__meta">
+                <span class="store-card__status">Catalogue</span>
+                <span class="store-card__price">Streaming · enquire for CDs</span>
+              </p>
+              <div class="store-card__cta-row">
+                <a class="btn btn-primary btn--compact store-card__action" href="https://open.spotify.com/artist/50PJ7UncEwx3fUxJ1LgZid"
+                  >Open catalogue</a
+                >
+              </div>
+              <p class="news-card-links">
+                <a href="https://open.spotify.com/artist/50PJ7UncEwx3fUxJ1LgZid">Spotify — artist</a> ·
+                <a href="https://music.apple.com/no/search?term=H%C3%A5vard%20Pedersen">Apple Music</a> ·
+                <a href="/shop.html">Music &amp; CDs page</a>
+              </p>
+            </article>
+            <article class="news-card store-card">
+              <div class="store-card__preview">
+                <img
+                  src="/assets/images/tour-poster-2025.png"
+                  alt="2026 tour routing poster"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <p class="news-card-kicker">Live</p>
+              <h3 class="news-card-title">Shows &amp; ticket enquiries</h3>
+              <p class="news-card-text">
+                Promoters and venues: routing and holds via Gigplanet. Ticket URLs will sit here next to dates when listings go public.
+              </p>
+              <p class="store-card__meta">
+                <span class="store-card__status">Booking active</span>
+                <span class="store-card__price">Per event</span>
+              </p>
+              <div class="store-card__cta-row">
+                <a
+                  class="btn btn-primary btn--compact store-card__action"
+                  href="https://www.gigplanet.no/band/havard-pedersen-and-the-blues-is-alright-band"
+                  >Request hold</a
+                >
+              </div>
+              <p class="news-card-links">
+                <a href="https://www.gigplanet.no/band/havard-pedersen-and-the-blues-is-alright-band">Gigplanet</a> ·
+                <a href="/assets/images/tour-poster-2025.png" target="_blank" rel="noopener noreferrer">Tour poster</a> ·
+                <a href="/#contact">Contact</a>
+              </p>
+            </article>
+            <article class="news-card store-card">
+              <div class="store-card__preview">
+                <img
+                  src="/assets/images/havard-portrait-scarf-bw.png"
+                  alt="Artist portrait — merch preview placeholder"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <p class="news-card-kicker">Merch</p>
+              <h3 class="news-card-title">Artist merchandise</h3>
+              <p class="news-card-text">
+                Apparel and bundles — product rows and secure checkout activate when inventory and payment links are ready.
+              </p>
+              <p class="store-card__meta">
+                <span class="store-card__status">Announcing soon</span>
+                <span class="store-card__price">—</span>
+              </p>
+              <div class="store-card__cta-row">
+                <a class="btn btn-primary btn--compact store-card__action" href="/#contact">Contact team</a>
+              </div>
+              <p class="news-card-links"><a href="/#contact">Notify via Contact</a> · <a href="/#partners">Partners</a></p>
+            </article>
+            <article class="news-card store-card">
+              <div class="store-card__preview">
+                <img
+                  src="/assets/images/studio-white-falcon-wide.png"
+                  alt="Brand imagery placeholder — partner row"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <p class="news-card-kicker">Seafood &amp; partners</p>
+              <h3 class="news-card-title">Holmen &amp; Robertsen range</h3>
+              <p class="news-card-text">
+                Partner products — separate listing and checkout when stock and payment links are agreed (music store stays primary).
+              </p>
+              <p class="store-card__meta">
+                <span class="store-card__status">On request</span>
+                <span class="store-card__price">—</span>
+              </p>
+              <div class="store-card__cta-row">
+                <a class="btn btn-primary btn--compact store-card__action" href="/#contact">Partner enquiry</a>
+              </div>
+              <p class="news-card-links">
+                <a href="/#partners">Partners</a> ·
+                <a href="https://www.holmenrobertsen.no/">Holmen &amp; Robertsen</a>
+              </p>
+            </article>
           </div>
 
           <p class="listen-hint shop-page-admin-hint">
@@ -122,6 +264,18 @@
     <footer class="site-footer">
       <div class="footer-inner">
         <p class="footer-copy">© Håvard Pedersen · havardpedersen.com</p>
+        <p id="footer-content-stamp" class="footer-content-stamp">
+          Content refreshed · <time datetime="2026-05-12">12 May 2026</time> — see the
+          <a href="/#latest-updates-heading">Feed</a> and <a href="/#news">News</a> on the homepage for what is new.
+        </p>
+        <details class="footer-host-details">
+          <summary class="footer-host-summary">Hosting this site yourself (e.g. one.com file upload)</summary>
+          <p id="footer-host-body" class="footer-host-body">
+            On one.com or any static host: upload the full site folder. When gigs, news, store rows, or partners change, replace
+            <code>assets/content.json</code> (and any new images it references) — pages pick up the update without editing HTML. Hard-refresh to
+            check.
+          </p>
+        </details>
         <p class="footer-meta">
           <a href="/">Home</a>
           ·

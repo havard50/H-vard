@@ -1,7 +1,8 @@
 {
   "siteMeta": {
-    "feedUpdated": "2026-05-09",
-    "feedNote": "Latest updates (top of News) merge timeline, live rows, video drops, and feedExtras — newest first. Edit those arrays here; add Decap/Netlify CMS or another headless CMS when you want a publish button instead of JSON."
+    "feedUpdated": "2026-05-12",
+    "feedNote": "Latest updates (top of News) merge timeline, live rows, video drops, and feedExtras — newest first. Timeline cards sort by published date in the browser. Edit in JSON or add a CMS later.",
+    "hostStaticTip": "On one.com or any static host: upload the full site folder. When gigs, news, store rows, or partners change, replace assets/content.json (and any new images it references) — pages pick up the update without editing HTML. Hard-refresh to check."
   },
   "contactForm": {
     "mailto": "havardpedersen@me.com",
@@ -11,6 +12,18 @@
     "note": "Optional: set action to a Formspree (or similar) https://… URL if you want in-browser submit without opening an email app. Leave action empty for the free mailto flow on your own domain."
   },
   "feedExtras": [
+    {
+      "published": "2026-05-14",
+      "kicker": "Rehearsal · 2026",
+      "title": "May 2026 — new rehearsal clip",
+      "body": "Trio rehearsal clip in the can — vertical cut ships to TikTok / Shorts first; a longer graded version lands under Video when it is ready.",
+      "image": "/assets/images/havard-live-sunburst-semihollow.png",
+      "imageAlt": "Håvard Pedersen — live on stage with semi-hollow sunburst guitar",
+      "links": [
+        { "label": "Video", "href": "#videos" },
+        { "label": "TikTok — @haavardhedde", "href": "https://www.tiktok.com/@haavardhedde" }
+      ]
+    },
     {
       "published": "2026-05-07",
       "kicker": "Studio",
@@ -26,9 +39,31 @@
   ],
   "timeline": [
     {
+      "kicker": "Rehearsal · 2026",
+      "title": "May 2026 — new rehearsal clip",
+      "body": "Trio rehearsal in progress — short-form edit coming to TikTok / YouTube Shorts; full story in the living feed and Video when graded.",
+      "published": "2026-05-14",
+      "image": "/assets/images/havard-live-sunburst-semihollow.png",
+      "imageAlt": "Håvard Pedersen — live on stage with semi-hollow sunburst guitar",
+      "links": [
+        { "label": "Video", "href": "#videos" },
+        { "label": "TikTok", "href": "https://www.tiktok.com/@haavardhedde" }
+      ]
+    },
+    {
+      "kicker": "Social video",
+      "title": "Short-form clips",
+      "body": "Performance edits and promo reels publish first on TikTok (@haavardhedde) and YouTube Shorts (@havardhedde10).",
+      "published": "2026-05-08",
+      "links": [
+        { "label": "TikTok — @haavardhedde", "href": "https://www.tiktok.com/@haavardhedde" },
+        { "label": "YouTube Shorts — @havardhedde10", "href": "https://www.youtube.com/@havardhedde10/shorts" }
+      ]
+    },
+    {
       "kicker": "Live · 2026",
-      "title": "Tour routing & poster",
-      "body": "Confirmed festival and club dates appear here when announced. Holds and routing for promoters run through Gigplanet.",
+      "title": "May 2026 — tour routing & poster",
+      "body": "2026 routing snapshot for promoters and fans — confirmed public dates also roll into Live & Touring when venues announce.",
       "published": "2026-05-01",
       "image": "/assets/images/tour-poster-2025.png",
       "imageAlt": "Tour poster — 2026 live routing graphic",
@@ -41,15 +76,16 @@
       ]
     },
     {
-      "kicker": "Release · 2025",
-      "title": "New single: Det sku bli oss",
-      "body": "Out now on streaming platforms. Hear it under Music and watch the official clip under Video.",
-      "published": "2025-10-15",
+      "kicker": "Live · 2026",
+      "title": "April 2026 — live poster refresh",
+      "body": "Routing graphic refreshed for spring holds — on-sale rows will mirror this card once dates are public.",
+      "published": "2026-04-25",
+      "image": "/assets/images/tour-poster-2025.png",
+      "imageAlt": "Tour poster — 2026 routing (spring refresh)",
       "links": [
-        { "label": "Listen", "href": "#listen" },
-        { "label": "Watch", "href": "#videos" }
-      ],
-      "featured": true
+        { "label": "Open poster (PNG)", "href": "/assets/images/tour-poster-2025.png" },
+        { "label": "Gigplanet", "href": "https://www.gigplanet.no/band/havard-pedersen-and-the-blues-is-alright-band" }
+      ]
     },
     {
       "kicker": "Studio",
@@ -59,21 +95,17 @@
       "links": [{ "label": "About sessions", "href": "#about" }]
     },
     {
-      "kicker": "Interviews",
-      "title": "Conversations & archive audio",
-      "body": "YouTube, short-form, and older radio — quick links in Recent interviews (same section, above the feed).",
-      "published": "2026-03-20",
-      "links": [{ "label": "Recent interviews", "href": "#recent-interviews" }]
-    },
-    {
-      "kicker": "Social video",
-      "title": "Short-form clips",
-      "body": "Performance edits and promo reels publish first on TikTok (@haavardhedde) and YouTube Shorts (@havardhedde10).",
-      "published": "2026-05-08",
+      "kicker": "Release · 2025",
+      "title": "2025 — Det sku bli oss",
+      "body": "Single out now on streaming — official video under Video; artwork in Photos.",
+      "published": "2025-10-15",
+      "image": "/assets/images/single-det-sku-studio.png",
+      "imageAlt": "Det sku bli oss — single artwork (studio)",
       "links": [
-        { "label": "TikTok — @haavardhedde", "href": "https://www.tiktok.com/@haavardhedde" },
-        { "label": "YouTube Shorts — @havardhedde10", "href": "https://www.youtube.com/@havardhedde10/shorts" }
-      ]
+        { "label": "Listen", "href": "#listen" },
+        { "label": "Watch", "href": "#videos" }
+      ],
+      "featured": true
     }
   ],
   "timelineArchive": [
@@ -202,6 +234,15 @@
       "updated": "2026-04-18",
       "meta": "Additional festivals and clubs — announced here and in the Timeline when confirmed.",
       "links": [{ "label": "News feed", "href": "#news" }]
+    },
+    {
+      "date": "Next",
+      "updated": "2026-05-01",
+      "meta": "When the first on-sale show is public, replace this row with date · city · venue · ticket link (edit the live array in content.json).",
+      "links": [
+        { "label": "Living feed", "href": "#latest-updates-heading" },
+        { "label": "Gigplanet", "href": "https://www.gigplanet.no/band/havard-pedersen-and-the-blues-is-alright-band" }
+      ]
     }
   ],
   "store": [
@@ -300,7 +341,7 @@
   "storeSettings": {
     "checkoutEnabled": false,
     "provider": "Stripe Payment Links",
-    "statusText": "Named catalogue rows below — streaming works today; secure checkout activates when payment links are connected.",
+    "statusText": "Product rows below are live for streaming and enquiries — each card can gain Stripe (or similar) payment links when you are ready; no change needed to the layout.",
     "helpText": ""
   },
   "heroBackground": {
@@ -347,14 +388,18 @@
     {
       "kicker": "Supported by",
       "name": "Holmen and Robertsen Seafood",
-      "description": "Partner and collaboration support. Artist branding remains music-first.",
+      "mark": "H&R",
+      "markLabel": "Holmen & Robertsen Seafood",
+      "description": "Norwegian seafood company — sponsor and collaboration partner. Artist identity stays music-first; partner campaigns and products are listed separately from the core music store when they go live.",
       "website": "https://www.holmenrobertsen.no/",
       "tag": "Sponsor"
     },
     {
       "kicker": "Studio collaboration",
       "name": "The Norwegian Sound",
-      "description": "Recording sessions and production context connected to current album work.",
+      "mark": "TNS",
+      "markLabel": "The Norwegian Sound, Mjøndalen",
+      "description": "Recording studio where current album and single sessions take place with Peter Michelsen — production partner for the new material on this site.",
       "website": "https://www.thenorwegiansound.com/",
       "tag": "Studio"
     }

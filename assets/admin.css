@@ -69,12 +69,17 @@ button:hover,
   margin: 0.75rem 0 0;
   font-size: 0.86rem;
   color: #fde68a;
+  white-space: pre-wrap;
 }
 
 .hint {
   margin: 0.35rem 0 0;
   font-size: 0.8rem;
   color: #94a3b8;
+}
+
+.admin-map-lead {
+  margin-top: 0;
 }
 
 textarea {
@@ -98,4 +103,36 @@ textarea {
 
 .stats li {
   margin: 0.28rem 0;
+}
+
+.stats code {
+  font-size: 0.88em;
+  background: #020617;
+  padding: 0.08rem 0.28rem;
+  border-radius: 4px;
+}
+
+.admin-map {
+  margin: 0;
+  padding-left: 1.05rem;
+  color: #cbd5e1;
+  font-size: 0.88rem;
+  line-height: 1.5;
+}
+
+.admin-map li {
+  margin: 0.35rem 0;
+}
+
+.admin-map code {
+  font-size: 0.86em;
+  background: #020617;
+  padding: 0.06rem 0.28rem;
+  border-radius: 4px;
+}
+
+.admin-map-note {
+  margin: 0.65rem 0 0;
+  font-size: 0.82rem;
+  color: #94a3b8;
 }

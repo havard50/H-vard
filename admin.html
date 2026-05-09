@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex,nofollow" />
     <title>Content Admin - Håvard Pedersen</title>
     <link rel="stylesheet" href="/assets/admin.css" />
   </head>
@@ -20,13 +21,19 @@
         <div class="admin-actions">
           <button id="loadBtn" type="button">Load current content</button>
           <button id="validateBtn" type="button">Validate JSON</button>
+          <button id="stampFeedDateBtn" type="button" title="Sets siteMeta.feedUpdated to today (your computer's local date)">
+            Stamp feed date (today)
+          </button>
           <button id="copyBtn" type="button">Copy JSON</button>
           <button id="downloadBtn" type="button">Download content.json</button>
-          <a class="admin-link" href="index.html">Open site</a>
+          <a class="admin-link" href="/">Open site</a>
+          <a class="admin-link" href="/shop.html">Shop page</a>
         </div>
         <p id="status" class="status" aria-live="polite">Ready.</p>
         <p class="hint">
-          Static-site note: this tool cannot write to server files directly. Export and replace `assets/content.json` in the repo.
+          Static-site note: this tool cannot write to server files directly. Export and replace <code>assets/content.json</code> in the repo or on your
+          host. <strong>Stamp feed date</strong> updates <code>siteMeta.feedUpdated</code> (footer + News line) to today’s local date — then download or
+          copy.
         </p>
       </section>
 
@@ -38,14 +45,46 @@
       <section class="admin-panel">
         <h2>Quick stats</h2>
         <ul id="stats" class="stats">
-          <li>Timeline items: -</li>
-          <li>Timeline archive: -</li>
-          <li>Recent interviews: -</li>
-          <li>Live entries: -</li>
-          <li>Store items: -</li>
-          <li>Video items: -</li>
-          <li>Feed extras (living feed): -</li>
+          <li>Feed last revised: —</li>
+          <li>Timeline items: —</li>
+          <li>Timeline archive: —</li>
+          <li>Recent interviews: —</li>
+          <li>Live entries: —</li>
+          <li>Store items: —</li>
+          <li>Video items: —</li>
+          <li>Feed extras (living feed): —</li>
+          <li>Partners: —</li>
         </ul>
+      </section>
+
+      <section class="admin-panel">
+        <h2>What each block drives</h2>
+        <p class="hint admin-map-lead">
+          The homepage and <code>shop.html</code> load this file at runtime. Static HTML in <code>index.html</code> is a fallback if the fetch fails.
+        </p>
+        <ul class="admin-map">
+          <li>
+            <code>siteMeta.feedUpdated</code> + <code>feedNote</code> — “Feed last revised” line under News; note text after the date. Same date drives
+            the visible footer “Content refreshed” line — use <strong>Stamp feed date (today)</strong> above to bump it quickly.
+          </li>
+          <li>
+            <code>siteMeta.hostStaticTip</code> — optional paragraph inside the footer “Hosting yourself” disclosure (e.g. one.com upload + replacing
+            <code>content.json</code>).
+          </li>
+          <li>
+            <code>feedExtras</code> — merged into <strong>Latest updates</strong> (with <code>timeline</code>, <code>live</code>, <code>videos</code>); needs
+            <code>published</code>, optional <code>image</code> / <code>imageAlt</code>.
+          </li>
+          <li><code>timeline</code> — dated cards in the News grid; sorted by <code>published</code> in the browser.</li>
+          <li><code>live</code> — rows under Live &amp; Touring; <code>updated</code> stamps the living feed.</li>
+          <li><code>store</code> + <code>storeSettings</code> — product cards on Home and Shop; <code>previewImage</code> / <code>previewAlt</code> for art.</li>
+          <li><code>partners</code> — replaces the Partners grid; optional <code>logoImage</code> / <code>logoAlt</code>, <code>mark</code> / <code>markLabel</code>.</li>
+          <li><code>videos</code> — Video section embeds; non-archive rows need a YouTube <code>youtubeId</code>.</li>
+          <li><code>recentInterviews</code> — “Recent interviews” cards (plus archive media / audio fields when set).</li>
+        </ul>
+        <p class="admin-map-note">
+          <strong>Photos gallery</strong> (stills, captions, lightbox) is edited in <code>index.html</code>, not in this JSON.
+        </p>
       </section>
     </main>
 
