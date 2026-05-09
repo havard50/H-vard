@@ -1,0 +1,85 @@
+{
+  "timeline": [
+    {
+      "kicker": "New release · 2025",
+      "title": "Det sku bli oss is out",
+      "body": "Latest single is live on streaming. Start in Music, then continue through official clips in Video.",
+      "links": [
+        { "label": "Music", "href": "#listen" },
+        { "label": "Video", "href": "#videos" }
+      ],
+      "featured": true
+    },
+    {
+      "kicker": "Touring · 2026",
+      "title": "Band booking and routing active",
+      "body": "New festival and venue slots are being scheduled now via Gigplanet.",
+      "links": [
+        {
+          "label": "Gigplanet",
+          "href": "https://www.gigplanet.no/band/havard-pedersen-and-the-blues-is-alright-band"
+        }
+      ]
+    },
+    {
+      "kicker": "Studio",
+      "title": "New album sessions in progress",
+      "body": "Tracking continues with Peter Michelsen at The Norwegian Sound.",
+      "links": [{ "label": "About sessions", "href": "#about" }]
+    },
+    {
+      "kicker": "Short-form video",
+      "title": "Reels, Shorts, TikTok updates",
+      "body": "New vertical promo cuts and performance snippets are published first on YouTube Shorts and TikTok.",
+      "links": [
+        { "label": "YouTube Shorts", "href": "https://www.youtube.com/@havardhedde10/shorts" },
+        { "label": "TikTok", "href": "https://www.tiktok.com/@haavardhedde" }
+      ]
+    },
+    {
+      "kicker": "Archive spotlight · 2011",
+      "title": "Never Felt So Good era",
+      "body": "Legacy material stays visible: debut period, historical visuals, and interviews remain part of the artist journey archive."
+    },
+    {
+      "kicker": "Archive spotlight · media",
+      "title": "TV Nord, Hermitage FM, press history",
+      "body": "Important old media is preserved and linked as archive references, not removed."
+    }
+  ],
+  "live": [
+    {
+      "date": "TBA",
+      "meta": "2026 routing ongoing — confirmed shows appear here"
+    }
+  ],
+  "store": [
+    {
+      "kicker": "Music",
+      "title": "CD and digital catalogue",
+      "body": "Never Felt So Good, You and I, and singles. Order and stream links in one place.",
+      "links": [
+        { "label": "Store and CDs", "href": "https://havardpedersen.com/shop.html" },
+        { "label": "Spotify", "href": "https://open.spotify.com/artist/50PJ7UncEwx3fUxJ1LgZid" }
+      ]
+    },
+    {
+      "kicker": "Tickets",
+      "title": "Concert booking and holds",
+      "body": "For venues, festivals, and routing requests.",
+      "links": [
+        {
+          "label": "Gigplanet",
+          "href": "https://www.gigplanet.no/band/havard-pedersen-and-the-blues-is-alright-band"
+        },
+        { "label": "Contact", "href": "#contact" }
+      ]
+    },
+    {
+      "kicker": "Merch and drops",
+      "title": "Merch, vinyl, and special products",
+      "body": "Merch and selected limited drops are being staged for launch.",
+      "links": [{ "label": "Request updates", "href": "#contact" }]
+    }
+  ]
+}

@@ -905,6 +905,22 @@ html[data-site-mode="press"] .about-visual-lead {
   line-height: 1.55;
 }
 
+.news-card-links {
+  margin: 0.7rem 0 0;
+  font-size: 0.86rem;
+  line-height: 1.5;
+  color: var(--text-muted);
+}
+
+.news-card-links a {
+  color: #e8bc6a;
+  text-decoration: none;
+}
+
+.news-card-links a:hover {
+  text-decoration: underline;
+}
+
 .timeline-hint {
   margin: 1rem 0 0;
   font-size: 0.86rem;

@@ -340,4 +340,118 @@
     window.addEventListener("hashchange", applyPrefill);
     window.addEventListener("load", applyPrefill);
   })();
+
+  (function initDynamicContent() {
+    var timelineRoot = document.querySelector("#timeline-feed");
+    var liveRoot = document.querySelector("#live-gigs");
+    var storeRoot = document.querySelector("#store-grid");
+    if (!timelineRoot && !liveRoot && !storeRoot) return;
+
+    function esc(value) {
+      return String(value || "")
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#39;");
+    }
+
+    function renderLinks(links, className) {
+      if (!Array.isArray(links) || !links.length) return "";
+      var items = links
+        .map(function (link) {
+          if (!link || !link.href || !link.label) return "";
+          return (
+            '<a href="' +
+            esc(link.href) +
+            '">' +
+            esc(link.label) +
+            "</a>"
+          );
+        })
+        .filter(Boolean);
+      if (!items.length) return "";
+      return '<p class="' + className + '">' + items.join(" · ") + "</p>";
+    }
+
+    function renderTimeline(items) {
+      if (!timelineRoot || !Array.isArray(items) || !items.length) return;
+      timelineRoot.innerHTML = items
+        .map(function (item) {
+          var featuredClass = item && item.featured ? " timeline-card--release" : "";
+          return (
+            '<article class="news-card timeline-card' +
+            featuredClass +
+            '">' +
+            '<p class="news-card-kicker">' +
+            esc(item.kicker) +
+            "</p>" +
+            '<h3 class="news-card-title">' +
+            esc(item.title) +
+            "</h3>" +
+            '<p class="news-card-text">' +
+            esc(item.body) +
+            "</p>" +
+            renderLinks(item.links, "news-card-links") +
+            "</article>"
+          );
+        })
+        .join("");
+    }
+
+    function renderLive(items) {
+      if (!liveRoot || !Array.isArray(items) || !items.length) return;
+      liveRoot.innerHTML = items
+        .map(function (item) {
+          return (
+            "<li>" +
+            '<span class="gig-date">' +
+            esc(item.date) +
+            "</span>" +
+            '<span class="gig-meta">' +
+            esc(item.meta) +
+            "</span>" +
+            "</li>"
+          );
+        })
+        .join("");
+    }
+
+    function renderStore(items) {
+      if (!storeRoot || !Array.isArray(items) || !items.length) return;
+      storeRoot.innerHTML = items
+        .map(function (item) {
+          return (
+            '<article class="news-card store-card">' +
+            '<p class="news-card-kicker">' +
+            esc(item.kicker) +
+            "</p>" +
+            '<h3 class="news-card-title">' +
+            esc(item.title) +
+            "</h3>" +
+            '<p class="news-card-text">' +
+            esc(item.body) +
+            "</p>" +
+            renderLinks(item.links, "news-card-links") +
+            "</article>"
+          );
+        })
+        .join("");
+    }
+
+    fetch("assets/content.json", { cache: "no-store" })
+      .then(function (res) {
+        if (!res.ok) throw new Error("Content fetch failed");
+        return res.json();
+      })
+      .then(function (data) {
+        if (!data || typeof data !== "object") return;
+        renderTimeline(data.timeline);
+        renderLive(data.live);
+        renderStore(data.store);
+      })
+      .catch(function () {
+        // Keep static fallback content if JSON is unavailable.
+      });
+  })();
 })();
