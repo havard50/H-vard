@@ -129,11 +129,9 @@
     "helpText": ""
   },
   "heroBackground": {
-    "caption": "Background: YouTube clips (@havardhedde10) over an ambient loop made from the live B&W photo (FFmpeg). TikTok: @haavardhedde.",
-    "youtubeIds": ["hwxs4sBNwp0", "zEXcH3lHjls", "i8fR9-sAvPM"],
+    "caption": "Background: monochrome ambient loop from the live club photo (generated from still). Watch full clips under Video; Shorts on YouTube & TikTok.",
     "posterSrc": "assets/images/havard-live-bw-semihollow.png",
-    "ambientMp4": "assets/videos/hero-live-bw-loop.mp4",
-    "rotateMs": 16000
+    "ambientMp4": "assets/videos/hero-live-bw-loop.mp4"
   },
   "videos": [
     {

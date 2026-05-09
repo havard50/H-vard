@@ -35,8 +35,9 @@ if (-not $ffexe) {
 }
 
 Write-Host "Using $ffexe"
+# hue=s=0 = grayscale; slow zoom for cinematic loop (single-artist wallpaper)
 & $ffexe -y -loop 1 -i $InputImage `
-  -vf "scale=2560:-2:flags=lanczos,zoompan=z='if(eq(on,1),1,zoom+0.00032)':d=1:x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':s=1920x1080:fps=30,format=yuv420p" `
+  -vf "scale=2560:-2:flags=lanczos,hue=s=0,eq=contrast=1.06:brightness=-0.02,zoompan=z='if(eq(on,1),1,zoom+0.00032)':d=1:x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':s=1920x1080:fps=30,format=yuv420p" `
   -t 14 -c:v libx264 -preset medium -crf 21 -movflags +faststart $OutputVideo
 
 Write-Host "Wrote $OutputVideo"

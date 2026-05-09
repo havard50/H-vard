@@ -1,16 +1,6 @@
 (function () {
   var YT_ID = /^[a-zA-Z0-9_-]{11}$/;
 
-  function buildYouTubeSrc(videoId) {
-    return (
-      "https://www.youtube-nocookie.com/embed/" +
-      videoId +
-      "?autoplay=1&mute=1&controls=0&loop=1&playlist=" +
-      videoId +
-      "&modestbranding=1&playsinline=1&rel=0"
-    );
-  }
-
   var toggle = document.querySelector(".nav-toggle");
   var nav = document.querySelector("#site-nav");
   var hasNav = toggle && nav;
@@ -185,88 +175,6 @@
     if (closeLightboxIfOpen()) return;
     if (hasNav) setOpen(false);
   });
-
-  var heroRotationCleanup = null;
-
-  function setupHeroYoutubeRotation(frame) {
-    if (heroRotationCleanup) {
-      heroRotationCleanup();
-      heroRotationCleanup = null;
-    }
-    if (!frame) return;
-
-    var idsRaw = frame.getAttribute("data-video-ids") || "";
-    var videoIds = idsRaw
-      .split(",")
-      .map(function (id) {
-        return id.trim();
-      })
-      .filter(function (id) {
-        return YT_ID.test(id);
-      });
-
-    if (videoIds.length) {
-      frame.src = buildYouTubeSrc(videoIds[0]);
-    }
-
-    if (videoIds.length <= 1) return;
-
-    var reduceMotionMq = window.matchMedia("(prefers-reduced-motion: reduce)");
-    var rotationTimer = null;
-    var currentIndex = 0;
-    var isTransitioning = false;
-    var rotateAttr = parseInt(frame.getAttribute("data-rotate-ms") || "16000", 10);
-    var rotateMs = Math.min(120000, Math.max(8000, isNaN(rotateAttr) ? 16000 : rotateAttr));
-
-    function stopHeroRotation() {
-      if (rotationTimer !== null) {
-        window.clearInterval(rotationTimer);
-        rotationTimer = null;
-      }
-    }
-
-    function startHeroRotation() {
-      if (videoIds.length <= 1 || reduceMotionMq.matches) return;
-      if (rotationTimer !== null) return;
-      rotationTimer = window.setInterval(function () {
-        if (isTransitioning) return;
-        isTransitioning = true;
-        currentIndex = (currentIndex + 1) % videoIds.length;
-        frame.classList.add("is-fading");
-
-        window.setTimeout(function () {
-          frame.src = buildYouTubeSrc(videoIds[currentIndex]);
-          window.setTimeout(function () {
-            frame.classList.remove("is-fading");
-            isTransitioning = false;
-          }, 420);
-        }, 450);
-      }, rotateMs);
-    }
-
-    function onReduceMotionChange() {
-      if (reduceMotionMq.matches) stopHeroRotation();
-      else startHeroRotation();
-    }
-
-    startHeroRotation();
-    if (typeof reduceMotionMq.addEventListener === "function") {
-      reduceMotionMq.addEventListener("change", onReduceMotionChange);
-    } else if (typeof reduceMotionMq.addListener === "function") {
-      reduceMotionMq.addListener(onReduceMotionChange);
-    }
-
-    heroRotationCleanup = function () {
-      stopHeroRotation();
-      if (typeof reduceMotionMq.removeEventListener === "function") {
-        reduceMotionMq.removeEventListener("change", onReduceMotionChange);
-      } else if (typeof reduceMotionMq.removeListener === "function") {
-        reduceMotionMq.removeListener(onReduceMotionChange);
-      }
-    };
-  }
-
-  setupHeroYoutubeRotation(document.querySelector(".hero-video-frame"));
 
   var syncAmbientHeroPlayback = function () {};
 
@@ -629,7 +537,6 @@
         renderPartners(data.partners);
 
         var hb = data.heroBackground;
-        var heroFrame = document.querySelector(".hero-video-frame");
         var ambient = document.querySelector(".hero__ambient-video");
         var noteEl = document.querySelector("#hero-bg-note");
         if (hb && typeof hb === "object") {
@@ -645,23 +552,7 @@
             srcEl.src = hb.ambientMp4;
             ambient.load();
           }
-          if (heroFrame && Array.isArray(hb.youtubeIds)) {
-            var hid = hb.youtubeIds
-              .map(function (id) {
-                return String(id || "").trim();
-              })
-              .filter(function (id) {
-                return YT_ID.test(id);
-              });
-            if (hid.length) {
-              heroFrame.setAttribute("data-video-ids", hid.join(","));
-              if (hb.rotateMs != null && hb.rotateMs !== "") {
-                heroFrame.setAttribute("data-rotate-ms", String(hb.rotateMs));
-              }
-            }
-          }
         }
-        setupHeroYoutubeRotation(heroFrame);
         syncAmbientHeroPlayback();
       })
       .catch(function () {
