@@ -2662,29 +2662,37 @@ html[data-site-mode="press"] .music-card-cover:hover {
     radial-gradient(circle at 78% 18%, rgba(212, 168, 74, 0.06), transparent 42%);
 }
 
-.hero--modern .hero-video-frame {
-  opacity: 0.68;
+.hero__video-wrap--motion {
+  overflow: hidden;
 }
 
-.hero__image {
+/* Live photo treated as “video”: slow zoom / drift loop (no iframe weight). */
+.hero__motion-bg {
   position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
+  inset: -8%;
+  width: 116%;
+  height: 116%;
+  max-width: none;
   object-fit: cover;
-  object-position: center 22%;
+  object-position: center 34%;
   z-index: 0;
-  opacity: 0.26;
-  filter: saturate(1.03) contrast(1.02);
+  filter: saturate(1.02) contrast(1.08);
+  transform-origin: 47% 38%;
+  will-change: transform;
+  animation: heroMotionKenBurns 34s ease-in-out infinite alternate;
 }
 
-.hero__image--portrait {
-  object-position: center 14%;
-  opacity: 0.3;
+@keyframes heroMotionKenBurns {
+  0% {
+    transform: scale(1.02) translate3d(1%, 0, 0);
+  }
+  100% {
+    transform: scale(1.13) translate3d(-2.6%, -1.4%, 0);
+  }
 }
 
-.hero.hero--modern .hero__image {
-  mix-blend-mode: soft-light;
+.hero--modern .hero__motion-bg {
+  opacity: 1;
 }
 
 /* Bottom-weighted scrim — lighter so the guitar portrait stays the focal read */
@@ -2718,6 +2726,15 @@ html[data-site-mode="press"] .music-card-cover:hover {
 @media (prefers-reduced-motion: reduce) {
   .hero__scanlines {
     opacity: 0.02;
+  }
+
+  .hero__motion-bg {
+    animation: none;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-position: center 32%;
+    will-change: auto;
   }
 }
 
@@ -3042,15 +3059,10 @@ html[data-site-mode="press"] .music-card-cover:hover {
   }
 }
 
-/* Small screens: keep performance video readable under a light photo veil */
+/* Small screens: anchor B&W live shot slightly higher for handheld framing */
 @media (max-width: 768px) {
-  .hero--modern .hero-video-frame {
-    opacity: 0.52;
-  }
-
-  .hero__image {
-    opacity: 0.42;
-    object-position: center 16%;
+  .hero--modern .hero__motion-bg {
+    object-position: center 26%;
   }
 
   .hero__scrim {
@@ -3067,8 +3079,8 @@ html[data-site-mode="press"] .music-card-cover:hover {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .hero--modern .hero-video-frame {
-    opacity: 0.12;
+  .hero--modern .hero__motion-bg {
+    opacity: 1;
   }
 }
 
@@ -3246,19 +3258,13 @@ html[data-site-mode="press"] .hero--modern .hero__scrim {
     radial-gradient(ellipse 90% 80% at 70% 50%, rgba(110, 84, 32, 0.06), transparent 55%);
 }
 
-html[data-site-mode="press"] .hero__video-wrap {
-  z-index: 0;
-}
-
-html[data-site-mode="press"] .hero--modern .hero__image {
-  z-index: 1;
-  opacity: 0.66;
-  mix-blend-mode: normal;
-  filter: grayscale(0.04) contrast(1.03) saturate(0.96);
-}
-
-html[data-site-mode="press"] .hero--modern .hero-video-frame {
-  opacity: 0.1;
+html[data-site-mode="press"] .hero__motion-bg {
+  animation: none;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-position: center 30%;
+  filter: grayscale(0.05) contrast(1.05) saturate(0.94);
 }
 
 html[data-site-mode="press"] .hero__inner {
