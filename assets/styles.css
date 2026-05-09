@@ -1209,6 +1209,21 @@ html[data-site-mode="press"] .about-visual-lead {
   background: rgba(15, 23, 42, 0.2);
 }
 
+/* Partners: two cards — avoid an empty third column from global .news-grid */
+#partners-grid.news-grid {
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+@media (min-width: 640px) {
+  #partners-grid.news-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.25rem;
+    max-width: min(46rem, 100%);
+    margin-inline: auto;
+  }
+}
+
 .partner-card .news-card-title {
   margin-bottom: 0.42rem;
 }
