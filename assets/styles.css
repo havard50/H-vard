@@ -1224,6 +1224,25 @@ html[data-site-mode="press"] .about-visual-lead {
   }
 }
 
+/* Store: four product rows — 2×2 on laptop, four-across on wide screens */
+#store-grid.news-grid {
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 640px) {
+  #store-grid.news-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.2rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  #store-grid.news-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1.15rem;
+  }
+}
+
 .partner-card .news-card-title {
   margin-bottom: 0.42rem;
 }

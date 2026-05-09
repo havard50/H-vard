@@ -1,7 +1,7 @@
 {
   "siteMeta": {
     "feedUpdated": "2026-05-09",
-    "feedNote": "Entries are data-driven from this file (newest dated items first). Swap in a Git-based CMS or Netlify Content when you want editors without deploys."
+    "feedNote": "Entries are data-driven from this file (newest dated items first). Add a headless CMS or Git-based editor when you want updates without touching JSON by hand."
   },
   "timeline": [
     {
