@@ -777,9 +777,34 @@ html[data-site-mode="press"] .about-visual-lead {
   gap: 1rem;
 }
 
+.timeline-grid {
+  gap: 1.35rem;
+}
+
 .timeline-grid .timeline-card {
   position: relative;
   overflow: hidden;
+  padding-top: 1.35rem;
+  padding-bottom: 1.45rem;
+}
+
+.timeline-grid .timeline-card .news-card-kicker {
+  margin-top: 0.15rem;
+  margin-bottom: 0.55rem;
+}
+
+.timeline-grid .timeline-card .news-card-title {
+  margin-bottom: 0.65rem;
+  line-height: 1.28;
+}
+
+.timeline-grid .timeline-card .news-card-text {
+  margin-top: 0.35rem;
+  line-height: 1.62;
+}
+
+.timeline-grid .timeline-card .news-card-links {
+  margin-top: 0.95rem;
 }
 
 .timeline-grid .timeline-card::before {
@@ -798,6 +823,10 @@ html[data-site-mode="press"] .about-visual-lead {
   .news-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 1.15rem;
+  }
+
+  .news-grid.timeline-grid {
+    gap: 1.55rem;
   }
 }
 
@@ -877,7 +906,8 @@ html[data-site-mode="press"] .about-visual-lead {
 }
 
 .timeline-card-date {
-  margin: 0 0 0.45rem;
+  margin: 0 0 1rem;
+  padding-bottom: 0.15rem;
   font-size: 0.78rem;
   letter-spacing: 0.04em;
   text-transform: uppercase;
@@ -966,6 +996,16 @@ html[data-site-mode="press"] .about-visual-lead {
   border-radius: var(--radius) var(--radius) 0 0;
   overflow: hidden;
   border-bottom: 1px solid var(--border);
+}
+
+/* Date-first layout: don't pull image up into the date — restore bleed only L/R */
+.timeline-card-date + .timeline-card-media {
+  margin-top: 0;
+  margin-bottom: 1.1rem;
+}
+
+.timeline-card-media + .news-card-kicker {
+  margin-top: 0.2rem;
 }
 
 .timeline-card-media img {
