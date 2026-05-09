@@ -275,7 +275,9 @@
     if (!heroFrame) return;
 
     if (hb && typeof hb === "object") {
-      if (noteEl && hb.caption) noteEl.textContent = hb.caption;
+      if (noteEl) {
+        noteEl.textContent = hb.caption != null && String(hb.caption).trim() ? String(hb.caption).trim() : "";
+      }
       if (poster && hb.posterImage) {
         poster.src = hb.posterImage;
         if (hb.posterAlt != null) poster.alt = hb.posterAlt;
@@ -792,10 +794,6 @@
           (document.body && document.body.classList.contains("page-shop") ? " on the homepage" : "") +
           " for what is new.";
       }
-      var hostBody = document.querySelector("#footer-host-body");
-      if (hostBody && siteMeta.hostStaticTip && String(siteMeta.hostStaticTip).trim()) {
-        hostBody.textContent = String(siteMeta.hostStaticTip).trim();
-      }
     }
 
     function renderStore(items, storeSettings) {
@@ -872,17 +870,17 @@
     function renderStoreStatus(storeSettings) {
       if (!storeCheckoutStatus) return;
       if (!storeSettings || typeof storeSettings !== "object") return;
+      var checkoutOn = !!(storeSettings && storeSettings.checkoutEnabled);
       var provider = esc(storeSettings.provider || "Payment provider");
       var statusText = esc(storeSettings.statusText || "");
       var helpText = storeSettings.helpText
         ? '<span class="store-checkout-help">' + esc(storeSettings.helpText) + "</span>"
         : "";
-      storeCheckoutStatus.innerHTML =
-        statusText +
-        ' <span class="store-checkout-provider">· Planned provider: ' +
-        provider +
-        "</span> " +
-        helpText;
+      var providerHtml = "";
+      if (checkoutOn && storeSettings.provider) {
+        providerHtml = ' <span class="store-checkout-provider">· Checkout: ' + provider + "</span>";
+      }
+      storeCheckoutStatus.innerHTML = statusText + providerHtml + (checkoutOn ? " " + helpText : "");
     }
 
     function renderVideos(items) {

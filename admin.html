@@ -64,16 +64,12 @@
         </p>
         <ul class="admin-map">
           <li>
-            <code>siteMeta.feedUpdated</code> + <code>feedNote</code> — “Feed last revised” line under News; note text after the date. Same date drives
-            the visible footer “Content refreshed” line — use <strong>Stamp feed date (today)</strong> above to bump it quickly.
+            <code>siteMeta.feedUpdated</code> + <code>feedNote</code> — “Feed last revised” under News (optional short line for visitors — keep it
+            non-technical). Same date drives the footer “Content refreshed” line — use <strong>Stamp feed date (today)</strong> to bump it.
           </li>
           <li>
-            <code>siteMeta.hostStaticTip</code> — optional paragraph inside the footer “Hosting yourself” disclosure (e.g. one.com upload + replacing
-            <code>content.json</code>).
-          </li>
-          <li>
-            <code>feedExtras</code> — merged into <strong>Latest updates</strong> (with <code>timeline</code>, <code>live</code>, <code>videos</code>); needs
-            <code>published</code>, optional <code>image</code> / <code>imageAlt</code>.
+            <code>feedExtras</code> — merged into <strong>Latest updates</strong> with timeline, live rows, and videos; needs <code>published</code>,
+            optional <code>image</code> / <code>imageAlt</code>.
           </li>
           <li><code>timeline</code> — dated cards in the News grid; sorted by <code>published</code> in the browser.</li>
           <li><code>live</code> — rows under Live &amp; Touring; <code>updated</code> stamps the living feed.</li>

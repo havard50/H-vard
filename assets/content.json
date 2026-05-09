@@ -1,8 +1,7 @@
 {
   "siteMeta": {
     "feedUpdated": "2026-05-12",
-    "feedNote": "Latest updates (top of News) merge timeline, live rows, video drops, and feedExtras — newest first. Timeline cards sort by published date in the browser. Edit in JSON or add a CMS later.",
-    "hostStaticTip": "On one.com or any static host: upload the full site folder. When gigs, news, store rows, or partners change, replace assets/content.json (and any new images it references) — pages pick up the update without editing HTML. Hard-refresh to check."
+    "feedNote": "Releases, clips, and tour news land here first — newest items at the top."
   },
   "contactForm": {
     "mailto": "havardpedersen@me.com",
@@ -237,7 +236,7 @@
     {
       "date": "Next",
       "updated": "2026-05-01",
-      "meta": "When the first on-sale show is public, replace this row with date · city · venue · ticket link (edit the live array in content.json).",
+      "meta": "When the first on-sale show is public, this row will show the date, city, venue, and ticket link.",
       "links": [
         { "label": "Living feed", "href": "#latest-updates-heading" },
         { "label": "Gigplanet", "href": "https://www.gigplanet.no/band/havard-pedersen-and-the-blues-is-alright-band" }
@@ -269,7 +268,7 @@
     {
       "kicker": "Albums",
       "title": "Never Felt So Good · You and I",
-      "body": "Full catalogue on streaming; physical CDs coordinated by email until Stripe (or similar) payment links are wired.",
+      "body": "Full catalogue on streaming; physical CDs coordinated by email until online checkout is available.",
       "previewImage": "/assets/images/havard-live-sunburst-semihollow.png",
       "previewAlt": "Håvard Pedersen — live performance still",
       "status": "Catalogue",
@@ -311,9 +310,9 @@
     {
       "kicker": "Merch",
       "title": "Artist merchandise",
-      "body": "Apparel and bundles — product rows and secure checkout activate when inventory and payment links are ready.",
+      "body": "Apparel and bundles — coming soon; use Contact to register interest.",
       "previewImage": "/assets/images/havard-portrait-scarf-bw.png",
-      "previewAlt": "Artist portrait — merch preview placeholder",
+      "previewAlt": "Håvard Pedersen — artist portrait",
       "status": "Announcing soon",
       "priceFrom": "—",
       "links": [
@@ -327,7 +326,7 @@
       "title": "Holmen & Robertsen range",
       "body": "Partner products — separate listing and checkout when stock and payment links are agreed (music store stays primary).",
       "previewImage": "/assets/images/studio-white-falcon-wide.png",
-      "previewAlt": "Brand imagery placeholder — partner row",
+      "previewAlt": "Partner spotlight — Holmen & Robertsen",
       "status": "On request",
       "priceFrom": "—",
       "links": [
@@ -340,11 +339,11 @@
   "storeSettings": {
     "checkoutEnabled": false,
     "provider": "Stripe Payment Links",
-    "statusText": "Product rows below are live for streaming and enquiries — each card can gain Stripe (or similar) payment links when you are ready; no change needed to the layout.",
+    "statusText": "Streaming and direct enquiries are live below — secure checkout will appear here when it is switched on.",
     "helpText": ""
   },
   "heroBackground": {
-    "caption": "Same stack as havardpedersen.com — studio portrait over subtly rotating live clips (edit youtubeIds / poster in content.json).",
+    "caption": "",
     "youtubeIds": ["i8fR9-sAvPM", "hwxs4sBNwp0", "-oE6ztWmr14"],
     "rotateMs": 16000,
     "posterImage": "/assets/images/studio-white-falcon-wide.png",
@@ -361,7 +360,7 @@
       "youtubeId": "-oE6ztWmr14",
       "published": "2025-08-20",
       "title": "Håvard Pedersen — featured clip",
-      "caption": "Featured performance — YouTube (approved for site)"
+      "caption": "Featured performance — YouTube"
     },
     {
       "youtubeId": "hwxs4sBNwp0",
