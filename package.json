@@ -1,0 +1,16 @@
+{
+  "name": "havardpedersen-redesign",
+  "private": true,
+  "description": "Static artist site served for Railway and local preview",
+  "type": "module",
+  "scripts": {
+    "start": "node scripts/static-server.mjs",
+    "start:local": "node scripts/static-server.mjs"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "serve-handler": "^6.1.6"
+  }
+}
