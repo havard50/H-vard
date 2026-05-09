@@ -2666,7 +2666,16 @@ html[data-site-mode="press"] .music-card-cover:hover {
   overflow: hidden;
 }
 
-/* Live photo treated as “video”: slow zoom / drift loop (no iframe weight). */
+/* Social hero: YouTube embed (@havardhedde10) over Ken Burns poster fallback */
+.hero__video-wrap--social .hero-video-frame {
+  z-index: 2;
+}
+
+.hero.hero--modern .hero__video-wrap--social .hero-video-frame {
+  opacity: 0.62;
+}
+
+/* Poster layer: slow zoom / drift loop — visible under iframe & during cross-fades */
 .hero__motion-bg {
   position: absolute;
   inset: -8%;
@@ -3065,6 +3074,10 @@ html[data-site-mode="press"] .music-card-cover:hover {
     object-position: center 26%;
   }
 
+  .hero.hero--modern .hero__video-wrap--social .hero-video-frame {
+    opacity: 0.52;
+  }
+
   .hero__scrim {
     background:
       linear-gradient(180deg, rgba(5, 5, 8, 0.015) 0%, rgba(5, 5, 8, 0.008) 40%, rgba(5, 5, 8, 0.18) 68%, rgba(5, 5, 8, 0.5) 100%),
@@ -3081,6 +3094,10 @@ html[data-site-mode="press"] .music-card-cover:hover {
 @media (prefers-reduced-motion: reduce) {
   .hero--modern .hero__motion-bg {
     opacity: 1;
+  }
+
+  .hero.hero--modern .hero__video-wrap--social .hero-video-frame {
+    opacity: 0.14;
   }
 }
 
@@ -3265,6 +3282,10 @@ html[data-site-mode="press"] .hero__motion-bg {
   height: 100%;
   object-position: center 30%;
   filter: grayscale(0.05) contrast(1.05) saturate(0.94);
+}
+
+html[data-site-mode="press"] .hero.hero--modern .hero__video-wrap--social .hero-video-frame {
+  opacity: 0.26;
 }
 
 html[data-site-mode="press"] .hero__inner {

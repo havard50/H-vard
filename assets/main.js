@@ -186,9 +186,16 @@
     if (hasNav) setOpen(false);
   });
 
-  var heroFrame = document.querySelector(".hero-video-frame");
-  if (heroFrame) {
-    var idsRaw = heroFrame.getAttribute("data-video-ids") || "";
+  var heroRotationCleanup = null;
+
+  function setupHeroYoutubeRotation(frame) {
+    if (heroRotationCleanup) {
+      heroRotationCleanup();
+      heroRotationCleanup = null;
+    }
+    if (!frame) return;
+
+    var idsRaw = frame.getAttribute("data-video-ids") || "";
     var videoIds = idsRaw
       .split(",")
       .map(function (id) {
@@ -199,56 +206,67 @@
       });
 
     if (videoIds.length) {
-      heroFrame.src = buildYouTubeSrc(videoIds[0]);
+      frame.src = buildYouTubeSrc(videoIds[0]);
     }
 
-    if (videoIds.length > 1) {
-      var reduceMotionMq = window.matchMedia("(prefers-reduced-motion: reduce)");
-      var rotationTimer = null;
-      var currentIndex = 0;
-      var isTransitioning = false;
-      var rotateAttr = parseInt(heroFrame.getAttribute("data-rotate-ms") || "16000", 10);
-      var rotateMs = Math.min(120000, Math.max(8000, isNaN(rotateAttr) ? 16000 : rotateAttr));
+    if (videoIds.length <= 1) return;
 
-      function stopHeroRotation() {
-        if (rotationTimer !== null) {
-          window.clearInterval(rotationTimer);
-          rotationTimer = null;
-        }
+    var reduceMotionMq = window.matchMedia("(prefers-reduced-motion: reduce)");
+    var rotationTimer = null;
+    var currentIndex = 0;
+    var isTransitioning = false;
+    var rotateAttr = parseInt(frame.getAttribute("data-rotate-ms") || "16000", 10);
+    var rotateMs = Math.min(120000, Math.max(8000, isNaN(rotateAttr) ? 16000 : rotateAttr));
+
+    function stopHeroRotation() {
+      if (rotationTimer !== null) {
+        window.clearInterval(rotationTimer);
+        rotationTimer = null;
       }
+    }
 
-      function startHeroRotation() {
-        if (videoIds.length <= 1 || reduceMotionMq.matches) return;
-        if (rotationTimer !== null) return;
-        rotationTimer = window.setInterval(function () {
-          if (isTransitioning) return;
-          isTransitioning = true;
-          currentIndex = (currentIndex + 1) % videoIds.length;
-          heroFrame.classList.add("is-fading");
+    function startHeroRotation() {
+      if (videoIds.length <= 1 || reduceMotionMq.matches) return;
+      if (rotationTimer !== null) return;
+      rotationTimer = window.setInterval(function () {
+        if (isTransitioning) return;
+        isTransitioning = true;
+        currentIndex = (currentIndex + 1) % videoIds.length;
+        frame.classList.add("is-fading");
 
+        window.setTimeout(function () {
+          frame.src = buildYouTubeSrc(videoIds[currentIndex]);
           window.setTimeout(function () {
-            heroFrame.src = buildYouTubeSrc(videoIds[currentIndex]);
-            window.setTimeout(function () {
-              heroFrame.classList.remove("is-fading");
-              isTransitioning = false;
-            }, 420);
-          }, 450);
-        }, rotateMs);
-      }
-
-      function onReduceMotionChange() {
-        if (reduceMotionMq.matches) stopHeroRotation();
-        else startHeroRotation();
-      }
-
-      startHeroRotation();
-      if (typeof reduceMotionMq.addEventListener === "function") {
-        reduceMotionMq.addEventListener("change", onReduceMotionChange);
-      } else if (typeof reduceMotionMq.addListener === "function") {
-        reduceMotionMq.addListener(onReduceMotionChange);
-      }
+            frame.classList.remove("is-fading");
+            isTransitioning = false;
+          }, 420);
+        }, 450);
+      }, rotateMs);
     }
+
+    function onReduceMotionChange() {
+      if (reduceMotionMq.matches) stopHeroRotation();
+      else startHeroRotation();
+    }
+
+    startHeroRotation();
+    if (typeof reduceMotionMq.addEventListener === "function") {
+      reduceMotionMq.addEventListener("change", onReduceMotionChange);
+    } else if (typeof reduceMotionMq.addListener === "function") {
+      reduceMotionMq.addListener(onReduceMotionChange);
+    }
+
+    heroRotationCleanup = function () {
+      stopHeroRotation();
+      if (typeof reduceMotionMq.removeEventListener === "function") {
+        reduceMotionMq.removeEventListener("change", onReduceMotionChange);
+      } else if (typeof reduceMotionMq.removeListener === "function") {
+        reduceMotionMq.removeListener(onReduceMotionChange);
+      }
+    };
   }
+
+  setupHeroYoutubeRotation(document.querySelector(".hero-video-frame"));
 
   (function initSiteModeToggle() {
     var KEY = "havardpedersen-site-mode";
@@ -585,6 +603,31 @@
         renderStoreStatus(data.storeSettings);
         renderVideos(data.videos);
         renderPartners(data.partners);
+
+        var hb = data.heroBackground;
+        var heroFrame = document.querySelector(".hero-video-frame");
+        var posterImg = document.querySelector(".hero__motion-bg--poster");
+        var noteEl = document.querySelector("#hero-bg-note");
+        if (hb && typeof hb === "object") {
+          if (noteEl && hb.caption) noteEl.textContent = hb.caption;
+          if (posterImg && hb.posterSrc) posterImg.src = hb.posterSrc;
+          if (heroFrame && Array.isArray(hb.youtubeIds)) {
+            var hid = hb.youtubeIds
+              .map(function (id) {
+                return String(id || "").trim();
+              })
+              .filter(function (id) {
+                return YT_ID.test(id);
+              });
+            if (hid.length) {
+              heroFrame.setAttribute("data-video-ids", hid.join(","));
+              if (hb.rotateMs != null && hb.rotateMs !== "") {
+                heroFrame.setAttribute("data-rotate-ms", String(hb.rotateMs));
+              }
+            }
+          }
+        }
+        setupHeroYoutubeRotation(heroFrame);
       })
       .catch(function () {
         // Keep static fallback content if JSON is unavailable.

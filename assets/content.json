@@ -128,6 +128,12 @@
     "statusText": "Secure checkout is prepared but not switched on. Purchases today: use the primary buttons above or email.",
     "helpText": ""
   },
+  "heroBackground": {
+    "caption": "Background: rotating clips from YouTube (@havardhedde10). Short-form also on TikTok (@haavardhedde). Fallback poster: live club shot.",
+    "youtubeIds": ["hwxs4sBNwp0", "zEXcH3lHjls", "i8fR9-sAvPM"],
+    "posterSrc": "assets/images/havard-live-bw-semihollow.png",
+    "rotateMs": 16000
+  },
   "videos": [
     {
       "youtubeId": "zEXcH3lHjls",

@@ -142,9 +142,9 @@
     <main id="main">
       <section id="hero" class="hero hero--modern" aria-labelledby="hero-title">
         <div class="hero__media" aria-hidden="true">
-          <div class="hero__video-wrap hero__video-wrap--motion">
+          <div class="hero__video-wrap hero__video-wrap--motion hero__video-wrap--social">
             <img
-              class="hero__motion-bg"
+              class="hero__motion-bg hero__motion-bg--poster"
               src="assets/images/havard-live-bw-semihollow.png"
               alt=""
               width="1080"
@@ -153,6 +153,18 @@
               loading="eager"
               decoding="async"
             />
+            <iframe
+              class="hero-video-frame"
+              src="https://www.youtube-nocookie.com/embed/hwxs4sBNwp0?autoplay=1&amp;mute=1&amp;controls=0&amp;loop=1&amp;playlist=hwxs4sBNwp0&amp;modestbranding=1&amp;playsinline=1&amp;rel=0"
+              title="Background — clips from YouTube @havardhedde10"
+              tabindex="-1"
+              aria-hidden="true"
+              loading="eager"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
+              data-video-ids="hwxs4sBNwp0,zEXcH3lHjls,i8fR9-sAvPM"
+              data-rotate-ms="16000"
+            ></iframe>
           </div>
           <div class="hero__scrim"></div>
           <div class="hero__scanlines" aria-hidden="true"></div>
@@ -175,8 +187,8 @@
             <p class="hero__booking-hook">
               Available for festivals &amp; venues · <strong>booking 2026</strong>
             </p>
-            <p class="hero__performance-note">
-              Background: live B&amp;W performance shot · cinematic drift loop (photo-based motion)
+            <p class="hero__performance-note" id="hero-bg-note">
+              Background: rotating clips from YouTube (@havardhedde10); TikTok @haavardhedde; poster fallback under video.
             </p>
             <ul class="hero__promoter-tags" aria-label="At a glance for promoters">
               <li>Based in Oslo · Norway</li>
