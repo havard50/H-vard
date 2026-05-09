@@ -887,9 +887,13 @@
         .join("");
     }
 
+    function isNetlifyDeployHost() {
+      var h = (location.hostname || "").toLowerCase();
+      return h.indexOf("netlify.app") !== -1;
+    }
+
     /**
-     * Netlify Forms only work on Netlify. For one.com, set contactForm.action in content.json
-     * to a Formspree (or any standard POST) HTTPS URL — same fields: name, email, message.
+     * Optional HTTPS action (e.g. Formspree): in-browser POST. Same fields: name, email, message.
      */
     function applyContactForm(contactForm) {
       var form = document.querySelector("#contact .contact-form");
@@ -930,6 +934,54 @@
           form.appendChild(next);
         }
         next.value = String(cfg.redirectThanks);
+      }
+    }
+
+    /**
+     * Free default on one.com / localhost: open the visitor's mail client (no third-party account).
+     * Skipped on *.netlify.app where Netlify Forms handle POST when action is not overridden.
+     */
+    function bindContactFormMailtoFallback(contactForm) {
+      var form = document.querySelector("#contact .contact-form");
+      if (!form) return;
+      if (isNetlifyDeployHost()) return;
+
+      var cfg = contactForm && typeof contactForm === "object" ? contactForm : {};
+      var action = cfg.action != null ? String(cfg.action).trim() : "";
+      if (action.indexOf("https://") === 0) return;
+
+      form.removeAttribute("data-netlify");
+      form.removeAttribute("data-netlify-honeypot");
+      form.setAttribute("action", "#");
+
+      var mailto = (cfg.mailto && String(cfg.mailto).trim()) || "havardpedersen@me.com";
+      var subj =
+        (cfg.subject && String(cfg.subject).trim()) || "Site contact — havardpedersen.com";
+
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        if (typeof form.reportValidity === "function" && !form.checkValidity()) {
+          form.reportValidity();
+          return;
+        }
+        var fd = new FormData(form);
+        var name = (fd.get("name") || "").toString();
+        var email = (fd.get("email") || "").toString();
+        var message = (fd.get("message") || "").toString();
+        var body =
+          "Name: " + name + "\r\n" + "Reply-to: " + email + "\r\n\r\n" + message;
+        window.location.href =
+          "mailto:" + mailto + "?subject=" + encodeURIComponent(subj) + "&body=" + encodeURIComponent(body);
+      });
+
+      var note = document.querySelector("#contact-form-provider-note");
+      if (note) {
+        note.removeAttribute("hidden");
+        note.textContent =
+          (cfg.mailtoNote && String(cfg.mailtoNote).trim()) ||
+          "Free — uses the visitor’s email app (no paid service). Message is addressed to " +
+          mailto +
+          ".";
       }
     }
 
@@ -984,6 +1036,7 @@
 
         applyHeroBackground(data.heroBackground);
         applyContactForm(data.contactForm);
+        bindContactFormMailtoFallback(data.contactForm);
       })
       .catch(function () {
         // Keep static fallback content if JSON is unavailable.

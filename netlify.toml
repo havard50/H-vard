@@ -4,8 +4,8 @@
 # Upload the same tree Netlify publishes: index.html, shop.html, admin.html,
 # robots.txt, sitemap.xml, and the ENTIRE assets/ folder (replace the whole
 # folder when content.json / CSS / JS / images change — avoids mixed versions).
-# Contact: Netlify Forms only work on Netlify. For one.com set contactForm.action
-# in assets/content.json to a Formspree (or similar) HTTPS endpoint.
+# Contact: on Netlify hosts, Netlify Forms apply. On one.com etc., empty contactForm.action
+# uses a free mailto: handoff (see main.js). Optional paid/free-trial providers only if you set action.
 #
 [build]
   publish = "."

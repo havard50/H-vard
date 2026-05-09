@@ -4,11 +4,11 @@
     "feedNote": "Latest updates (top of News) merge timeline, live rows, video drops, and feedExtras — newest first. Edit those arrays here; add Decap/Netlify CMS or another headless CMS when you want a publish button instead of JSON."
   },
   "contactForm": {
-    "provider": "formspree",
-    "action": "",
+    "mailto": "havardpedersen@me.com",
     "subject": "Site contact — havardpedersen.com",
+    "action": "",
     "redirectThanks": "https://havardpedersen.com/?contact=sent",
-    "note": "Submits via Formspree (works on one.com and Netlify). Create a form at formspree.io and paste its https://formspree.io/f/… URL into action above."
+    "note": "Optional: set action to a Formspree (or similar) https://… URL if you want in-browser submit without opening an email app. Leave action empty for the free mailto flow on your own domain."
   },
   "feedExtras": [
     {
