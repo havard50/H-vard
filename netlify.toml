@@ -2,8 +2,9 @@
 #
 # --- Manual upload to one.com (or any static host) ---
 # Upload the same tree Netlify publishes: index.html, shop.html, admin.html,
-# 404.html (custom missing-page), robots.txt, sitemap.xml, and the ENTIRE assets/ folder (replace the whole
-# folder when content.json / CSS / JS / images change — avoids mixed versions).
+# 404.html (custom missing-page), robots.txt, sitemap.xml, .htaccess, and the ENTIRE assets/ folder
+# (including assets/.htaccess — helps one.com/Apache not cache content.json for months). Replace the whole
+# assets/ folder when content.json / CSS / JS / images change — avoids mixed versions.
 # Contact: on Netlify hosts, Netlify Forms apply. On one.com etc., empty contactForm.action
 # uses a free mailto: handoff (see main.js). Optional paid/free-trial providers only if you set action.
 #

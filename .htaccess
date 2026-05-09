@@ -70,6 +70,9 @@ RedirectMatch 410 ^/_vti_.*
   ExpiresByType application/javascript "access plus 30 days"
   ExpiresByType application/x-javascript "access plus 30 days"
 
+  # JSON (e.g. assets/content.json) — avoid long cache so feed/store match editor uploads
+  ExpiresByType application/json "access plus 0 seconds"
+
   # Images/fonts cache longest
   ExpiresByType image/jpeg "access plus 1 year"
   ExpiresByType image/png "access plus 1 year"
