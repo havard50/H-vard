@@ -2692,28 +2692,11 @@ html[data-site-mode="press"] .music-card-cover:hover {
   overflow: hidden;
 }
 
-.hero__video-wrap--band {
+.hero__video-wrap--single {
   background: #050506;
 }
 
-/* Ambient MP4: subtle monochrome bed under live clips */
-.hero__video-wrap--band .hero__ambient-video {
-  opacity: 0.26;
-}
-
-.hero__ambient-video {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center 34%;
-  z-index: 0;
-  filter: grayscale(1) contrast(1.07) brightness(0.97);
-  pointer-events: none;
-}
-
-/* Live band footage — CSS grade pulls red wash toward steel / blue-grey */
+/* Single hero wallpaper: live guitar clip — cooler grade so reds stay subdued */
 .hero-video-frame {
   position: absolute;
   top: 50%;
@@ -2722,22 +2705,13 @@ html[data-site-mode="press"] .music-card-cover:hover {
   height: max(110vh, 220vw);
   transform: translate(-50%, -50%);
   border: 0;
-  z-index: 2;
+  z-index: 1;
   pointer-events: none;
-  opacity: 0.56;
-  filter: saturate(0.36) contrast(1.09) hue-rotate(-26deg) brightness(0.93);
-  transition: opacity 0.85s ease;
-}
-
-.hero-video-frame.is-fading {
-  opacity: 0.28;
-}
-
-.hero.hero--modern .hero__video-wrap--band .hero-video-frame {
   opacity: 0.54;
+  filter: saturate(0.38) contrast(1.09) hue-rotate(-26deg) brightness(0.93);
 }
 
-/* Neutral dark scrim — no colored gel on the B&W wallpaper */
+/* Neutral dark scrim */
 .hero__scrim {
   position: absolute;
   inset: 0;
@@ -2769,14 +2743,9 @@ html[data-site-mode="press"] .music-card-cover:hover {
     opacity: 0.02;
   }
 
-  .hero__ambient-video {
-    object-position: center 32%;
-    opacity: 0.72;
-  }
-
-  .hero.hero--modern .hero__video-wrap--band .hero-video-frame {
-    opacity: 0.1;
-    filter: saturate(0.22) grayscale(0.45) contrast(1.05);
+  .hero.hero--modern .hero__video-wrap--single .hero-video-frame {
+    opacity: 0.08;
+    filter: saturate(0.25) grayscale(0.5) contrast(1.05);
   }
 }
 
@@ -3101,15 +3070,10 @@ html[data-site-mode="press"] .music-card-cover:hover {
   }
 }
 
-/* Small screens: anchor B&W live shot slightly higher for handheld framing */
 @media (max-width: 768px) {
-  .hero--modern .hero__ambient-video {
-    object-position: center 26%;
-  }
-
-  .hero.hero--modern .hero__video-wrap--band .hero-video-frame {
+  .hero.hero--modern .hero__video-wrap--single .hero-video-frame {
     opacity: 0.48;
-    filter: saturate(0.32) contrast(1.08) hue-rotate(-24deg) brightness(0.92);
+    filter: saturate(0.34) contrast(1.08) hue-rotate(-24deg) brightness(0.92);
   }
 
   .hero__scrim {
@@ -3299,13 +3263,8 @@ html[data-site-mode="press"] .hero--modern .hero__scrim {
     radial-gradient(ellipse 90% 80% at 70% 50%, rgba(110, 84, 32, 0.06), transparent 55%);
 }
 
-html[data-site-mode="press"] .hero__ambient-video {
-  object-position: center 30%;
-  filter: grayscale(1) contrast(1.05) brightness(1.02);
-}
-
-html[data-site-mode="press"] .hero.hero--modern .hero__video-wrap--band .hero-video-frame {
-  opacity: 0.4;
+html[data-site-mode="press"] .hero.hero--modern .hero__video-wrap--single .hero-video-frame {
+  opacity: 0.38;
   filter: saturate(0.26) contrast(1.06) hue-rotate(-22deg) brightness(0.95);
 }
 

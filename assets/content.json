@@ -129,11 +129,8 @@
     "helpText": ""
   },
   "heroBackground": {
-    "caption": "Background: rotating live clips with Håvard & The Blues Is Alright Band — graded cooler / lower saturation so stage reds don’t overwhelm. Full clips under Video.",
-    "youtubeIds": ["i8fR9-sAvPM", "hwxs4sBNwp0", "zEXcH3lHjls"],
-    "posterSrc": "assets/images/havard-live-bw-semihollow.png",
-    "ambientMp4": "assets/videos/hero-live-bw-loop.mp4",
-    "rotateMs": 16000
+    "caption": "Background: single looping video — Håvard Pedersen live guitar (February 2025). Edit youtubeId in content.json to swap the clip.",
+    "youtubeId": "hwxs4sBNwp0"
   },
   "videos": [
     {
