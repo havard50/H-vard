@@ -425,6 +425,17 @@
         .replace(/'/g, "&#39;");
     }
 
+    function formatPublished(iso) {
+      if (!iso || typeof iso !== "string") return "";
+      var parsed = Date.parse(iso.length === 10 ? iso + "T12:00:00" : iso);
+      if (isNaN(parsed)) return iso;
+      return new Date(parsed).toLocaleDateString("en-GB", {
+        year: "numeric",
+        month: "short",
+        day: "numeric"
+      });
+    }
+
     function renderLinks(links, className) {
       if (!Array.isArray(links) || !links.length) return "";
       var items = links
@@ -447,6 +458,14 @@
       if (!item) return "";
       var featuredClass = item.featured ? " timeline-card--release" : "";
       var archiveClass = archiveVariant ? " timeline-card--archive" : "";
+      var published =
+        item.published && formatPublished(item.published)
+          ? '<p class="timeline-card-date"><time datetime="' +
+            esc(item.published) +
+            '">' +
+            esc(formatPublished(item.published)) +
+            "</time></p>"
+          : "";
       var media = "";
       if (item.image) {
         media =
@@ -463,6 +482,7 @@
         featuredClass +
         archiveClass +
         '">' +
+        published +
         media +
         '<p class="news-card-kicker">' +
         esc(item.kicker) +
@@ -547,6 +567,10 @@
       if (!liveRoot || !Array.isArray(items) || !items.length) return;
       liveRoot.innerHTML = items
         .map(function (item) {
+          var links =
+            Array.isArray(item.links) && item.links.length
+              ? renderLinks(item.links, "gig-row-links")
+              : "";
           return (
             "<li>" +
             '<span class="gig-date">' +
@@ -555,10 +579,24 @@
             '<span class="gig-meta">' +
             esc(item.meta) +
             "</span>" +
+            links +
             "</li>"
           );
         })
         .join("");
+    }
+
+    function renderFeedMeta(siteMeta) {
+      var el = document.querySelector("#news-feed-meta");
+      if (!el || !siteMeta || typeof siteMeta !== "object") return;
+      var updated = siteMeta.feedUpdated ? esc(formatPublished(siteMeta.feedUpdated)) : "";
+      var note = siteMeta.feedNote ? esc(siteMeta.feedNote) : "";
+      if (!updated && !note) return;
+      var parts = [];
+      if (updated) parts.push("Feed last revised · <time datetime=\"" + esc(siteMeta.feedUpdated) + "\">" + updated + "</time>");
+      if (note) parts.push(note);
+      el.innerHTML = parts.join(" — ");
+      el.removeAttribute("hidden");
     }
 
     function renderStore(items, storeSettings) {
@@ -720,6 +758,7 @@
       })
       .then(function (data) {
         if (!data || typeof data !== "object") return;
+        renderFeedMeta(data.siteMeta);
         renderTimeline(data.timeline);
         renderTimelineArchive(data.timelineArchive);
         renderRecentInterviews(data.recentInterviews);

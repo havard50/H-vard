@@ -864,6 +864,30 @@ html[data-site-mode="press"] .about-visual-lead {
   text-decoration: underline;
 }
 
+.news-feed-meta {
+  margin: 0 0 1rem;
+  font-size: 0.86rem;
+  line-height: 1.45;
+  color: rgba(235, 228, 240, 0.72);
+}
+
+.news-feed-meta strong {
+  font-weight: 600;
+  color: rgba(252, 249, 255, 0.88);
+}
+
+.timeline-card-date {
+  margin: 0 0 0.45rem;
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: rgba(212, 168, 74, 0.85);
+}
+
+.timeline-card-date time {
+  font-weight: 600;
+}
+
 .interviews-block {
   margin-bottom: 2rem;
 }
@@ -3807,6 +3831,18 @@ html[data-site-mode="press"] .press-kit-channels a:hover {
   color: var(--text-muted);
 }
 
+.gig-list li .gig-row-links {
+  flex-basis: 100%;
+  margin: 0.15rem 0 0.85rem;
+  padding: 0;
+  font-size: 0.88rem;
+  line-height: 1.45;
+}
+
+.gig-list li:last-child .gig-row-links {
+  margin-bottom: 0;
+}
+
 .gig-date {
   font-family: var(--font-future);
   font-weight: 700;
@@ -3854,4 +3890,12 @@ html[data-site-mode="press"] .live-schedule-title {
 
 html[data-site-mode="press"] .gig-date {
   color: var(--accent);
+}
+
+html[data-site-mode="press"] .news-feed-meta {
+  color: rgba(61, 58, 54, 0.82);
+}
+
+html[data-site-mode="press"] .timeline-card-date {
+  color: rgba(110, 84, 32, 0.9);
 }

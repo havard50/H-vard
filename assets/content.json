@@ -1,9 +1,14 @@
 {
+  "siteMeta": {
+    "feedUpdated": "2026-05-09",
+    "feedNote": "Entries are data-driven from this file (newest dated items first). Swap in a Git-based CMS or Netlify Content when you want editors without deploys."
+  },
   "timeline": [
     {
       "kicker": "Live · 2026",
       "title": "Tour routing & poster",
       "body": "Confirmed festival and club dates appear here when announced. Holds and routing for promoters run through Gigplanet.",
+      "published": "2026-05-01",
       "image": "/assets/images/tour-poster-2025.png",
       "imageAlt": "Tour poster — 2026 live routing graphic",
       "links": [
@@ -18,6 +23,7 @@
       "kicker": "Release · 2025",
       "title": "New single: Det sku bli oss",
       "body": "Out now on streaming platforms. Hear it under Music and watch the official clip under Video.",
+      "published": "2025-10-15",
       "links": [
         { "label": "Listen", "href": "#listen" },
         { "label": "Watch", "href": "#videos" }
@@ -28,18 +34,21 @@
       "kicker": "Studio",
       "title": "Album sessions underway",
       "body": "Recording with Peter Michelsen at The Norwegian Sound, Mjøndalen. Credits and context: About.",
+      "published": "2026-04-12",
       "links": [{ "label": "About sessions", "href": "#about" }]
     },
     {
       "kicker": "Interviews",
       "title": "Conversations & archive audio",
       "body": "YouTube, short-form, and older radio — quick links in Recent interviews (same section, above the feed).",
+      "published": "2026-03-20",
       "links": [{ "label": "Recent interviews", "href": "#recent-interviews" }]
     },
     {
       "kicker": "Social video",
       "title": "Short-form clips",
       "body": "Performance edits and promo reels publish first on TikTok (@haavardhedde) and YouTube Shorts (@havardhedde10).",
+      "published": "2026-05-08",
       "links": [
         { "label": "TikTok — @haavardhedde", "href": "https://www.tiktok.com/@haavardhedde" },
         { "label": "YouTube Shorts — @havardhedde10", "href": "https://www.youtube.com/@havardhedde10/shorts" }
@@ -147,27 +156,68 @@
   ],
   "live": [
     {
+      "date": "Poster",
+      "meta": "2026 routing snapshot — venues and dates appear on the tour poster (full PNG). Same updates roll into this list when gigs are confirmed.",
+      "links": [
+        {
+          "label": "Open tour poster (PNG)",
+          "href": "/assets/images/tour-poster-2025.png"
+        },
+        {
+          "label": "Gigplanet — booking",
+          "href": "https://www.gigplanet.no/band/havard-pedersen-and-the-blues-is-alright-band"
+        }
+      ]
+    },
+    {
       "date": "TBA",
-      "meta": "2026 routing ongoing — confirmed shows appear here and in News"
+      "meta": "Additional festivals and clubs — announced here and in the Timeline when confirmed.",
+      "links": [{ "label": "News feed", "href": "#news" }]
     }
   ],
   "store": [
     {
-      "kicker": "Music",
-      "title": "Recordings & physical releases",
-      "body": "Studio albums, singles, and CD availability — streaming links plus a dedicated store page on this site.",
-      "status": "Available",
-      "priceFrom": "See store / streaming",
+      "kicker": "Single · 2025",
+      "title": "Det sku bli oss",
+      "body": "Latest single — stream on Spotify and Apple Music. CDs or bundles: use Contact until checkout goes live.",
+      "status": "Out now",
+      "priceFrom": "Streaming · CDs on request",
       "links": [
-        { "label": "Music store page", "href": "/shop.html" },
-        { "label": "Spotify", "href": "https://open.spotify.com/artist/50PJ7UncEwx3fUxJ1LgZid" }
+        {
+          "label": "Spotify — track",
+          "href": "https://open.spotify.com/track/3b5YUyKuugvteTF85a3TpP"
+        },
+        {
+          "label": "Apple Music",
+          "href": "https://music.apple.com/no/search?term=Det%20sku%20bli%20oss"
+        },
+        { "label": "Music section", "href": "#listen" }
       ],
-      "primaryAction": { "label": "Open music store", "href": "/shop.html" }
+      "primaryAction": { "label": "Listen on Spotify", "href": "https://open.spotify.com/track/3b5YUyKuugvteTF85a3TpP" }
+    },
+    {
+      "kicker": "Albums",
+      "title": "Never Felt So Good · You and I",
+      "body": "Full catalogue on streaming; physical CDs coordinated by email until Stripe (or similar) payment links are wired.",
+      "status": "Catalogue",
+      "priceFrom": "Streaming · enquire for CDs",
+      "links": [
+        {
+          "label": "Spotify — artist",
+          "href": "https://open.spotify.com/artist/50PJ7UncEwx3fUxJ1LgZid"
+        },
+        {
+          "label": "Apple Music",
+          "href": "https://music.apple.com/no/search?term=H%C3%A5vard%20Pedersen"
+        },
+        { "label": "Music & CDs page", "href": "/shop.html" }
+      ],
+      "primaryAction": { "label": "Open catalogue", "href": "https://open.spotify.com/artist/50PJ7UncEwx3fUxJ1LgZid" }
     },
     {
       "kicker": "Live",
       "title": "Shows & ticket enquiries",
-      "body": "Promoters and venues: routing and holds via Gigplanet. Ticket links will appear here when listed publicly.",
+      "body": "Promoters and venues: routing and holds via Gigplanet. Ticket URLs will sit here next to dates when listings go public.",
       "status": "Booking active",
       "priceFrom": "Per event",
       "links": [
@@ -175,6 +225,7 @@
           "label": "Gigplanet",
           "href": "https://www.gigplanet.no/band/havard-pedersen-and-the-blues-is-alright-band"
         },
+        { "label": "Tour poster", "href": "/assets/images/tour-poster-2025.png" },
         { "label": "Contact", "href": "#contact" }
       ],
       "primaryAction": {
@@ -185,26 +236,20 @@
     {
       "kicker": "Merch",
       "title": "Artist merchandise",
-      "body": "Limited apparel and bundled drops will be listed here when stock is confirmed.",
+      "body": "Apparel and bundles — product rows and secure checkout activate when inventory and payment links are ready.",
       "status": "Announcing soon",
       "priceFrom": "—",
-      "links": [{ "label": "Notify me", "href": "#contact" }],
+      "links": [
+        { "label": "Notify via Contact", "href": "#contact" },
+        { "label": "Partners (non-music)", "href": "#partners" }
+      ],
       "primaryAction": { "label": "Contact team", "href": "#contact" }
-    },
-    {
-      "kicker": "Partners",
-      "title": "Seafood collaborations",
-      "body": "Separate from core artist branding — selective partner products may appear here only when agreed.",
-      "status": "On request",
-      "priceFrom": "—",
-      "links": [{ "label": "Partnerships", "href": "#partners" }],
-      "primaryAction": { "label": "Business enquiry", "href": "#contact" }
     }
   ],
   "storeSettings": {
     "checkoutEnabled": false,
     "provider": "Stripe Payment Links",
-    "statusText": "Secure checkout is prepared but not switched on. Purchases today: use the primary buttons above or email.",
+    "statusText": "Named catalogue rows below — streaming works today; secure checkout activates when payment links are connected.",
     "helpText": ""
   },
   "heroBackground": {
