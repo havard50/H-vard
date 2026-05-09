@@ -22,6 +22,25 @@
       ]
     },
     {
+      "kicker": "Interviews · recent",
+      "title": "Press, podcasts & long-form conversations",
+      "body": "New interviews and media appearances are listed alongside releases — extended archive on the legacy site; clips and conversations also surface on YouTube and TikTok.",
+      "links": [
+        {
+          "label": "Interview archive",
+          "href": "https://havardpedersen.com/interviews.html"
+        },
+        {
+          "label": "YouTube — @havardhedde10",
+          "href": "https://www.youtube.com/@havardhedde10"
+        },
+        {
+          "label": "TikTok — @haavardhedde",
+          "href": "https://www.tiktok.com/@haavardhedde"
+        }
+      ]
+    },
+    {
       "kicker": "Studio",
       "title": "Album sessions underway",
       "body": "Recording with Peter Michelsen at The Norwegian Sound, Mjøndalen. Credits and context: About.",
@@ -30,10 +49,10 @@
     {
       "kicker": "Social video",
       "title": "Short-form clips",
-      "body": "Performance edits and promo reels publish first on YouTube Shorts and TikTok.",
+      "body": "Performance edits and promo reels publish first on TikTok (@haavardhedde) and YouTube Shorts (@havardhedde10).",
       "links": [
-        { "label": "YouTube Shorts", "href": "https://www.youtube.com/@havardhedde10/shorts" },
-        { "label": "TikTok", "href": "https://www.tiktok.com/@haavardhedde" }
+        { "label": "TikTok — @haavardhedde", "href": "https://www.tiktok.com/@haavardhedde" },
+        { "label": "YouTube Shorts — @havardhedde10", "href": "https://www.youtube.com/@havardhedde10/shorts" }
       ]
     },
     {
@@ -111,26 +130,26 @@
   },
   "videos": [
     {
-      "youtubeId": "i8fR9-sAvPM",
-      "title": "Håvard Pedersen & The Blues Is Alright Band — February 2025",
-      "caption": "The Blues Is Alright Band — live, February 2025"
-    },
-    {
-      "youtubeId": "hwxs4sBNwp0",
-      "title": "Håvard Pedersen — live clips, February 2025",
-      "caption": "Live stage clips — February 2025"
-    },
-    {
       "youtubeId": "zEXcH3lHjls",
       "title": "Det sku bli oss — Håvard Pedersen",
       "caption": "Det sku bli oss — official video"
     },
     {
+      "youtubeId": "hwxs4sBNwp0",
+      "title": "Håvard Pedersen — live clips, February 2025",
+      "caption": "Håvard Pedersen — live guitar & vocals"
+    },
+    {
+      "youtubeId": "i8fR9-sAvPM",
+      "title": "Håvard Pedersen & The Blues Is Alright Band — February 2025",
+      "caption": "Full trio — live on stage, February 2025"
+    },
+    {
       "archiveCard": true,
       "kicker": "Short-form",
-      "title": "Reels and Shorts updates",
-      "body": "New vertical edits are published to social channels first, then selected clips land here.",
-      "href": "https://www.youtube.com/@havardhedde10/shorts"
+      "title": "Reels, TikTok & Shorts",
+      "body": "Vertical performance edits go live first on TikTok (@haavardhedde) and YouTube Shorts (@havardhedde10).",
+      "href": "https://www.tiktok.com/@haavardhedde"
     }
   ],
   "partners": [
