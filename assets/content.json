@@ -1,19 +1,19 @@
 {
   "timeline": [
     {
-      "kicker": "New release · 2025",
-      "title": "Det sku bli oss is out",
-      "body": "Latest single is live on streaming. Start in Music, then continue through official clips in Video.",
+      "kicker": "Release · 2025",
+      "title": "New single: Det sku bli oss",
+      "body": "Out now on streaming platforms. Hear it under Music and watch the official clip under Video.",
       "links": [
-        { "label": "Music", "href": "#listen" },
-        { "label": "Video", "href": "#videos" }
+        { "label": "Listen", "href": "#listen" },
+        { "label": "Watch", "href": "#videos" }
       ],
       "featured": true
     },
     {
       "kicker": "Touring · 2026",
-      "title": "Band booking and routing active",
-      "body": "New festival and venue slots are being scheduled now via Gigplanet.",
+      "title": "Booking open for festivals and venues",
+      "body": "Routing and holds are coordinated through Gigplanet for promoters and agents.",
       "links": [
         {
           "label": "Gigplanet",
@@ -23,28 +23,28 @@
     },
     {
       "kicker": "Studio",
-      "title": "New album sessions in progress",
-      "body": "Tracking continues with Peter Michelsen at The Norwegian Sound.",
+      "title": "Album sessions underway",
+      "body": "Recording with Peter Michelsen at The Norwegian Sound, Mjøndalen. Credits and context: About.",
       "links": [{ "label": "About sessions", "href": "#about" }]
     },
     {
-      "kicker": "Short-form video",
-      "title": "Reels, Shorts, TikTok updates",
-      "body": "New vertical promo cuts and performance snippets are published first on YouTube Shorts and TikTok.",
+      "kicker": "Social video",
+      "title": "Short-form clips",
+      "body": "Performance edits and promo reels publish first on YouTube Shorts and TikTok.",
       "links": [
         { "label": "YouTube Shorts", "href": "https://www.youtube.com/@havardhedde10/shorts" },
         { "label": "TikTok", "href": "https://www.tiktok.com/@haavardhedde" }
       ]
     },
     {
-      "kicker": "Archive spotlight · 2011",
-      "title": "Never Felt So Good era",
-      "body": "Legacy material stays visible: debut period, historical visuals, and interviews remain part of the artist journey archive."
+      "kicker": "Archive · 2011",
+      "title": "Never Felt So Good",
+      "body": "Debut-era recordings and coverage remain part of the public archive — history stays accessible alongside new work."
     },
     {
-      "kicker": "Archive spotlight · media",
-      "title": "TV Nord, Hermitage FM, press history",
-      "body": "Important old media is preserved and linked as archive references, not removed."
+      "kicker": "Press archive",
+      "title": "Broadcast & print history",
+      "body": "Regional TV, UK radio, and press artefacts stay documented — linked from Press and legacy pages."
     }
   ],
   "live": [
@@ -56,26 +56,22 @@
   "store": [
     {
       "kicker": "Music",
-      "title": "CD and digital catalogue",
-      "body": "Never Felt So Good, You and I, and singles. Order and stream links in one place.",
-      "status": "Live now",
-      "priceFrom": "from NOK 149",
-      "checkoutLabel": "Buy now",
-      "checkoutLink": "",
+      "title": "Recordings & physical releases",
+      "body": "Studio albums, singles, and CD availability — streaming links plus a dedicated store page on this site.",
+      "status": "Available",
+      "priceFrom": "See store / streaming",
       "links": [
-        { "label": "Store and CDs", "href": "https://havardpedersen.com/shop.html" },
+        { "label": "Music store page", "href": "/shop.html" },
         { "label": "Spotify", "href": "https://open.spotify.com/artist/50PJ7UncEwx3fUxJ1LgZid" }
       ],
-      "primaryAction": { "label": "Open music store", "href": "https://havardpedersen.com/shop.html" }
+      "primaryAction": { "label": "Open music store", "href": "/shop.html" }
     },
     {
-      "kicker": "Tickets",
-      "title": "Concert booking and holds",
-      "body": "For venues, festivals, and routing requests.",
-      "status": "Booking open",
-      "priceFrom": "quote on request",
-      "checkoutLabel": "Reserve ticket",
-      "checkoutLink": "",
+      "kicker": "Live",
+      "title": "Shows & ticket enquiries",
+      "body": "Promoters and venues: routing and holds via Gigplanet. Ticket links will appear here when listed publicly.",
+      "status": "Booking active",
+      "priceFrom": "Per event",
       "links": [
         {
           "label": "Gigplanet",
@@ -89,33 +85,29 @@
       }
     },
     {
-      "kicker": "Merch and drops",
-      "title": "Merch, vinyl, and special products",
-      "body": "Merch and selected limited drops are being staged for launch.",
-      "status": "Coming soon",
-      "priceFrom": "TBA",
-      "checkoutLabel": "Checkout soon",
-      "checkoutLink": "",
-      "links": [{ "label": "Request updates", "href": "#contact" }],
-      "primaryAction": { "label": "Join waitlist", "href": "#contact" }
+      "kicker": "Merch",
+      "title": "Artist merchandise",
+      "body": "Limited apparel and bundled drops will be listed here when stock is confirmed.",
+      "status": "Announcing soon",
+      "priceFrom": "—",
+      "links": [{ "label": "Notify me", "href": "#contact" }],
+      "primaryAction": { "label": "Contact team", "href": "#contact" }
     },
     {
-      "kicker": "Optional category",
-      "title": "Seafood products and side offerings",
-      "body": "Available as a separate collection when enabled, without changing the music-first brand identity.",
-      "status": "Optional extension",
-      "priceFrom": "pilot phase",
-      "checkoutLabel": "Enable category",
-      "checkoutLink": "",
-      "links": [{ "label": "Business inquiries", "href": "#contact" }],
-      "primaryAction": { "label": "Discuss category", "href": "#contact" }
+      "kicker": "Partners",
+      "title": "Seafood collaborations",
+      "body": "Separate from core artist branding — selective partner products may appear here only when agreed.",
+      "status": "On request",
+      "priceFrom": "—",
+      "links": [{ "label": "Partnerships", "href": "#partners" }],
+      "primaryAction": { "label": "Business enquiry", "href": "#contact" }
     }
   ],
   "storeSettings": {
     "checkoutEnabled": false,
     "provider": "Stripe Payment Links",
-    "statusText": "Checkout not live yet. Activate payment links when ready.",
-    "helpText": "When enabled, each product card can use checkoutLink directly from this file."
+    "statusText": "Secure checkout is prepared but not switched on. Purchases today: use the primary buttons above or email.",
+    "helpText": ""
   },
   "videos": [
     {

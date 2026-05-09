@@ -1017,6 +1017,19 @@ html[data-site-mode="press"] .about-visual-lead {
   margin-top: 0.72rem;
 }
 
+.store-card__cta-row {
+  margin-top: 0.72rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 0.65rem;
+  align-items: center;
+}
+
+.store-card__cta-row .store-card__action,
+.store-card__cta-row .store-card__checkout {
+  margin-top: 0;
+}
+
 .store-card__checkout {
   margin-top: 0.52rem;
 }
@@ -2642,6 +2655,7 @@ html[data-site-mode="press"] .music-card-cover:hover {
 .hero__video-wrap {
   position: absolute;
   inset: 0;
+  z-index: 1;
   pointer-events: none;
   background:
     linear-gradient(110deg, rgba(18, 6, 10, 0.38), rgba(10, 8, 12, 0.22)),
@@ -2649,7 +2663,7 @@ html[data-site-mode="press"] .music-card-cover:hover {
 }
 
 .hero--modern .hero-video-frame {
-  opacity: 0.12;
+  opacity: 0.68;
 }
 
 .hero__image {
@@ -2659,9 +2673,13 @@ html[data-site-mode="press"] .music-card-cover:hover {
   height: 100%;
   object-fit: cover;
   object-position: center 22%;
-  z-index: 1;
-  opacity: 0.97;
+  z-index: 0;
+  opacity: 0.26;
   filter: saturate(1.03) contrast(1.02);
+}
+
+.hero.hero--modern .hero__image {
+  mix-blend-mode: soft-light;
 }
 
 /* Bottom-weighted scrim — lighter so the guitar portrait stays the focal read */
@@ -2876,6 +2894,18 @@ html[data-site-mode="press"] .music-card-cover:hover {
   text-shadow: 0 1px 12px rgba(0, 0, 0, 0.45);
 }
 
+.hero__performance-note {
+  margin: -0.15rem 0 0.75rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(253, 230, 138, 0.88);
+  max-width: 36rem;
+  line-height: 1.45;
+  text-shadow: 0 1px 10px rgba(0, 0, 0, 0.55);
+}
+
 .hero__promoter-tags {
   list-style: none;
   margin: 0 0 1rem;
@@ -2994,14 +3024,14 @@ html[data-site-mode="press"] .music-card-cover:hover {
   }
 }
 
-/* Image-first on small screens: no video layer — photo is the story */
+/* Small screens: keep performance video readable under a light photo veil */
 @media (max-width: 768px) {
-  .hero__video-wrap {
-    display: none;
+  .hero--modern .hero-video-frame {
+    opacity: 0.52;
   }
 
   .hero__image {
-    opacity: 1;
+    opacity: 0.42;
     object-position: center 16%;
   }
 
@@ -3198,8 +3228,14 @@ html[data-site-mode="press"] .hero--modern .hero__scrim {
     radial-gradient(ellipse 90% 80% at 70% 50%, rgba(110, 84, 32, 0.06), transparent 55%);
 }
 
+html[data-site-mode="press"] .hero__video-wrap {
+  z-index: 0;
+}
+
 html[data-site-mode="press"] .hero--modern .hero__image {
+  z-index: 1;
   opacity: 0.66;
+  mix-blend-mode: normal;
   filter: grayscale(0.04) contrast(1.03) saturate(0.96);
 }
 
@@ -3297,6 +3333,11 @@ html[data-site-mode="press"] .hero__momentum {
 
 html[data-site-mode="press"] .hero__booking-hook {
   color: var(--accent);
+  text-shadow: none;
+}
+
+html[data-site-mode="press"] .hero__performance-note {
+  color: #7a6d58;
   text-shadow: none;
 }
 

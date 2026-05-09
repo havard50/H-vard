@@ -423,7 +423,6 @@
     function renderStore(items, storeSettings) {
       if (!storeRoot || !Array.isArray(items) || !items.length) return;
       var checkoutEnabled = !!(storeSettings && storeSettings.checkoutEnabled);
-      var provider = (storeSettings && storeSettings.provider) || "Checkout";
       storeRoot.innerHTML = items
         .map(function (item) {
           var primaryAction = item && item.primaryAction && item.primaryAction.href && item.primaryAction.label
@@ -442,24 +441,26 @@
               "</p>";
           }
           var checkoutAction = "";
-          if (item && item.checkoutLabel) {
-            if (checkoutEnabled && item.checkoutLink) {
-              checkoutAction =
-                '<a class="btn btn-ghost btn--compact store-card__checkout" href="' +
-                esc(item.checkoutLink) +
-                '">' +
-                esc(item.checkoutLabel) +
-                " (" +
-                esc(provider) +
-                ")" +
-                "</a>";
-            } else {
-              checkoutAction =
-                '<span class="store-card__checkout-disabled">' +
-                esc(item.checkoutLabel) +
-                " unavailable" +
-                "</span>";
-            }
+          if (
+            checkoutEnabled &&
+            item &&
+            item.checkoutLink &&
+            item.checkoutLabel
+          ) {
+            checkoutAction =
+              '<a class="btn btn-ghost btn--compact store-card__checkout" href="' +
+              esc(item.checkoutLink) +
+              '">' +
+              esc(item.checkoutLabel) +
+              "</a>";
+          }
+          var ctaRow = "";
+          if (primaryAction || checkoutAction) {
+            ctaRow =
+              '<div class="store-card__cta-row">' +
+              primaryAction +
+              checkoutAction +
+              "</div>";
           }
           return (
             '<article class="news-card store-card">' +
@@ -473,8 +474,7 @@
             esc(item.body) +
             "</p>" +
             meta +
-            primaryAction +
-            checkoutAction +
+            ctaRow +
             renderLinks(item.links, "news-card-links") +
             "</article>"
           );
@@ -485,17 +485,16 @@
     function renderStoreStatus(storeSettings) {
       if (!storeCheckoutStatus) return;
       if (!storeSettings || typeof storeSettings !== "object") return;
-      var provider = esc(storeSettings.provider || "payment links");
-      var statusText = esc(storeSettings.statusText || "Checkout status not set.");
+      var provider = esc(storeSettings.provider || "Payment provider");
+      var statusText = esc(storeSettings.statusText || "");
       var helpText = storeSettings.helpText
         ? '<span class="store-checkout-help">' + esc(storeSettings.helpText) + "</span>"
         : "";
       storeCheckoutStatus.innerHTML =
-        '<strong>Checkout mode:</strong> ' +
         statusText +
-        " <span class=\"store-checkout-provider\">(" +
+        ' <span class="store-checkout-provider">· Planned provider: ' +
         provider +
-        ")</span> " +
+        "</span> " +
         helpText;
     }
 
