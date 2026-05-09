@@ -1029,7 +1029,9 @@
           var link = item && item.website
             ? '<p class="news-card-links"><a href="' +
               esc(item.website) +
-              '">Visit website</a></p>'
+              '">' +
+              esc(item.linkLabel || "Visit website") +
+              "</a></p>"
             : "";
           var tag = item && item.tag
             ? '<span class="partner-tag">' + esc(item.tag) + "</span>"
@@ -1042,8 +1044,17 @@
                 esc(item.logoAlt || item.name || "Partner logo") +
                 '" loading="lazy" decoding="async" /></div>'
               : "";
+          var brandLine = item && item.brandLine ? String(item.brandLine).trim() : "";
+          var brandSub = item && item.brandSub ? String(item.brandSub).trim() : "";
+          var brand =
+            !logo && (brandLine || brandSub)
+              ? '<div class="partner-card__brand" aria-hidden="true">' +
+                (brandLine ? '<span class="partner-card__brand-line">' + esc(brandLine) + "</span>" : "") +
+                (brandSub ? '<span class="partner-card__brand-sub">' + esc(brandSub) + "</span>" : "") +
+                "</div>"
+              : "";
           var mark =
-            item && item.mark
+            !logo && !brand && item && item.mark
               ? '<p class="partner-card__mark" title="' +
                 esc(item.markLabel || item.name || "") +
                 '">' +
@@ -1053,6 +1064,7 @@
           return (
             '<article class="news-card partner-card">' +
             logo +
+            brand +
             mark +
             '<p class="news-card-kicker">' +
             esc(item.kicker || "Partner") +

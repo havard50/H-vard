@@ -387,19 +387,21 @@
     {
       "kicker": "Supported by",
       "name": "Holmen and Robertsen Seafood",
-      "mark": "H&R",
-      "markLabel": "Holmen & Robertsen Seafood",
-      "description": "Norwegian seafood company — sponsor and collaboration partner. Artist identity stays music-first; partner campaigns and products are listed separately from the core music store when they go live.",
+      "brandLine": "Holmen & Robertsen",
+      "brandSub": "Seafood",
+      "description": "Norwegian seafood producer and sponsor — collaboration support for Håvard’s artist work. The music profile stays front and centre; partner products or campaigns appear in Store when agreed.",
       "website": "https://www.holmenrobertsen.no/",
+      "linkLabel": "holmenrobertsen.no",
       "tag": "Sponsor"
     },
     {
       "kicker": "Studio collaboration",
       "name": "The Norwegian Sound",
-      "mark": "TNS",
-      "markLabel": "The Norwegian Sound, Mjøndalen",
-      "description": "Recording studio where current album and single sessions take place with Peter Michelsen — production partner for the new material on this site.",
+      "brandLine": "The Norwegian Sound",
+      "brandSub": "Recording studio · Mjøndalen",
+      "description": "Where the current album and singles are tracked and produced with Peter Michelsen — the studio partner behind the new recordings featured on this site.",
       "website": "https://www.thenorwegiansound.com/",
+      "linkLabel": "thenorwegiansound.com",
       "tag": "Studio"
     }
   ]
