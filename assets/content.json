@@ -254,7 +254,7 @@
   },
   "heroBackground": {
     "caption": "Same stack as havardpedersen.com — studio portrait over subtly rotating live clips (edit youtubeIds / poster in content.json).",
-    "youtubeIds": ["i8fR9-sAvPM", "hwxs4sBNwp0"],
+    "youtubeIds": ["i8fR9-sAvPM", "hwxs4sBNwp0", "-oE6ztWmr14"],
     "rotateMs": 16000,
     "posterImage": "/assets/images/studio-white-falcon-wide.png",
     "posterAlt": "Håvard Pedersen — studio portrait with Gretsch White Falcon"
@@ -264,6 +264,11 @@
       "youtubeId": "zEXcH3lHjls",
       "title": "Det sku bli oss — Håvard Pedersen",
       "caption": "Det sku bli oss — official video"
+    },
+    {
+      "youtubeId": "-oE6ztWmr14",
+      "title": "Håvard Pedersen — featured clip",
+      "caption": "Featured performance — YouTube (approved for site)"
     },
     {
       "youtubeId": "hwxs4sBNwp0",
