@@ -1,6 +1,9 @@
 # Static site — open index.html at repo root
 #
 # --- Manual upload to one.com (or any static host) ---
+# Why Netlify can look "complete" but one.com not: Netlify always deploys 100% of the folder in one go;
+# manual upload often misses hidden .htaccess, assets/.htaccess, nested assets/images/*, or leaves an old
+# content.json / styles.css. Run: npm run deploy:check
 # Upload the same tree Netlify publishes: index.html, shop.html, admin.html,
 # robots.txt, sitemap.xml, .htaccess, and the ENTIRE assets/ folder
 # (including assets/.htaccess — helps one.com/Apache not cache content.json for months). Replace the whole

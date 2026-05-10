@@ -6,6 +6,7 @@
   "scripts": {
     "start": "node scripts/static-server.mjs",
     "start:local": "node scripts/static-server.mjs",
+    "deploy:check": "node scripts/verify-onecom-deploy.mjs",
     "hero:ambient-video": "powershell -ExecutionPolicy Bypass -File scripts/make-hero-ambient-video.ps1"
   },
   "engines": {
