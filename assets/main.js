@@ -753,38 +753,6 @@
         .join("");
     }
 
-    function renderFeedMeta(siteMeta) {
-      var el = document.querySelector("#news-feed-meta");
-      if (!el || !siteMeta || typeof siteMeta !== "object") return;
-      var updated = siteMeta.feedUpdated ? esc(formatPublished(siteMeta.feedUpdated)) : "";
-      var note = siteMeta.feedNote ? esc(siteMeta.feedNote) : "";
-      if (!updated && !note) return;
-      var parts = [];
-      if (updated) parts.push("Feed last revised · <time datetime=\"" + esc(siteMeta.feedUpdated) + "\">" + updated + "</time>");
-      if (note) parts.push(note);
-      el.innerHTML = parts.join(" — ");
-      el.removeAttribute("hidden");
-    }
-
-    function hashLink(hash) {
-      var h = hash.charAt(0) === "#" ? hash : "#" + hash;
-      if (document.body && document.body.classList.contains("page-shop")) {
-        return "/" + h;
-      }
-      return h;
-    }
-
-    function renderFooterSiteMeta(siteMeta) {
-      if (!siteMeta || typeof siteMeta !== "object") return;
-      var stamp = document.querySelector("#footer-content-stamp");
-      if (stamp && siteMeta.feedUpdated) {
-        var iso = esc(siteMeta.feedUpdated);
-        var human = esc(formatPublished(siteMeta.feedUpdated));
-        stamp.innerHTML =
-          "Content refreshed · <time datetime=\"" + iso + "\">" + human + "</time>.";
-      }
-    }
-
     function renderStore(items, storeSettings) {
       if (!storeRoot || !Array.isArray(items) || !items.length) return;
       var checkoutEnabled = !!(storeSettings && storeSettings.checkoutEnabled);
@@ -1077,8 +1045,6 @@
       })
       .then(function (data) {
         if (!data || typeof data !== "object") return;
-        renderFeedMeta(data.siteMeta);
-        renderFooterSiteMeta(data.siteMeta);
         renderLatestUpdates(buildLatestUpdates(data));
         renderTimeline(data.timeline);
         renderTimelineArchive(data.timelineArchive);
