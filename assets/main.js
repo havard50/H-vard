@@ -756,7 +756,11 @@
     function renderStore(items, storeSettings) {
       if (!storeRoot || !Array.isArray(items) || !items.length) return;
       var checkoutEnabled = !!(storeSettings && storeSettings.checkoutEnabled);
-      storeRoot.innerHTML = items
+      var storeItems = items.filter(function (item) {
+        return !(item && item.featured);
+      });
+      if (!storeItems.length) return;
+      storeRoot.innerHTML = storeItems
         .map(function (item) {
           var primaryAction = item && item.primaryAction && item.primaryAction.href && item.primaryAction.label
             ? '<a class="btn btn-primary btn--compact store-card__action" href="' +

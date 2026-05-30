@@ -32,8 +32,14 @@
   --radius: 14px;
   --header-h: 4rem;
   /* Main column — tighter on laptop/desktop so cards don’t feel oversized */
-  --max: 58rem;
-  --space: clamp(1rem, 3vw, 1.65rem);
+  --max: clamp(52rem, 88vw, 62rem);
+  --space: clamp(1rem, 2.5vw, 1.65rem);
+}
+
+@media (min-width: 1100px) {
+  :root {
+    --max: 62rem;
+  }
 }
 
 @media (min-width: 900px) {
@@ -202,6 +208,22 @@ a:hover {
   gap: clamp(0.45rem, 1.6vw, 1.15rem);
 }
 
+@media (min-width: 769px) and (max-width: 1099px) {
+  .site-nav {
+    gap: 0.35rem;
+    padding: 0.32rem 0.55rem 0.32rem 0.65rem;
+  }
+
+  .site-nav a {
+    font-size: 0.8125rem;
+  }
+
+  .site-nav .nav-cta {
+    padding: 0.42rem 0.75rem;
+    font-size: 0.65rem;
+  }
+}
+
 @media (min-width: 769px) {
   .site-nav {
     padding: 0.38rem 0.72rem 0.38rem 0.85rem;
@@ -344,8 +366,9 @@ a:hover {
     pointer-events: none;
     transform: translateY(-0.5rem);
     transition: opacity 0.2s ease, transform 0.2s ease;
-    max-height: min(70vh, 24rem);
+    max-height: min(78vh, 28rem);
     overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
   }
 
   .site-nav.is-open {
@@ -1587,7 +1610,7 @@ html[data-site-mode="press"] #interviews-feed .interview-card .news-card-kicker 
   }
 }
 
-/* Store: four product rows — 2×2 on laptop, four-across on wide screens */
+/* Store: product rows — 1 col mobile, 2 col tablet+, flexible on wide screens */
 #store-grid.news-grid {
   grid-template-columns: 1fr;
 }
@@ -3902,6 +3925,18 @@ html[data-site-mode="press"] .music-card-cover:hover {
   gap: 0.5rem;
 }
 
+@media (max-width: 480px) {
+  .hero__cta--secondary-row {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .hero__cta--secondary-row .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
 .btn--hero-secondary {
   padding: 0.58rem 1rem;
   min-height: 2.45rem;
@@ -4830,54 +4865,11 @@ html[data-site-mode="press"] .timeline-card-date {
 }
 
 /* —— Official merch (Rå Ekte Live tee) —— */
-.merch-promo-bar {
-  background: linear-gradient(90deg, rgba(18, 12, 28, 0.98) 0%, rgba(28, 18, 42, 0.98) 50%, rgba(18, 12, 28, 0.98) 100%);
-  border-bottom: 1px solid rgba(212, 168, 74, 0.22);
-  text-align: center;
-}
-
-.merch-promo-bar__inner {
-  margin: 0;
-  padding: 0.5rem 1rem;
-  max-width: var(--max);
-  margin-inline: auto;
-  font-size: 0.78rem;
-  line-height: 1.45;
-  color: rgba(244, 240, 234, 0.88);
-}
-
-.merch-promo-bar__inner strong {
-  color: var(--gold-muted);
-  font-weight: 700;
-  letter-spacing: 0.04em;
-}
-
-.merch-promo-bar a {
-  color: #e8bc6a;
-  font-weight: 600;
-  text-decoration: none;
-}
-
-.merch-promo-bar a:hover {
-  color: #fde68a;
-  text-decoration: underline;
-}
-
-html[data-site-mode="press"] .merch-promo-bar {
-  background: linear-gradient(90deg, #ece8e0 0%, #e6e0d4 50%, #ece8e0 100%);
-  border-bottom-color: rgba(26, 24, 22, 0.1);
-}
-
-html[data-site-mode="press"] .merch-promo-bar__inner {
-  color: #3d3a36;
-}
-
-html[data-site-mode="press"] .merch-promo-bar__inner strong {
-  color: #6e5420;
-}
-
-html[data-site-mode="press"] .merch-promo-bar a {
-  color: #5c4a1a;
+.store-merch-wrap {
+  margin: clamp(1.5rem, 4vw, 2.25rem) 0 clamp(2rem, 5vw, 2.75rem);
+  padding-bottom: clamp(1.5rem, 4vw, 2.25rem);
+  border-bottom: 1px solid rgba(212, 168, 74, 0.14);
+  scroll-margin-top: calc(var(--header-h) + 0.75rem);
 }
 
 .section-merch {
@@ -4893,7 +4885,7 @@ html[data-site-mode="press"] .merch-promo-bar a {
 .merch-feature {
   display: grid;
   gap: clamp(1.5rem, 4vw, 2.5rem);
-  margin-top: clamp(1.5rem, 4vw, 2.25rem);
+  margin-top: 0.85rem;
   padding: clamp(1.25rem, 3vw, 1.75rem);
   border-radius: calc(var(--radius) + 6px);
   border: 1px solid rgba(212, 168, 74, 0.22);
@@ -5193,6 +5185,23 @@ html[data-site-mode="press"] .merch-promo-bar a {
   margin-bottom: 0.75rem;
 }
 
+@media (max-width: 520px) {
+  .merch-feature__actions .btn {
+    flex: 1 1 100%;
+    justify-content: center;
+  }
+
+  .merch-sizes__grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .merch-size {
+    min-width: 0;
+    width: 100%;
+  }
+}
+
 .merch-order-btn:not(.is-ready) {
   opacity: 0.72;
   pointer-events: none;
@@ -5204,46 +5213,14 @@ html[data-site-mode="press"] .merch-promo-bar a {
   color: var(--text-muted);
 }
 
-.merch-fan {
-  margin-top: clamp(1.75rem, 4vw, 2.5rem);
-  padding: clamp(1.15rem, 3vw, 1.5rem);
-  border-radius: calc(var(--radius) + 4px);
-  border: 1px solid rgba(212, 168, 74, 0.16);
-  background: linear-gradient(135deg, rgba(212, 168, 74, 0.06), rgba(124, 58, 237, 0.04));
-  text-align: center;
-}
-
-.merch-fan__kicker {
-  margin: 0 0 0.35rem;
+.store-grid-heading {
+  margin: 0 0 0.85rem;
+  font-family: var(--font-future);
   font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--gold-muted);
-}
-
-.merch-fan__title {
-  margin: 0 0 0.55rem;
-  font-family: var(--font-display);
-  font-size: clamp(1.35rem, 3vw, 1.75rem);
-  font-weight: 400;
-  letter-spacing: 0.04em;
-  color: var(--heading-ink);
-}
-
-.merch-fan__lead {
-  margin: 0 auto 1rem;
-  max-width: 36rem;
-  font-size: 0.92rem;
-  line-height: 1.55;
-  color: var(--text-muted);
-}
-
-.merch-fan__actions {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 0.55rem;
 }
 
 .store-card--merch {
@@ -5269,60 +5246,4 @@ html[data-site-mode="press"] .merch-total__row--grand dd {
 
 html[data-site-mode="press"] .merch-feature__bullets {
   color: #3d3a36;
-}
-
-html[data-site-mode="press"] .merch-fan {
-  background: rgba(255, 252, 247, 0.92);
-  border-color: rgba(26, 24, 22, 0.1);
-}
-
-html[data-site-mode="press"] .merch-fan__title {
-  color: #1f1c18;
-}
-
-.floating-merch-btn {
-  position: fixed;
-  left: 0.9rem;
-  bottom: 0.9rem;
-  z-index: 220;
-  display: none;
-  padding: 0.78rem 1.05rem;
-  border-radius: 999px;
-  text-decoration: none;
-  font-family: var(--font-future);
-  font-weight: 800;
-  font-size: 0.72rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: #f5ecd6;
-  background: linear-gradient(135deg, rgba(28, 18, 42, 0.96) 0%, rgba(18, 12, 28, 0.98) 100%);
-  border: 1px solid rgba(212, 168, 74, 0.45);
-  box-shadow:
-    0 0 0 1px rgba(212, 168, 74, 0.12),
-    0 12px 32px rgba(0, 0, 0, 0.45);
-}
-
-.floating-merch-btn:hover {
-  color: #fde68a;
-  transform: translateY(-2px);
-  border-color: rgba(212, 168, 74, 0.65);
-}
-
-body.lightbox-open .floating-merch-btn {
-  visibility: hidden;
-  pointer-events: none;
-}
-
-@media (max-width: 900px) {
-  .floating-merch-btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-  }
-}
-
-html[data-site-mode="press"] .floating-merch-btn {
-  color: #1f1c18;
-  background: linear-gradient(135deg, #f5ecd6 0%, #ece4d0 100%);
-  border-color: rgba(110, 84, 32, 0.35);
 }
