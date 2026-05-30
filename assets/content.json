@@ -292,18 +292,20 @@
       }
     },
     {
-      "kicker": "Merch",
-      "title": "Artist merchandise",
-      "body": "Apparel and bundles — coming soon; use Contact to register interest.",
-      "previewImage": "/assets/images/havard-portrait-scarf-bw.png",
-      "previewAlt": "Håvard Pedersen — artist portrait",
-      "status": "Announcing soon",
-      "priceFrom": "—",
+      "kicker": "Merch · 2026",
+      "title": "Rå Ekte Live T-Shirt",
+      "body": "Official black tee — same stage design. L–3XL. Order by email now; full merch store with size picker.",
+      "previewImage": "/assets/images/merch-raa-ekte-worn.png",
+      "previewAlt": "Rå Ekte Live tour t-shirt — worn on stage",
+      "status": "In stock",
+      "priceFrom": "250 kr + 79 kr shipping",
       "links": [
-        { "label": "Notify via Contact", "href": "#contact" },
-        { "label": "Partners (non-music)", "href": "#partners" }
+        { "label": "Size & order", "href": "#merch" },
+        { "label": "Merch store", "href": "https://havardtshirt.netlify.app/" },
+        { "label": "Email order", "href": "mailto:havardpedersen@me.com" }
       ],
-      "primaryAction": { "label": "Contact team", "href": "#contact" }
+      "primaryAction": { "label": "Order tee", "href": "#merch" },
+      "featured": true
     },
     {
       "kicker": "Seafood & partners",
@@ -323,8 +325,21 @@
   "storeSettings": {
     "checkoutEnabled": false,
     "provider": "Stripe Payment Links",
-    "statusText": "Streaming and direct enquiries are live below — secure checkout will appear here when it is switched on.",
+    "statusText": "Merch orders by email are live — pick a size in the Merch section. Streaming and enquiries below; Stripe card checkout coming soon.",
     "helpText": ""
+  },
+  "merch": {
+    "title": "Rå Ekte Live T-Shirt",
+    "priceKr": 250,
+    "shippingKr": 79,
+    "stockLeft": 17,
+    "sizes": ["L", "XL", "XXL", "3XL"],
+    "email": "havardpedersen@me.com",
+    "externalStore": "https://havardtshirt.netlify.app/",
+    "images": {
+      "worn": "/assets/images/merch-raa-ekte-worn.png",
+      "tee": "/assets/images/merch-raa-ekte-tee.png"
+    }
   },
   "heroBackground": {
     "caption": "",

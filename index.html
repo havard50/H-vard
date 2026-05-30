@@ -100,9 +100,35 @@
         }
       }
     </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": "Rå Ekte Live T-Shirt",
+        "description": "Official black tour t-shirt — same stage design as Håvard Pedersen & The Blues Is Alright Band. Direct-to-garment print.",
+        "image": "https://havardpedersen.com/assets/images/merch-raa-ekte-worn.png",
+        "brand": { "@type": "Brand", "name": "Håvard Pedersen" },
+        "offers": {
+          "@type": "Offer",
+          "url": "https://havardpedersen.com/#merch",
+          "priceCurrency": "NOK",
+          "price": "250",
+          "availability": "https://schema.org/InStock",
+          "seller": { "@type": "Person", "name": "Håvard Pedersen" }
+        }
+      }
+    </script>
   </head>
   <body class="body--future">
     <a class="skip-link" href="#main">Skip to content</a>
+    <div class="merch-promo-bar" role="region" aria-label="Official merch">
+      <p class="merch-promo-bar__inner">
+        <strong>Official tour merch</strong> · Rå Ekte Live tee · 250 kr + shipping —
+        <a href="#merch">Pick a size &amp; order</a>
+        ·
+        <a href="https://havardtshirt.netlify.app/" rel="noopener noreferrer">Full store</a>
+      </p>
+    </div>
     <header class="site-header">
       <div class="header-inner">
         <a class="logo" href="#main">Håvard Pedersen</a>
@@ -135,6 +161,7 @@
           <a href="#band">Band</a>
           <a href="#press-kit">Press kit</a>
           <a href="#partners">Partners</a>
+          <a href="#merch">Merch</a>
           <a href="#store">Store</a>
           <a href="#contact">Contact</a>
           <a href="#press">Press</a>
@@ -222,6 +249,7 @@
             </div>
             <div class="hero__cta hero__cta--secondary-row" role="group" aria-label="Secondary links">
               <a class="btn btn-ghost btn--hero btn--hero-secondary" href="#listen">Listen</a>
+              <a class="btn btn-ghost btn--hero btn--hero-secondary" href="#merch">Merch</a>
               <a class="btn btn-ghost btn--hero btn--hero-secondary" href="#gallery">Photos</a>
               <a class="btn btn-ghost btn--hero btn--hero-secondary" href="#contact">Contact</a>
             </div>
@@ -1422,13 +1450,152 @@
         </div>
       </section>
 
+      <section id="merch" class="section section-merch reveal" aria-labelledby="merch-title">
+        <div class="section-inner">
+          <p class="section-kicker">Official tour merch · 2026</p>
+          <h2 id="merch-title" class="section-title">Rå Ekte Live T-Shirt</h2>
+          <p class="listen-lead merch-lead">
+            Same design as on stage with <strong>The Blues Is Alright Band</strong> — limited run, direct-to-garment print.
+            Order by email today; card checkout via Stripe is coming soon on the
+            <a href="https://havardtshirt.netlify.app/" rel="noopener noreferrer">dedicated merch store</a>.
+          </p>
+
+          <div class="merch-feature" id="merch-feature" data-price-kr="250" data-shipping-kr="79">
+            <div class="merch-feature__gallery">
+              <figure class="merch-feature__figure">
+                <button
+                  type="button"
+                  class="merch-feature__zoom"
+                  data-lightbox="true"
+                  data-caption="Rå Ekte Live t-shirt — official tour merch"
+                  aria-label="Enlarge product photo"
+                >
+                  <img
+                    id="merch-main-image"
+                    class="merch-feature__img"
+                    src="/assets/images/merch-raa-ekte-worn.png"
+                    alt="Rå Ekte Live t-shirt worn on stage"
+                    width="800"
+                    height="1000"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <span class="merch-feature__zoom-hint">Click to enlarge</span>
+                </button>
+                <figcaption class="merch-feature__caption" id="merch-image-caption">On model · as seen on stage</figcaption>
+              </figure>
+              <div class="merch-feature__thumbs" role="tablist" aria-label="Product photos">
+                <button
+                  type="button"
+                  class="merch-thumb is-active"
+                  role="tab"
+                  aria-selected="true"
+                  data-src="/assets/images/merch-raa-ekte-worn.png"
+                  data-caption="On model · as seen on stage"
+                  data-alt="Rå Ekte Live t-shirt worn on stage"
+                >
+                  <img src="/assets/images/merch-raa-ekte-worn.png" alt="" width="120" height="120" loading="lazy" decoding="async" />
+                  <span>On model</span>
+                </button>
+                <button
+                  type="button"
+                  class="merch-thumb"
+                  role="tab"
+                  aria-selected="false"
+                  data-src="/assets/images/merch-raa-ekte-tee.png"
+                  data-caption="Front print · flat lay"
+                  data-alt="Rå Ekte Live t-shirt — front print"
+                >
+                  <img src="/assets/images/merch-raa-ekte-tee.png" alt="" width="120" height="120" loading="lazy" decoding="async" />
+                  <span>Front</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="merch-feature__buy">
+              <p class="merch-feature__badge">As seen on stage · 100% official</p>
+              <p class="merch-feature__price">
+                <span class="merch-feature__price-main">250 kr</span>
+                <span class="merch-feature__price-sub">+ 79 kr shipping (Norway)</span>
+              </p>
+              <p class="merch-feature__ship-note">Ships from Norway · typical delivery 3–7 business days after order</p>
+              <p class="merch-feature__stock" id="merch-stock">17 left in stock</p>
+
+              <ul class="merch-feature__bullets">
+                <li>Black tee — concerts, pubs, everyday</li>
+                <li>Unisex fit — men's cut</li>
+                <li>Wash inside out · do not tumble dry</li>
+              </ul>
+
+              <fieldset class="merch-sizes">
+                <legend class="merch-sizes__legend">Select size</legend>
+                <div class="merch-sizes__grid" role="group" aria-label="T-shirt sizes">
+                  <label class="merch-size"><input type="radio" name="merch-size" value="L" /> L</label>
+                  <label class="merch-size"><input type="radio" name="merch-size" value="XL" /> XL</label>
+                  <label class="merch-size"><input type="radio" name="merch-size" value="XXL" /> XXL</label>
+                  <label class="merch-size"><input type="radio" name="merch-size" value="3XL" /> 3XL</label>
+                </div>
+                <p class="merch-sizes__hint" id="merch-size-hint">Choose a size above</p>
+              </fieldset>
+
+              <dl class="merch-total" aria-label="Order summary">
+                <div class="merch-total__row">
+                  <dt>Item</dt>
+                  <dd id="merch-item-amount">250 kr</dd>
+                </div>
+                <div class="merch-total__row">
+                  <dt>Shipping (Norway)</dt>
+                  <dd id="merch-shipping-amount">79 kr</dd>
+                </div>
+                <div class="merch-total__row merch-total__row--grand">
+                  <dt>Total</dt>
+                  <dd id="merch-total-amount">329 kr</dd>
+                </div>
+              </dl>
+
+              <div class="merch-feature__actions">
+                <a
+                  id="merch-order-email"
+                  class="btn btn-primary merch-order-btn"
+                  href="mailto:havardpedersen@me.com?subject=R%C3%A5%20Ekte%20Live%20T-Shirt%20order&amp;body=Hi%20H%C3%A5vard%2C%0A%0AI%20would%20like%20to%20order%20the%20R%C3%A5%20Ekte%20Live%20T-Shirt.%0A%0ASize%3A%20%5Bchoose%20size%5D%0AQuantity%3A%201%0A%0ATotal%20(inc.%20shipping)%3A%20329%20kr%0A%0AShipping%20address%3A%0A%0AThank%20you!"
+                  >Order by email</a
+                >
+                <a class="btn btn-ghost" href="https://havardtshirt.netlify.app/" rel="noopener noreferrer">Full merch store</a>
+                <a class="btn btn-ghost" href="https://open.spotify.com/track/3b5YUyKuugvteTF85a3TpP">Listen to the single</a>
+              </div>
+              <p class="merch-feature__email-note">Email: <a href="mailto:havardpedersen@me.com">havardpedersen@me.com</a></p>
+
+              <p class="merch-hashtag">
+                Wear it to the show · share with
+                <a href="https://www.instagram.com/explore/tags/raaekteLive/">#RåEkteLive</a>
+              </p>
+            </div>
+          </div>
+
+          <div class="merch-fan">
+            <p class="merch-fan__kicker">For fans</p>
+            <h3 class="merch-fan__title">Wear it to the show</h3>
+            <p class="merch-fan__lead">
+              Support live music — wear the shirt at the next gig and tag
+              <a href="https://www.instagram.com/haavard_pedersen_raa_ekte_live/">@haavard_pedersen_raa_ekte_live</a>
+              with <a href="https://www.instagram.com/explore/tags/raaekteLive/">#RåEkteLive</a>.
+            </p>
+            <div class="merch-fan__actions">
+              <a class="btn btn-ghost btn--compact" href="https://www.instagram.com/haavard_pedersen_raa_ekte_live/" rel="noopener noreferrer">Instagram</a>
+              <a class="btn btn-ghost btn--compact" href="https://www.tiktok.com/@haavardhedde" rel="noopener noreferrer">TikTok</a>
+              <a class="btn btn-ghost btn--compact" href="#live">Tour dates</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section id="store" class="section section-news reveal" aria-labelledby="store-title">
         <div class="section-inner">
           <p class="section-kicker">Store</p>
-          <h2 id="store-title" class="section-title">Artist store (music-first)</h2>
+          <h2 id="store-title" class="section-title">Artist store</h2>
           <p class="listen-lead">
-            Music-first catalogue: stream today; CDs and bundles on request via Contact. Secure checkout will appear here when it goes live. Partner
-            products: <a href="#partners">Partners</a>.
+            Stream the catalogue, order the <a href="#merch">Rå Ekte Live tee</a> by email, book live dates, or enquire about CDs and partner products.
+            <a href="/shop.html">Shop page</a> · <a href="#partners">Partners</a>.
           </p>
           <ul class="store-cats" aria-label="Store categories">
             <li>Streaming &amp; catalogue</li>
@@ -1444,7 +1611,7 @@
             Online payments will be added when the store checkout phase goes live.
           </p>
           <p id="store-checkout-status" class="store-checkout-status" aria-live="polite">
-            Streaming and direct enquiries are live below — secure checkout will appear here when it is switched on.
+            Merch orders by email are live — pick a size on the <a href="#merch">Rå Ekte Live tee</a> section. Streaming and enquiries below; Stripe card checkout coming soon.
           </p>
           <div id="store-grid" class="news-grid" aria-label="Store products">
             <article class="news-card store-card">
@@ -1535,28 +1702,32 @@
                 <a href="#contact">Contact</a>
               </p>
             </article>
-            <article class="news-card store-card">
+            <article class="news-card store-card store-card--merch">
               <div class="store-card__preview">
                 <img
-                  src="/assets/images/havard-portrait-scarf-bw.png"
-                  alt="Håvard Pedersen — artist portrait"
+                  src="/assets/images/merch-raa-ekte-worn.png"
+                  alt="Rå Ekte Live tour t-shirt — worn on stage"
                   loading="lazy"
                   decoding="async"
                 />
               </div>
-              <p class="news-card-kicker">Merch</p>
-              <h3 class="news-card-title">Artist merchandise</h3>
+              <p class="news-card-kicker">Merch · 2026</p>
+              <h3 class="news-card-title">Rå Ekte Live T-Shirt</h3>
               <p class="news-card-text">
-                Apparel and bundles — coming soon; use Contact to register interest.
+                Official black tee — same stage design. L–3XL. Order by email now; full merch store with size picker at havardtshirt.netlify.app.
               </p>
               <p class="store-card__meta">
-                <span class="store-card__status">Announcing soon</span>
-                <span class="store-card__price">—</span>
+                <span class="store-card__status">In stock</span>
+                <span class="store-card__price">250 kr + 79 kr shipping</span>
               </p>
               <div class="store-card__cta-row">
-                <a class="btn btn-primary btn--compact store-card__action" href="#contact">Contact team</a>
+                <a class="btn btn-primary btn--compact store-card__action" href="#merch">Order tee</a>
               </div>
-              <p class="news-card-links"><a href="#contact">Notify via Contact</a> · <a href="#partners">Partners</a></p>
+              <p class="news-card-links">
+                <a href="#merch">Size &amp; order</a> ·
+                <a href="https://havardtshirt.netlify.app/" rel="noopener noreferrer">Merch store</a> ·
+                <a href="mailto:havardpedersen@me.com">Email order</a>
+              </p>
             </article>
             <article class="news-card store-card">
               <div class="store-card__preview">
@@ -1635,6 +1806,10 @@
           On this site:
           <a href="#listen">Music</a>
           ·
+          <a href="#merch">Merch</a>
+          ·
+          <a href="#store">Store</a>
+          ·
           <a href="#videos">Video</a>
           ·
           <a href="#gallery">Photos</a>
@@ -1660,6 +1835,9 @@
       </div>
     </footer>
 
+    <a class="floating-merch-btn" href="#merch" title="Official Rå Ekte Live tour t-shirt — 250 kr">
+      Merch · 250 kr
+    </a>
     <a class="floating-book-btn" href="https://www.gigplanet.no/band/havard-pedersen-and-the-blues-is-alright-band" title="Book live dates via Gigplanet">
       Book live
     </a>
