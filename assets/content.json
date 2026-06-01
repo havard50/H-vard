@@ -1,6 +1,6 @@
 {
   "siteMeta": {
-    "feedUpdated": "2026-05-12"
+    "feedUpdated": "2026-06-01"
   },
   "contactForm": {
     "mailto": "havardpedersen@me.com",
@@ -11,75 +11,9 @@
   "feedExtras": [],
   "timeline": [
     {
-      "kicker": "Rehearsal · 2026",
-      "title": "May 2026 — new rehearsal clip",
-      "body": "Trio rehearsal — short-form on TikTok / Shorts first; longer graded cut under Video when ready.",
-      "published": "2026-05-14",
-      "image": "/assets/images/havard-live-sunburst-semihollow.png",
-      "imageAlt": "Håvard Pedersen — live on stage with semi-hollow sunburst guitar",
-      "links": [
-        { "label": "Video", "href": "#videos" },
-        { "label": "TikTok", "href": "https://www.tiktok.com/@haavardhedde" }
-      ]
-    },
-    {
-      "kicker": "Social video",
-      "title": "Short-form clips",
-      "body": "Performance edits and promo reels publish first on TikTok (@haavardhedde) and YouTube Shorts (@havardhedde10).",
-      "published": "2026-05-08",
-      "links": [
-        { "label": "TikTok — @haavardhedde", "href": "https://www.tiktok.com/@haavardhedde" },
-        { "label": "YouTube Shorts — @havardhedde10", "href": "https://www.youtube.com/@havardhedde10/shorts" }
-      ]
-    },
-    {
-      "kicker": "Studio",
-      "title": "Album sessions — vocal day",
-      "body": "Tracking at The Norwegian Sound with Peter Michelsen. Stills and cleared reel clips land here; raw moments on Shorts/TikTok first.",
-      "published": "2026-05-07",
-      "image": "/assets/images/cinematic-gretsch.png",
-      "imageAlt": "Håvard Pedersen — cinematic studio still with Gretsch guitar",
-      "links": [
-        { "label": "About / sessions", "href": "#about" },
-        { "label": "Video", "href": "#videos" }
-      ]
-    },
-    {
-      "kicker": "Live · 2026",
-      "title": "May 2026 — tour routing & poster",
-      "body": "2026 routing snapshot for promoters and fans — confirmed public dates also roll into Live & Touring when venues announce.",
-      "published": "2026-05-01",
-      "image": "/assets/images/tour-poster-2025.png",
-      "imageAlt": "Tour poster — 2026 live routing graphic",
-      "links": [
-        {
-          "label": "Gigplanet",
-          "href": "https://www.gigplanet.no/band/havard-pedersen-and-the-blues-is-alright-band"
-        },
-        { "label": "Live & touring", "href": "#live" }
-      ]
-    },
-    {
-      "kicker": "Live · 2026",
-      "title": "April 2026 — live poster refresh",
-      "body": "Routing graphic refreshed for spring holds — on-sale rows will mirror this card once dates are public.",
-      "published": "2026-04-25",
-      "links": [
-        { "label": "Open poster (PNG)", "href": "/assets/images/tour-poster-2025.png" },
-        { "label": "Gigplanet", "href": "https://www.gigplanet.no/band/havard-pedersen-and-the-blues-is-alright-band" }
-      ]
-    },
-    {
-      "kicker": "Studio",
-      "title": "Album sessions underway",
-      "body": "Recording with Peter Michelsen at The Norwegian Sound, Mjøndalen. Credits and context: About.",
-      "published": "2026-04-12",
-      "links": [{ "label": "About sessions", "href": "#about" }]
-    },
-    {
       "kicker": "Release · 2025",
-      "title": "2025 — Det sku bli oss",
-      "body": "Single out now on streaming — official video under Video; artwork in Photos.",
+      "title": "Det sku bli oss — out now",
+      "body": "Latest single on streaming — official video under Video.",
       "published": "2025-10-15",
       "image": "/assets/images/single-det-sku-studio.png",
       "imageAlt": "Det sku bli oss — single artwork (studio)",
@@ -88,123 +22,46 @@
         { "label": "Watch", "href": "#videos" }
       ],
       "featured": true
+    },
+    {
+      "kicker": "Studio",
+      "title": "Album sessions underway",
+      "body": "Recording with Peter Michelsen at The Norwegian Sound, Mjøndalen.",
+      "published": "2026-04-12",
+      "image": "/assets/images/cinematic-gretsch.png",
+      "imageAlt": "Håvard Pedersen — studio still with Gretsch guitar",
+      "links": [{ "label": "About", "href": "#about" }]
+    },
+    {
+      "kicker": "Live · 2026",
+      "title": "Tour routing & poster",
+      "body": "2026 routing for promoters and fans — dates added here when venues announce.",
+      "published": "2026-05-01",
+      "image": "/assets/images/tour-poster-2025.png",
+      "imageAlt": "Tour poster — 2026 live routing graphic",
+      "links": [
+        {
+          "label": "Gigplanet",
+          "href": "https://www.gigplanet.no/band/havard-pedersen-and-the-blues-is-alright-band"
+        },
+        { "label": "Live", "href": "#live" }
+      ]
     }
   ],
   "timelineArchive": [
     {
       "kicker": "Archive · 2011",
       "title": "Never Felt So Good",
-      "body": "Debut-era recordings and coverage remain part of the public archive — history stays accessible alongside new work."
-    },
-    {
-      "kicker": "Press archive",
-      "title": "Broadcast & print history",
-      "body": "Regional TV, UK radio, and press artefacts stay documented — linked from Press and legacy pages."
+      "body": "Debut album — still on streaming alongside newer releases."
     }
   ],
-  "recentInterviews": [
-    {
-      "kicker": "YouTube",
-      "title": "Long-form & channel hub",
-      "body": "Official YouTube is where longer performance pieces and sit-down style clips are published when they are ready.",
-      "links": [
-        { "label": "Channel — @havardhedde10", "href": "https://www.youtube.com/@havardhedde10" },
-        { "label": "Shorts", "href": "https://www.youtube.com/@havardhedde10/shorts" }
-      ]
-    },
-    {
-      "kicker": "TikTok & Instagram",
-      "title": "Candid & short-form",
-      "body": "Vertical clips and on-the-fly performance moments often land on TikTok and Reels first.",
-      "links": [
-        { "label": "TikTok @haavardhedde", "href": "https://www.tiktok.com/@haavardhedde" },
-        { "label": "Instagram @havardhedde", "href": "https://www.instagram.com/havardhedde" }
-      ]
-    },
-    {
-      "kicker": "Archive · TV Nord",
-      "title": "Regional TV — November 2010",
-      "body": "TV Nord segment during the debut album campaign; broadcast still archived on the legacy domain.",
-      "image": "https://havardpedersen.com/TvNord.png-for-web-normal.png",
-      "imageAlt": "TV Nord — archived broadcast still",
-      "links": [
-        {
-          "label": "TV Nord still (full image)",
-          "href": "https://havardpedersen.com/TvNord.png-for-web-normal.png"
-        },
-        { "label": "Press timeline", "href": "#press" }
-      ]
-    },
-    {
-      "kicker": "Archive · Altaposten",
-      "title": "Print — debut album coverage",
-      "body": "Altaposten feature during the Never Felt So Good campaign; scan archived on the legacy domain.",
-      "image": "https://havardpedersen.com/HavardAltaposten.png",
-      "imageAlt": "Altaposten — newspaper coverage scan",
-      "links": [
-        {
-          "label": "Altaposten scan (full image)",
-          "href": "https://havardpedersen.com/HavardAltaposten.png"
-        },
-        { "label": "Press timeline", "href": "#press" }
-      ]
-    },
-    {
-      "kicker": "Archive · UK radio",
-      "title": "Blast Radio UK — WMGGW",
-      "body": "Segment archived as MP3 on the legacy domain (February 26).",
-      "image": "/assets/images/havard-portrait-scarf-bw.png",
-      "imageAlt": "Håvard Pedersen — press portrait, black & white (Blast Radio UK archive)",
-      "imageFit": "cover",
-      "audio": "https://havardpedersen.com/BlastRadioUK_WMGGW_Feb26th.mp3",
-      "links": [
-        {
-          "label": "Download / open MP3",
-          "href": "https://havardpedersen.com/BlastRadioUK_WMGGW_Feb26th.mp3"
-        },
-        { "label": "Press timeline", "href": "#press" }
-      ]
-    },
-    {
-      "kicker": "Archive · UK radio",
-      "title": "Hermitage FM — From Blues To Rock (2011)",
-      "body": "Conversation with Jon Seymour plus a Mobile Dreams live spot — both archived on the legacy domain (MP3).",
-      "image": "/assets/images/havard-live-bw-semihollow.png",
-      "imageAlt": "Håvard Pedersen — live black & white, semi-hollow guitar (Hermitage FM archive)",
-      "imageFit": "cover",
-      "audio": "https://havardpedersen.com/HermitageFM_interviewJune8.mp3",
-      "links": [
-        {
-          "label": "Interview (MP3)",
-          "href": "https://havardpedersen.com/HermitageFM_interviewJune8.mp3"
-        },
-        {
-          "label": "Mobile Dreams — Hermitage FM (MP3)",
-          "href": "https://havardpedersen.com/MobileDreams_HermitageFM.mp3"
-        },
-        { "label": "Press timeline", "href": "#press" }
-      ]
-    },
-    {
-      "kicker": "Press & print",
-      "title": "Broadcast, TV, and reviews",
-      "body": "Scan lists and review summaries on the legacy pages; the Press section on this site covers the core broadcast trail.",
-      "links": [
-        { "label": "Press (this site)", "href": "#press" },
-        { "label": "Reviews (legacy)", "href": "https://havardpedersen.com/reviews.html" }
-      ]
-    }
-  ],
+  "recentInterviews": [],
   "live": [
     {
       "date": "Poster",
-      "updated": "2026-05-01",
-      "meta": "2026 routing snapshot — venues and dates appear on the tour poster (full PNG). Same updates roll into this list when gigs are confirmed.",
+      "meta": "2026 routing snapshot — venues and dates on the tour poster. Updates here when confirmed.",
       "links": [
-        {
-          "label": "Open tour poster (PNG)",
-          "href": "/assets/images/tour-poster-2025.png"
-        },
+        { "label": "Tour poster (PNG)", "href": "/assets/images/tour-poster-2025.png" },
         {
           "label": "Gigplanet — booking",
           "href": "https://www.gigplanet.no/band/havard-pedersen-and-the-blues-is-alright-band"
@@ -213,38 +70,22 @@
     },
     {
       "date": "TBA",
-      "updated": "2026-04-18",
-      "meta": "Additional festivals and clubs — announced here and in the Timeline when confirmed.",
-      "links": [{ "label": "News feed", "href": "#news" }]
-    },
-    {
-      "date": "Next",
-      "updated": "2026-05-01",
-      "meta": "When the first on-sale show is public, this row will show the date, city, venue, and ticket link.",
-      "links": [
-        { "label": "Living feed", "href": "#latest-updates-heading" },
-        { "label": "Gigplanet", "href": "https://www.gigplanet.no/band/havard-pedersen-and-the-blues-is-alright-band" }
-      ]
+      "meta": "Festivals and clubs — announced in News when confirmed.",
+      "links": [{ "label": "News", "href": "#news" }]
     }
   ],
   "store": [
     {
       "kicker": "Single · 2025",
       "title": "Det sku bli oss",
-      "body": "Latest single — stream on Spotify and Apple Music. CDs or bundles: use Contact until checkout goes live.",
+      "body": "Latest single — stream on Spotify and Apple Music. CDs on request via Contact.",
       "previewImage": "/assets/images/studio-gretsch-portrait.png",
       "previewAlt": "Håvard Pedersen — Gretsch portrait",
       "status": "Out now",
       "priceFrom": "Streaming · CDs on request",
       "links": [
-        {
-          "label": "Spotify — track",
-          "href": "https://open.spotify.com/track/3b5YUyKuugvteTF85a3TpP"
-        },
-        {
-          "label": "Apple Music",
-          "href": "https://music.apple.com/no/search?term=Det%20sku%20bli%20oss"
-        },
+        { "label": "Spotify — track", "href": "https://open.spotify.com/track/3b5YUyKuugvteTF85a3TpP" },
+        { "label": "Apple Music", "href": "https://music.apple.com/no/search?term=Det%20sku%20bli%20oss" },
         { "label": "Music section", "href": "#listen" }
       ],
       "primaryAction": { "label": "Listen on Spotify", "href": "https://open.spotify.com/track/3b5YUyKuugvteTF85a3TpP" }
@@ -273,7 +114,7 @@
     {
       "kicker": "Live",
       "title": "Shows & ticket enquiries",
-      "body": "Promoters and venues: routing and holds via Gigplanet. Ticket URLs will sit here next to dates when listings go public.",
+      "body": "Promoters and venues: routing and holds via Gigplanet.",
       "previewImage": "/assets/images/tour-poster-2025.png",
       "previewAlt": "2026 tour routing poster",
       "status": "Booking active",
@@ -327,10 +168,10 @@
   },
   "heroBackground": {
     "caption": "",
-    "youtubeIds": ["i8fR9-sAvPM", "hwxs4sBNwp0", "-oE6ztWmr14"],
+    "youtubeIds": [],
     "rotateMs": 16000,
-    "posterImage": "/assets/images/studio-white-falcon-wide.png",
-    "posterAlt": "Håvard Pedersen — studio portrait with Gretsch White Falcon"
+    "posterImage": "/assets/images/promo-raa-ekte-live.png",
+    "posterAlt": "Håvard Pedersen & The Blues Is Alright Band — Rå Ekte Live"
   },
   "videos": [
     {
@@ -340,29 +181,11 @@
       "caption": "Det sku bli oss — official video"
     },
     {
-      "youtubeId": "-oE6ztWmr14",
-      "published": "2025-08-20",
-      "title": "Håvard Pedersen — featured clip",
-      "caption": "Featured performance — YouTube"
-    },
-    {
-      "youtubeId": "hwxs4sBNwp0",
-      "published": "2025-02-18",
-      "title": "Håvard Pedersen — live clips, February 2025",
-      "caption": "Håvard Pedersen — live guitar & vocals"
-    },
-    {
-      "youtubeId": "i8fR9-sAvPM",
-      "published": "2025-02-18",
-      "title": "Håvard Pedersen & The Blues Is Alright Band — February 2025",
-      "caption": "Full trio — live on stage, February 2025"
-    },
-    {
       "archiveCard": true,
-      "kicker": "Short-form",
-      "title": "Reels, TikTok & Shorts",
-      "body": "Vertical performance edits go live first on TikTok (@haavardhedde) and YouTube Shorts (@havardhedde10).",
-      "href": "https://www.tiktok.com/@haavardhedde"
+      "kicker": "YouTube",
+      "title": "More videos & covers",
+      "body": "Subscribe on @havardhedde10 for new uploads.",
+      "href": "https://www.youtube.com/@havardhedde10"
     }
   ],
   "partners": [
@@ -371,7 +194,7 @@
       "name": "Holmen and Robertsen Seafood",
       "brandLine": "Holmen & Robertsen",
       "brandSub": "Seafood",
-      "description": "Norwegian seafood producer and sponsor — collaboration support for Håvard’s artist work. The music profile stays front and centre; partner products or campaigns appear in Store when agreed.",
+      "description": "Norwegian seafood producer and sponsor — collaboration support for Håvard's artist work. The music profile stays front and centre; partner products or campaigns appear in Store when agreed.",
       "website": "https://www.holmenrobertsen.no/",
       "linkLabel": "holmenrobertsen.no",
       "tag": "Sponsor"

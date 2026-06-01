@@ -158,10 +158,7 @@ a:hover {
     linear-gradient(180deg, rgba(12, 8, 22, 0.92) 0%, rgba(4, 3, 10, 0.88) 100%);
   backdrop-filter: blur(18px) saturate(1.2);
   border-bottom: 1px solid rgba(167, 139, 250, 0.22);
-  box-shadow:
-    0 1px 0 rgba(56, 189, 248, 0.12),
-    0 18px 48px rgba(0, 0, 0, 0.55),
-    0 0 40px rgba(124, 58, 237, 0.08);
+  box-shadow: 0 1px 0 rgba(56, 189, 248, 0.08), 0 12px 32px rgba(0, 0, 0, 0.45);
 }
 
 .header-inner {
@@ -512,6 +509,20 @@ a:hover {
   border: 1px solid rgba(167, 139, 250, 0.35);
   border-radius: 999px;
   box-shadow: 0 0 22px rgba(56, 189, 248, 0.08);
+}
+
+.credibility-press {
+  margin: 0.85rem 0 0;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  line-height: 1.5;
+  color: rgba(253, 230, 138, 0.82);
+}
+
+html[data-site-mode="press"] .credibility-press {
+  color: rgba(110, 84, 32, 0.9);
 }
 
 .quote-strip {
@@ -5246,4 +5257,23 @@ html[data-site-mode="press"] .merch-total__row--grand dd {
 
 html[data-site-mode="press"] .merch-feature__bullets {
   color: #3d3a36;
+}
+
+/* —— Professional artist polish —— */
+.hero.hero--modern .hero__video-wrap {
+  display: none;
+}
+
+.hero.hero--modern .hero__image {
+  object-position: center 22%;
+}
+
+.hero.hero--modern .hero__scrim {
+  background:
+    linear-gradient(180deg, rgba(5, 5, 8, 0.08) 0%, rgba(5, 5, 8, 0.35) 55%, rgba(5, 5, 8, 0.72) 100%),
+    radial-gradient(ellipse 90% 70% at 50% 100%, rgba(80, 20, 30, 0.25), transparent 55%);
+}
+
+.hero__scanlines {
+  display: none;
 }

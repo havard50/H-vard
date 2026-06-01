@@ -272,7 +272,7 @@
     var heroFrame = document.querySelector(".hero-video-frame");
     var poster = document.querySelector(".hero__image");
     var noteEl = document.querySelector("#hero-bg-note");
-    if (!heroFrame) return;
+    if (!poster && !heroFrame) return;
 
     if (hb && typeof hb === "object") {
       if (noteEl) {
@@ -282,6 +282,7 @@
         poster.src = hb.posterImage;
         if (hb.posterAlt != null) poster.alt = hb.posterAlt;
       }
+      if (!heroFrame) return;
       var ids = [];
       if (Array.isArray(hb.youtubeIds) && hb.youtubeIds.length) {
         hb.youtubeIds.forEach(function (id) {
