@@ -3678,7 +3678,101 @@ html[data-site-mode="press"] .music-card-cover:hover {
   }
 }
 
-/* —— Modern full-bleed hero (hero--modern) —— */
+/* —— Modern hero — compact (no full-screen wallpaper) —— */
+.hero.hero--modern.hero--compact {
+  min-height: auto;
+  padding: clamp(1.75rem, 5vw, 3rem) var(--space);
+  display: block;
+  align-items: stretch;
+  justify-content: flex-start;
+}
+
+.hero.hero--compact .hero__layout {
+  max-width: var(--max);
+  margin: 0 auto;
+  display: grid;
+  gap: clamp(1.25rem, 4vw, 2rem);
+  align-items: center;
+}
+
+@media (min-width: 860px) {
+  .hero.hero--compact .hero__layout {
+    grid-template-columns: minmax(0, 1.15fr) minmax(220px, 300px);
+    gap: clamp(1.5rem, 4vw, 2.5rem);
+  }
+}
+
+.hero.hero--compact .hero__media {
+  position: relative;
+  inset: auto;
+  z-index: 0;
+  margin: 0;
+  order: -1;
+  border-radius: calc(var(--radius) + 4px);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: #0a0a0c;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
+}
+
+@media (min-width: 860px) {
+  .hero.hero--compact .hero__media {
+    order: 2;
+    max-height: min(52vh, 26rem);
+  }
+}
+
+.hero.hero--compact .hero__image {
+  position: relative;
+  inset: auto;
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: min(46vw, 18rem);
+  object-fit: cover;
+  object-position: center 12%;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+@media (min-width: 860px) {
+  .hero.hero--compact .hero__image {
+    max-height: min(52vh, 26rem);
+    min-height: 100%;
+  }
+}
+
+.hero.hero--compact .hero__scrim {
+  display: none;
+}
+
+.hero.hero--compact .hero__content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+}
+
+.hero.hero--compact .hero__inner {
+  max-width: none;
+  margin: 0;
+  padding: clamp(1rem, 2.5vw, 1.5rem);
+  border-radius: calc(var(--radius) + 6px);
+  background: linear-gradient(155deg, rgba(18, 12, 32, 0.55) 0%, rgba(8, 6, 16, 0.4) 100%);
+  border: 1px solid rgba(167, 139, 250, 0.22);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.32);
+  backdrop-filter: blur(12px) saturate(1.1);
+}
+
+@media (min-width: 860px) {
+  .hero.hero--compact .hero__inner {
+    margin-left: 0;
+    margin-right: auto;
+  }
+}
+
 .hero.hero--modern {
   padding: 0;
   display: flex;
@@ -5214,8 +5308,7 @@ html[data-site-mode="press"] .timeline-card-date {
 }
 
 .merch-order-btn:not(.is-ready) {
-  opacity: 0.72;
-  pointer-events: none;
+  opacity: 0.88;
 }
 
 .merch-hashtag {
@@ -5259,21 +5352,8 @@ html[data-site-mode="press"] .merch-feature__bullets {
   color: #3d3a36;
 }
 
-/* —— Professional artist polish —— */
-.hero.hero--modern .hero__video-wrap {
-  display: none;
-}
-
-.hero.hero--modern .hero__image {
-  object-position: center 22%;
-}
-
-.hero.hero--modern .hero__scrim {
-  background:
-    linear-gradient(180deg, rgba(5, 5, 8, 0.08) 0%, rgba(5, 5, 8, 0.35) 55%, rgba(5, 5, 8, 0.72) 100%),
-    radial-gradient(ellipse 90% 70% at 50% 100%, rgba(80, 20, 30, 0.25), transparent 55%);
-}
-
-.hero__scanlines {
-  display: none;
+html[data-site-mode="press"] .hero.hero--compact .hero__inner {
+  background: rgba(255, 252, 247, 0.92);
+  border-color: rgba(26, 24, 22, 0.12);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
 }

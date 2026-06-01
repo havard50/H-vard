@@ -410,6 +410,7 @@
     var videoRoot = document.querySelector("#video-feed");
     var partnersRoot = document.querySelector("#partners-grid");
     var latestUpdatesRoot = document.querySelector("#latest-updates-feed");
+    var merchFeature = document.getElementById("merch-feature");
     if (
       !timelineRoot &&
       !timelineArchiveRoot &&
@@ -418,7 +419,8 @@
       !storeRoot &&
       !videoRoot &&
       !partnersRoot &&
-      !latestUpdatesRoot
+      !latestUpdatesRoot &&
+      !merchFeature
     )
       return;
 
@@ -1052,9 +1054,11 @@
 
       var priceKr = Number(root.getAttribute("data-price-kr")) || 250;
       var shippingKr = Number(root.getAttribute("data-shipping-kr")) || 79;
+      var email = "havardpedersen@me.com";
       if (merch && typeof merch === "object") {
         if (merch.priceKr != null) priceKr = Number(merch.priceKr) || priceKr;
         if (merch.shippingKr != null) shippingKr = Number(merch.shippingKr) || shippingKr;
+        if (merch.email) email = String(merch.email);
         root.setAttribute("data-price-kr", String(priceKr));
         root.setAttribute("data-shipping-kr", String(shippingKr));
         var stockEl = document.getElementById("merch-stock");
@@ -1063,38 +1067,15 @@
         }
       }
 
-      var mainImg = document.getElementById("merch-main-image");
-      var captionEl = document.getElementById("merch-image-caption");
-      var zoomBtn = root.querySelector(".merch-feature__zoom");
-      root.querySelectorAll(".merch-thumb").forEach(function (btn) {
-        btn.addEventListener("click", function () {
-          root.querySelectorAll(".merch-thumb").forEach(function (b) {
-            b.classList.remove("is-active");
-            b.setAttribute("aria-selected", "false");
-          });
-          btn.classList.add("is-active");
-          btn.setAttribute("aria-selected", "true");
-          if (mainImg && btn.getAttribute("data-src")) {
-            mainImg.src = btn.getAttribute("data-src");
-            mainImg.alt = btn.getAttribute("data-alt") || mainImg.alt;
-          }
-          if (captionEl && btn.getAttribute("data-caption")) {
-            captionEl.textContent = btn.getAttribute("data-caption");
-          }
-          if (zoomBtn && btn.getAttribute("data-caption")) {
-            zoomBtn.setAttribute("data-caption", btn.getAttribute("data-caption"));
-          }
-        });
-      });
+      root.setAttribute("data-merch-email", email);
 
       var totalEl = document.getElementById("merch-total-amount");
       var itemEl = document.getElementById("merch-item-amount");
       var shippingEl = document.getElementById("merch-shipping-amount");
-      var priceMainEl = document.querySelector(".merch-feature__price-main");
-      var priceSubEl = document.querySelector(".merch-feature__price-sub");
+      var priceMainEl = root.querySelector(".merch-feature__price-main");
+      var priceSubEl = root.querySelector(".merch-feature__price-sub");
       var orderBtn = document.getElementById("merch-order-email");
       var hintEl = document.getElementById("merch-size-hint");
-      var email = (merch && merch.email) || "havardpedersen@me.com";
       var total = priceKr + shippingKr;
 
       if (itemEl) itemEl.textContent = priceKr + " kr";
@@ -1117,7 +1098,7 @@
           "Thank you!";
         return (
           "mailto:" +
-          encodeURIComponent(email) +
+          email +
           "?subject=" +
           encodeURIComponent("Rå Ekte Live T-Shirt order") +
           "&body=" +
@@ -1125,30 +1106,96 @@
         );
       }
 
-      function onSizeChange() {
+      function getSelectedSize() {
         var selected = root.querySelector('input[name="merch-size"]:checked');
-        if (!selected) {
+        return selected ? selected.value : "";
+      }
+
+      function onSizeChange() {
+        var size = getSelectedSize();
+        if (!size) {
           if (hintEl) {
-            hintEl.textContent = "Choose a size above";
+            hintEl.textContent = "Choose a size above, then order";
             hintEl.classList.remove("is-ready");
           }
           if (orderBtn) orderBtn.classList.remove("is-ready");
+          if (orderBtn) orderBtn.setAttribute("title", "Select a size first");
           return;
         }
         if (hintEl) {
-          hintEl.textContent = "Size " + selected.value + " selected";
+          hintEl.textContent = "Size " + size + " selected — tap Order by email";
           hintEl.classList.add("is-ready");
         }
         if (orderBtn) {
-          orderBtn.href = buildMailto(selected.value);
+          orderBtn.href = buildMailto(size);
           orderBtn.classList.add("is-ready");
+          orderBtn.removeAttribute("title");
         }
       }
 
-      root.querySelectorAll('input[name="merch-size"]').forEach(function (input) {
-        input.addEventListener("change", onSizeChange);
-      });
+      function openMerchEmail(e) {
+        var size = getSelectedSize();
+        if (!size) {
+          if (e) e.preventDefault();
+          if (hintEl) {
+            hintEl.textContent = "Pick a size first (L, XL, XXL or 3XL)";
+            hintEl.classList.remove("is-ready");
+          }
+          var sizes = root.querySelector(".merch-sizes");
+          if (sizes && sizes.scrollIntoView) {
+            sizes.scrollIntoView({ behavior: "smooth", block: "center" });
+          }
+          return;
+        }
+        var mailto = buildMailto(size);
+        if (orderBtn) orderBtn.href = mailto;
+        if (e) {
+          e.preventDefault();
+          window.location.href = mailto;
+        }
+      }
+
+      if (root.getAttribute("data-merch-bound") !== "true") {
+        root.setAttribute("data-merch-bound", "true");
+
+        var mainImg = document.getElementById("merch-main-image");
+        var captionEl = document.getElementById("merch-image-caption");
+        var zoomBtn = root.querySelector(".merch-feature__zoom");
+        root.querySelectorAll(".merch-thumb").forEach(function (btn) {
+          btn.addEventListener("click", function () {
+            root.querySelectorAll(".merch-thumb").forEach(function (b) {
+              b.classList.remove("is-active");
+              b.setAttribute("aria-selected", "false");
+            });
+            btn.classList.add("is-active");
+            btn.setAttribute("aria-selected", "true");
+            if (mainImg && btn.getAttribute("data-src")) {
+              mainImg.src = btn.getAttribute("data-src");
+              mainImg.alt = btn.getAttribute("data-alt") || mainImg.alt;
+            }
+            if (captionEl && btn.getAttribute("data-caption")) {
+              captionEl.textContent = btn.getAttribute("data-caption");
+            }
+            if (zoomBtn && btn.getAttribute("data-caption")) {
+              zoomBtn.setAttribute("data-caption", btn.getAttribute("data-caption"));
+            }
+          });
+        });
+
+        root.querySelectorAll('input[name="merch-size"]').forEach(function (input) {
+          input.addEventListener("change", onSizeChange);
+        });
+
+        if (orderBtn) {
+          orderBtn.addEventListener("click", openMerchEmail);
+        }
+      }
+
       onSizeChange();
+    }
+
+    if (merchFeature) {
+      bindMerch(null);
     }
 
     fetch("/assets/content.json", { cache: "no-store" })
