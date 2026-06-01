@@ -799,8 +799,16 @@ html[data-site-mode="press"] .credibility-press {
   }
 }
 
-.band-lineup-label {
-  margin: 0 0 0.5rem;
+.band-ensemble {
+  margin: 0 0 1.25rem;
+  padding: 1rem 1.15rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  background: linear-gradient(165deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.01));
+}
+
+.band-ensemble-label {
+  margin: 0 0 0.65rem;
   font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 0.14em;
@@ -808,32 +816,42 @@ html[data-site-mode="press"] .credibility-press {
   color: #deac5e;
 }
 
-.band-lineup {
+.band-ensemble-roles {
   list-style: none;
-  margin: 0 0 1.25rem;
-  padding: 0.9rem 1.1rem;
-  border-radius: var(--radius);
-  border: 1px solid var(--border);
-  background: linear-gradient(165deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.01));
+  margin: 0;
+  padding: 0;
 }
 
-.band-lineup li {
+.band-ensemble-roles li {
   margin-bottom: 0.45rem;
   color: var(--text-muted);
   font-size: 0.95rem;
 }
 
-.band-lineup li:last-child {
+.band-ensemble-roles li:last-child {
   margin-bottom: 0;
 }
 
-.band-lineup-name {
+.band-ensemble-role {
   font-weight: 700;
   color: #e2e6ee;
 }
 
-html[data-site-mode="press"] .band-lineup-name {
+.band-ensemble-note {
+  margin: 0.85rem 0 0;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--border);
+  font-size: 0.88rem;
+  color: var(--text-muted);
+}
+
+html[data-site-mode="press"] .band-ensemble-role {
   color: #2a2825;
+}
+
+html[data-site-mode="press"] .band-ensemble {
+  background: rgba(255, 252, 247, 0.65);
+  border-color: rgba(26, 24, 22, 0.1);
 }
 
 html[data-site-mode="press"] .about-visual-lead {
