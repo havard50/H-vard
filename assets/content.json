@@ -1,6 +1,6 @@
 {
   "siteMeta": {
-    "feedUpdated": "2026-06-01"
+    "feedUpdated": "2026-06-04"
   },
   "contactForm": {
     "mailto": "havardpedersen@me.com",
@@ -10,6 +10,28 @@
   },
   "feedExtras": [],
   "timeline": [
+    {
+      "kicker": "Press · Endorsement",
+      "title": "Welcome to the Gretsch family",
+      "body": "Official Gretsch-endorsed artist — approved artist cards and endorsed logos for marketing. In public posts, reference the Gretsch Company. Among the first with the new Gretsch amp series, in celebration of Gretsch's 135th anniversary.",
+      "published": "2026-06-04",
+      "image": "/assets/images/cinematic-gretsch.png",
+      "imageAlt": "Håvard Pedersen — cinematic studio still with Gretsch guitar",
+      "links": [
+        { "label": "About / press", "href": "#about" },
+        { "label": "Photos", "href": "#photos" }
+      ],
+      "featured": true
+    },
+    {
+      "kicker": "Endorsement",
+      "title": "Endorsed by Mezzabarba",
+      "body": "Recognised and endorsed by Mezzabarba — premium amplification behind the live sound.",
+      "published": "2026-06-04",
+      "image": "/assets/images/studio-gretsch-portrait.png",
+      "imageAlt": "Håvard Pedersen — press portrait with Gretsch guitar",
+      "links": [{ "label": "Live", "href": "#live" }]
+    },
     {
       "kicker": "Release · 2025",
       "title": "Det sku bli oss — out now",
@@ -21,7 +43,7 @@
         { "label": "Listen", "href": "#listen" },
         { "label": "Watch", "href": "#videos" }
       ],
-      "featured": true
+      "featured": false
     },
     {
       "kicker": "Studio",
