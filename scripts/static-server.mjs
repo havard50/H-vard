@@ -11,11 +11,17 @@ const port = parseInt(process.env.PORT || "3333", 10);
 
 const server = createServer((req, res) => {
   const url = req.url || "/";
+  const pathname = url.split("?")[0];
 
   if (url === "/health" || url.startsWith("/health?")) {
     res.writeHead(200, { "Content-Type": "text/plain; charset=utf-8" });
     res.end("ok");
     return;
+  }
+
+  if (pathname === "/" || pathname === "") {
+    const query = url.includes("?") ? url.slice(url.indexOf("?")) : "";
+    req.url = "/index.html" + query;
   }
 
   return handler(req, res, {
