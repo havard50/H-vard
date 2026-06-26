@@ -1,6 +1,6 @@
 {
   "siteMeta": {
-    "feedUpdated": "2026-06-04"
+    "feedUpdated": "2026-05-30"
   },
   "contactForm": {
     "mailto": "havardpedersen@me.com",
@@ -9,7 +9,53 @@
     "redirectThanks": "https://havardpedersen.com/?contact=sent"
   },
   "feedExtras": [],
+  "shows": [
+    {
+      "isoDate": "2026-07-15",
+      "day": "15",
+      "month": "Jul",
+      "year": "2026",
+      "time": "18:00",
+      "kicker": "Blues & BBQ",
+      "title": "Valhal, Akkarfjord",
+      "venue": "Valhal",
+      "location": "Akkarfjord, Finnmark",
+      "body": "Summer blues & BBQ — live trio set, grill, and transport from Hammerfest.",
+      "ticketLabel": "Buy tickets",
+      "ticketUrl": "https://valhal.ticketco.events/no/nb?version=m",
+      "featured": true
+    },
+    {
+      "isoDate": "2026-07-16",
+      "day": "16",
+      "month": "Jul",
+      "year": "2026",
+      "time": "20:00",
+      "kicker": "Concert",
+      "title": "Verdde Hotel Lakselv",
+      "venue": "Verdde Hotel",
+      "location": "Lakselv, Finnmark",
+      "body": "Håvard Pedersen & The Blues Is Alright Band at Verdde Mat & Vinhus.",
+      "ticketLabel": "Buy tickets",
+      "ticketUrl": "https://verddehotel.hoopla.no/",
+      "featured": true
+    }
+  ],
   "timeline": [
+    {
+      "kicker": "Live · Tickets",
+      "title": "Finnmark summer 2026 — on sale now",
+      "body": "Blues & BBQ at Valhal (15 Jul) and Verdde Hotel Lakselv (16 Jul). Tickets via TicketCo and Hoopla.",
+      "published": "2026-05-30",
+      "image": "/assets/images/havard-live-sunburst-semihollow.png",
+      "imageAlt": "Håvard Pedersen — live on stage",
+      "links": [
+        { "label": "Get tickets", "href": "#shows" },
+        { "label": "Valhal", "href": "https://valhal.ticketco.events/no/nb?version=m" },
+        { "label": "Verdde Hotel", "href": "https://verddehotel.hoopla.no/" }
+      ],
+      "featured": true
+    },
     {
       "kicker": "Press · Endorsement",
       "title": "Welcome to the Gretsch family",
@@ -80,20 +126,41 @@
   "recentInterviews": [],
   "live": [
     {
-      "date": "Poster",
-      "meta": "2026 routing snapshot — venues and dates on the tour poster. Updates here when confirmed.",
+      "date": "15 Jul",
+      "meta": "Blues & BBQ — Valhal, Akkarfjord · 18:00",
+      "ticket": true,
       "links": [
-        { "label": "Tour poster (PNG)", "href": "/assets/images/tour-poster-2025.png" },
-        {
-          "label": "Gigplanet — booking",
-          "href": "https://www.gigplanet.no/band/havard-pedersen-and-the-blues-is-alright-band"
-        }
+        { "label": "Buy tickets", "href": "https://valhal.ticketco.events/no/nb?version=m" },
+        { "label": "All shows", "href": "#shows" }
       ]
     },
     {
-      "date": "TBA",
-      "meta": "Festivals and clubs — announced in News when confirmed.",
-      "links": [{ "label": "News", "href": "#news" }]
+      "date": "16 Jul",
+      "meta": "Verdde Hotel Lakselv — concert",
+      "ticket": true,
+      "links": [
+        { "label": "Buy tickets", "href": "https://verddehotel.hoopla.no/" },
+        { "label": "Venue", "href": "https://www.verddehotel.no/" }
+      ]
+    },
+    {
+      "date": "Autumn",
+      "meta": "North Cape routing — follow Perleporten Kulturhus for Honningsvåg dates.",
+      "links": [
+        { "label": "Perleporten tickets", "href": "https://ebillett.no/90037000000000" },
+        { "label": "Gigplanet", "href": "https://www.gigplanet.no/band/havard-pedersen-and-the-blues-is-alright-band" }
+      ]
+    },
+    {
+      "date": "Poster",
+      "meta": "Full 2026 routing snapshot — open the tour poster for promoters and fans.",
+      "links": [
+        { "label": "Tour poster (PNG)", "href": "/assets/images/tour-poster-2025.png" },
+        {
+          "label": "Book the band",
+          "href": "https://www.gigplanet.no/band/havard-pedersen-and-the-blues-is-alright-band"
+        }
+      ]
     }
   ],
   "store": [

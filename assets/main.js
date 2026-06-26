@@ -405,6 +405,7 @@
     var timelineArchiveRoot = document.querySelector("#timeline-archive-feed");
     var interviewsRoot = document.querySelector("#interviews-feed");
     var liveRoot = document.querySelector("#live-gigs");
+    var showsRoot = document.querySelector("#shows-grid");
     var storeRoot = document.querySelector("#store-grid");
     var storeCheckoutStatus = document.querySelector("#store-checkout-status");
     var videoRoot = document.querySelector("#video-feed");
@@ -733,6 +734,56 @@
       interviewsRoot.innerHTML = items.map(interviewCardHtml).join("");
     }
 
+    function renderShows(items) {
+      if (!showsRoot || !Array.isArray(items) || !items.length) return;
+      var sorted = items.slice().sort(function (a, b) {
+        var ad = a && a.isoDate ? a.isoDate : "";
+        var bd = b && b.isoDate ? b.isoDate : "";
+        return ad < bd ? -1 : ad > bd ? 1 : 0;
+      });
+      showsRoot.innerHTML = sorted.map(showCardHtml).join("");
+    }
+
+    function showCardHtml(item) {
+      if (!item) return "";
+      var featured = item.featured ? " show-card--featured" : "";
+      var timeMeta = [item.time, item.location].filter(Boolean).join(" · ");
+      var ticket =
+        item.ticketUrl && item.ticketLabel
+          ? '<a class="btn btn-primary show-card__cta" href="' +
+            esc(resolveHref(item.ticketUrl)) +
+            '" rel="noopener noreferrer">' +
+            esc(item.ticketLabel) +
+            "</a>"
+          : "";
+      return (
+        '<article class="show-card' +
+        featured +
+        '">' +
+        '<div class="show-card__date" aria-hidden="true">' +
+        '<span class="show-card__day">' +
+        esc(item.day || "") +
+        "</span>" +
+        '<span class="show-card__month">' +
+        esc(item.month || "") +
+        "</span>" +
+        '<span class="show-card__year">' +
+        esc(item.year || "") +
+        "</span>" +
+        "</div>" +
+        '<div class="show-card__body">' +
+        (item.kicker ? '<p class="show-card__kicker">' + esc(item.kicker) + "</p>" : "") +
+        '<h3 class="show-card__title">' +
+        esc(item.title || item.venue || "") +
+        "</h3>" +
+        (timeMeta ? '<p class="show-card__meta">' + esc(timeMeta) + "</p>" : "") +
+        (item.body ? '<p class="show-card__deck">' + esc(item.body) + "</p>" : "") +
+        "</div>" +
+        ticket +
+        "</article>"
+      );
+    }
+
     function renderLive(items) {
       if (!liveRoot || !Array.isArray(items) || !items.length) return;
       liveRoot.innerHTML = items
@@ -741,8 +792,11 @@
             Array.isArray(item.links) && item.links.length
               ? renderLinks(item.links, "gig-row-links")
               : "";
+          var ticketClass = item.ticket ? " gig-row--tickets" : "";
           return (
-            "<li>" +
+            '<li class="gig-row' +
+            ticketClass +
+            '">' +
             '<span class="gig-date">' +
             esc(item.date) +
             "</span>" +
@@ -1209,6 +1263,7 @@
         renderTimeline(data.timeline);
         renderTimelineArchive(data.timelineArchive);
         renderRecentInterviews(data.recentInterviews);
+        renderShows(data.shows);
         renderLive(data.live);
         renderStore(data.store, data.storeSettings);
         renderStoreStatus(data.storeSettings);
