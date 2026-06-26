@@ -222,6 +222,23 @@
       }
     },
     {
+      "kicker": "Merch",
+      "title": "Rå Ekte Live T-skjorte",
+      "body": "Offisiell svart turné-t-skjorte — begrenset lager. Samme design som på scenen.",
+      "previewImage": "/assets/images/promo-raa-ekte-live.png",
+      "previewAlt": "Rå Ekte Live — offisiell merch",
+      "status": "På lager",
+      "priceFrom": "250 kr + frakt",
+      "links": [
+        { "label": "Bestill på artist-siden", "href": "#merch" },
+        { "label": "Full merch store", "href": "https://havardtshirt.netlify.app/" }
+      ],
+      "primaryAction": {
+        "label": "Kjøp nå",
+        "href": "https://havardtshirt.netlify.app/"
+      }
+    },
+    {
       "kicker": "Seafood & partners",
       "title": "Holmen & Robertsen range",
       "body": "Non-music partner line — listing and checkout when agreed. Collaboration note under Partners.",
