@@ -417,6 +417,7 @@
       !timelineArchiveRoot &&
       !interviewsRoot &&
       !liveRoot &&
+      !showsRoot &&
       !storeRoot &&
       !videoRoot &&
       !partnersRoot &&
@@ -746,32 +747,44 @@
 
     function showCardHtml(item) {
       if (!item) return "";
-      var featured = item.featured ? " show-card--featured" : "";
+      var isVenue = item.venueOnly === true;
+      var featured = !isVenue && item.featured ? " show-card--featured" : "";
+      var venueClass = isVenue ? " show-card--venue" : "";
       var timeMeta = [item.time, item.location].filter(Boolean).join(" · ");
+      var ticketBtn = isVenue ? "btn-ghost" : "btn-primary";
       var ticket =
         item.ticketUrl && item.ticketLabel
-          ? '<a class="btn btn-primary show-card__cta" href="' +
+          ? '<a class="btn ' +
+            ticketBtn +
+            ' show-card__cta" href="' +
             esc(resolveHref(item.ticketUrl)) +
             '" rel="noopener noreferrer">' +
             esc(item.ticketLabel) +
             "</a>"
           : "";
+      var dateBlock = isVenue
+        ? ""
+        : '<div class="show-card__date" aria-hidden="true">' +
+          '<span class="show-card__day">' +
+          esc(item.day || "") +
+          "</span>" +
+          '<span class="show-card__month">' +
+          esc(item.month || "") +
+          "</span>" +
+          '<span class="show-card__year">' +
+          esc(item.year || "") +
+          "</span>" +
+          "</div>";
+      var bodyClass = isVenue ? " show-card__body--full" : "";
       return (
         '<article class="show-card' +
         featured +
+        venueClass +
         '">' +
-        '<div class="show-card__date" aria-hidden="true">' +
-        '<span class="show-card__day">' +
-        esc(item.day || "") +
-        "</span>" +
-        '<span class="show-card__month">' +
-        esc(item.month || "") +
-        "</span>" +
-        '<span class="show-card__year">' +
-        esc(item.year || "") +
-        "</span>" +
-        "</div>" +
-        '<div class="show-card__body">' +
+        dateBlock +
+        '<div class="show-card__body' +
+        bodyClass +
+        '">' +
         (item.kicker ? '<p class="show-card__kicker">' + esc(item.kicker) + "</p>" : "") +
         '<h3 class="show-card__title">' +
         esc(item.title || item.venue || "") +

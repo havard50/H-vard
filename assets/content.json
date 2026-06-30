@@ -35,10 +35,19 @@
       "title": "Verdde Hotel Lakselv",
       "venue": "Verdde Hotel",
       "location": "Lakselv, Finnmark",
-      "body": "Håvard Pedersen & The Blues Is Alright Band at Verdde Mat & Vinhus.",
+      "body": "Concert at Verdde Mat & Vinhus.",
       "ticketLabel": "Buy tickets",
       "ticketUrl": "https://verddehotel.hoopla.no/",
       "featured": true
+    },
+    {
+      "venueOnly": true,
+      "kicker": "North Cape",
+      "title": "Perleporten Kulturhus",
+      "location": "Honningsvåg · autumn routing",
+      "body": "Venue calendar for Honningsvåg dates — announced when on sale.",
+      "ticketLabel": "Venue tickets",
+      "ticketUrl": "https://ebillett.no/90037000000000"
     }
   ],
   "timeline": [
