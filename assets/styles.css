@@ -1042,6 +1042,107 @@ html[data-site-mode="press"] .band-ensemble {
   font-weight: 600;
 }
 
+/* Direct ticket link hub */
+.ticket-hub {
+  display: grid;
+  gap: 0.75rem;
+  margin-top: 1.35rem;
+}
+
+@media (min-width: 640px) {
+  .ticket-hub {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .ticket-hub {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+.ticket-hub__link {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  padding: 0.95rem 1.05rem;
+  border-radius: calc(var(--radius) + 2px);
+  border: 1px solid rgba(167, 139, 250, 0.22);
+  background: rgba(12, 8, 22, 0.55);
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.22s ease, border-color 0.22s ease, box-shadow 0.22s ease;
+}
+
+.ticket-hub__link:hover {
+  transform: translateY(-2px);
+  border-color: rgba(212, 168, 74, 0.38);
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.32);
+}
+
+.ticket-hub__link--primary {
+  border-color: rgba(212, 168, 74, 0.32);
+  background: linear-gradient(145deg, rgba(32, 18, 28, 0.75), rgba(10, 8, 18, 0.6));
+}
+
+.ticket-hub__link--social {
+  border-style: dashed;
+}
+
+.ticket-hub__label {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  line-height: 1.2;
+  color: var(--heading-ink);
+}
+
+.ticket-hub__action {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold-muted);
+}
+
+.hero__ticket-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem 0.85rem;
+  margin: 0.85rem 0 0;
+  padding: 0;
+  font-size: 0.82rem;
+}
+
+.hero__ticket-links a {
+  font-weight: 600;
+  color: var(--gold-muted);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(212, 168, 74, 0.35);
+}
+
+.hero__ticket-links a:hover {
+  color: #fde68a;
+  border-bottom-color: #fde68a;
+}
+
+.footer-meta--tickets a {
+  font-weight: 600;
+}
+
+html[data-site-mode="press"] .ticket-hub__link {
+  background: rgba(255, 252, 247, 0.92);
+  border-color: rgba(26, 24, 22, 0.12);
+}
+
+html[data-site-mode="press"] .ticket-hub__label {
+  color: #1a1816;
+}
+
+html[data-site-mode="press"] .hero__ticket-links a {
+  color: #6b4e1f;
+  border-bottom-color: rgba(107, 78, 31, 0.35);
+}
+
 html[data-site-mode="press"] .show-card {
   background: rgba(255, 252, 247, 0.92);
   border-color: rgba(26, 24, 22, 0.12);

@@ -9,6 +9,31 @@
     "redirectThanks": "https://havardpedersen.com/?contact=sent"
   },
   "feedExtras": [],
+  "ticketLinks": [
+    {
+      "label": "Valhal · 15 Jul",
+      "action": "Buy tickets",
+      "href": "https://valhal.ticketco.events/no/nb?version=m",
+      "primary": true
+    },
+    {
+      "label": "Verdde Hotel · 16 Jul",
+      "action": "Buy tickets",
+      "href": "https://verddehotel.hoopla.no/",
+      "primary": true
+    },
+    {
+      "label": "Perleporten Kulturhus",
+      "action": "Venue tickets",
+      "href": "https://ebillett.no/90037000000000"
+    },
+    {
+      "label": "Facebook",
+      "action": "Follow & updates",
+      "href": "https://www.facebook.com/share/1D5WXFTpxz/?mibextid=wwXIfr",
+      "social": true
+    }
+  ],
   "shows": [
     {
       "isoDate": "2026-07-15",
@@ -61,7 +86,9 @@
       "links": [
         { "label": "Get tickets", "href": "#shows" },
         { "label": "Valhal", "href": "https://valhal.ticketco.events/no/nb?version=m" },
-        { "label": "Verdde Hotel", "href": "https://verddehotel.hoopla.no/" }
+        { "label": "Verdde Hotel", "href": "https://verddehotel.hoopla.no/" },
+        { "label": "Perleporten", "href": "https://ebillett.no/90037000000000" },
+        { "label": "Facebook", "href": "https://www.facebook.com/share/1D5WXFTpxz/?mibextid=wwXIfr" }
       ],
       "featured": true
     },
@@ -154,10 +181,11 @@
     },
     {
       "date": "Autumn",
-      "meta": "North Cape routing — follow Perleporten Kulturhus for Honningsvåg dates.",
+      "meta": "Perleporten Kulturhus — Honningsvåg (watch for dates)",
+      "ticket": true,
       "links": [
-        { "label": "Perleporten tickets", "href": "https://ebillett.no/90037000000000" },
-        { "label": "Gigplanet", "href": "https://www.gigplanet.no/band/havard-pedersen-and-the-blues-is-alright-band" }
+        { "label": "Venue tickets", "href": "https://ebillett.no/90037000000000" },
+        { "label": "Facebook", "href": "https://www.facebook.com/share/1D5WXFTpxz/?mibextid=wwXIfr" }
       ]
     },
     {
@@ -211,23 +239,25 @@
     },
     {
       "kicker": "Live",
-      "title": "Shows & ticket enquiries",
-      "body": "Promoters and venues: routing and holds via Gigplanet.",
+      "title": "Shows & tickets — summer 2026",
+      "body": "Valhal (15 Jul), Verdde Hotel Lakselv (16 Jul), and Perleporten Kulturhus. Book direct; promoters via Gigplanet.",
       "previewImage": "/assets/images/tour-poster-2025.png",
       "previewAlt": "2026 tour routing poster",
-      "status": "Booking active",
-      "priceFrom": "Per event",
+      "status": "On sale",
+      "priceFrom": "Jul 2026",
       "links": [
+        { "label": "Valhal", "href": "https://valhal.ticketco.events/no/nb?version=m" },
+        { "label": "Verdde Hotel", "href": "https://verddehotel.hoopla.no/" },
+        { "label": "Perleporten", "href": "https://ebillett.no/90037000000000" },
+        { "label": "Facebook", "href": "https://www.facebook.com/share/1D5WXFTpxz/?mibextid=wwXIfr" },
         {
           "label": "Gigplanet",
           "href": "https://www.gigplanet.no/band/havard-pedersen-and-the-blues-is-alright-band"
-        },
-        { "label": "Tour poster", "href": "/assets/images/tour-poster-2025.png" },
-        { "label": "Contact", "href": "#contact" }
+        }
       ],
       "primaryAction": {
-        "label": "Request hold",
-        "href": "https://www.gigplanet.no/band/havard-pedersen-and-the-blues-is-alright-band"
+        "label": "Valhal tickets",
+        "href": "https://valhal.ticketco.events/no/nb?version=m"
       }
     },
     {
