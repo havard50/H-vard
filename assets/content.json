@@ -204,7 +204,7 @@
       "title": "Føler seg bra — TV Nord Debut",
       "body": "Documenting Håvard's home return to Alta and the official regional TV feature covering the rollout of the debut album \"Never Felt So Good\", spotlighting world-class guest musicians.",
       "links": [
-        { "label": "Press archive", "href": "https://havardpedersen.com/interviews.html" }
+        { "label": "Read feature", "href": "https://www.altaposten.no/kultur/n/rWJwye/foler-seg-bra" }
       ]
     },
     {
@@ -214,7 +214,7 @@
       "title": "Fra Kjøpmann til Musiker på full tid",
       "body": "Deep-dive career profile outlining Håvard's departure from a demanding 30-year executive business career to fully dedicate his life, focus, and artistic purpose to live blues-rock guitar.",
       "links": [
-        { "label": "Read profile", "href": "https://havardpedersen.com/interviews.html" }
+        { "label": "Read profile", "href": "https://www.ifinnmark.no/fra-rema-kjopmann-til-musiker-pa-full-tid/f/5-81-2479007" }
       ]
     },
     {
@@ -224,7 +224,8 @@
       "title": "Finnmarks Gitarguru sverger til dialekt",
       "body": "Editorial reviews covering Håvard's significant artistic evolution at The Norwegian Sound studios, transition from English to raw, personal lyricism sung entirely in his native Vardø dialect.",
       "links": [
-        { "label": "Reviews archive", "href": "https://havardpedersen.com/reviews.html" }
+        { "label": "Altaposten feature", "href": "https://www.altaposten.no/kultur/n/KMO5EE/haavard-sverger-til-dialekt-paa-to-ferske-singler" },
+        { "label": "Østhavet editorial", "href": "https://osthavet.no/kultur/2025/10/17/havard-pedersen-med-tekster-pa-vardodialekt/" }
       ]
     },
     {
@@ -232,8 +233,8 @@
       "title": "Broadcast & print history",
       "body": "Regional TV, UK radio, and press artefacts stay documented — linked from Press and legacy pages.",
       "links": [
-        { "label": "Interviews", "href": "https://havardpedersen.com/interviews.html" },
-        { "label": "Reviews", "href": "https://havardpedersen.com/reviews.html" }
+        { "label": "Interviews", "href": "https://www.ifinnmark.no/fra-rema-kjopmann-til-musiker-pa-full-tid/f/5-81-2479007" },
+        { "label": "Reviews", "href": "https://www.altaposten.no/kultur/n/KMO5EE/haavard-sverger-til-dialekt-paa-to-ferske-singler" }
       ]
     }
   ],
