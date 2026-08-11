@@ -1,7 +1,7 @@
 {
   "name": "havardpedersen-redesign",
   "private": true,
-  "description": "Static artist site served for Railway and local preview",
+  "description": "Static artist site for Vercel and local preview",
   "type": "module",
   "scripts": {
     "start": "node scripts/static-server.mjs",
