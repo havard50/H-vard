@@ -1,523 +1,104 @@
 {
   "siteMeta": {
-    "feedUpdated": "2026-08-12",
-    "canonical": "https://www.havardpedersen.com/",
-    "primaryLanguage": "en"
+    "feedUpdated": "2026-08-12"
   },
   "contactForm": {
     "mailto": "havardpedersen@me.com",
     "subject": "Site contact — havardpedersen.com",
     "action": "",
-    "provider": "netlify",
-    "redirectThanks": "https://www.havardpedersen.com/?contact=sent",
-    "mailtoNote": "Opens your email app with this message ready to send."
+    "redirectThanks": "https://havardpedersen.com/?contact=sent"
   },
-  "social": {
-    "instagramPrimary": {
-      "handle": "@haavard_pedersen_raa_ekte_live",
-      "label": "Artist / band Instagram",
-      "href": "https://www.instagram.com/haavard_pedersen_raa_ekte_live/"
+  "feedExtras": [],
+  "ticketLinks": [
+    {
+      "label": "Valhal · 15 Jul",
+      "action": "Buy tickets",
+      "href": "https://valhal.ticketco.events/no/nb?version=m",
+      "primary": true
     },
-    "instagramPersonal": {
-      "handle": "@havardhedde",
-      "label": "Personal Instagram",
-      "href": "https://www.instagram.com/havardhedde/"
+    {
+      "label": "Verdde Hotel · 16 Jul",
+      "action": "Buy tickets",
+      "href": "https://verddehotel.hoopla.no/",
+      "primary": true
     },
-    "youtube": {
-      "handle": "@havardhedde10",
-      "href": "https://www.youtube.com/@havardhedde10"
+    {
+      "label": "Perleporten Kulturhus",
+      "action": "Venue tickets",
+      "href": "https://ebillett.no/90037000000000"
     },
-    "tiktok": {
-      "handle": "@haavardhedde",
-      "href": "https://www.tiktok.com/@haavardhedde"
-    },
-    "facebook": {
+    {
       "label": "Facebook",
-      "href": "https://www.facebook.com/share/1D5WXFTpxz/?mibextid=wwXIfr"
-    },
-    "spotify": {
-      "label": "Spotify",
-      "href": "https://open.spotify.com/artist/50PJ7UncEwx3fUxJ1LgZid"
-    },
-    "appleMusic": {
-      "label": "Apple Music",
-      "href": "https://music.apple.com/no/search?term=H%C3%A5vard%20Pedersen"
-    },
-    "gigplanet": {
-      "label": "Gigplanet",
-      "href": "https://www.gigplanet.no/band/havard-pedersen-and-the-blues-is-alright-band"
-    }
-  },
-  "pressLinks": [
-    {
-      "label": "Full press archive",
-      "href": "/press.html",
-      "public": true
-    },
-    {
-      "label": "Interviews archive",
-      "note": "Legacy path /interviews.html — superseded by /press.html. Do not link publicly.",
-      "public": false
-    },
-    {
-      "label": "Reviews archive",
-      "note": "Legacy path /reviews.html — superseded by /press.html. Do not link publicly.",
-      "public": false
+      "action": "Follow & updates",
+      "href": "https://www.facebook.com/share/1D5WXFTpxz/?mibextid=wwXIfr",
+      "social": true
     }
   ],
-  "pressArchive": {
-    "intro": "Broadcast, print, and radio coverage from Håvard Pedersen's career — preserved as an artist journey archive. Scans and audio restored from legacy site backups where available.",
-    "pendingAssets": [
-      {
-        "file": "altaposten-2010.png",
-        "legacy": "HavardAltaposten.png",
-        "status": "missing"
-      },
-      {
-        "file": "blast-radio-wmggw.mp3",
-        "legacy": "BlastRadioUK_WMGGW_Feb26th.mp3",
-        "status": "missing"
-      },
-      {
-        "file": "hermitage-fm-mobile-dreams.mp3",
-        "legacy": "MobileDreams_HermitageFM.mp3",
-        "status": "missing"
-      }
-    ],
-    "sections": [
-      {
-        "id": "broadcast-print",
-        "title": "Broadcast & print",
-        "items": [
-          {
-            "id": "tv-nord-2010",
-            "kind": "archive",
-            "kicker": "Archive · TV Nord",
-            "title": "Regional TV — November 2010",
-            "body": "TV Nord segment during the Never Felt So Good debut album campaign.",
-            "published": "2010-11-01",
-            "image": "/assets/archive/tv-nord-2010.png",
-            "imageAlt": "TV Nord — archived broadcast still",
-            "imageFit": "cover",
-            "public": true,
-            "links": [
-              {
-                "label": "View broadcast still",
-                "href": "/assets/archive/tv-nord-2010.png",
-                "verifiedLink": true
-              }
-            ]
-          },
-          {
-            "id": "altaposten-2010",
-            "kind": "archive",
-            "kicker": "Archive · Altaposten",
-            "title": "Print — debut album coverage",
-            "body": "Altaposten feature during the Never Felt So Good campaign. Newspaper scan pending restoration.",
-            "published": "2010-10-01",
-            "public": true
-          },
-          {
-            "id": "nrk-2010",
-            "kind": "archive",
-            "kicker": "Archive · NRK",
-            "title": "National broadcast — 2010",
-            "body": "NRK coverage during the debut album campaign.",
-            "published": "2010-10-01",
-            "public": true
-          },
-          {
-            "id": "nfsg-playlist-2011",
-            "kind": "archive",
-            "kicker": "Archive · Release",
-            "title": "Never Felt So Good — playlist art",
-            "body": "Legacy playlist artwork from the debut album campaign.",
-            "published": "2011-01-01",
-            "image": "/assets/archive/playlist-nfsg.jpg",
-            "imageAlt": "Never Felt So Good — playlist artwork",
-            "imageFit": "cover",
-            "public": true,
-            "links": [
-              {
-                "label": "Open artwork",
-                "href": "/assets/archive/playlist-nfsg.jpg",
-                "verifiedLink": true
-              },
-              {
-                "label": "Album on Spotify",
-                "href": "https://open.spotify.com/album/17MYfinSWo8DC3XESNqmFi",
-                "verifiedLink": true
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "id": "radio-interviews",
-        "title": "Radio interviews",
-        "items": [
-          {
-            "id": "blast-radio-uk-2011",
-            "kind": "archive",
-            "kicker": "Archive · UK radio",
-            "title": "Blast Radio UK — WMGGW",
-            "body": "Segment from the February 2011 campaign. MP3 archive pending restoration.",
-            "published": "2011-02-26",
-            "image": "/assets/archive/cards/blast-radio-card.png",
-            "imageAlt": "Håvard Pedersen — live performance, semi-hollow guitar",
-            "imageFit": "cover",
-            "public": true
-          },
-          {
-            "id": "hermitage-fm-2011",
-            "kind": "archive",
-            "kicker": "Archive · UK radio",
-            "title": "Hermitage FM — From Blues To Rock (2011)",
-            "body": "Conversation with Jon Seymour plus a Mobile Dreams live spot. Interview MP3 restored; Mobile Dreams segment pending restoration.",
-            "published": "2011-06-08",
-            "image": "/assets/archive/cards/hermitage-fm-card.png",
-            "imageAlt": "Håvard Pedersen — live on stage with red electric guitar",
-            "imageFit": "cover",
-            "audio": "/assets/archive/hermitage-fm-interview-2011.mp3",
-            "public": true,
-            "links": [
-              {
-                "label": "Listen to interview (MP3)",
-                "href": "/assets/archive/hermitage-fm-interview-2011.mp3",
-                "verifiedLink": true
-              }
-            ]
-          },
-          {
-            "id": "exit-music-2011",
-            "kind": "archive",
-            "kicker": "Archive · Press",
-            "title": "Exit Music (UK) — 2011",
-            "body": "Review coverage during the Never Felt So Good release cycle.",
-            "published": "2011-01-01",
-            "public": true
-          }
-        ]
-      },
-      {
-        "id": "channels",
-        "title": "Video & social",
-        "items": [
-          {
-            "id": "youtube-hub",
-            "kind": "social",
-            "kicker": "YouTube",
-            "title": "Long-form & channel hub",
-            "body": "Official YouTube — longer performance pieces and sit-down clips when they are ready.",
-            "public": true,
-            "links": [
-              {
-                "label": "Channel @havardhedde10",
-                "href": "https://www.youtube.com/@havardhedde10",
-                "verifiedLink": true
-              },
-              {
-                "label": "Shorts",
-                "href": "https://www.youtube.com/@havardhedde10/shorts",
-                "verifiedLink": true
-              }
-            ]
-          },
-          {
-            "id": "short-form-social",
-            "kind": "social",
-            "kicker": "TikTok & Instagram",
-            "title": "Candid & short-form",
-            "body": "Vertical clips and on-the-fly performance moments on TikTok and Reels.",
-            "public": true,
-            "links": [
-              {
-                "label": "TikTok @haavardhedde",
-                "href": "https://www.tiktok.com/@haavardhedde",
-                "verifiedLink": true
-              },
-              {
-                "label": "Instagram @havardhedde",
-                "href": "https://www.instagram.com/havardhedde/",
-                "verifiedLink": true
-              },
-              {
-                "label": "Artist Instagram @haavard_pedersen_raa_ekte_live",
-                "href": "https://www.instagram.com/haavard_pedersen_raa_ekte_live/",
-                "verifiedLink": true
-              }
-            ]
-          }
-        ]
-      }
-    ]
-  },
-  "pressOutlets": [
+  "shows": [
     {
-      "name": "NRK",
-      "verifiedLink": false,
-      "note": "TODO: replace with specific NRK article URL when available"
-    },
-    {
-      "name": "Altaposten",
-      "verifiedLink": false,
-      "note": "Newspaper scan pending restoration — listed in press trail"
-    },
-    {
-      "name": "TV Nord",
-      "verifiedLink": true,
-      "href": "/assets/archive/tv-nord-2010.png",
-      "note": "Archived broadcast still — November 2010"
-    },
-    {
-      "name": "Exit Music (UK)",
-      "verifiedLink": false,
-      "note": "TODO: replace with specific Exit Music review URL when available"
-    },
-    {
-      "name": "Hermitage FM",
-      "verifiedLink": true,
-      "href": "/assets/archive/hermitage-fm-interview-2011.mp3",
-      "note": "From Blues To Rock interview — archived MP3"
-    }
-  ],
-  "pressHistory": [
-    {
-      "period": "2011",
-      "outlet": "EXIT MUSIC (UK)",
-      "body": "Review coverage during the Never Felt So Good release cycle."
-    },
-    {
-      "period": "2011",
-      "outlet": "HERMITAGE FM",
-      "body": "From Blues To Rock — interview archived on /press.html (Mobile Dreams segment pending)."
-    },
-    {
-      "period": "2010",
-      "outlet": "ALTAPOSTEN",
-      "body": "Print feature during the debut album campaign."
-    },
-    {
-      "period": "2010",
-      "outlet": "NRK",
-      "body": "National broadcast coverage during the debut album campaign."
-    },
-    {
-      "period": "2010",
-      "outlet": "TV NORD",
-      "body": "Regional TV segment — November 2010."
-    }
-  ],
-  "credibilityGroups": [
-    { "label": "Endorsed by", "items": ["Gretsch", "Mezzabarba"] },
-    { "label": "Recorded with", "items": ["John Norum", "Ronni Le Tekrø"] },
-    { "label": "Recording / production", "items": ["Peter Michelsen", "The Norwegian Sound"] }
-  ],
-  "homepageTrio": {
-    "billing": "HÅVARD PEDERSEN TRIO feat. WILD WILLY BENDIKSEN & KNUT EVENMO",
-    "poster": "/assets/images/havard-pedersen-trio-2026.jpg",
-    "posterAlt": "Håvard Pedersen Trio feat. Wild Willy Bendiksen & Knut Evenmo — official 2026 campaign poster",
-    "posterWidth": 681,
-    "posterHeight": 1024,
-    "intro": "Tre erfarne musikere. Ett rått liveshow.",
-    "body": "Bluesrock med trøkk, spilleglede og låter fra bl.a.\nGary Moore, Stevie Ray Vaughan, Thin Lizzy og Jimi Hendrix+++",
-    "lineupParagraph": "Med legendariske Wild Willy Bendiksen på trommer, Knut Evenmo på bass/vokal og Håvard Pedersen på gitar/vokal.",
-    "tagline": "Power Trio. Rått. Ærlig. Live.",
-    "lineup": [
-      { "name": "Håvard Pedersen", "role": "Guitar / Vocal" },
-      { "name": "Wild Willy Bendiksen", "role": "Drums" },
-      { "name": "Knut Evenmo", "role": "Bass / Vocal" }
-    ]
-  },
-  "homepageNewsFromYear": 2025,
-  "credibility": [
-    "Gretsch",
-    "Mezzabarba",
-    "John Norum",
-    "Ronni Le Tekrø",
-    "The Norwegian Sound",
-    "Peter Michelsen"
-  ],
-  "events": [
-    {
-      "id": "stopp-pressen-2026-08-22",
-      "date": "2026-08-22",
+      "isoDate": "2026-08-22",
+      "day": "22",
+      "month": "Aug",
+      "year": "2026",
       "time": "17:00",
+      "kicker": "Håvard Pedersen Trio",
+      "title": "Stopp Pressen, Oslo",
       "venue": "Stopp Pressen",
-      "city": "Oslo",
-      "country": "Norway",
-      "title": "Håvard Pedersen Trio feat. Wild Willy Bendiksen & Knut Evenmo",
-      "billing": "HÅVARD PEDERSEN TRIO feat. WILD WILLY BENDIKSEN & KNUT EVENMO",
-      "schemaName": "Håvard Pedersen Trio feat. Wild Willy Bendiksen & Knut Evenmo – Stopp Pressen",
-      "featuredEyebrow": "NEXT SHOW",
-      "body": "Tre erfarne musikere. Ett rått liveshow.\n\nBluesrock med trøkk, spilleglede og låter fra bl.a. Gary Moore, Stevie Ray Vaughan, Thin Lizzy og Jimi Hendrix+++\n\nMed legendariske Wild Willy Bendiksen på trommer, Knut Evenmo på bass/vokal og Håvard Pedersen på gitar/vokal.",
-      "tagline": "Power Trio. Rått. Ærlig. Live.",
-      "musicalFocus": "Gary Moore · Stevie Ray Vaughan · Thin Lizzy · Jimi Hendrix",
-      "status": "confirmed",
-      "lineup": [
-        { "name": "Håvard Pedersen", "role": "Guitar & Vocal" },
-        { "name": "Wild Willy Bendiksen", "role": "Drums" },
-        { "name": "Knut Evenmo", "role": "Bass & Vocal" }
-      ]
+      "location": "Oslo, Norway",
+      "body": "HÅVARD PEDERSEN TRIO feat. WILD WILLY BENDIKSEN & KNUT EVENMO",
+      "featured": true
     },
     {
-      "id": "inni-granskauen-2026-08-28",
-      "date": "2026-08-28",
+      "isoDate": "2026-08-28",
+      "day": "28",
+      "month": "Aug",
+      "year": "2026",
       "time": "18:00",
+      "kicker": "Håvard Pedersen Trio",
+      "title": "Inni Granskauen Fest, Aurskog",
       "venue": "Inni Granskauen Fest",
-      "city": "Aurskog",
-      "country": "Norway",
-      "title": "Håvard Pedersen Trio feat. Wild Willy Bendiksen & Knut Evenmo",
-      "billing": "HÅVARD PEDERSEN TRIO feat. WILD WILLY BENDIKSEN & KNUT EVENMO",
-      "featuredEyebrow": "NEXT SPECIAL SHOW",
-      "schemaName": "Håvard Pedersen Trio feat. Wild Willy Bendiksen & Knut Evenmo – Inni Granskauen Fest",
-      "body": "Tre erfarne musikere. Ett rått liveshow.\n\nBluesrock med trøkk, spilleglede og låter fra bl.a. Gary Moore, Stevie Ray Vaughan, Thin Lizzy og Jimi Hendrix+++\n\nMed legendariske Wild Willy Bendiksen på trommer, Knut Evenmo på bass/vokal og Håvard Pedersen på gitar/vokal.",
-      "tagline": "Power Trio. Rått. Ærlig. Live.",
-      "status": "confirmed",
-      "featured": true,
-      "specialGuest": true,
-      "detailUrl": "/gigs/inni-granskauen-fest-2026.html",
-      "image": "/assets/images/havard-pedersen-trio-2026.jpg",
-      "poster": "/assets/images/havard-pedersen-trio-2026.jpg",
-      "musicalFocus": "Håvard Pedersen originals, Gary Moore, Thin Lizzy and soulful blues.",
-      "specialNote": "Wild Willy Bendiksen joins Håvard Pedersen for this special concert.",
-      "featuredHook": "One special night. A guitar-driven power trio ready to let it rip — with Wild Willy Bendiksen joining Håvard behind the drums.",
-      "lineup": [
-        { "name": "Håvard Pedersen", "role": "Guitar & vocals" },
-        { "name": "Wild Willy Bendiksen", "role": "Drums", "specialGuest": true },
-        { "name": "Knut Evenmo", "role": "Bass & vocals" }
-      ],
-      "quote": {
-        "text": "It is a fantastic honour to have my good friend Wild Willy Bendiksen joining us for this special night. Willy is an absolutely phenomenal drummer and musician, and I can’t wait to get on stage together.",
-        "attribution": "Håvard Pedersen"
-      }
+      "location": "Aurskog, Norway",
+      "body": "HÅVARD PEDERSEN TRIO feat. WILD WILLY BENDIKSEN & KNUT EVENMO",
+      "featured": true
     },
     {
-      "id": "valhal-2026-07-15",
-      "date": "2026-07-15",
+      "isoDate": "2026-07-15",
+      "day": "15",
+      "month": "Jul",
+      "year": "2026",
       "time": "18:00",
+      "kicker": "Blues & BBQ",
+      "title": "Valhal, Akkarfjord",
       "venue": "Valhal",
-      "city": "Akkarfjord",
-      "region": "Finnmark",
-      "country": "Norway",
-      "title": "Blues & BBQ",
+      "location": "Akkarfjord, Finnmark",
       "body": "Summer blues & BBQ — live trio set, grill, and transport from Hammerfest.",
+      "ticketLabel": "Buy tickets",
       "ticketUrl": "https://valhal.ticketco.events/no/nb?version=m",
-      "status": "confirmed",
-      "image": "/assets/images/havard-live-sunburst-semihollow.png"
+      "featured": true
     },
     {
-      "id": "verdde-2026-07-16",
-      "date": "2026-07-16",
+      "isoDate": "2026-07-16",
+      "day": "16",
+      "month": "Jul",
+      "year": "2026",
       "time": "20:00",
+      "kicker": "Concert",
+      "title": "Verdde Hotel Lakselv",
       "venue": "Verdde Hotel",
-      "city": "Lakselv",
-      "region": "Finnmark",
-      "country": "Norway",
-      "title": "Concert",
-      "body": "Håvard Pedersen & The Blues Is Alright Band — concert at Verdde Mat & Vinhus.",
+      "location": "Lakselv, Finnmark",
+      "body": "Concert at Verdde Mat & Vinhus.",
+      "ticketLabel": "Buy tickets",
       "ticketUrl": "https://verddehotel.hoopla.no/",
-      "venueUrl": "https://www.verddehotel.no/",
-      "status": "confirmed",
-      "image": "/assets/images/havard-live-bw-semihollow.png"
-    }
-  ],
-  "routingNotes": [
+      "featured": true
+    },
     {
+      "venueOnly": true,
+      "kicker": "North Cape",
       "title": "Perleporten Kulturhus",
       "location": "Honningsvåg · autumn routing",
-      "body": "Venue calendar for Honningsvåg dates — announced when on sale. Not a confirmed public performance date on this site.",
-      "venueCalendarUrl": "https://ebillett.no/90037000000000",
-      "status": "routing-only"
-    }
-  ],
-  "tourPoster": {
-    "image": "/assets/images/tour-poster-2025.png",
-    "imageAlt": "Tour poster — 2026 live routing graphic",
-    "caption": "Full 2026 routing snapshot for promoters and fans."
-  },
-  "releases": {
-    "albumCountClaim": null,
-    "albumCountNote": "VERIFY: Site copy previously said “three albums”, but only two studio albums are listed below with streaming links. Do not publish an album count until confirmed.",
-    "latest": {
-      "type": "single",
-      "title": "Det sku bli oss",
-      "year": "2025",
-      "cover": "/assets/images/single-det-sku-studio.png",
-      "spotify": "https://open.spotify.com/track/3b5YUyKuugvteTF85a3TpP",
-      "appleMusic": "https://music.apple.com/no/search?term=Det%20sku%20bli%20oss",
-      "youtube": "https://www.youtube.com/watch?v=zEXcH3lHjls",
-      "youtubeId": "zEXcH3lHjls"
-    },
-    "albums": [
-      {
-        "title": "Never Felt So Good",
-        "year": "2011",
-        "type": "album",
-        "spotify": "https://open.spotify.com/album/17MYfinSWo8DC3XESNqmFi",
-        "appleMusic": "https://music.apple.com/no/album/never-felt-so-good/438518141",
-        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music/c1/a1/62/mzi.qytoprdk.jpg/600x600bb.jpg",
-        "notes": "Debut. Guests on select tracks include John Norum and Ronni Le Tekrø (as stated on existing site).",
-        "tracks": [
-          { "title": "I Love The Sun" },
-          { "title": "Just A Little Teardrop" },
-          { "title": "Never Felt So Good" },
-          { "title": "Our Song" },
-          { "title": "Still In Love With You", "note": "feat. John Norum" },
-          { "title": "The Black Eagle" },
-          { "title": "Dudette" },
-          { "title": "Sugarbabe" },
-          { "title": "Mighty Bird" },
-          { "title": "Make Believe" },
-          { "title": "Northern Sky" },
-          { "title": "Mobile Dreams" },
-          { "title": "The Greatest Fan Of All" },
-          { "title": "While My Guitar Gently Weeps" }
-        ]
-      },
-      {
-        "title": "You and I",
-        "year": "2021",
-        "type": "album",
-        "spotify": "https://open.spotify.com/album/2M8DjRkpO23MSWpXZ3r0Ug",
-        "appleMusic": "https://music.apple.com/no/album/you-and-i/1553917917",
-        "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/6d/c2/cd/6dc2cd35-4eb8-92bf-ce1a-f1ecc83ef5c3/196006100919.jpg/600x600bb.jpg",
-        "notes": "Second studio album listed on site."
-      }
-    ],
-    "singles": [
-      { "title": "Det sku bli oss", "year": "2025" },
-      { "title": "Lenge Sia", "year": "2025" },
-      { "title": "Tender Falls the Rain", "year": "2024" },
-      { "title": "Trader Joe's", "year": "2022" },
-      { "title": "Please Don't Leave Me", "year": "2019" },
-      { "title": "Out of Here", "year": "2019" },
-      { "title": "Loneliness", "year": "2018" }
-    ]
-  },
-  "videos": [
-    {
-      "featured": true,
-      "kind": "live-local",
-      "src": "/assets/videos/hero-live-bw-loop.mp4",
-      "poster": "/assets/images/havard-live-bw-semihollow.png",
-      "title": "Håvard Pedersen — live performance clip",
-      "caption": "Live energy — Håvard Pedersen & The Blues Is Alright Band"
-    },
-    {
-      "featured": false,
-      "kind": "youtube",
-      "youtubeId": "zEXcH3lHjls",
-      "published": "2025-11-02",
-      "title": "Det sku bli oss — Håvard Pedersen",
-      "caption": "Official video — Det sku bli oss"
-    },
-    {
-      "archiveCard": true,
-      "kicker": "YouTube",
-      "title": "More live & studio videos",
-      "body": "Subscribe on @havardhedde10 for new uploads.",
-      "href": "https://www.youtube.com/@havardhedde10"
+      "body": "Venue calendar for Honningsvåg dates — announced when on sale.",
+      "ticketLabel": "Venue tickets",
+      "ticketUrl": "https://ebillett.no/90037000000000"
     }
   ],
   "timeline": [
@@ -529,21 +110,37 @@
       "image": "/assets/images/havard-pedersen-trio-2026.jpg",
       "imageAlt": "Håvard Pedersen Trio feat. Wild Willy Bendiksen & Knut Evenmo — official 2026 campaign poster",
       "links": [
-        { "label": "Live dates", "href": "/live.html" },
-        { "label": "Inni Granskauen Fest", "href": "/gigs/inni-granskauen-fest-2026.html" }
+        { "label": "Get tickets", "href": "#shows" },
+        { "label": "Trio campaign", "href": "#trio" }
       ],
       "featured": true
     },
     {
-      "kicker": "Endorsement",
+      "kicker": "Live · Tickets",
+      "title": "Finnmark summer 2026 — on sale now",
+      "body": "Blues & BBQ at Valhal (15 Jul) and Verdde Hotel Lakselv (16 Jul). Tickets via TicketCo and Hoopla.",
+      "published": "2026-05-30",
+      "image": "/assets/images/havard-live-sunburst-semihollow.png",
+      "imageAlt": "Håvard Pedersen — live on stage",
+      "links": [
+        { "label": "Get tickets", "href": "#shows" },
+        { "label": "Valhal", "href": "https://valhal.ticketco.events/no/nb?version=m" },
+        { "label": "Verdde Hotel", "href": "https://verddehotel.hoopla.no/" },
+        { "label": "Perleporten", "href": "https://ebillett.no/90037000000000" },
+        { "label": "Facebook", "href": "https://www.facebook.com/share/1D5WXFTpxz/?mibextid=wwXIfr" }
+      ],
+      "featured": true
+    },
+    {
+      "kicker": "Press · Endorsement",
       "title": "Welcome to the Gretsch family",
       "body": "Official Gretsch-endorsed artist — approved artist cards and endorsed logos for marketing. In public posts, reference the Gretsch Company. Among the first with the new Gretsch amp series, in celebration of Gretsch's 135th anniversary.",
       "published": "2026-06-04",
       "image": "/assets/images/cinematic-gretsch.png",
       "imageAlt": "Håvard Pedersen — cinematic studio still with Gretsch guitar",
       "links": [
-        { "label": "About", "href": "#about" },
-        { "label": "Press / EPK", "href": "/epk.html" }
+        { "label": "About / press", "href": "#about" },
+        { "label": "Photos", "href": "#photos" }
       ],
       "featured": true
     },
@@ -554,10 +151,20 @@
       "published": "2026-06-04",
       "image": "/assets/images/studio-gretsch-portrait.png",
       "imageAlt": "Håvard Pedersen — press portrait with Gretsch guitar",
+      "links": [{ "label": "Live", "href": "#live" }]
+    },
+    {
+      "kicker": "Release · 2025",
+      "title": "Det sku bli oss — out now",
+      "body": "Latest single on streaming — official video under Video.",
+      "published": "2025-10-15",
+      "image": "/assets/images/single-det-sku-studio.png",
+      "imageAlt": "Det sku bli oss — single artwork (studio)",
       "links": [
-        { "label": "Live dates", "href": "/live.html" },
-        { "label": "About", "href": "/bio.html" }
-      ]
+        { "label": "Listen", "href": "#listen" },
+        { "label": "Watch", "href": "#videos" }
+      ],
+      "featured": false
     },
     {
       "kicker": "Studio",
@@ -569,38 +176,9 @@
       "links": [{ "label": "About", "href": "#about" }]
     },
     {
-      "kicker": "Release · 2025",
-      "title": "Det sku bli oss — out now",
-      "body": "Latest single on streaming — official video under Video.",
-      "published": "2025-10-15",
-      "image": "/assets/images/single-det-sku-studio.png",
-      "imageAlt": "Det sku bli oss — single artwork (studio)",
-      "links": [
-        { "label": "Listen", "href": "#listen" },
-        { "label": "Watch", "href": "#video" }
-      ]
-    }
-  ],
-  "timelineArchive": [
-    {
-      "kicker": "Live · Tickets",
-      "title": "Finnmark summer 2026 — on sale now",
-      "body": "Blues & BBQ at Valhal (15 Jul) and Verdde Hotel Lakselv (16 Jul). Tickets via TicketCo and Hoopla.",
-      "published": "2026-05-30",
-      "image": "/assets/images/havard-live-sunburst-semihollow.png",
-      "imageAlt": "Håvard Pedersen — live on stage",
-      "links": [
-        { "label": "Live archive", "href": "/live.html" },
-        { "label": "Valhal (TicketCo)", "href": "https://valhal.ticketco.events/no/nb?version=m" },
-        { "label": "Verdde Hotel (Hoopla)", "href": "https://verddehotel.hoopla.no/" },
-        { "label": "Perleporten venue calendar", "href": "https://ebillett.no/90037000000000" },
-        { "label": "Facebook", "href": "https://www.facebook.com/share/1D5WXFTpxz/?mibextid=wwXIfr" }
-      ]
-    },
-    {
       "kicker": "Live · 2026",
       "title": "Tour routing & poster",
-      "body": "2026 routing for promoters and fans — dates added when venues announce.",
+      "body": "2026 routing for promoters and fans — dates added here when venues announce.",
       "published": "2026-05-01",
       "image": "/assets/images/tour-poster-2025.png",
       "imageAlt": "Tour poster — 2026 live routing graphic",
@@ -609,56 +187,73 @@
           "label": "Gigplanet",
           "href": "https://www.gigplanet.no/band/havard-pedersen-and-the-blues-is-alright-band"
         },
-        { "label": "Tour poster (PNG)", "href": "/assets/images/tour-poster-2025.png" },
-        { "label": "Live dates", "href": "/live.html" }
+        { "label": "Live", "href": "#live" }
       ]
-    },
+    }
+  ],
+  "timelineArchive": [
     {
       "kicker": "Archive · 2011",
       "title": "Never Felt So Good",
       "body": "Debut album — still on streaming alongside newer releases."
     }
   ],
-  "feedExtras": [],
   "recentInterviews": [],
-  "merch": {
-    "title": "Rå Ekte Live T-Shirt",
-    "priceKr": 250,
-    "shippingKr": 79,
-    "sizes": ["L", "XL", "XXL", "3XL"],
-    "email": "havardpedersen@me.com",
-    "externalStore": "https://havardtshirt.netlify.app/",
-    "images": {
-      "worn": "/assets/images/merch-raa-ekte-worn.png",
-      "tee": "/assets/images/merch-raa-ekte-tee.png"
+  "live": [
+    {
+      "date": "15 Jul",
+      "meta": "Blues & BBQ — Valhal, Akkarfjord · 18:00",
+      "ticket": true,
+      "links": [
+        { "label": "Buy tickets", "href": "https://valhal.ticketco.events/no/nb?version=m" },
+        { "label": "All shows", "href": "#shows" }
+      ]
     },
-    "stockLeft": null,
-    "stockNote": "TODO: only show inventory counts when maintained from a live source (e.g. merch store API)."
-  },
-  "storeSettings": {
-    "checkoutEnabled": false,
-    "provider": "Stripe Payment Links",
-    "statusText": "Merch by email is live on the main site. Streaming and enquiries below; card checkout coming soon.",
-    "helpText": ""
-  },
+    {
+      "date": "16 Jul",
+      "meta": "Verdde Hotel Lakselv — concert",
+      "ticket": true,
+      "links": [
+        { "label": "Buy tickets", "href": "https://verddehotel.hoopla.no/" },
+        { "label": "Venue", "href": "https://www.verddehotel.no/" }
+      ]
+    },
+    {
+      "date": "Autumn",
+      "meta": "Perleporten Kulturhus — Honningsvåg (watch for dates)",
+      "ticket": true,
+      "links": [
+        { "label": "Venue tickets", "href": "https://ebillett.no/90037000000000" },
+        { "label": "Facebook", "href": "https://www.facebook.com/share/1D5WXFTpxz/?mibextid=wwXIfr" }
+      ]
+    },
+    {
+      "date": "Poster",
+      "meta": "Full 2026 routing snapshot — open the tour poster for promoters and fans.",
+      "links": [
+        { "label": "Tour poster (PNG)", "href": "/assets/images/tour-poster-2025.png" },
+        {
+          "label": "Book the band",
+          "href": "https://www.gigplanet.no/band/havard-pedersen-and-the-blues-is-alright-band"
+        }
+      ]
+    }
+  ],
   "store": [
     {
       "kicker": "Single · 2025",
       "title": "Det sku bli oss",
       "body": "Latest single — stream on Spotify and Apple Music. CDs on request via Contact.",
-      "previewImage": "/assets/images/single-det-sku-studio.png",
-      "previewAlt": "Det sku bli oss — single artwork",
+      "previewImage": "/assets/images/studio-gretsch-portrait.png",
+      "previewAlt": "Håvard Pedersen — Gretsch portrait",
       "status": "Out now",
       "priceFrom": "Streaming · CDs on request",
       "links": [
-        { "label": "Spotify", "href": "https://open.spotify.com/track/3b5YUyKuugvteTF85a3TpP" },
+        { "label": "Spotify — track", "href": "https://open.spotify.com/track/3b5YUyKuugvteTF85a3TpP" },
         { "label": "Apple Music", "href": "https://music.apple.com/no/search?term=Det%20sku%20bli%20oss" },
-        { "label": "Music page", "href": "/music.html" }
+        { "label": "Music section", "href": "#listen" }
       ],
-      "primaryAction": {
-        "label": "Listen on Spotify",
-        "href": "https://open.spotify.com/track/3b5YUyKuugvteTF85a3TpP"
-      }
+      "primaryAction": { "label": "Listen on Spotify", "href": "https://open.spotify.com/track/3b5YUyKuugvteTF85a3TpP" }
     },
     {
       "kicker": "Albums",
@@ -677,48 +272,47 @@
           "label": "Apple Music",
           "href": "https://music.apple.com/no/search?term=H%C3%A5vard%20Pedersen"
         },
-        { "label": "Music page", "href": "/music.html" }
+        { "label": "Music & CDs page", "href": "/shop.html" }
       ],
-      "primaryAction": {
-        "label": "Open catalogue",
-        "href": "https://open.spotify.com/artist/50PJ7UncEwx3fUxJ1LgZid"
-      }
+      "primaryAction": { "label": "Open catalogue", "href": "https://open.spotify.com/artist/50PJ7UncEwx3fUxJ1LgZid" }
     },
     {
       "kicker": "Live",
-      "title": "Shows & tickets",
-      "body": "Confirmed dates on the Live page — book direct where ticket links are listed. Promoters via Gigplanet.",
+      "title": "Shows & tickets — summer 2026",
+      "body": "Valhal (15 Jul), Verdde Hotel Lakselv (16 Jul), and Perleporten Kulturhus. Book direct; promoters via Gigplanet.",
       "previewImage": "/assets/images/tour-poster-2025.png",
       "previewAlt": "2026 tour routing poster",
-      "status": "See Live page",
-      "priceFrom": "2026",
+      "status": "On sale",
+      "priceFrom": "Jul 2026",
       "links": [
-        { "label": "Live dates", "href": "/live.html" },
+        { "label": "Valhal", "href": "https://valhal.ticketco.events/no/nb?version=m" },
+        { "label": "Verdde Hotel", "href": "https://verddehotel.hoopla.no/" },
+        { "label": "Perleporten", "href": "https://ebillett.no/90037000000000" },
+        { "label": "Facebook", "href": "https://www.facebook.com/share/1D5WXFTpxz/?mibextid=wwXIfr" },
         {
           "label": "Gigplanet",
           "href": "https://www.gigplanet.no/band/havard-pedersen-and-the-blues-is-alright-band"
-        },
-        { "label": "Tour poster (PNG)", "href": "/assets/images/tour-poster-2025.png" }
+        }
       ],
       "primaryAction": {
-        "label": "View live dates",
-        "href": "/live.html"
+        "label": "Valhal tickets",
+        "href": "https://valhal.ticketco.events/no/nb?version=m"
       }
     },
     {
       "kicker": "Merch",
-      "title": "Rå Ekte Live T-Shirt",
-      "body": "Official black tour t-shirt — same stage design. Shop via the merch store.",
+      "title": "Rå Ekte Live T-skjorte",
+      "body": "Offisiell svart turné-t-skjorte — begrenset lager. Samme design som på scenen.",
       "previewImage": "/assets/images/promo-raa-ekte-live.png",
-      "previewAlt": "Rå Ekte Live — official merch",
-      "status": "Available",
-      "priceFrom": "250 kr + shipping",
+      "previewAlt": "Rå Ekte Live — offisiell merch",
+      "status": "På lager",
+      "priceFrom": "250 kr + frakt",
       "links": [
-        { "label": "Shop merch", "href": "https://havardtshirt.netlify.app/" },
-        { "label": "Shop page", "href": "/shop.html" }
+        { "label": "Bestill på artist-siden", "href": "#merch" },
+        { "label": "Full merch store", "href": "https://havardtshirt.netlify.app/" }
       ],
       "primaryAction": {
-        "label": "Shop merch",
+        "label": "Kjøp nå",
         "href": "https://havardtshirt.netlify.app/"
       }
     },
@@ -731,13 +325,51 @@
       "status": "On request",
       "priceFrom": "—",
       "links": [
-        { "label": "Holmen & Robertsen", "href": "https://www.holmenrobertsen.no/" },
-        { "label": "Contact", "href": "/contact.html" }
+        { "label": "Partners", "href": "#partners" },
+        { "label": "Holmen & Robertsen", "href": "https://www.holmenrobertsen.no/" }
       ],
-      "primaryAction": {
-        "label": "Partner enquiry",
-        "href": "/contact.html"
-      }
+      "primaryAction": { "label": "Partner enquiry", "href": "#contact" }
+    }
+  ],
+  "storeSettings": {
+    "checkoutEnabled": false,
+    "provider": "Stripe Payment Links",
+    "statusText": "Merch by email is live on the main site. Streaming and enquiries below; Stripe card checkout coming soon.",
+    "helpText": ""
+  },
+  "merch": {
+    "title": "Rå Ekte Live T-Shirt",
+    "priceKr": 250,
+    "shippingKr": 79,
+    "stockLeft": 17,
+    "sizes": ["L", "XL", "XXL", "3XL"],
+    "email": "havardpedersen@me.com",
+    "externalStore": "https://havardtshirt.netlify.app/",
+    "images": {
+      "worn": "/assets/images/merch-raa-ekte-worn.png",
+      "tee": "/assets/images/merch-raa-ekte-tee.png"
+    }
+  },
+  "heroBackground": {
+    "caption": "",
+    "youtubeIds": [],
+    "rotateMs": 16000,
+    "posterImage": "/assets/images/studio-gretsch-portrait.png",
+    "posterAlt": "Håvard Pedersen — press portrait with Gretsch guitar"
+  },
+  "videos": [
+    {
+      "youtubeId": "zEXcH3lHjls",
+      "published": "2025-11-02",
+      "title": "Det sku bli oss — Håvard Pedersen",
+      "caption": "Det sku bli oss — official video"
+    },
+    {
+      "archiveCard": true,
+      "kicker": "YouTube",
+      "title": "More videos & covers",
+      "body": "Subscribe on @havardhedde10 for new uploads.",
+      "href": "https://www.youtube.com/@havardhedde10"
     }
   ],
   "partners": [
@@ -761,126 +393,5 @@
       "linkLabel": "thenorwegiansound.com",
       "tag": "Studio"
     }
-  ],
-  "bioPage": {
-    "lead": "Norwegian guitarist, singer and songwriter — rooted in blues-rock, built for the stage.",
-    "sections": [
-      {
-        "id": "origins",
-        "title": "Origins / Vardø",
-        "paragraphs": [
-          "From the Arctic town of Vardø in Finnmark, Håvard Pedersen grew up with music as a driving force — expressive guitar tone, strong songs, and a commitment to playing live without shortcuts.",
-          "Today based between Vardø and Oslo, he brings northern identity and international blues-rock energy to clubs, festivals and concert halls across Norway and beyond."
-        ],
-        "image": "/assets/images/havard-portrait-scarf-bw.png",
-        "imageAlt": "Håvard Pedersen — black and white press portrait"
-      },
-      {
-        "id": "influences",
-        "title": "Musical influences",
-        "paragraphs": [
-          "Håvard's playing draws on classic blues-rock — Gary Moore, Stevie Ray Vaughan, Thin Lizzy, Jimi Hendrix and the wider British and American rock tradition — filtered through his own songwriting and live attack.",
-          "On stage the focus is guitar-driven power trio energy: riffs, dynamics, and songs that leave room for improvisation within a tight live band."
-        ]
-      },
-      {
-        "id": "career",
-        "title": "Career",
-        "paragraphs": [
-          "Håvard Pedersen has released albums and singles across more than a decade of recording and touring, from the debut Never Felt So Good (2011) through You and I (2021) and recent singles including Det sku bli oss (2025).",
-          "He fronts Håvard Pedersen & The Blues Is Alright Band for full-band shows, and in 2026 leads the Håvard Pedersen Trio — a lean power trio format with Wild Willy Bendiksen and Knut Evenmo."
-        ],
-        "image": "/assets/images/havard-live-sunburst-semihollow.png",
-        "imageAlt": "Håvard Pedersen live on stage"
-      },
-      {
-        "id": "releases",
-        "title": "Releases",
-        "paragraphs": [
-          "Albums: Never Felt So Good (2011), You and I (2021). Singles and catalogue highlights include Det sku bli oss, Lenge Sia, Tender Falls the Rain, Trader Joe's, Please Don't Leave Me, Out of Here, Loneliness and Never Felt So Good (title track).",
-          "Full streaming links and track listings are on the Music page."
-        ]
-      },
-      {
-        "id": "collaborations",
-        "title": "Collaborations",
-        "paragraphs": [
-          "Select recordings feature John Norum and Ronni Le Tekrø. Studio work is produced with Peter Michelsen at The Norwegian Sound in Mjøndalen — the same creative hub behind major Norwegian pop and rock productions.",
-          "Håvard maintains a long-standing connection to Europe through his cousin, guitarist John Norum."
-        ]
-      },
-      {
-        "id": "side-projects",
-        "title": "Side projects & live experience",
-        "paragraphs": [
-          "Alongside his solo career Håvard has been part of Cinematic World, The Norwegian Beatles, and Three Men Electric Jam — gaining extensive experience on stages across Norway and internationally in Europe, the UK, and the United States.",
-          "Live concerts continue as Håvard Pedersen & The Blues Is Alright Band for full-band shows, alongside the current Håvard Pedersen Trio power trio format."
-        ],
-        "links": [
-          { "label": "The Norwegian Beatles", "href": "https://www.norwegianbeatles.com/" }
-        ]
-      },
-      {
-        "id": "mezzabarba",
-        "title": "Mezzabarba",
-        "paragraphs": [
-          "Recognised and endorsed by Mezzabarba — premium amplification behind the live sound."
-        ]
-      },
-      {
-        "id": "personal",
-        "title": "Beyond the stage",
-        "paragraphs": [
-          "Beyond the stage Håvard is a creative entrepreneur with a strong independent spirit: after years in the retail and business world he has chosen to focus on music and self-created projects — artistic freedom, live performance, and meaningful connection with audiences.",
-          "He has faced personal challenges, including health setbacks and major back surgery, and remains committed to persistence, reinvention, and music as both expression and purpose."
-        ]
-      },
-      {
-        "id": "gretsch",
-        "title": "Gretsch",
-        "paragraphs": [
-          "Håvard Pedersen is an official Gretsch-endorsed artist — White Falcon, Electromatic and stage guitars are central to his visual and sonic identity."
-        ],
-        "image": "/assets/images/studio-gretsch-portrait.png",
-        "imageAlt": "Håvard Pedersen with Gretsch White Falcon"
-      },
-      {
-        "id": "norwegian-sound",
-        "title": "The Norwegian Sound",
-        "paragraphs": [
-          "Recording sessions with producer Peter Michelsen at The Norwegian Sound continue Håvard's studio work — balancing live energy with crafted production for singles and upcoming album material."
-        ]
-      },
-      {
-        "id": "trio",
-        "title": "Current Håvard Pedersen Trio",
-        "paragraphs": [
-          "HÅVARD PEDERSEN TRIO feat. WILD WILLY BENDIKSEN & KNUT EVENMO",
-          "Tre erfarne musikere. Ett rått liveshow.",
-          "Bluesrock med trøkk, spilleglede og låter fra bl.a. Gary Moore, Stevie Ray Vaughan, Thin Lizzy og Jimi Hendrix+++",
-          "Med legendariske Wild Willy Bendiksen på trommer, Knut Evenmo på bass/vokal og Håvard Pedersen på gitar/vokal.",
-          "Power Trio. Rått. Ærlig. Live."
-        ],
-        "image": "/assets/images/havard-pedersen-trio-2026.jpg",
-        "imageAlt": "Håvard Pedersen Trio feat. Wild Willy Bendiksen & Knut Evenmo — official 2026 campaign poster"
-      }
-    ]
-  },
-  "epk": {
-    "missingAssets": [
-      "TODO: technical rider PDF",
-      "TODO: stage plot PDF",
-      "TODO: official logo / wordmark SVG or PNG",
-      "TODO: dedicated high-resolution press photo pack (ZIP)"
-    ],
-    "pressEmail": "havardpedersen@me.com",
-    "bookingUrl": "https://www.gigplanet.no/band/havard-pedersen-and-the-blues-is-alright-band"
-  },
-  "heroBackground": {
-    "caption": "",
-    "youtubeIds": [],
-    "rotateMs": 16000,
-    "posterImage": "/assets/images/havard-live-sunburst-semihollow.png",
-    "posterAlt": "Håvard Pedersen — live on stage with guitar"
-  }
+  ]
 }
