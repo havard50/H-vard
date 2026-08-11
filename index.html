@@ -656,7 +656,7 @@
                 <em>You and I</em> (2021). Production context: <a href="#about">About</a>.
               </figcaption>
             </figure>
-            <article class="music-card music-card--with-cover">
+            <article class="music-card music-card--with-cover music-card--nfs">
               <a
                 class="music-card-cover"
                 href="https://music.apple.com/no/album/never-felt-so-good/438518141"
@@ -684,26 +684,9 @@
                   <a href="https://open.spotify.com/album/17MYfinSWo8DC3XESNqmFi">Spotify</a>
                   ·
                   <a href="https://music.apple.com/no/album/never-felt-so-good/438518141">Apple Music</a>
+                  ·
+                  <a href="#nfs-tracklist-panel">Full album — 14 tracks</a>
                 </p>
-                <details class="album-tracklist-details" open>
-                  <summary class="album-tracklist-summary">Full album — 14 tracks</summary>
-                  <ol class="tracklist-list tracklist-list--album">
-                    <li><span class="track-title">I Love The Sun</span></li>
-                    <li><span class="track-title">Just A Little Teardrop</span></li>
-                    <li><span class="track-title">Never Felt So Good</span></li>
-                    <li><span class="track-title">Our Song</span></li>
-                    <li><span class="track-title">Still In Love With You</span> <span class="track-note">feat. John Norum</span></li>
-                    <li><span class="track-title">The Black Eagle</span></li>
-                    <li><span class="track-title">Dudette</span></li>
-                    <li><span class="track-title">Sugarbabe</span></li>
-                    <li><span class="track-title">Mighty Bird</span></li>
-                    <li><span class="track-title">Make Believe</span></li>
-                    <li><span class="track-title">Northern Sky</span></li>
-                    <li><span class="track-title">Mobile Dreams</span></li>
-                    <li><span class="track-title">The Greatest Fan Of All</span></li>
-                    <li><span class="track-title">While My Guitar Gently Weeps</span></li>
-                  </ol>
-                </details>
               </div>
             </article>
             <article class="music-card music-card--with-cover">
@@ -753,6 +736,47 @@
         </div>
       </section>
 
+      <aside
+        class="media-perfect-block reveal"
+        id="nfs-tracklist-panel"
+        aria-label="Never Felt So Good — full album tracklist and official video"
+      >
+        <div class="media-perfect-block__tracks">
+          <header class="media-perfect-block__header">
+            <p class="media-perfect-block__kicker">Never Felt So Good</p>
+            <h3 class="media-perfect-block__title">Full album — 14 tracks</h3>
+          </header>
+          <ol class="tracklist-list tracklist-list--album tracklist-list--scroll">
+            <li class="tracklist-row"><span class="track-title">I Love The Sun</span></li>
+            <li class="tracklist-row"><span class="track-title">Just A Little Teardrop</span></li>
+            <li class="tracklist-row"><span class="track-title">Never Felt So Good</span></li>
+            <li class="tracklist-row"><span class="track-title">Our Song</span></li>
+            <li class="tracklist-row"><span class="track-title">Still In Love With You</span> <span class="track-note">feat. John Norum</span></li>
+            <li class="tracklist-row"><span class="track-title">The Black Eagle</span></li>
+            <li class="tracklist-row"><span class="track-title">Dudette</span></li>
+            <li class="tracklist-row"><span class="track-title">Sugarbabe</span></li>
+            <li class="tracklist-row"><span class="track-title">Mighty Bird</span></li>
+            <li class="tracklist-row"><span class="track-title">Make Believe</span></li>
+            <li class="tracklist-row"><span class="track-title">Northern Sky</span></li>
+            <li class="tracklist-row"><span class="track-title">Mobile Dreams</span></li>
+            <li class="tracklist-row"><span class="track-title">The Greatest Fan Of All</span></li>
+            <li class="tracklist-row"><span class="track-title">While My Guitar Gently Weeps</span></li>
+          </ol>
+        </div>
+        <div class="media-perfect-block__video">
+          <div class="media-perfect-block__video-embed music-video-embed">
+            <iframe
+              src="https://www.youtube-nocookie.com/embed/zEXcH3lHjls?rel=0&modestbranding=1"
+              title="Det sku bli oss — Håvard Pedersen"
+              loading="lazy"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allow="encrypted-media; picture-in-picture; fullscreen"
+            ></iframe>
+          </div>
+          <p class="music-video-caption"><em>Det sku bli oss</em> — official video</p>
+        </div>
+      </aside>
+
       <section id="videos" class="section section-video section-video--feed reveal" aria-labelledby="videos-title">
         <div class="section-inner">
           <p class="section-kicker">Film</p>
@@ -766,21 +790,9 @@
           <div class="visuals-block">
           <div
             id="video-feed"
-            class="music-video-grid"
+            class="music-video-grid music-video-grid--archive"
             aria-label="Official videos"
           >
-            <div class="music-video-card">
-              <div class="music-video-embed">
-                <iframe
-                  src="https://www.youtube-nocookie.com/embed/zEXcH3lHjls?rel=0&modestbranding=1"
-                  title="Det sku bli oss — Håvard Pedersen"
-                  loading="lazy"
-                  referrerpolicy="strict-origin-when-cross-origin"
-                  allow="encrypted-media; picture-in-picture; fullscreen"
-                ></iframe>
-              </div>
-              <p class="music-video-caption"><em>Det sku bli oss</em> — official video</p>
-            </div>
             <div class="music-video-card music-video-card--archive">
               <a class="music-video-archive-link" href="https://www.youtube.com/@havardhedde10">
                 <span class="music-video-archive-kicker">YouTube</span>
@@ -952,6 +964,7 @@
           <h2 id="contact-heading" class="section-title">Contact</h2>
           <p class="listen-lead">Messages below — routing and profiles in the sidebar.</p>
           <p id="contact-form-provider-note" class="listen-hint contact-form-provider-note" hidden></p>
+          <p id="contact-form-success" class="contact-form-success" hidden aria-live="polite"></p>
           <div class="contact-layout">
             <form
               id="contact-form"

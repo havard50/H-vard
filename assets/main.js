@@ -744,6 +744,20 @@
       return d < today;
     }
 
+    function tourRegionBadge(item) {
+      if (!item) return "";
+      var loc = String(item.location || item.city || "").toLowerCase();
+      var venue = String(item.venue || item.title || "").toLowerCase();
+      var haystack = loc + " " + venue;
+      if (/akkarfjord|lakselv|finnmark/.test(haystack)) {
+        return '<span class="tour-badge tour-badge--arctic">Finnmark / Arctic Tour</span>';
+      }
+      if (/oslo|aurskog/.test(haystack)) {
+        return '<span class="tour-badge tour-badge--oslo">Oslo Region</span>';
+      }
+      return "";
+    }
+
     function tourRowHtml(item) {
       if (!item) return "";
       var isVenue = item.venueOnly === true;
@@ -792,6 +806,10 @@
         '<p class="tour-row__venue-meta">' +
         esc(time + location) +
         "</p>" +
+        (function () {
+          var badge = tourRegionBadge(item);
+          return badge ? '<div class="tour-row__badges">' + badge + "</div>" : "";
+        })() +
         (item.body ? '<p class="tour-row__deck">' + esc(item.body) + "</p>" : "") +
         "</div>" +
         '<div class="tour-row__action">' +
@@ -987,6 +1005,8 @@
 
     function renderVideos(items) {
       if (!videoRoot || !Array.isArray(items) || !items.length) return;
+      var perfectIframe = document.querySelector(".media-perfect-block__video iframe");
+      var perfectSrc = perfectIframe ? String(perfectIframe.getAttribute("src") || "") : "";
       videoRoot.innerHTML = items
         .map(function (item) {
           if (item && item.archiveCard) {
@@ -1009,6 +1029,7 @@
             );
           }
           if (!item || !item.youtubeId || !YT_ID.test(item.youtubeId)) return "";
+          if (perfectSrc && perfectSrc.indexOf(item.youtubeId) !== -1) return "";
           return (
             '<div class="music-video-card">' +
             '<div class="music-video-embed">' +
@@ -1026,6 +1047,9 @@
         })
         .filter(Boolean)
         .join("");
+      if (videoRoot.querySelector(".music-video-card--archive") && !videoRoot.querySelector(".music-video-embed")) {
+        videoRoot.classList.add("music-video-grid--archive");
+      }
     }
 
     function isNetlifyDeployHost() {
@@ -1081,14 +1105,25 @@
      * Free default on one.com / localhost: open the visitor's mail client (no third-party account).
      * Skipped on *.netlify.app where Netlify Forms handle POST when action is not overridden.
      */
+    function showContactFormSuccess(message) {
+      var successEl = document.getElementById("contact-form-success");
+      if (!successEl) return;
+      successEl.textContent = message || "Message Ready to Send!";
+      successEl.removeAttribute("hidden");
+      successEl.classList.remove("is-visible");
+      void successEl.offsetWidth;
+      successEl.classList.add("is-visible");
+    }
+
     function bindContactFormMailtoFallback(contactForm) {
       var form = document.querySelector("#contact .contact-form");
       if (!form) return;
-      if (isNetlifyDeployHost()) return;
 
       var cfg = contactForm && typeof contactForm === "object" ? contactForm : {};
       var action = cfg.action != null ? String(cfg.action).trim() : "";
-      if (action.indexOf("https://") === 0) return;
+      var useNetlify = isNetlifyDeployHost() && action.indexOf("https://") !== 0;
+
+      if (useNetlify) return;
 
       form.removeAttribute("data-netlify");
       form.removeAttribute("data-netlify-honeypot");
@@ -1100,8 +1135,7 @@
 
       form.addEventListener("submit", function (e) {
         e.preventDefault();
-        if (typeof form.reportValidity === "function" && !form.checkValidity()) {
-          form.reportValidity();
+        if (typeof form.reportValidity === "function" && !form.reportValidity()) {
           return;
         }
         var fd = new FormData(form);
@@ -1110,8 +1144,16 @@
         var message = (fd.get("message") || "").toString();
         var body =
           "Name: " + name + "\r\n" + "Reply-to: " + email + "\r\n\r\n" + message;
-        window.location.href =
-          "mailto:" + mailto + "?subject=" + encodeURIComponent(subj) + "&body=" + encodeURIComponent(body);
+        showContactFormSuccess("Message Ready to Send!");
+        window.setTimeout(function () {
+          window.location.href =
+            "mailto:" +
+            mailto +
+            "?subject=" +
+            encodeURIComponent(subj) +
+            "&body=" +
+            encodeURIComponent(body);
+        }, 480);
       });
 
       var note = document.querySelector("#contact-form-provider-note");
@@ -1220,24 +1262,17 @@
       if (priceSubEl) priceSubEl.textContent = "+ " + shippingKr + " kr shipping (Norway)";
 
       function buildMailto(size) {
-        var body =
-          "Hi Håvard,\n\n" +
-          "I would like to order the Rå Ekte Live T-Shirt.\n\n" +
-          "Size: " +
-          size +
-          "\nQuantity: 1\n\n" +
-          "Total (inc. shipping): " +
-          total +
-          " kr\n\n" +
-          "Shipping address:\n\n" +
-          "Thank you!";
         return (
           "mailto:" +
           email +
           "?subject=" +
-          encodeURIComponent("Rå Ekte Live T-Shirt order") +
+          encodeURIComponent("Rå Ekte Live T-Shirt - Size " + size) +
           "&body=" +
-          encodeURIComponent(body)
+          encodeURIComponent(
+            "Hello Håvard, I would like to order the official tour shirt in size " +
+              size +
+              ". Please send payment instructions."
+          )
         );
       }
 
@@ -1321,8 +1356,12 @@
           input.addEventListener("change", function () {
             root.querySelectorAll(".merch-size").forEach(function (label) {
               label.classList.remove("is-selected");
+              label.classList.remove("active");
             });
-            if (input.parentElement) input.parentElement.classList.add("is-selected");
+            if (input.parentElement) {
+              input.parentElement.classList.add("is-selected");
+              input.parentElement.classList.add("active");
+            }
             onSizeChange();
           });
         });
