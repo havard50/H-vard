@@ -615,11 +615,73 @@
       return '<p class="' + className + '">' + items.join(" · ") + "</p>";
     }
 
+    function renderPressClips(clips) {
+      if (!Array.isArray(clips) || !clips.length) return "";
+      return (
+        '<div class="press-clip-grid">' +
+        clips
+          .map(function (clip) {
+            if (!clip || typeof clip !== "object") return "";
+            var caption = clip.caption ? esc(clip.caption) : "";
+            if (clip.type === "facebook" && (clip.facebookHref || clip.videoId)) {
+              var fbHref = clip.facebookHref
+                ? String(clip.facebookHref)
+                : "https://www.facebook.com/" +
+                  (clip.page ? String(clip.page) : "OfficialHavardPedersen") +
+                  "/videos/" +
+                  String(clip.videoId) +
+                  "/";
+              var embedSrc =
+                "https://www.facebook.com/plugins/video.php?height=314&href=" +
+                encodeURIComponent(fbHref) +
+                "&show_text=false&width=560";
+              var idAttr = clip.id ? ' id="' + esc(clip.id) + '"' : "";
+              return (
+                '<figure class="press-clip"' +
+                idAttr +
+                ">" +
+                '<div class="press-clip__frame press-clip__frame--embed">' +
+                '<iframe title="' +
+                esc(clip.title || "TV Nord interview") +
+                '" src="' +
+                embedSrc +
+                '" loading="lazy" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowfullscreen></iframe>' +
+                "</div>" +
+                (caption ? "<figcaption>" + caption + "</figcaption>" : "") +
+                "</figure>"
+              );
+            }
+            if (clip.type === "article" && clip.href) {
+              return (
+                '<figure class="press-clip press-clip--article">' +
+                '<a class="press-clip__frame press-clip__frame--play" href="' +
+                esc(resolveHref(clip.href)) +
+                '" rel="noopener noreferrer" target="_blank">' +
+                '<span class="press-clip__play" aria-hidden="true"></span>' +
+                '<span class="press-clip__label">' +
+                esc(clip.label || "Read feature") +
+                "</span>" +
+                "</a>" +
+                (caption ? "<figcaption>" + caption + "</figcaption>" : "") +
+                "</figure>"
+              );
+            }
+            return "";
+          })
+          .filter(Boolean)
+          .join("") +
+        "</div>"
+      );
+    }
+
     function timelineArticleHtml(item, archiveVariant) {
       if (!item) return "";
       var featuredClass = item.featured ? " timeline-card--release" : "";
       var archiveClass = archiveVariant ? " timeline-card--archive" : "";
       var pressClass = item.outlet || item.pressEra ? " timeline-card--press" : "";
+      if (Array.isArray(item.pressClips) && item.pressClips.length) {
+        pressClass += " timeline-card--press-clips";
+      }
       var published =
         item.published && formatPublished(item.published)
           ? '<p class="timeline-card-date"><time datetime="' +
@@ -665,7 +727,10 @@
         '<p class="news-card-text">' +
         esc(item.body) +
         "</p>" +
-        renderLinks(item.links, "news-card-links") +
+        renderPressClips(item.pressClips) +
+        (Array.isArray(item.pressClips) && item.pressClips.length
+          ? ""
+          : renderLinks(item.links, "news-card-links")) +
         "</article>"
       );
     }

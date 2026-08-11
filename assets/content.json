@@ -203,10 +203,21 @@
       "pressEra": "Debut Era",
       "published": "2011-03-18",
       "title": "Føler seg bra — TV Nord Debut",
-      "body": "Documenting Håvard's home return to Alta and the official regional TV feature covering the rollout of the debut album \"Never Felt So Good\", spotlighting world-class guest musicians. Archived on Facebook (18 Mar 2011).",
-      "links": [
-        { "label": "TV Nord interview", "href": "https://www.facebook.com/watch/?v=1907028237486" },
-        { "label": "Altaposten feature", "href": "https://www.altaposten.no/kultur/n/rWJwye/foler-seg-bra" }
+      "body": "Documenting Håvard's home return to Alta and the official regional TV feature covering the rollout of the debut album \"Never Felt So Good\", spotlighting world-class guest musicians.",
+      "pressClips": [
+        {
+          "type": "facebook",
+          "id": "press-tvnord-interview",
+          "facebookHref": "https://www.facebook.com/OfficialHavardPedersen/videos/interview-with-h%C3%A5vard-pedersen-on-tv-nord/1907028237486/",
+          "title": "Interview with Håvard Pedersen on TV Nord",
+          "caption": "TV Nord · Interview (2011)"
+        },
+        {
+          "type": "article",
+          "href": "https://www.altaposten.no/kultur/n/rWJwye/foler-seg-bra",
+          "label": "Altaposten · Føler seg bra",
+          "caption": "Print & web feature"
+        }
       ]
     },
     {
@@ -235,7 +246,7 @@
       "title": "Broadcast & print history",
       "body": "Regional TV, UK radio, and press artefacts stay documented — linked from Press and legacy pages.",
       "links": [
-        { "label": "Interviews", "href": "https://www.facebook.com/watch/?v=1907028237486" },
+        { "label": "Interviews", "href": "#press-tvnord-interview" },
         { "label": "Reviews", "href": "https://www.altaposten.no/kultur/n/KMO5EE/haavard-sverger-til-dialekt-paa-to-ferske-singler" }
       ]
     }
