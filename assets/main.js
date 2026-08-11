@@ -619,6 +619,7 @@
       if (!item) return "";
       var featuredClass = item.featured ? " timeline-card--release" : "";
       var archiveClass = archiveVariant ? " timeline-card--archive" : "";
+      var pressClass = item.outlet || item.pressEra ? " timeline-card--press" : "";
       var published =
         item.published && formatPublished(item.published)
           ? '<p class="timeline-card-date"><time datetime="' +
@@ -638,13 +639,23 @@
           '" loading="lazy" decoding="async" />' +
           "</div>";
       }
+      var pressMeta = "";
+      if (item.outlet || item.pressEra) {
+        pressMeta =
+          '<div class="timeline-card-press-meta">' +
+          (item.outlet ? '<span class="timeline-card-outlet">' + esc(item.outlet) + "</span>" : "") +
+          (item.pressEra ? '<span class="timeline-card-era">' + esc(item.pressEra) + "</span>" : "") +
+          "</div>";
+      }
       return (
         '<article class="news-card timeline-card' +
         featuredClass +
         archiveClass +
+        pressClass +
         '">' +
         published +
         media +
+        pressMeta +
         '<p class="news-card-kicker">' +
         esc(item.kicker) +
         "</p>" +
@@ -1266,14 +1277,23 @@
           "mailto:" +
           email +
           "?subject=" +
-          encodeURIComponent("Rå Ekte Live T-Shirt - Size " + size) +
+          encodeURIComponent("Rå Ekte Live T-Skjorte (Størrelse " + size + ")") +
           "&body=" +
           encodeURIComponent(
-            "Hello Håvard, I would like to order the official tour shirt in size " +
+            "Hei Håvard, jeg ønsker å bestille den offisielle turné-t-skjorten i størrelse " +
               size +
-              ". Please send payment instructions."
+              ". Vennligst send betalingsinformasjon."
           )
         );
+      }
+
+      function setActiveSizeChip(activeLabel) {
+        root.querySelectorAll(".merch-size").forEach(function (label) {
+          label.classList.remove("is-selected", "active", "bg-white", "text-black");
+        });
+        if (activeLabel) {
+          activeLabel.classList.add("is-selected", "active", "bg-white", "text-black");
+        }
       }
 
       function getSelectedSize() {
@@ -1353,15 +1373,15 @@
         });
 
         root.querySelectorAll('input[name="merch-size"]').forEach(function (input) {
-          input.addEventListener("change", function () {
-            root.querySelectorAll(".merch-size").forEach(function (label) {
-              label.classList.remove("is-selected");
-              label.classList.remove("active");
+          var label = input.parentElement;
+          if (label) {
+            label.addEventListener("click", function () {
+              setActiveSizeChip(label);
+              onSizeChange();
             });
-            if (input.parentElement) {
-              input.parentElement.classList.add("is-selected");
-              input.parentElement.classList.add("active");
-            }
+          }
+          input.addEventListener("change", function () {
+            setActiveSizeChip(input.parentElement || null);
             onSizeChange();
           });
         });
