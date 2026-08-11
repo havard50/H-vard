@@ -735,6 +735,72 @@
       interviewsRoot.innerHTML = items.map(interviewCardHtml).join("");
     }
 
+    function isPastShow(item) {
+      if (!item || !item.isoDate) return false;
+      var today = new Date();
+      today.setHours(0, 0, 0, 0);
+      var d = new Date(item.isoDate + "T12:00:00");
+      if (Number.isNaN(d.getTime())) return false;
+      return d < today;
+    }
+
+    function tourRowHtml(item) {
+      if (!item) return "";
+      var isVenue = item.venueOnly === true;
+      var past = isPastShow(item);
+      var rowClass = "tour-row" + (past ? " tour-row--past" : "") + (isVenue ? " tour-row--venue" : "");
+      var dateBlock = isVenue
+        ? '<div class="tour-row__date"><span class="tour-row__date-day">—</span><span class="tour-row__date-meta">Routing</span></div>'
+        : '<div class="tour-row__date"><span class="tour-row__date-day">' +
+          esc(item.day || "") +
+          '</span><span class="tour-row__date-meta">' +
+          esc(String(item.month || "").toUpperCase()) +
+          " " +
+          esc(item.year || "") +
+          "</span></div>";
+      var venueName = item.venue || item.title || "";
+      var location = item.location || "";
+      var time = item.time ? item.time + " · " : "";
+      var action = "";
+      if (past) {
+        action = '<span class="tour-btn tour-btn--disabled" aria-disabled="true">Past show</span>';
+      } else if (item.ticketUrl && item.ticketLabel) {
+        action =
+          '<a class="tour-btn" href="' +
+          esc(resolveHref(item.ticketUrl)) +
+          '" rel="noopener noreferrer">' +
+          esc(String(item.ticketLabel).toUpperCase()) +
+          "</a>";
+      } else if (isVenue && item.ticketUrl) {
+        action =
+          '<a class="tour-btn tour-btn--ghost" href="' +
+          esc(resolveHref(item.ticketUrl)) +
+          '" rel="noopener noreferrer">Venue tickets</a>';
+      } else {
+        action = '<span class="tour-btn tour-btn--disabled" aria-disabled="true">Announced soon</span>';
+      }
+      return (
+        '<article class="' +
+        rowClass +
+        '">' +
+        dateBlock +
+        '<div class="tour-row__venue">' +
+        (item.kicker ? '<p class="tour-row__kicker">' + esc(item.kicker) + "</p>" : "") +
+        '<strong class="tour-row__venue-name">' +
+        esc(venueName) +
+        "</strong>" +
+        '<p class="tour-row__venue-meta">' +
+        esc(time + location) +
+        "</p>" +
+        (item.body ? '<p class="tour-row__deck">' + esc(item.body) + "</p>" : "") +
+        "</div>" +
+        '<div class="tour-row__action">' +
+        action +
+        "</div>" +
+        "</article>"
+      );
+    }
+
     function renderShows(items) {
       if (!showsRoot || !Array.isArray(items) || !items.length) return;
       var sorted = items.slice().sort(function (a, b) {
@@ -742,7 +808,9 @@
         var bd = b && b.isoDate ? b.isoDate : "";
         return ad < bd ? -1 : ad > bd ? 1 : 0;
       });
-      showsRoot.innerHTML = sorted.map(showCardHtml).join("");
+      var useTourTable = showsRoot.classList.contains("tour-table");
+      var renderer = useTourTable ? tourRowHtml : showCardHtml;
+      showsRoot.innerHTML = sorted.map(renderer).join("");
     }
 
     function showCardHtml(item) {
@@ -1250,7 +1318,13 @@
         });
 
         root.querySelectorAll('input[name="merch-size"]').forEach(function (input) {
-          input.addEventListener("change", onSizeChange);
+          input.addEventListener("change", function () {
+            root.querySelectorAll(".merch-size").forEach(function (label) {
+              label.classList.remove("is-selected");
+            });
+            if (input.parentElement) input.parentElement.classList.add("is-selected");
+            onSizeChange();
+          });
         });
 
         if (orderBtn) {

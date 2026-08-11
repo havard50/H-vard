@@ -44,13 +44,14 @@
     <link rel="dns-prefetch" href="https://embed.music.apple.com" />
     <link rel="dns-prefetch" href="https://www.youtube-nocookie.com" />
     <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Instrument+Serif:ital@0;1&family=Syne:wght@400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&family=Oswald:wght@400;500;600;700&family=Syne:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="/assets/styles.css" />
+    <link rel="stylesheet" href="/assets/premium.css" />
     <link rel="prefetch" href="/assets/content.json" as="fetch" type="application/json" />
     <link rel="icon" type="image/png" href="/assets/images/studio-gretsch-portrait.png" />
-    <meta name="theme-color" content="#030206" />
+    <meta name="theme-color" content="#000000" />
     <meta name="apple-mobile-web-app-title" content="Håvard Pedersen" />
     <script type="application/ld+json">
       {
@@ -120,11 +121,11 @@
       }
     </script>
   </head>
-  <body class="body--future body--artist">
+  <body class="body--future body--artist body--premium">
     <a class="skip-link" href="#main">Skip to content</a>
     <header class="site-header">
       <div class="header-inner">
-        <a class="logo" href="#main">Håvard Pedersen</a>
+        <a class="logo" href="#main" aria-label="Håvard Pedersen">HÅVARD PEDERSEN</a>
         <span class="header-spacer" aria-hidden="true"></span>
         <button
           class="site-mode-toggle"
@@ -154,33 +155,41 @@
           <a href="#news">News</a>
           <a href="#store">Shop</a>
           <a href="#contact">Contact</a>
-          <a class="nav-cta" href="https://www.gigplanet.no/band/havard-pedersen-and-the-blues-is-alright-band">Booking</a>
+          <a class="nav-cta" href="https://www.gigplanet.no/band/havard-pedersen-and-the-blues-is-alright-band">Book the band</a>
         </nav>
       </div>
     </header>
 
     <main id="main">
-      <section id="hero" class="hero hero--modern hero--compact hero--artist" aria-labelledby="hero-title">
-        <div class="hero__layout">
-          <div class="hero__content">
-            <div class="hero__inner">
-            <p class="hero__eyebrow">Håvard Pedersen</p>
-            <p class="hero__tagline" id="hero-tagline">Norwegian guitarist, singer &amp; songwriter.</p>
-            <h1 id="hero-title" class="hero__headline">
-              <span class="hero__headline-line">Raw.</span>
-              <span class="hero__headline-line hero__headline-line--accent">Real. Live.</span>
-            </h1>
+      <section id="hero" class="hero hero--modern hero--compact hero--artist hero--premium" aria-labelledby="hero-title">
+        <div class="hero-premium__bg" aria-hidden="true">
+          <img src="/assets/images/havard-portrait-scarf-bw.png" alt="" width="1200" height="1500" decoding="async" />
+          <div class="hero-premium__shade"></div>
+        </div>
+        <div class="hero-premium__inner">
+          <div class="hero__layout">
+            <div class="hero__content">
+              <div class="hero__inner">
+                <div class="hero-premium__center">
+                  <p class="hero__eyebrow">Håvard Pedersen</p>
+                  <h1 id="hero-title" class="hero__headline">
+                    <span class="hero__headline-line">Raw.</span>
+                    <span class="hero__headline-line hero__headline-line--accent">Real. Live.</span>
+                  </h1>
+                  <p class="hero__tagline" id="hero-tagline">Norwegian guitarist, singer &amp; songwriter.</p>
+                  <div class="hero-premium__actions" role="group" aria-label="Primary actions">
+                    <a class="btn btn-primary btn--hero btn--hero-dominate" href="#shows">Get tickets</a>
+                    <a
+                      class="btn btn-ghost btn--hero btn--hero-secondary"
+                      href="https://www.gigplanet.no/band/havard-pedersen-and-the-blues-is-alright-band"
+                      >Book the band</a
+                    >
+                  </div>
+                </div>
+                <div class="hero-premium__below">
             <p class="hero__momentum">
               August trio live · Stopp Pressen &amp; Inni Granskauen · new single <em>Det sku bli oss</em> · booking 2026
             </p>
-            <div class="hero__cta hero__cta--single-primary" role="group" aria-label="Primary actions">
-              <a class="btn btn-primary btn--hero btn--hero-dominate" href="#shows">Get tickets</a>
-              <a
-                class="btn btn-ghost btn--hero btn--hero-secondary"
-                href="https://www.gigplanet.no/band/havard-pedersen-and-the-blues-is-alright-band"
-                >Book the band</a
-              >
-            </div>
             <nav class="hero__ticket-links" aria-label="Direct ticket links">
               <a href="https://valhal.ticketco.events/no/nb?version=m" rel="noopener noreferrer">Valhal</a>
               <a href="https://verddehotel.hoopla.no/" rel="noopener noreferrer">Verdde Hotel</a>
@@ -210,20 +219,22 @@
               <a class="btn btn-ghost btn--hero btn--hero-secondary" href="#contact">Contact</a>
             </div>
             <p class="hero__micro">Gretsch-endorsed · Oslo · 100% live — no backing tracks.</p>
+                </div>
+              </div>
             </div>
+            <figure class="hero__media">
+              <img
+                class="hero__image"
+                src="/assets/images/studio-gretsch-portrait.png"
+                alt="Håvard Pedersen — press portrait with Gretsch guitar"
+                width="800"
+                height="1000"
+                fetchpriority="high"
+                loading="eager"
+                decoding="async"
+              />
+            </figure>
           </div>
-          <figure class="hero__media">
-            <img
-              class="hero__image"
-              src="/assets/images/studio-gretsch-portrait.png"
-              alt="Håvard Pedersen — press portrait with Gretsch guitar"
-              width="800"
-              height="1000"
-              fetchpriority="high"
-              loading="eager"
-              decoding="async"
-            />
-          </figure>
         </div>
       </section>
 
@@ -278,7 +289,11 @@
               >Promoter booking</a
             >
           </header>
-          <div id="shows-grid" class="shows-grid" aria-label="Upcoming concerts with tickets">
+          <div class="tour-widget">
+            <div class="tour-table__head" aria-hidden="true">
+              <span>Date</span><span>Venue · City</span><span>Tickets</span>
+            </div>
+            <div id="shows-grid" class="tour-table" aria-label="Upcoming concerts with tickets">
             <article class="show-card show-card--featured">
               <div class="show-card__date" aria-hidden="true">
                 <span class="show-card__day">22</span>
@@ -357,6 +372,7 @@
                 >Venue tickets</a
               >
             </article>
+          </div>
           </div>
           <nav class="ticket-hub" aria-label="Ticket and event links">
             <a class="ticket-hub__link ticket-hub__link--primary" href="https://valhal.ticketco.events/no/nb?version=m" rel="noopener noreferrer">
@@ -574,6 +590,7 @@
         </div>
       </section>
 
+      <div class="premium-media-grid">
       <section id="listen" class="section section-album reveal" aria-labelledby="listen-title">
         <div class="section-inner section-split">
           <div class="album-intro">
@@ -775,6 +792,7 @@
           </div>
         </div>
       </section>
+      </div>
 
       <section id="gallery" class="section section-gallery reveal" aria-labelledby="gallery-title">
         <div class="section-inner">
@@ -1442,6 +1460,29 @@
           ·
           <a href="#partners">Partners</a>
         </p>
+        <div class="footer-sponsors" aria-labelledby="footer-sponsors-title">
+          <p id="footer-sponsors-title" class="footer-sponsors__title">Proudly Supported By</p>
+          <div class="footer-sponsors__grid">
+            <article class="footer-sponsor-card">
+              <p class="news-card-kicker">Supported by</p>
+              <h3>Holmen and Robertsen Seafood</h3>
+              <p>
+                Norwegian seafood producer and sponsor — collaboration support for Håvard’s artist work. The music profile stays front and centre;
+                partner products or campaigns appear in Store when agreed.
+              </p>
+              <p class="news-card-links"><a href="https://www.holmenrobertsen.no/">holmenrobertsen.no</a></p>
+            </article>
+            <article class="footer-sponsor-card">
+              <p class="news-card-kicker">Studio collaboration</p>
+              <h3>The Norwegian Sound</h3>
+              <p>
+                Where the current album and singles are tracked and produced with Peter Michelsen — the studio partner behind the new recordings featured
+                on this site.
+              </p>
+              <p class="news-card-links"><a href="https://www.thenorwegiansound.com/">thenorwegiansound.com</a></p>
+            </article>
+          </div>
+        </div>
       </div>
     </footer>
 
