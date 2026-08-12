@@ -662,6 +662,81 @@
 .body--premium .premium-media-grid .section-video {
   border-left: 0;
   padding-left: 0;
+  padding-block: 0.35rem 0.75rem;
+}
+
+.body--premium .section-video--compact .section-kicker {
+  margin-bottom: 0.15rem;
+}
+
+.body--premium .section-video--compact .section-title {
+  margin-bottom: 0.35rem;
+}
+
+.body--premium .section-video--compact .listen-lead {
+  margin-bottom: 0.65rem;
+  font-size: 0.9rem;
+  line-height: 1.45;
+  max-width: 42rem;
+}
+
+.body--premium .section-video--compact .visuals-block {
+  margin-top: 0;
+}
+
+.body--premium .music-video-grid--archive {
+  display: block;
+  max-width: 17.5rem;
+  margin: 0;
+}
+
+.body--premium .music-video-grid--archive .music-video-archive-link {
+  aspect-ratio: auto;
+  min-height: 0;
+  flex: none;
+  padding: 0.65rem 0.85rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.28);
+}
+
+.body--premium .music-video-grid--archive .music-video-archive-kicker {
+  margin-bottom: 0.2rem;
+  font-size: 0.62rem;
+  letter-spacing: 0.14em;
+}
+
+.body--premium .music-video-grid--archive .music-video-archive-title {
+  font-size: 0.92rem;
+  margin-bottom: 0.2rem;
+  line-height: 1.25;
+}
+
+.body--premium .music-video-grid--archive .music-video-archive-deck {
+  font-size: 0.76rem;
+  line-height: 1.35;
+}
+
+.body--premium .music-video-grid--archive .music-video-card--archive {
+  min-height: 0;
+}
+
+@media (min-width: 640px) {
+  .body--premium .section-video--compact .video-section-row {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .body--premium .section-video--compact .video-section-row .listen-lead {
+    flex: 1 1 16rem;
+    margin-bottom: 0;
+  }
+
+  .body--premium .section-video--compact .video-section-row .visuals-block {
+    flex: 0 0 auto;
+  }
 }
 
 /* —— Discography perfect block (tracklist + video) —— */
