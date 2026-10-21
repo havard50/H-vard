@@ -19,7 +19,7 @@ fetch('/assets/content.json').then(r=>{if(!r.ok)throw new Error('Content unavail
  const past=dated.filter(s=>s.isoDate<today).sort((a,b)=>b.isoDate.localeCompare(a.isoDate));
  const list=document.querySelector('#concert-list');
  if(upcoming.length) list.replaceChildren(...upcoming.map(s=>concertRow(s)));
- else {list.replaceChildren();const p=document.createElement('p');p.textContent='New concert dates will be announced here. For booking enquiries, get in touch below.';list.append(p);}
+ else {list.replaceChildren();const p=document.createElement('p');p.textContent='New concert dates will be announced here. For booking enquiries, get in touch below.';list.append(p);const updates=document.createElement('a');updates.className='text-link';updates.href='https://www.facebook.com/OfficialHavardPedersen/';updates.textContent='Follow concert announcements on Facebook ↗';list.append(updates);}
  document.querySelector('#past-concerts').replaceChildren(...past.map(s=>concertRow(s,true)));
  document.querySelector('.past-shows').hidden=!past.length;
 }).catch(()=>{document.querySelector('#concert-list').textContent='For current concert dates, contact Håvard or check his social channels.';document.querySelector('.past-shows').hidden=true;});

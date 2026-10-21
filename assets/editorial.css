@@ -128,3 +128,9 @@
 @media(max-width:700px){.product-layout{grid-template-columns:minmax(0,1fr);gap:2.5rem}.photo-collection{grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem}.release-list a{grid-template-columns:1fr 1rem;gap:.5rem}.release-list small{grid-row:2;grid-column:1}.release-list b{grid-row:1;grid-column:2}.past-list li{grid-template-columns:minmax(0,1fr);gap:.3rem}.archive-film>img{height:300px}.photo-dialog{width:96vw;padding:.7rem}.page-jumps{gap:.8rem 1.2rem}}
 
 .page-intro h1 em{color:#665437}
+/* Final responsive rhythm and comfortable interaction targets. */
+@media(min-width:801px){.hero{min-height:660px}.hero h1{font-size:clamp(3.8rem,6.2vw,6.5rem)}.hero .hero-copy{padding-top:4rem}.hero .artist-location{margin-bottom:1rem}.hero .artist-signature{margin:1.4rem 0}}
+@media(max-width:560px){.hero .hero-copy{padding:2rem 6vw}.hero .eyebrow{margin-bottom:1.1rem}.hero h1{font-size:3.7rem;margin-bottom:1.2rem}.hero .artist-location{margin-bottom:1rem}.hero .artist-signature{margin:1rem 0}.hero .hero-description{margin-bottom:1rem;line-height:1.7}.hero .actions{margin-top:1.2rem}.hero-photo{height:310px}.section{padding-block:3.3rem}.section-heading{gap:1.2rem}.hero .button,.menu-button,.spotify-play,.resource-links a,.photo-dialog button{min-height:44px}.page-jumps a{padding-block:.4rem}.release-art{max-width:300px}.hero-note{font-size:.52rem}}
+#concert-list>.text-link{display:inline-block;margin-top:.8rem}
+
+.social-notes{background:#eee9de}.social-notes>p:not(.eyebrow){max-width:36rem}.social-notes .actions{flex-wrap:wrap;gap:1.2rem 2rem}.footer-top>div{display:flex;flex-wrap:wrap;gap:1rem}
