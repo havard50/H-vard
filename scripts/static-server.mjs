@@ -13,6 +13,12 @@ const server = createServer((req, res) => {
   const url = req.url || "/";
   const pathname = url.split("?")[0];
 
+  let publicPath;
+  try { publicPath = decodeURIComponent(pathname); } catch { res.writeHead(400); res.end('Bad request'); return; }
+  if (/^\/(?:\.|node_modules(?:\/|$)|docs(?:\/|$)|scripts(?:\/|$)|admin\.html$|assets\/admin\.(?:js|css)$)/i.test(publicPath) || /\.md$/i.test(publicPath)) {
+    res.writeHead(404, { 'Content-Type': 'text/plain; charset=utf-8' }); res.end('Not found'); return;
+  }
+
   if (url === "/health" || url.startsWith("/health?")) {
     res.writeHead(200, { "Content-Type": "text/plain; charset=utf-8" });
     res.end("ok");
