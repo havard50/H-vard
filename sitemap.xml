@@ -1,15 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://havardpedersen.com/</loc>
-    <lastmod>2026-05-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1</priority>
-  </url>
-  <url>
-    <loc>https://havardpedersen.com/shop.html</loc>
-    <lastmod>2026-05-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
+  <url><loc>https://havardpedersen.com/</loc><lastmod>2026-10-21</lastmod></url>
+  <url><loc>https://havardpedersen.com/shop.html</loc><lastmod>2026-10-21</lastmod></url>
+  <url><loc>https://havardpedersen.com/archive.html</loc><lastmod>2026-10-21</lastmod></url>
 </urlset>
