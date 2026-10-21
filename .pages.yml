@@ -1,0 +1,47 @@
+media:
+  input: assets/images
+  output: /assets/images
+  categories: [image]
+content:
+  - name: updates
+    label: Nyheter og konserter
+    type: file
+    path: assets/updates.json
+    format: json
+    fields:
+      - name: settings
+        label: Profiler
+        type: object
+        fields:
+          - { name: heroImage, label: Artistbilde, type: image }
+          - { name: heroAlt, label: Bildebeskrivelse, type: string }
+          - { name: facebookUrl, label: Facebook, type: string }
+          - { name: instagramUrl, label: Instagram, type: string }
+      - name: news
+        label: Nyheter
+        type: object
+        list: true
+        fields:
+          - { name: title, label: Overskrift, type: string, required: true }
+          - { name: date, label: Publiseringsdato, type: date, required: true, options: { format: yyyy-MM-dd } }
+          - { name: body, label: Tekst, type: text, required: true }
+          - { name: image, label: Bilde, type: image }
+          - { name: imageAlt, label: Bildebeskrivelse, type: string }
+          - { name: imageCredit, label: Fotograf, type: string }
+          - { name: source, label: Kilde eller lenketekst, type: string }
+          - { name: url, label: Lenke til originalinnlegg, type: string }
+          - { name: published, label: Publisert, type: boolean, default: true }
+      - name: shows
+        label: Konserter
+        type: object
+        list: true
+        fields:
+          - { name: title, label: Konserttittel, type: string, required: true }
+          - { name: venue, label: Spillested, type: string, required: true }
+          - { name: isoDate, label: Dato, type: date, required: true, options: { format: yyyy-MM-dd } }
+          - { name: time, label: Klokkeslett, type: string }
+          - { name: location, label: Sted, type: string }
+          - { name: body, label: Beskrivelse, type: text }
+          - { name: ticketUrl, label: Billett- eller arrangørlenke, type: string }
+          - { name: ticketLabel, label: Lenketekst, type: string }
+          - { name: published, label: Publisert, type: boolean, default: true }
