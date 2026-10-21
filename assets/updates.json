@@ -1,0 +1,113 @@
+{
+  "settings": {
+    "heroImage": "/assets/images/studio-white-falcon-wide.png",
+    "heroAlt": "Håvard Pedersen med gitar",
+    "facebookUrl": "https://www.facebook.com/OfficialHavardPedersen/",
+    "instagramUrl": "https://www.instagram.com/havardhedde/"
+  },
+  "shows": [
+    {
+      "isoDate": "2026-11-01",
+      "title": "Hjertefred Sandvika",
+      "venue": "Hjertefred Sandvika",
+      "location": "Sandvika, Norge",
+      "time": "",
+      "body": "Håvard er med i årets artistprogram. Se arrangørens side for praktisk informasjon.",
+      "ticketUrl": "https://www.facebook.com/people/Hjertefred-Sandvika/100068808918596/",
+      "ticketLabel": "Arrangement / informasjon",
+      "published": true
+    },
+    {
+      "isoDate": "2026-08-22",
+      "day": "22",
+      "month": "Aug",
+      "year": "2026",
+      "time": "17:00",
+      "kicker": "Håvard Pedersen Trio",
+      "title": "Stopp Pressen, Oslo",
+      "venue": "Stopp Pressen",
+      "location": "Oslo, Norway",
+      "body": "HÅVARD PEDERSEN TRIO feat. WILD WILLY BENDIKSEN & KNUT EVENMO",
+      "featured": true,
+      "published": true
+    },
+    {
+      "isoDate": "2026-08-28",
+      "day": "28",
+      "month": "Aug",
+      "year": "2026",
+      "time": "18:00",
+      "kicker": "Håvard Pedersen Trio",
+      "title": "Inni Granskauen Fest, Aurskog",
+      "venue": "Inni Granskauen Fest",
+      "location": "Aurskog, Norway",
+      "body": "HÅVARD PEDERSEN TRIO feat. WILD WILLY BENDIKSEN & KNUT EVENMO",
+      "featured": true,
+      "published": true
+    },
+    {
+      "isoDate": "2026-07-15",
+      "day": "15",
+      "month": "Jul",
+      "year": "2026",
+      "time": "18:00",
+      "kicker": "Blues & BBQ",
+      "title": "Valhal, Akkarfjord",
+      "venue": "Valhal",
+      "location": "Akkarfjord, Finnmark",
+      "body": "Summer blues & BBQ — live trio set, grill, and transport from Hammerfest.",
+      "ticketLabel": "Buy tickets",
+      "ticketUrl": "https://valhal.ticketco.events/no/nb?version=m",
+      "featured": true,
+      "published": true
+    },
+    {
+      "isoDate": "2026-07-16",
+      "day": "16",
+      "month": "Jul",
+      "year": "2026",
+      "time": "20:00",
+      "kicker": "Concert",
+      "title": "Verdde Hotel Lakselv",
+      "venue": "Verdde Hotel",
+      "location": "Lakselv, Finnmark",
+      "body": "Concert at Verdde Mat & Vinhus.",
+      "ticketLabel": "Buy tickets",
+      "ticketUrl": "https://verddehotel.hoopla.no/",
+      "featured": true,
+      "published": true
+    }
+  ],
+  "news": [
+    {
+      "title": "Håvard til Hjertefred Sandvika",
+      "date": "2026-09-24",
+      "body": "Håvard er med på Hjertefred Sandvika 1. november 2026. Følg arrangøren for program og praktisk informasjon.",
+      "image": "",
+      "imageAlt": "",
+      "source": "Hjertefred Sandvika",
+      "url": "https://www.facebook.com/permalink.php?story_fbid=pfbid02baQebfNTuLSzHpEmKrUL4HfnxL7TWuCrw8WQMgQvtDmkccaeNC2dmRM2AQzYebpQl&id=100068808918596",
+      "published": true
+    },
+    {
+      "title": "Whole Lotta Love — live",
+      "date": "2026-10-18",
+      "body": "En livevideo fra Håvards egen kanal, med Jan Ole på trommer og vokal.",
+      "image": "",
+      "imageAlt": "",
+      "source": "YouTube",
+      "url": "https://www.youtube.com/watch?v=6U3hKNMCVS8",
+      "published": true
+    },
+    {
+      "title": "Thin Lizzy-medley med Wild Willy",
+      "date": "2026-10-02",
+      "body": "En jam fra Håvards kanal med Wild Willy som gjest på trommer. Publiseringsdatoen gjelder videoen.",
+      "image": "",
+      "imageAlt": "",
+      "source": "YouTube",
+      "url": "https://www.youtube.com/watch?v=LGVachHP988",
+      "published": true
+    }
+  ]
+}
