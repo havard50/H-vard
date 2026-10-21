@@ -1,0 +1,4 @@
+/* Contain the legacy archive's forms and long links on small screens. */
+.body--premium .contact-form,.body--premium .contact-form>*,.body--premium .contact-grid>*,.body--premium .contact-layout>*{min-width:0;max-width:100%;box-sizing:border-box}
+.body--premium .form-input,.body--premium .form-textarea{width:100%;min-width:0;max-width:100%;box-sizing:border-box}
+@media(max-width:600px){.body--premium .contact-grid,.body--premium .contact-layout{grid-template-columns:minmax(0,1fr)}.body--premium .btn{max-width:100%;white-space:normal;overflow-wrap:anywhere}.body--premium .contact-form{padding:1rem}.body--premium .section-inner{min-width:0}.body--premium .contact-direct a{overflow-wrap:anywhere}}
