@@ -2,3 +2,10 @@
 Thumbs.db
 *.log
 node_modules/
+.netlify/
+.vercel/
+.qa-screenshots/
+.qa-worktree*/
+.env
+.env.*
+!.env.example
