@@ -1,0 +1,12 @@
+{
+  "routes": [
+    {
+      "src": "/(?:\\..*|node_modules(?:/.*)?|docs(?:/.*)?|scripts(?:/.*)?|admin\\.html|assets/admin\\.(?:js|css)|.*\\.md)",
+      "dest": "/404.html",
+      "status": 404
+    },
+    {
+      "handle": "filesystem"
+    }
+  ]
+}
