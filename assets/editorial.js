@@ -23,3 +23,22 @@ fetch('/assets/content.json').then(r=>{if(!r.ok)throw new Error('Content unavail
  document.querySelector('#past-concerts').replaceChildren(...past.map(s=>concertRow(s,true)));
  document.querySelector('.past-shows').hidden=!past.length;
 }).catch(()=>{document.querySelector('#concert-list').textContent='For current concert dates, contact Håvard or check his social channels.';document.querySelector('.past-shows').hidden=true;});
+
+const spotifyButton = document.querySelector('.spotify-play');
+if (spotifyButton) {
+ spotifyButton.addEventListener('click', () => {
+  const player = document.querySelector('#featured-player');
+  if (!player.querySelector('iframe')) {
+   const frame = document.createElement('iframe');
+   frame.title = 'Spotify player — Det sku bli oss by Håvard Pedersen';
+   frame.src = 'https://open.spotify.com/embed/track/3b5YUyKuugvteTF85a3TpP?theme=0';
+   frame.allow = 'autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture';
+   frame.loading = 'lazy';
+   player.append(frame);
+  }
+  const expanded = spotifyButton.getAttribute('aria-expanded') !== 'true';
+  player.hidden = !expanded;
+  spotifyButton.setAttribute('aria-expanded', String(expanded));
+  spotifyButton.textContent = expanded ? 'Close player' : '▶ Play on Spotify';
+ });
+}
