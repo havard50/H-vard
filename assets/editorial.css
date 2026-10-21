@@ -134,3 +134,5 @@
 #concert-list>.text-link{display:inline-block;margin-top:.8rem}
 
 .social-notes{background:#eee9de}.social-notes>p:not(.eyebrow){max-width:36rem}.social-notes .actions{flex-wrap:wrap;gap:1.2rem 2rem}.footer-top>div{display:flex;flex-wrap:wrap;gap:1rem}
+
+.performance-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:2rem;margin-top:2.5rem}.performance-card{border-top:1px solid #aab69a;padding:1.5rem 0}.performance-card h3{font-family:Instrument Serif,Georgia,serif;font-size:2.3rem;font-weight:400;margin:.8rem 0}.performance-card p{font-size:.85rem}.performance-card small{display:block;color:#5f6e54;font-size:.7rem}.performance-card .text-link{display:inline-block;margin-top:1rem}.live-sessions{background:#e8e9df}.live-video-link{display:inline-block;margin-left:1.5rem}#norsk>p{max-width:48rem}@media(max-width:700px){.performance-grid{grid-template-columns:1fr;gap:1rem}.live-video-link{margin-left:0;margin-top:1rem;display:block}}
