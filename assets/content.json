@@ -110,8 +110,14 @@
       "image": "/assets/images/havard-pedersen-trio-2026.jpg",
       "imageAlt": "Håvard Pedersen Trio feat. Wild Willy Bendiksen & Knut Evenmo — official 2026 campaign poster",
       "links": [
-        { "label": "Get tickets", "href": "#shows" },
-        { "label": "Trio campaign", "href": "#trio" }
+        {
+          "label": "Get tickets",
+          "href": "#shows"
+        },
+        {
+          "label": "Trio campaign",
+          "href": "#trio"
+        }
       ],
       "featured": true
     },
@@ -123,11 +129,26 @@
       "image": "/assets/images/havard-live-sunburst-semihollow.png",
       "imageAlt": "Håvard Pedersen — live on stage",
       "links": [
-        { "label": "Get tickets", "href": "#shows" },
-        { "label": "Valhal", "href": "https://valhal.ticketco.events/no/nb?version=m" },
-        { "label": "Verdde Hotel", "href": "https://verddehotel.hoopla.no/" },
-        { "label": "Perleporten", "href": "https://ebillett.no/90037000000000" },
-        { "label": "Facebook", "href": "https://www.facebook.com/share/1D5WXFTpxz/?mibextid=wwXIfr" }
+        {
+          "label": "Get tickets",
+          "href": "#shows"
+        },
+        {
+          "label": "Valhal",
+          "href": "https://valhal.ticketco.events/no/nb?version=m"
+        },
+        {
+          "label": "Verdde Hotel",
+          "href": "https://verddehotel.hoopla.no/"
+        },
+        {
+          "label": "Perleporten",
+          "href": "https://ebillett.no/90037000000000"
+        },
+        {
+          "label": "Facebook",
+          "href": "https://www.facebook.com/share/1D5WXFTpxz/?mibextid=wwXIfr"
+        }
       ],
       "featured": true
     },
@@ -139,8 +160,14 @@
       "image": "/assets/images/cinematic-gretsch.png",
       "imageAlt": "Håvard Pedersen — cinematic studio still with Gretsch guitar",
       "links": [
-        { "label": "About / press", "href": "#about" },
-        { "label": "Photos", "href": "#photos" }
+        {
+          "label": "About / press",
+          "href": "#about"
+        },
+        {
+          "label": "Photos",
+          "href": "#photos"
+        }
       ],
       "featured": true
     },
@@ -151,7 +178,12 @@
       "published": "2026-06-04",
       "image": "/assets/images/studio-gretsch-portrait.png",
       "imageAlt": "Håvard Pedersen — press portrait with Gretsch guitar",
-      "links": [{ "label": "Live", "href": "#live" }]
+      "links": [
+        {
+          "label": "Live",
+          "href": "#live"
+        }
+      ]
     },
     {
       "kicker": "Release · 2025",
@@ -161,8 +193,14 @@
       "image": "/assets/images/single-det-sku-studio.png",
       "imageAlt": "Det sku bli oss — single artwork (studio)",
       "links": [
-        { "label": "Listen", "href": "#listen" },
-        { "label": "Watch", "href": "#videos" }
+        {
+          "label": "Listen",
+          "href": "#listen"
+        },
+        {
+          "label": "Watch",
+          "href": "#videos"
+        }
       ],
       "featured": false
     },
@@ -173,7 +211,12 @@
       "published": "2026-04-12",
       "image": "/assets/images/cinematic-gretsch.png",
       "imageAlt": "Håvard Pedersen — studio still with Gretsch guitar",
-      "links": [{ "label": "About", "href": "#about" }]
+      "links": [
+        {
+          "label": "About",
+          "href": "#about"
+        }
+      ]
     },
     {
       "kicker": "Live · 2026",
@@ -187,7 +230,10 @@
           "label": "Gigplanet",
           "href": "https://www.gigplanet.no/band/havard-pedersen-and-the-blues-is-alright-band"
         },
-        { "label": "Live", "href": "#live" }
+        {
+          "label": "Live",
+          "href": "#live"
+        }
       ]
     }
   ],
@@ -227,7 +273,10 @@
       "title": "Fra Kjøpmann til Musiker på full tid",
       "body": "Deep-dive career profile outlining Håvard's departure from a demanding 30-year executive business career to fully dedicate his life, focus, and artistic purpose to live blues-rock guitar.",
       "links": [
-        { "label": "Read profile", "href": "https://www.ifinnmark.no/fra-rema-kjopmann-til-musiker-pa-full-tid/f/5-81-2479007" }
+        {
+          "label": "Read profile",
+          "href": "https://www.ifinnmark.no/fra-rema-kjopmann-til-musiker-pa-full-tid/f/5-81-2479007"
+        }
       ]
     },
     {
@@ -237,8 +286,14 @@
       "title": "Finnmarks Gitarguru sverger til dialekt",
       "body": "Editorial reviews covering Håvard's significant artistic evolution at The Norwegian Sound studios, transition from English to raw, personal lyricism sung entirely in his native Vardø dialect.",
       "links": [
-        { "label": "Altaposten feature", "href": "https://www.altaposten.no/kultur/n/KMO5EE/haavard-sverger-til-dialekt-paa-to-ferske-singler" },
-        { "label": "Østhavet editorial", "href": "https://osthavet.no/kultur/2025/10/17/havard-pedersen-med-tekster-pa-vardodialekt/" }
+        {
+          "label": "Altaposten feature",
+          "href": "https://www.altaposten.no/kultur/n/KMO5EE/haavard-sverger-til-dialekt-paa-to-ferske-singler"
+        },
+        {
+          "label": "Østhavet editorial",
+          "href": "https://osthavet.no/kultur/2025/10/17/havard-pedersen-med-tekster-pa-vardodialekt/"
+        }
       ]
     },
     {
@@ -246,8 +301,14 @@
       "title": "Broadcast & print history",
       "body": "Regional TV, UK radio, and press artefacts stay documented — linked from Press and legacy pages.",
       "links": [
-        { "label": "Interviews", "href": "#press-tvnord-interview" },
-        { "label": "Reviews", "href": "https://www.altaposten.no/kultur/n/KMO5EE/haavard-sverger-til-dialekt-paa-to-ferske-singler" }
+        {
+          "label": "Interviews",
+          "href": "#press-tvnord-interview"
+        },
+        {
+          "label": "Reviews",
+          "href": "https://www.altaposten.no/kultur/n/KMO5EE/haavard-sverger-til-dialekt-paa-to-ferske-singler"
+        }
       ]
     }
   ],
@@ -258,8 +319,14 @@
       "meta": "Blues & BBQ — Valhal, Akkarfjord · 18:00",
       "ticket": true,
       "links": [
-        { "label": "Buy tickets", "href": "https://valhal.ticketco.events/no/nb?version=m" },
-        { "label": "All shows", "href": "#shows" }
+        {
+          "label": "Buy tickets",
+          "href": "https://valhal.ticketco.events/no/nb?version=m"
+        },
+        {
+          "label": "All shows",
+          "href": "#shows"
+        }
       ]
     },
     {
@@ -267,8 +334,14 @@
       "meta": "Verdde Hotel Lakselv — concert",
       "ticket": true,
       "links": [
-        { "label": "Buy tickets", "href": "https://verddehotel.hoopla.no/" },
-        { "label": "Venue", "href": "https://www.verddehotel.no/" }
+        {
+          "label": "Buy tickets",
+          "href": "https://verddehotel.hoopla.no/"
+        },
+        {
+          "label": "Venue",
+          "href": "https://www.verddehotel.no/"
+        }
       ]
     },
     {
@@ -276,15 +349,24 @@
       "meta": "Perleporten Kulturhus — Honningsvåg (watch for dates)",
       "ticket": true,
       "links": [
-        { "label": "Venue tickets", "href": "https://ebillett.no/90037000000000" },
-        { "label": "Facebook", "href": "https://www.facebook.com/share/1D5WXFTpxz/?mibextid=wwXIfr" }
+        {
+          "label": "Venue tickets",
+          "href": "https://ebillett.no/90037000000000"
+        },
+        {
+          "label": "Facebook",
+          "href": "https://www.facebook.com/share/1D5WXFTpxz/?mibextid=wwXIfr"
+        }
       ]
     },
     {
       "date": "Poster",
       "meta": "Full 2026 routing snapshot — open the tour poster for promoters and fans.",
       "links": [
-        { "label": "Tour poster (PNG)", "href": "/assets/images/tour-poster-2025.png" },
+        {
+          "label": "Tour poster (PNG)",
+          "href": "/assets/images/tour-poster-2025.png"
+        },
         {
           "label": "Book the band",
           "href": "https://www.gigplanet.no/band/havard-pedersen-and-the-blues-is-alright-band"
@@ -296,22 +378,34 @@
     {
       "kicker": "Single · 2025",
       "title": "Det sku bli oss",
-      "body": "Latest single — stream on Spotify and Apple Music. CDs on request via Contact.",
+      "body": "Latest single — stream on Spotify and Apple Music. Contact Håvard about CDs.",
       "previewImage": "/assets/images/studio-gretsch-portrait.png",
       "previewAlt": "Håvard Pedersen — Gretsch portrait",
       "status": "Out now",
       "priceFrom": "Streaming · CDs on request",
       "links": [
-        { "label": "Spotify — track", "href": "https://open.spotify.com/track/3b5YUyKuugvteTF85a3TpP" },
-        { "label": "Apple Music", "href": "https://music.apple.com/no/search?term=Det%20sku%20bli%20oss" },
-        { "label": "Music section", "href": "#listen" }
+        {
+          "label": "Spotify — track",
+          "href": "https://open.spotify.com/track/3b5YUyKuugvteTF85a3TpP"
+        },
+        {
+          "label": "Apple Music",
+          "href": "https://music.apple.com/no/search?term=Det%20sku%20bli%20oss"
+        },
+        {
+          "label": "Music section",
+          "href": "#listen"
+        }
       ],
-      "primaryAction": { "label": "Listen on Spotify", "href": "https://open.spotify.com/track/3b5YUyKuugvteTF85a3TpP" }
+      "primaryAction": {
+        "label": "Listen on Spotify",
+        "href": "https://open.spotify.com/track/3b5YUyKuugvteTF85a3TpP"
+      }
     },
     {
       "kicker": "Albums",
       "title": "Never Felt So Good · You and I",
-      "body": "Full catalogue on streaming; physical CDs coordinated by email until online checkout is available.",
+      "body": "Full catalogue on streaming; contact Håvard about physical CDs.",
       "previewImage": "https://is1-ssl.mzstatic.com/image/thumb/Music/c1/a1/62/mzi.qytoprdk.jpg/600x600bb.jpg",
       "previewAlt": "Never Felt So Good — album artwork",
       "status": "Catalogue",
@@ -325,77 +419,75 @@
           "label": "Apple Music",
           "href": "https://music.apple.com/no/search?term=H%C3%A5vard%20Pedersen"
         },
-        { "label": "Music & CDs page", "href": "/shop.html" }
-      ],
-      "primaryAction": { "label": "Open catalogue", "href": "https://open.spotify.com/artist/50PJ7UncEwx3fUxJ1LgZid" }
-    },
-    {
-      "kicker": "Live",
-      "title": "Shows & tickets — summer 2026",
-      "body": "Valhal (15 Jul), Verdde Hotel Lakselv (16 Jul), and Perleporten Kulturhus. Book direct; promoters via Gigplanet.",
-      "previewImage": "/assets/images/tour-poster-2025.png",
-      "previewAlt": "2026 tour routing poster",
-      "status": "On sale",
-      "priceFrom": "Jul 2026",
-      "links": [
-        { "label": "Valhal", "href": "https://valhal.ticketco.events/no/nb?version=m" },
-        { "label": "Verdde Hotel", "href": "https://verddehotel.hoopla.no/" },
-        { "label": "Perleporten", "href": "https://ebillett.no/90037000000000" },
-        { "label": "Facebook", "href": "https://www.facebook.com/share/1D5WXFTpxz/?mibextid=wwXIfr" },
         {
-          "label": "Gigplanet",
-          "href": "https://www.gigplanet.no/band/havard-pedersen-and-the-blues-is-alright-band"
+          "label": "Music & CDs page",
+          "href": "/shop.html"
         }
       ],
       "primaryAction": {
-        "label": "Valhal tickets",
-        "href": "https://valhal.ticketco.events/no/nb?version=m"
+        "label": "Open catalogue",
+        "href": "https://open.spotify.com/artist/50PJ7UncEwx3fUxJ1LgZid"
+      }
+    },
+    {
+      "kicker": "Live",
+      "title": "Live performances & booking",
+      "body": "For concert bookings and current availability, contact Håvard through Gigplanet.",
+      "previewImage": "/assets/images/tour-poster-2025.png",
+      "previewAlt": "2026 tour routing poster",
+      "status": "Booking enquiries",
+      "priceFrom": "",
+      "links": [
+        {
+          "label": "Contact",
+          "href": "#contact"
+        }
+      ],
+      "primaryAction": {
+        "label": "Booking enquiry",
+        "href": "https://www.gigplanet.no/band/havard-pedersen-and-the-blues-is-alright-band"
       }
     },
     {
       "kicker": "Merch",
       "title": "Rå Ekte Live T-skjorte",
-      "body": "Offisiell svart turné-t-skjorte — begrenset lager. Samme design som på scenen.",
+      "body": "Offisiell Rå Ekte Live T-skjorte. Kontakt Håvard for tilgjengelige størrelser og levering.",
       "previewImage": "/assets/images/promo-raa-ekte-live.png",
       "previewAlt": "Rå Ekte Live — offisiell merch",
-      "status": "På lager",
-      "priceFrom": "250 kr + frakt",
+      "status": "Kontakt for tilgjengelighet",
+      "priceFrom": "",
       "links": [
-        { "label": "Bestill på artist-siden", "href": "#merch" },
-        { "label": "Full merch store", "href": "https://havardtshirt.netlify.app/" }
+        {
+          "label": "Bestill på artist-siden",
+          "href": "#merch"
+        },
+        {
+          "label": "Full merch store",
+          "href": "https://havardtshirt.netlify.app/"
+        }
       ],
       "primaryAction": {
-        "label": "Kjøp nå",
-        "href": "https://havardtshirt.netlify.app/"
+        "label": "Enquire about a T-shirt",
+        "href": "mailto:havardpedersen@me.com?subject=R%C3%A5%20Ekte%20Live%20T-shirt"
       }
-    },
-    {
-      "kicker": "Seafood & partners",
-      "title": "Holmen & Robertsen range",
-      "body": "Non-music partner line — listing and checkout when agreed. Collaboration note under Partners.",
-      "previewImage": "/assets/images/promo-raa-ekte-live.png",
-      "previewAlt": "Rå Ekte Live — stage branding (partner enquiries)",
-      "status": "On request",
-      "priceFrom": "—",
-      "links": [
-        { "label": "Partners", "href": "#partners" },
-        { "label": "Holmen & Robertsen", "href": "https://www.holmenrobertsen.no/" }
-      ],
-      "primaryAction": { "label": "Partner enquiry", "href": "#contact" }
     }
   ],
   "storeSettings": {
     "checkoutEnabled": false,
     "provider": "Stripe Payment Links",
-    "statusText": "Merch by email is live on the main site. Streaming and enquiries below; Stripe card checkout coming soon.",
+    "statusText": "Listen to the music or contact Håvard about merchandise and physical releases.",
     "helpText": ""
   },
   "merch": {
     "title": "Rå Ekte Live T-Shirt",
     "priceKr": 250,
     "shippingKr": 79,
-    "stockLeft": 17,
-    "sizes": ["L", "XL", "XXL", "3XL"],
+    "sizes": [
+      "L",
+      "XL",
+      "XXL",
+      "3XL"
+    ],
     "email": "havardpedersen@me.com",
     "externalStore": "https://havardtshirt.netlify.app/",
     "images": {
@@ -431,7 +523,7 @@
       "name": "Holmen and Robertsen Seafood",
       "brandLine": "Holmen & Robertsen",
       "brandSub": "Seafood",
-      "description": "Norwegian seafood producer and sponsor — collaboration support for Håvard's artist work. The music profile stays front and centre; partner products or campaigns appear in Store when agreed.",
+      "description": "Support for Håvard Pedersen’s artist work.",
       "website": "https://www.holmenrobertsen.no/",
       "linkLabel": "holmenrobertsen.no",
       "tag": "Sponsor"
@@ -441,7 +533,7 @@
       "name": "The Norwegian Sound",
       "brandLine": "The Norwegian Sound",
       "brandSub": "Recording studio · Mjøndalen",
-      "description": "Where the current album and singles are tracked and produced with Peter Michelsen — the studio partner behind the new recordings featured on this site.",
+      "description": "Recording studio in Mjøndalen, where Håvard works with Peter Michelsen.",
       "website": "https://www.thenorwegiansound.com/",
       "linkLabel": "thenorwegiansound.com",
       "tag": "Studio"

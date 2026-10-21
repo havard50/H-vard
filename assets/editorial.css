@@ -59,3 +59,32 @@
 @media(max-width:1100px) and (min-width:801px){.masthead nav{gap:1.1rem}.hero .hero-copy{max-width:61%}.hero h1{font-size:5rem}}
 @media(max-width:800px){.hero .hero-copy{max-width:none;padding:3rem 6vw}.hero h1{font-size:clamp(3.8rem,11vw,6rem)}.release-feature{gap:3rem}.stage-story{gap:2rem}.artist-resources{gap:3rem}.release-art img{box-shadow:10px 10px 0 #d2d2c2}}
 @media(max-width:600px){.release-feature,.stage-story,.artist-resources{grid-template-columns:minmax(0,1fr)}.release-art{max-width:350px}.release-copy h2{font-size:3.5rem}.release-feature .actions{gap:1rem}.stage-story>img{aspect-ratio:4/3}.stage-story{margin-top:2.5rem}.artist-resources{gap:2rem}.hero .hero-copy{padding-bottom:2.5rem}.hero h1{font-size:4rem}.hero-photo{height:350px}.artist-signature{margin:1.2rem 0}.hero .actions{margin-top:1.5rem}}
+/* Public artist edition: focused editorial sections with practical fan links. */
+.masthead{border-bottom:1px solid #c6c9bb}
+.masthead nav a{transition:color .2s}
+.masthead nav a:hover{color:#8b683a}
+.catalogue-notes{margin-top:3.5rem;padding-top:2rem;border-top:1px solid #c2c8b7;display:grid;grid-template-columns:1fr 2fr;gap:1rem 4vw}
+.catalogue-notes>.eyebrow{margin-top:.9rem;color:#6d7068}
+.single-rows a{display:grid;grid-template-columns:1fr auto 1rem;gap:1.5rem;align-items:center;padding:.85rem 0;border-bottom:1px solid #d2d5c9;font-size:.92rem}
+.single-rows small{font-size:.65rem;color:#6d7068}
+.single-rows b{font-weight:400}
+.single-rows a:hover{color:#8b683a}
+.streaming-links{grid-column:2;display:flex;gap:1.5rem;font-size:.7rem;margin-top:.5rem}
+.streaming-links a{border-bottom:1px solid #aaa995;padding-bottom:3px}
+.artist-journal{background:#e8e9df}
+.journal-grid{display:grid;grid-template-columns:1fr 1fr;gap:6vw}
+.journal-grid article{border-top:1px solid #bbc2b0;padding-top:1.5rem}
+.journal-grid h3{font-family:'Instrument Serif',Georgia,serif;font-size:clamp(2rem,3vw,3.2rem);line-height:1.15;letter-spacing:-.02em}
+.journal-grid p:not(.eyebrow){font-size:.85rem;color:#5e6857;max-width:30rem}
+.journal-grid .text-link{display:inline-block;margin-top:.8rem}
+.press-note{display:block;font-size:.62rem;color:#70776a;margin-top:.7rem}
+.merch-edit{display:grid;grid-template-columns:.8fr 1.2fr;gap:7vw;align-items:center}
+.merch-image{background:#dedfd5;overflow:hidden}
+.merch-image img{max-height:430px;object-fit:contain;transition:transform .3s}
+.merch-image:hover img{transform:scale(1.025)}
+.merch-edit>div>p:not(.eyebrow){max-width:30rem;color:#616b59;font-size:.9rem;margin:1.5rem 0}
+.merch-edit .text-link{display:inline-block;margin-top:.5rem}
+.artist-credits{display:flex;flex-wrap:wrap;gap:1rem 2rem;margin-top:2.5rem;color:#6b7264;font-size:.65rem}
+.hero h1{max-width:44rem}
+@media(min-width:1100px){.masthead{position:sticky;top:0;z-index:20;background:#f2efe7f5;backdrop-filter:blur(12px)}.records{gap:2rem}.record img{border-radius:2px}.section{padding-block:5.5rem}}
+@media(max-width:700px){.catalogue-notes{grid-template-columns:minmax(0,1fr);gap:.5rem;margin-top:2.5rem}.streaming-links{grid-column:1;flex-wrap:wrap}.journal-grid{grid-template-columns:minmax(0,1fr);gap:2.5rem}.merch-edit{grid-template-columns:minmax(0,1fr);gap:2.5rem}.merch-image{max-width:360px}.single-rows a{gap:1rem}.artist-journal{padding-block:3.5rem}}

@@ -440,7 +440,8 @@
       if (href == null || typeof href !== "string") return href;
       if (href.charAt(0) !== "#") return href;
       if (document.body && document.body.classList.contains("page-shop")) {
-        return "/" + href;
+        var destinations = { "#listen": "/#music", "#contact": "/#booking", "#merch": "/#merch", "#videos": "/archive.html#videos", "#gallery": "/archive.html#gallery", "#news": "/#journal", "#store": "/shop.html", "#partners": "/archive.html#partners" };
+        return destinations[href] || "/" + href;
       }
       return href;
     }
