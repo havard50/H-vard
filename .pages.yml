@@ -25,6 +25,8 @@ content:
           - { name: title, label: Overskrift, type: string, required: true }
           - { name: date, label: Publiseringsdato, type: date, required: true, options: { format: yyyy-MM-dd } }
           - { name: body, label: Tekst, type: text, required: true }
+          - { name: titleEn, label: Engelsk overskrift (valgfritt), type: string }
+          - { name: bodyEn, label: Engelsk tekst (valgfritt), type: text }
           - { name: image, label: Bilde, type: image }
           - { name: imageAlt, label: Bildebeskrivelse, type: string }
           - { name: imageCredit, label: Fotograf, type: string }
@@ -44,4 +46,6 @@ content:
           - { name: body, label: Beskrivelse, type: text }
           - { name: ticketUrl, label: Billett- eller arrangørlenke, type: string }
           - { name: ticketLabel, label: Lenketekst, type: string }
+          - { name: bodyEn, label: Engelsk beskrivelse (valgfritt), type: text }
+          - { name: ticketLabelEn, label: Engelsk lenketekst (valgfritt), type: string }
           - { name: published, label: Publisert, type: boolean, default: true }
