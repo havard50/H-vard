@@ -15,7 +15,9 @@
       "body": "Håvard er med i årets artistprogram. Se arrangørens side for praktisk informasjon.",
       "ticketUrl": "https://www.facebook.com/people/Hjertefred-Sandvika/100068808918596/",
       "ticketLabel": "Arrangement / informasjon",
-      "published": true
+      "published": true,
+      "bodyEn": "Håvard is part of this year’s artist programme. See the organiser for practical information.",
+      "ticketLabelEn": "Event information ↗"
     },
     {
       "isoDate": "2026-08-22",
@@ -87,7 +89,9 @@
       "imageAlt": "",
       "source": "Hjertefred Sandvika",
       "url": "https://www.facebook.com/permalink.php?story_fbid=pfbid02baQebfNTuLSzHpEmKrUL4HfnxL7TWuCrw8WQMgQvtDmkccaeNC2dmRM2AQzYebpQl&id=100068808918596",
-      "published": true
+      "published": true,
+      "titleEn": "Håvard at Hjertefred Sandvika",
+      "bodyEn": "Håvard is part of Hjertefred Sandvika on 1 November 2026. See the organiser for the programme and practical information."
     },
     {
       "title": "Whole Lotta Love — live",
@@ -97,7 +101,9 @@
       "imageAlt": "",
       "source": "YouTube",
       "url": "https://www.youtube.com/watch?v=6U3hKNMCVS8",
-      "published": true
+      "published": true,
+      "titleEn": "Whole Lotta Love — live",
+      "bodyEn": "A performance from Håvard’s own channel, featuring Jan Ole on drums and vocals."
     },
     {
       "title": "Thin Lizzy-medley med Wild Willy",
@@ -107,7 +113,9 @@
       "imageAlt": "",
       "source": "YouTube",
       "url": "https://www.youtube.com/watch?v=LGVachHP988",
-      "published": true
+      "published": true,
+      "titleEn": "Thin Lizzy medley with Wild Willy",
+      "bodyEn": "A jam from Håvard’s channel with guest drummer Wild Willy. The date refers to the video publication."
     }
   ]
 }
